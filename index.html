@@ -46,7 +46,7 @@
 </head>
 <body class="font-body bg-gray-50 text-gray-800">
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/51999999999" target="_blank" class="whatsapp-button fixed bottom-6 right-6 bg-green-500 text-white rounded-full p-3 shadow-lg z-50 hover:bg-green-600 transition duration-300">
+    <a href="https://wa.me/51943215876" target="_blank" class="whatsapp-button fixed bottom-6 right-6 bg-green-500 text-white rounded-full p-3 shadow-lg z-50 hover:bg-green-600 transition duration-300">
         <i class="fab fa-whatsapp text-3xl"></i>
     </a>
 
@@ -56,9 +56,7 @@
             <div class="flex justify-between items-center py-4">
                 <!-- Logo -->
                 <a href="index.html" class="flex items-center">
-                    <!-- Replace with actual logo later -->
-                    <span class="text-2xl font-heading font-bold text-primary">EICA</span>
-                    <span class="ml-2 text-sm font-medium text-muted">Laguna Canrash</span>
+                    <img src="assets/images/logos/logo-sin-bg.png" alt="Logo Laguna Canrash" class="h-12">
                 </a>
                 
                 <!-- Mobile Menu Button -->
@@ -73,7 +71,7 @@
                     <a href="pages/criadero.html" class="text-gray-600 font-medium hover:text-accent transition">Criadero</a>
                     <a href="pages/hospedaje.html" class="text-gray-600 font-medium hover:text-accent transition">Hospedaje</a>
                     <a href="pages/ubicacion.html" class="text-gray-600 font-medium hover:text-accent transition">Ubicación</a>
-                    <a href="https://wa.me/51999999999" target="_blank" class="bg-accent text-white px-4 py-2 rounded-full font-medium hover:bg-opacity-90 transition">
+                    <a href="https://wa.me/51943215876" target="_blank" class="bg-accent text-white px-4 py-2 rounded-full font-medium hover:bg-opacity-90 transition">
                         Reservar por WhatsApp
                     </a>
                 </nav>
@@ -96,7 +94,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-section bg-gray-800 text-white" style="background-image: url('assets/images/hero-laguna.jpg');">
+    <section class="hero-section bg-gray-800 text-white" style="background-image: url('assets/images/laguna/foto_profesional_preferida_contiene_laguna_bote_casitas_muelle_agua_limpia_cerro_con_nieve_cielo_azul_pasto_verde.jpg');">
         <div class="container mx-auto px-4 py-24 md:py-36 flex items-center hero-content">
             <div class="max-w-2xl">
                 <h1 class="text-4xl md:text-5xl font-heading font-bold mb-6 leading-tight">
@@ -117,6 +115,21 @@
         </div>
     </section>
 
+    <!-- Video Showcase -->
+    <section class="py-12 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto overflow-hidden rounded-xl shadow-2xl">
+                <video class="w-full" autoplay muted loop playsinline>
+                    <source src="assets/images/laguna/video_hermoso_de_toda_la_laguna.mp4" type="video/mp4">
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+            </div>
+            <div class="text-center mt-6">
+                <p class="text-white font-medium italic">"Sumérgete en la magia de Laguna Canrash, un paraíso en los Andes peruanos"</p>
+            </div>
+        </div>
+    </section>
+    
     <!-- Nuestra Experiencia Section -->
     <section class="py-16 bg-white">
         <div class="container mx-auto px-4">
@@ -179,30 +192,37 @@
             <!-- Gallery Grid -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div class="overflow-hidden rounded-lg">
-                    <img src="assets/images/placeholder-1.jpg" alt="Vista de la Laguna Canrash" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                    <img src="assets/images/laguna/hermoso_atardecer_en_canrash.jpg" alt="Hermoso atardecer en la Laguna Canrash" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
                 </div>
                 <div class="overflow-hidden rounded-lg">
-                    <img src="assets/images/placeholder-2.jpg" alt="Plato de trucha a la parrilla" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                    <img src="assets/images/comida/ceviche_y_chicharron_de_trucha_con_fondo_canrash_platos_bandera.jpg" alt="Platos bandera: ceviche y chicharrón de trucha con vista a la laguna" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
                 </div>
                 <div class="overflow-hidden rounded-lg">
-                    <img src="assets/images/placeholder-3.jpg" alt="Criadero de truchas" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                    <img src="assets/images/laguna/bote_en_laguna_cerro_se_releja_en_laguna_foto_horizontal.jpg" alt="Bote en la laguna con reflejo del cerro en el agua" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
                 </div>
                 <div class="overflow-hidden rounded-lg">
-                    <img src="assets/images/placeholder-4.jpg" alt="Visitantes disfrutando" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                    <img src="assets/images/laguna/turistas_posando_en_bote_en_medio_de_laguna_en_primera_persona.jpg" alt="Visitantes disfrutando un paseo en bote" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
                 </div>
             </div>
             
             <!-- Testimonial -->
             <div class="mt-12 bg-white p-8 rounded-xl shadow-md max-w-3xl mx-auto">
-                <div class="text-accent text-center mb-4">
-                    <i class="fas fa-quote-left text-3xl"></i>
-                </div>
-                <blockquote class="text-center text-lg text-gray-700 italic mb-6">
-                    "La experiencia en Laguna Canrash fue increíble. La trucha es la más fresca y deliciosa que hemos probado, y el entorno natural es espectacular. Definitivamente volveremos."
-                </blockquote>
-                <div class="text-center">
-                    <p class="font-medium text-gray-800">Familia Rodríguez</p>
-                    <p class="text-sm text-gray-500">Visitantes de Huaraz</p>
+                <div class="flex flex-col md:flex-row items-center gap-6">
+                    <div class="md:w-1/3">
+                        <img src="assets/images/laguna/turista_alemana_feliz_echada_en_bote_primera_persona_en_medio_de_laguna.jpeg" alt="Turista disfrutando de un paseo en bote" class="rounded-lg shadow-md w-full h-48 object-cover">
+                    </div>
+                    <div class="md:w-2/3">
+                        <div class="text-accent mb-4">
+                            <i class="fas fa-quote-left text-3xl"></i>
+                        </div>
+                        <blockquote class="text-lg text-gray-700 italic mb-6">
+                            "La experiencia en Laguna Canrash fue mágica. La trucha es la más fresca y deliciosa que he probado, y el entorno natural es espectacular. El paseo en bote por la laguna cristalina con vista a los nevados es algo que recordaré toda mi vida. Definitivamente volveré."
+                        </blockquote>
+                        <div>
+                            <p class="font-medium text-gray-800">Anna Schmidt</p>
+                            <p class="text-sm text-gray-500">Visitante de Alemania</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -222,9 +242,19 @@
                         <i class="fas fa-map-marker-alt mr-2"></i> Cómo Llegar
                     </a>
                 </div>
-                <div class="w-full md:w-1/2 h-80 bg-gray-200 rounded-xl overflow-hidden shadow-md">
-                    <!-- Replace with actual Google Maps embed code -->
+                <div class="w-full md:w-1/2 h-80 bg-gray-200 rounded-xl overflow-hidden shadow-md relative group">
+                    <!-- Google Maps embed code -->
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.6141020372383!2d-77.13266845776138!3d-9.53865881780579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91a8ddd8c2eb1f45%3A0x7e9b99faebc1f80c!2sLaguna%20Canrash!5e0!3m2!1ses!2spe!4v1634567890123!5m2!1ses!2spe" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <!-- Overlay with additional routes info that appears on hover -->
+                    <div class="absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div class="text-white text-center p-4">
+                            <p class="font-medium mb-2">Rutas panorámicas hacia Canrash:</p>
+                            <p class="text-sm">• Desde Huaraz (3 horas)</p>
+                            <p class="text-sm">• Desde Antamina (1 hora)</p>
+                            <p class="text-sm">• Desde San Marcos (40 minutos)</p>
+                            <a href="pages/ubicacion.html" class="inline-block mt-3 px-4 py-2 bg-white text-primary rounded-full text-sm font-medium">Ver rutas detalladas</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -237,9 +267,7 @@
                 <!-- Logo & Description -->
                 <div class="col-span-1 md:col-span-2">
                     <div class="flex items-center mb-4">
-                        <!-- Replace with actual logo later -->
-                        <span class="text-2xl font-heading font-bold text-white">EICA</span>
-                        <span class="ml-2 text-sm font-medium text-gray-400">Laguna Canrash</span>
+                        <img src="assets/images/logos/logo-sin-bg.png" alt="Logo Laguna Canrash" class="h-10">
                     </div>
                     <p class="text-gray-400 mb-4">
                         Empresa Isla de Canrash (EICA) ofrece una experiencia gastronómica única con la auténtica trucha arcoíris, 
@@ -277,7 +305,7 @@
                         </li>
                         <li class="flex items-center">
                             <i class="fab fa-whatsapp mr-2 text-accent"></i>
-                            <a href="https://wa.me/51999999999" target="_blank" class="text-gray-400 hover:text-white transition">+51 999 999 999</a>
+                            <a href="https://wa.me/51943215876" target="_blank" class="text-gray-400 hover:text-white transition">+51 943 215 876</a>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-envelope mr-2 text-accent"></i>
