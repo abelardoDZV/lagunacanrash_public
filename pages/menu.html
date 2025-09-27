@@ -49,7 +49,7 @@
 
 <body class="font-body bg-background text-text min-h-screen bg-gradient-to-br from-accent/10 to-white/80">
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/51943215876" target="_blank" class="whatsapp-button fixed bottom-6 right-6 bg-green-500 text-white rounded-full p-3 shadow-lg z-50 hover:bg-green-600 transition duration-300 flex items-center">
+    <a href="https://wa.me/51957878409" target="_blank" class="whatsapp-button fixed bottom-6 right-6 bg-green-500 text-white rounded-full p-3 shadow-lg z-50 hover:bg-green-600 transition duration-300 flex items-center">
         <i class="fab fa-whatsapp text-3xl"></i>
         <span class="ml-2 mr-2 font-medium hidden md:inline">¡Reserva Ya!</span>
     </a>
@@ -76,7 +76,7 @@
                     <a href="criadero.html" class="text-gray-600 font-medium hover:text-accent transition">Criadero</a>
                     <a href="hospedaje.html" class="text-gray-600 font-medium hover:text-accent transition">Hospedaje</a>
                     <a href="ubicacion.html" class="text-gray-600 font-medium hover:text-accent transition">Ubicación</a>
-                    <a href="https://wa.me/51943215876" target="_blank" class="bg-accent text-white px-4 py-2 rounded-full font-medium hover:bg-opacity-90 transition">
+                    <a href="https://wa.me/51957878409" target="_blank" class="bg-accent text-white px-4 py-2 rounded-full font-medium hover:bg-opacity-90 transition">
                         ¡Reserva Ahora! <i class="fas fa-arrow-right ml-1"></i>
                     </a>
                 </nav>
@@ -91,7 +91,7 @@
                     <a href="criadero.html" class="text-gray-600 font-medium py-2">Criadero</a>
                     <a href="hospedaje.html" class="text-gray-600 font-medium py-2">Hospedaje</a>
                     <a href="ubicacion.html" class="text-gray-600 font-medium py-2">Ubicación</a>
-                    <a href="https://wa.me/51943215876" target="_blank" class="bg-accent text-white px-4 py-2 rounded-full font-medium text-center">
+                    <a href="https://wa.me/51957878409" target="_blank" class="bg-accent text-white px-4 py-2 rounded-full font-medium text-center">
                         ¡Reserva Ahora! <i class="fas fa-arrow-right ml-1"></i>
                     </a>
                 </div>
@@ -227,23 +227,27 @@
         </section>
 
         <!-- Payment Info -->
-        <div class="mt-1 sm:mt-2 bg-accent/10 rounded-md sm:rounded-lg p-1 sm:p-2 shadow-sm relative overflow-hidden">
+        <div class="mt-1 sm:mt-2 bg-accent/10 rounded-md sm:rounded-lg p-2 sm:p-4 shadow-sm relative overflow-hidden">
             <div
                 class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-secondary to-transparent">
             </div>
 
-            <h4 class="text-primary font-playfair font-semibold text-2xs sm:text-base mb-0.5 sm:mb-1">Formas de Pago -
+            <h4 class="text-primary font-playfair font-semibold text-xs sm:text-base mb-1 sm:mb-2">Formas de Pago -
                 para reservas o llevar:
             </h4>
+            
+            <p class="text-gray-600 text-2xs sm:text-xs mb-1 sm:mb-2">
+                La confirmación y reserva es previo pago.
+            </p>
 
-            <div class="grid grid-cols-1 gap-0.5 sm:gap-1">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-1 sm:gap-2">
                 <!-- Yape -->
                 <div class="bg-white/60 rounded p-1 sm:p-1.5 shadow-sm hover:shadow transition-all">
                     <h5 class="text-purple-800 font-medium text-2xs sm:text-xs mb-0">Yape</h5>
                     <div class="flex items-center justify-center gap-0.5">
                         <button onclick="copyToClipboard('957878409', 'yape-tooltip')"
                             class="flex items-center gap-0.5 bg-purple-100 text-purple-800 py-0.5 px-1 rounded text-3xs sm:text-xs">
-                            <span>957878409</span>
+                            <span>957 878 409</span>
                             <i class="far fa-copy text-2xs"></i>
                             <div id="yape-tooltip"
                                 class="absolute bg-black text-white text-2xs px-1 py-0.5 rounded opacity-0 transition-opacity duration-300 -translate-y-8">
@@ -252,8 +256,27 @@
                         </button>
                     </div>
                     <p class="text-2xs sm:text-xs italic mt-0 sm:mt-0.5 text-gray-600 text-center">"Empresa Isla de
-                        Canrash"</p>
+                        Canrash s.r.l"</p>
                 </div>
+                
+                <!-- Transferencia BCP -->
+                <div class="bg-white/60 rounded p-1 sm:p-1.5 shadow-sm hover:shadow transition-all">
+                    <h5 class="text-blue-800 font-medium text-2xs sm:text-xs mb-0">Transferencia BCP</h5>
+                    <div class="flex flex-col items-center justify-center">
+                        <p class="text-2xs sm:text-xs">Cuenta: 375 2654572 0 35</p>
+                        <p class="text-2xs sm:text-xs">CCI: 00237500265457203546</p>
+                    </div>
+                    <p class="text-2xs sm:text-xs italic mt-0 sm:mt-0.5 text-gray-600 text-center">"Empresa Isla de
+                        Canrash s.r.l"</p>
+                </div>
+            </div>
+            
+            <!-- Reservas -->
+            <div class="mt-1.5 sm:mt-2 bg-white/60 rounded p-1 sm:p-1.5 shadow-sm text-center">
+                <h5 class="text-green-800 font-medium text-2xs sm:text-xs mb-0">Para Reservas</h5>
+                <p class="text-2xs sm:text-xs text-gray-700">
+                    Indique por WhatsApp: platos que desea, mesa para cuántas personas, fecha y hora de llegada.
+                </p>
             </div>
         </div>
         
@@ -335,7 +358,7 @@
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-phone text-accent mr-3"></i>
-                            <span class="text-gray-400">+51 957 878 409</span>
+                            <a href="https://wa.me/51957878409" target="_blank" class="text-gray-400 hover:text-white">+51 957 878 409</a>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-envelope text-accent mr-3"></i>
