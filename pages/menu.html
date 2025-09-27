@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta - Laguna Canrash</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#1e88e5', // Main blue (water)
+                        'secondary': '#0d47a1', // Dark blue (deep water)
+                        'accent': '#ff7043', // Coral/orange (trout color)
+                        'earth': '#8d6e63', // Earth tones for rustic feel
+                        'muted': '#90a4ae', // Muted blue-grey
+                        background: '#f9f7f4',
+                        border: '#e0d7c7',
+                        text: '#333',
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'sans-serif'],
+                        'body': ['Poppins', 'sans-serif'],
+                        'playfair': ['"Playfair Display"', 'serif'],
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                    fontSize: {
+                        '2xs': '0.65rem',
+                        '3xs': '0.55rem',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body class="font-body bg-background text-text min-h-screen bg-gradient-to-br from-accent/10 to-white/80">
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/51943215876" target="_blank" class="whatsapp-button fixed bottom-6 right-6 bg-green-500 text-white rounded-full p-3 shadow-lg z-50 hover:bg-green-600 transition duration-300 flex items-center">
+        <i class="fab fa-whatsapp text-3xl"></i>
+        <span class="ml-2 mr-2 font-medium hidden md:inline">¡Reserva Ya!</span>
+    </a>
+
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <a href="../index.html" class="flex items-center">
+                    <img src="../assets/images/logos/logo-sin-bg.png" alt="Logo Laguna Canrash" class="h-12">
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                    <i class="fas fa-bars text-2xl text-primary"></i>
+                </button>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="../index.html" class="text-gray-600 font-medium hover:text-accent transition">Inicio</a>
+                    <a href="restaurante.html" class="text-gray-600 font-medium hover:text-accent transition">Restaurante</a>
+                    <a href="menu.html" class="text-primary font-medium hover:text-accent transition">Carta</a>
+                    <a href="criadero.html" class="text-gray-600 font-medium hover:text-accent transition">Criadero</a>
+                    <a href="hospedaje.html" class="text-gray-600 font-medium hover:text-accent transition">Hospedaje</a>
+                    <a href="ubicacion.html" class="text-gray-600 font-medium hover:text-accent transition">Ubicación</a>
+                    <a href="https://wa.me/51943215876" target="_blank" class="bg-accent text-white px-4 py-2 rounded-full font-medium hover:bg-opacity-90 transition">
+                        ¡Reserva Ahora! <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </nav>
+            </div>
+            
+            <!-- Mobile Navigation (Hidden by default) -->
+            <nav id="mobile-menu" class="hidden md:hidden py-4 border-t border-gray-100">
+                <div class="flex flex-col space-y-3">
+                    <a href="../index.html" class="text-gray-600 font-medium py-2">Inicio</a>
+                    <a href="restaurante.html" class="text-gray-600 font-medium py-2">Restaurante</a>
+                    <a href="menu.html" class="text-primary font-medium py-2">Carta</a>
+                    <a href="criadero.html" class="text-gray-600 font-medium py-2">Criadero</a>
+                    <a href="hospedaje.html" class="text-gray-600 font-medium py-2">Hospedaje</a>
+                    <a href="ubicacion.html" class="text-gray-600 font-medium py-2">Ubicación</a>
+                    <a href="https://wa.me/51943215876" target="_blank" class="bg-accent text-white px-4 py-2 rounded-full font-medium text-center">
+                        ¡Reserva Ahora! <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Carta Container -->
+    <div class="max-w-3xl mx-auto my-1 sm:my-6 p-2 sm:p-6 bg-white rounded-md sm:rounded-2xl shadow-lg border border-border relative overflow-hidden" id="carta-container">
+        <!-- Decorative header bar -->
+        <div class="absolute top-0 left-0 right-0 h-0.5 sm:h-1 bg-gradient-to-r from-secondary to-primary"></div>
+
+        <!-- Header Section -->
+        <header class="text-center mb-1 sm:mb-4">
+            <div class="flex justify-center mb-1 sm:mb-2">
+                <img src="../assets/images/logos/logo con fondo blanco.jpg" alt="Logo Laguna Canrash"
+                    class="w-8 h-8 sm:w-20 sm:h-20 rounded-full border-0 sm:border sm:border-white shadow-sm sm:shadow-md mx-1 sm:mx-2 object-cover">
+            </div>
+
+            <h2 class="font-playfair text-xl sm:text-4xl font-bold text-primary relative inline-block mb-0">
+                Laguna Canrash
+            </h2>
+
+            <h1
+                class="font-poppins text-2xs sm:text-lg uppercase tracking-wider text-primary font-medium opacity-90 mb-0.5 sm:mb-1">
+                Nuestra Carta
+            </h1>
+
+            <div class="h-0.5 w-8 sm:w-20 mx-auto bg-gradient-to-r from-secondary to-primary rounded-full my-1 sm:my-3">
+            </div>
+        </header>
+
+        <!-- Notes Section -->
+        <div class="text-center mb-1 sm:mb-2">
+            <!-- Disclamer Section -->
+            <div class="flex flex-col items-center">
+                <p
+                    class="italic text-3xs sm:text-xs text-gray-600 bg-accent/50 px-1.5 py-0 sm:px-3 sm:py-1 rounded inline-block shadow-sm">
+                    *Algunos platos aplican: anticipación 2 días y mínimo personas
+                </p>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="mt-1 mb-0.5">
+                <div class="flex justify-center items-center flex-wrap gap-1 sm:gap-2">
+                    <!-- WhatsApp -->
+                    <button onclick="copyToClipboard('957 878 409', 'whatsapp-tooltip')"
+                        class="flex items-center gap-0.5 bg-green-500 text-white py-0.5 px-1 sm:py-1 sm:px-2 rounded-full text-3xs sm:text-xs">
+                        <i class="fab fa-whatsapp text-xs sm:text-sm"></i>
+                        <span>957 878 409</span>
+                        <div id="whatsapp-tooltip"
+                            class="absolute bg-black text-white text-2xs px-1 py-0.5 rounded opacity-0 transition-opacity duration-300 -translate-y-8">
+                            ¡Copiado!
+                        </div>
+                    </button>
+
+                    <!-- Social Media -->
+                    <div class="flex items-center gap-1 sm:gap-3">
+                        <a href="https://facebook.com/lagunacanrash" target="_blank"
+                            class="text-blue-600 hover:text-blue-800 transition">
+                            <i class="fab fa-facebook text-xs sm:text-sm"></i>
+                        </a>
+                        <a href="https://instagram.com/lagunacanrash" target="_blank"
+                            class="text-pink-600 hover:text-pink-800 transition">
+                            <i class="fab fa-instagram text-xs sm:text-sm"></i>
+                        </a>
+                        <a href="https://tiktok.com/@lagunacanrash" target="_blank"
+                            class="text-black hover:text-gray-800 transition">
+                            <i class="fab fa-tiktok text-xs sm:text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Sections - Loading Indicator -->
+        <div id="loading-indicator" class="text-center py-8">
+            <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+            <p class="mt-4 text-gray-600">Cargando carta...</p>
+        </div>
+
+        <!-- Menu Sections - Error Message -->
+        <div id="error-message" class="hidden text-center py-8">
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-red-100 text-red-500 rounded-full mb-4">
+                <i class="fas fa-exclamation-circle text-2xl"></i>
+            </div>
+            <p class="text-red-500">No se pudo cargar la carta en este momento. Por favor intente más tarde.</p>
+        </div>
+
+        <!-- Menu Sections - Trucha Section -->
+        <section id="trucha-section"
+            class="hidden mb-1.5 sm:mb-2 bg-white/80 rounded-md sm:rounded-lg p-1.5 sm:p-2 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-0.5">
+            <h3
+                class="font-playfair font-bold text-2xs sm:text-lg text-primary text-center uppercase relative inline-block left-1/2 transform -translate-x-1/2 mb-0.5 sm:mb-1 px-2 sm:px-3 pb-0.5">
+                A BASE DE TRUCHA
+                <span
+                    class="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-secondary to-transparent"></span>
+            </h3>
+
+            <ul class="space-y-0 sm:space-y-0.5" id="trucha-items">
+                <!-- Items will be populated dynamically -->
+            </ul>
+        </section>
+
+        <!-- Menu Sections - Pollo Section -->
+        <section id="pollo-section"
+            class="hidden mb-1.5 sm:mb-2 bg-white/80 rounded-md sm:rounded-lg p-1.5 sm:p-2 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-0.5">
+            <h3
+                class="font-playfair font-bold text-2xs sm:text-lg text-primary text-center uppercase relative inline-block left-1/2 transform -translate-x-1/2 mb-0.5 sm:mb-1 px-2 sm:px-3 pb-0.5">
+                A BASE DE POLLO
+                <span
+                    class="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-secondary to-transparent"></span>
+            </h3>
+
+            <ul class="space-y-0 sm:space-y-0.5" id="pollo-items">
+                <!-- Items will be populated dynamically -->
+            </ul>
+        </section>
+
+        <!-- Menu Sections - Otros Section -->
+        <section id="otros-section"
+            class="hidden mb-1.5 sm:mb-2 bg-white/80 rounded-md sm:rounded-lg p-1.5 sm:p-2 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-0.5">
+            <h3
+                class="font-playfair font-bold text-2xs sm:text-lg text-primary text-center uppercase relative inline-block left-1/2 transform -translate-x-1/2 mb-0.5 sm:mb-1 px-2 sm:px-3 pb-0.5">
+                OTROS PLATOS
+                <span
+                    class="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-secondary to-transparent"></span>
+            </h3>
+
+            <ul class="space-y-0 sm:space-y-0.5" id="otros-items">
+                <!-- Items will be populated dynamically -->
+            </ul>
+        </section>
+
+        <!-- Payment Info -->
+        <div class="mt-1 sm:mt-2 bg-accent/10 rounded-md sm:rounded-lg p-1 sm:p-2 shadow-sm relative overflow-hidden">
+            <div
+                class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-secondary to-transparent">
+            </div>
+
+            <h4 class="text-primary font-playfair font-semibold text-2xs sm:text-base mb-0.5 sm:mb-1">Formas de Pago -
+                para reservas o llevar:
+            </h4>
+
+            <div class="grid grid-cols-1 gap-0.5 sm:gap-1">
+                <!-- Yape -->
+                <div class="bg-white/60 rounded p-1 sm:p-1.5 shadow-sm hover:shadow transition-all">
+                    <h5 class="text-purple-800 font-medium text-2xs sm:text-xs mb-0">Yape</h5>
+                    <div class="flex items-center justify-center gap-0.5">
+                        <button onclick="copyToClipboard('957878409', 'yape-tooltip')"
+                            class="flex items-center gap-0.5 bg-purple-100 text-purple-800 py-0.5 px-1 rounded text-3xs sm:text-xs">
+                            <span>957878409</span>
+                            <i class="far fa-copy text-2xs"></i>
+                            <div id="yape-tooltip"
+                                class="absolute bg-black text-white text-2xs px-1 py-0.5 rounded opacity-0 transition-opacity duration-300 -translate-y-8">
+                                ¡Copiado!
+                            </div>
+                        </button>
+                    </div>
+                    <p class="text-2xs sm:text-xs italic mt-0 sm:mt-0.5 text-gray-600 text-center">"Empresa Isla de
+                        Canrash"</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer
+            class="text-center mt-1 sm:mt-2 pt-0.5 sm:pt-1 border-t border-border text-gray-500 text-2xs sm:text-xs relative">
+            <div
+                class="absolute top-0 left-1/2 transform -translate-x-1/2 w-6 sm:w-12 h-0.5 bg-gradient-to-r from-transparent via-secondary to-transparent">
+            </div>
+            <p>© 2025 Laguna Canrash</p>
+            <p class="text-3xs sm:text-2xs text-gray-400">Última actualización: <span id="fecha-actualizacion">Cargando...</span></p>
+        </footer>
+    </div>
+
+    <!-- Botón para copiar como imagen -->
+    <div class="fixed bottom-3 right-3 sm:bottom-5 sm:right-5 z-50">
+        <button id="copyImageBtn"
+            class="flex items-center gap-1 sm:gap-2 bg-primary hover:bg-primary/90 text-white py-1 px-2.5 sm:py-2 sm:px-4 rounded-full text-xs sm:text-sm font-medium transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 sm:w-4 sm:h-4 icon-copy" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 sm:w-4 sm:h-4 icon-success hidden" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span id="copyBtnText">Copiar Carta</span>
+        </button>
+        <div id="statusMessage"
+            class="mt-1 sm:mt-2 text-xs sm:text-sm font-medium hidden absolute right-0 w-36 sm:w-48 bg-white p-1.5 sm:p-2 rounded-lg shadow-lg text-center">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Logo & Description -->
+                <div class="col-span-1 md:col-span-2">
+                    <a href="../index.html" class="inline-block mb-4">
+                        <img src="../assets/images/logos/logo-sin-bg.png" alt="Logo Laguna Canrash" class="h-12">
+                    </a>
+                    <p class="text-gray-400 mb-4">
+                        La auténtica trucha arcoiris, de nuestras aguas a tu mesa. Disfruta de la mejor experiencia gastronómica con vista panorámica a la hermosa Laguna Canrash.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://facebook.com/lagunacanrash" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com/lagunacanrash" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://tiktok.com/@lagunacanrash" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Enlaces Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition">Inicio</a></li>
+                        <li><a href="restaurante.html" class="text-gray-400 hover:text-white transition">Restaurante</a></li>
+                        <li><a href="criadero.html" class="text-gray-400 hover:text-white transition">Criadero</a></li>
+                        <li><a href="hospedaje.html" class="text-gray-400 hover:text-white transition">Hospedaje</a></li>
+                        <li><a href="ubicacion.html" class="text-gray-400 hover:text-white transition">Ubicación</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contáctanos</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-accent mt-1 mr-3"></i>
+                            <span class="text-gray-400">Laguna Canrash, San Marcos – Huari – Ancash - Perú</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-accent mr-3"></i>
+                            <span class="text-gray-400">+51 957 878 409</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-accent mr-3"></i>
+                            <span class="text-gray-400">contacto@lagunacanrash.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="border-t border-gray-700 pt-6 text-center text-gray-500 text-sm">
+                <p>© 2025 Laguna Canrash. Todos los derechos reservados.</p>
+                <p class="mt-2">
+                    Diseño por <a href="#" class="text-accent hover:text-white transition">Isla de Canrash</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- html2canvas Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <script>
+        // Función para copiar al portapapeles
+        function copyToClipboard(text, tooltipId) {
+            // Create temporary input element
+            const tempInput = document.createElement('input');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+
+            // Select the text
+            tempInput.select();
+            tempInput.setSelectionRange(0, 99999); // For mobile devices
+
+            // Copy the text
+            document.execCommand('copy');
+
+            // Remove the temporary element
+            document.body.removeChild(tempInput);
+
+            // Show tooltip
+            const tooltip = document.getElementById(tooltipId);
+            tooltip.classList.add('opacity-100');
+
+            setTimeout(() => {
+                tooltip.classList.remove('opacity-100');
+            }, 2000);
+        }
+
+        // Función para formatear precios
+        function formatPrice(price) {
+            return new Intl.NumberFormat('es-PE', {
+                style: 'currency',
+                currency: 'PEN',
+                minimumFractionDigits: 0
+            }).format(price);
+        }
+
+        // Función para formatear la fecha
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleDateString('es-PE', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+        }
+
+        // Función para cargar la carta desde la API
+        async function loadMenu() {
+            try {
+                const response = await fetch('https://admin.lagunacanrash.com/carta/carta_api');
+                const data = await response.json();
+                
+                if (!data.success) {
+                    throw new Error(data.error || 'Error al cargar la carta');
+                }
+                
+                // Ocultar indicador de carga
+                document.getElementById('loading-indicator').classList.add('hidden');
+                
+                // Mostrar fecha de actualización
+                document.getElementById('fecha-actualizacion').textContent = formatDate(data.carta.fecha_actualizacion);
+                
+                // Procesar productos por categoría
+                const { trucha, pollo, otros } = data.carta.productos;
+                
+                // Mostrar secciones solo si tienen productos
+                if (trucha && trucha.length > 0) {
+                    renderProductSection('trucha-items', 'trucha-section', trucha);
+                }
+                
+                if (pollo && pollo.length > 0) {
+                    renderProductSection('pollo-items', 'pollo-section', pollo);
+                }
+                
+                if (otros && otros.length > 0) {
+                    renderProductSection('otros-items', 'otros-section', otros);
+                }
+                
+            } catch (error) {
+                console.error('Error al cargar la carta:', error);
+                document.getElementById('loading-indicator').classList.add('hidden');
+                document.getElementById('error-message').classList.remove('hidden');
+            }
+        }
+        
+        // Función para renderizar una sección de productos
+        function renderProductSection(containerId, sectionId, products) {
+            const container = document.getElementById(containerId);
+            const section = document.getElementById(sectionId);
+            
+            // Limpiar contenedor
+            container.innerHTML = '';
+            
+            // Ordenar productos por nombre
+            products.sort((a, b) => a.nombre.localeCompare(b.nombre));
+            
+            // Crear elementos para cada producto
+            products.forEach(product => {
+                const li = document.createElement('li');
+                li.className = 'flex justify-between items-center py-0.5 border-b border-dashed border-secondary/20 hover:bg-accent/30 px-1 rounded transition-colors';
+                
+                const nameSpan = document.createElement('span');
+                nameSpan.className = 'font-poppins text-primary font-medium text-2xs sm:text-sm';
+                nameSpan.textContent = product.nombre;
+                
+                const priceSpan = document.createElement('span');
+                priceSpan.className = 'font-poppins font-semibold text-2xs sm:text-sm bg-accent/20 py-0 px-1 sm:py-0.5 sm:px-2 rounded-full text-accent';
+                priceSpan.textContent = formatPrice(product.precio);
+                
+                li.appendChild(nameSpan);
+                li.appendChild(priceSpan);
+                container.appendChild(li);
+            });
+            
+            // Mostrar sección
+            section.classList.remove('hidden');
+        }
+        
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Función para copiar la carta como imagen
+        document.getElementById('copyImageBtn').addEventListener('click', function () {
+            const statusMessage = document.getElementById('statusMessage');
+            const element = document.querySelector('#carta-container'); // El contenedor de la carta
+            const copyBtn = document.getElementById('copyImageBtn');
+            const copyBtnText = document.getElementById('copyBtnText');
+            const iconCopy = document.querySelector('.icon-copy');
+            const iconSuccess = document.querySelector('.icon-success');
+
+            // Deshabilitar botón durante el proceso
+            copyBtn.disabled = true;
+
+            // Mostrar mensaje de carga
+            statusMessage.textContent = "Generando imagen...";
+            statusMessage.classList.remove('hidden', 'text-red-600', 'text-green-600');
+            statusMessage.classList.add('text-white', 'bg-primary');
+
+            html2canvas(element, {
+                scale: 2, // Mejor resolución
+                backgroundColor: "#ffffff",
+                logging: false,
+                useCORS: true,
+            }).then(canvas => {
+                // Convertir canvas a blob
+                canvas.toBlob(function (blob) {
+                    try {
+                        // Crear un objeto ClipboardItem
+                        const item = new ClipboardItem({ "image/png": blob });
+                        
+                        // Escribir al portapapeles
+                        navigator.clipboard.write([item]).then(() => {
+                            // Cambiar el texto del botón temporalmente
+                            copyBtnText.textContent = "¡Copiado!";
+                            iconCopy.classList.add('hidden');
+                            iconSuccess.classList.remove('hidden');
+                            
+                            statusMessage.textContent = "¡Imagen copiada al portapapeles!";
+                            statusMessage.classList.remove('hidden', 'bg-primary');
+                            statusMessage.classList.add('bg-green-100', 'text-green-700');
+                            
+                            // Restaurar el botón después de 3 segundos
+                            setTimeout(() => {
+                                copyBtnText.textContent = "Copiar Carta";
+                                copyBtn.disabled = false;
+                                iconCopy.classList.remove('hidden');
+                                iconSuccess.classList.add('hidden');
+                                
+                                // Ocultar el mensaje después de 2 segundos más
+                                setTimeout(() => {
+                                    statusMessage.classList.add('hidden');
+                                }, 2000);
+                            }, 3000);
+                        }).catch(err => {
+                            console.error("Error al copiar la imagen:", err);
+                            statusMessage.textContent = "No se pudo copiar la imagen. Intente con otro navegador.";
+                            statusMessage.classList.remove('hidden', 'bg-primary');
+                            statusMessage.classList.add('bg-red-100', 'text-red-700');
+                            
+                            // Restaurar el botón
+                            copyBtn.disabled = false;
+                            
+                            // Ocultar el mensaje después de 5 segundos
+                            setTimeout(() => {
+                                statusMessage.classList.add('hidden');
+                            }, 5000);
+                        });
+                    } catch (err) {
+                        console.error("Error al procesar la imagen:", err);
+                        statusMessage.textContent = "No se pudo copiar la imagen: " + err.message;
+                        statusMessage.classList.remove('hidden', 'bg-primary');
+                        statusMessage.classList.add('bg-red-100', 'text-red-700');
+                        
+                        // Restaurar el botón
+                        copyBtn.disabled = false;
+                        
+                        // Ocultar el mensaje después de 5 segundos
+                        setTimeout(() => {
+                            statusMessage.classList.add('hidden');
+                        }, 5000);
+                    }
+                });
+            }).catch(err => {
+                statusMessage.textContent = "Error al generar la imagen: " + err.message;
+                statusMessage.classList.remove('hidden', 'bg-primary');
+                statusMessage.classList.add('bg-red-100', 'text-red-700');
+
+                // Restaurar el botón
+                copyBtn.disabled = false;
+
+                // Ocultar el mensaje después de 5 segundos
+                setTimeout(() => {
+                    statusMessage.classList.add('hidden');
+                }, 5000);
+
+                console.error("Error generando imagen:", err);
+            });
+        });
+
+        // Cargar menú al iniciar la página
+        document.addEventListener('DOMContentLoaded', function() {
+            loadMenu();
+        });
+    </script>
+</body>
+</html>

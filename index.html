@@ -46,8 +46,9 @@
 </head>
 <body class="font-body bg-gray-50 text-gray-800">
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/51943215876" target="_blank" class="whatsapp-button fixed bottom-6 right-6 bg-green-500 text-white rounded-full p-3 shadow-lg z-50 hover:bg-green-600 transition duration-300">
+    <a href="https://wa.me/51943215876" target="_blank" class="whatsapp-button fixed bottom-6 right-6 bg-green-500 text-white rounded-full p-3 shadow-lg z-50 hover:bg-green-600 transition duration-300 flex items-center">
         <i class="fab fa-whatsapp text-3xl"></i>
+        <span class="ml-2 mr-2 font-medium hidden md:inline">¡Reserva Ya!</span>
     </a>
 
     <!-- Header/Navigation -->
@@ -68,11 +69,12 @@
                 <nav class="hidden md:flex items-center space-x-6">
                     <a href="index.html" class="text-primary font-medium hover:text-accent transition">Inicio</a>
                     <a href="pages/restaurante.html" class="text-gray-600 font-medium hover:text-accent transition">Restaurante</a>
+                    <a href="pages/menu.html" class="text-gray-600 font-medium hover:text-accent transition">Carta</a>
                     <a href="pages/criadero.html" class="text-gray-600 font-medium hover:text-accent transition">Criadero</a>
                     <a href="pages/hospedaje.html" class="text-gray-600 font-medium hover:text-accent transition">Hospedaje</a>
                     <a href="pages/ubicacion.html" class="text-gray-600 font-medium hover:text-accent transition">Ubicación</a>
                     <a href="https://wa.me/51943215876" target="_blank" class="bg-accent text-white px-4 py-2 rounded-full font-medium hover:bg-opacity-90 transition">
-                        Reservar por WhatsApp
+                        ¡Reserva Ahora! <i class="fas fa-arrow-right ml-1"></i>
                     </a>
                 </nav>
             </div>
@@ -82,11 +84,12 @@
                 <div class="flex flex-col space-y-3">
                     <a href="index.html" class="text-primary font-medium py-2">Inicio</a>
                     <a href="pages/restaurante.html" class="text-gray-600 font-medium py-2">Restaurante</a>
+                    <a href="pages/menu.html" class="text-gray-600 font-medium py-2">Carta</a>
                     <a href="pages/criadero.html" class="text-gray-600 font-medium py-2">Criadero</a>
                     <a href="pages/hospedaje.html" class="text-gray-600 font-medium py-2">Hospedaje</a>
                     <a href="pages/ubicacion.html" class="text-gray-600 font-medium py-2">Ubicación</a>
                     <a href="https://wa.me/51943215876" target="_blank" class="bg-accent text-white px-4 py-2 rounded-full font-medium text-center">
-                        Reservar por WhatsApp
+                        ¡Reserva Ahora! <i class="fas fa-arrow-right ml-1"></i>
                     </a>
                 </div>
             </nav>
@@ -98,17 +101,17 @@
         <div class="container mx-auto px-4 py-24 md:py-36 flex items-center hero-content">
             <div class="max-w-2xl">
                 <h1 class="text-4xl md:text-5xl font-heading font-bold mb-6 leading-tight">
-                    Laguna Canrash: La auténtica trucha arcoíris, de nuestras aguas a tu mesa
+                    Trucha Premium en Laguna Canrash
                 </h1>
                 <p class="text-lg md:text-xl mb-8 text-gray-200">
-                    Disfruta de una experiencia única en Áncash-Perú, a solo 3 horas de Huaraz. Restaurante, criadero y hospedaje en un entorno natural incomparable.
+                    Restaurante • Criadero • Hospedaje • A 3h de Huaraz
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
                     <a href="pages/restaurante.html" class="bg-accent text-white px-6 py-3 rounded-full font-medium hover:bg-opacity-90 transition text-center">
-                        Ver Menú del Restaurante
+                        Descubre Nuestro Menú <i class="fas fa-utensils ml-1"></i>
                     </a>
                     <a href="pages/criadero.html" class="bg-white text-primary px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition text-center">
-                        Cotizar Trucha por Mayor
+                        Compra Trucha Premium <i class="fas fa-fish ml-1"></i>
                     </a>
                 </div>
             </div>
@@ -133,17 +136,18 @@
     <!-- Nuestra Experiencia Section -->
     <section class="py-16 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-heading font-bold text-center mb-12">Nuestra Experiencia</h2>
+            <h2 class="text-3xl font-heading font-bold text-center mb-12">Lo Que Ofrecemos</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Restaurante -->
-                <div class="bg-gray-50 rounded-xl p-8 text-center shadow-md hover:shadow-lg transition">
+                <div class="bg-gray-50 rounded-xl p-8 text-center shadow-md hover:shadow-lg transition relative">
+                    <div class="absolute -top-3 -right-3 bg-accent text-white text-xs px-3 py-1 rounded-full shadow-md">Más Popular</div>
                     <div class="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 text-primary rounded-full mb-6">
                         <i class="fas fa-utensils text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-heading font-semibold mb-4">Restaurante</h3>
                     <p class="text-gray-600">
-                        Disfruta del sabor inigualable de nuestra trucha arcoíris, preparada con recetas tradicionales y servida en un entorno natural impresionante.
+                        Trucha premium con vista panorámica a la laguna.
                     </p>
                     <a href="pages/restaurante.html" class="inline-block mt-6 text-primary font-medium hover:text-accent">
                         Conoce más <i class="fas fa-arrow-right ml-1"></i>
@@ -157,7 +161,7 @@
                     </div>
                     <h3 class="text-xl font-heading font-semibold mb-4">Criadero</h3>
                     <p class="text-gray-600">
-                        Calidad que nos distingue. Nuestras truchas son criadas con ovas importadas de Canadá, logrando un sabor y textura similar al salmón.
+                        Trucha premium con ovas canadienses. Sabor y textura similar al salmón.
                     </p>
                     <a href="pages/criadero.html" class="inline-block mt-6 text-primary font-medium hover:text-accent">
                         Conoce más <i class="fas fa-arrow-right ml-1"></i>
@@ -171,7 +175,7 @@
                     </div>
                     <h3 class="text-xl font-heading font-semibold mb-4">Hospedaje</h3>
                     <p class="text-gray-600">
-                        Descanso en la naturaleza. Disfruta de una experiencia rústica y auténtica en nuestras habitaciones con vista a la impresionante laguna.
+                        Habitaciones rústicas con vista a la laguna.
                     </p>
                     <a href="pages/hospedaje.html" class="inline-block mt-6 text-primary font-medium hover:text-accent">
                         Conoce más <i class="fas fa-arrow-right ml-1"></i>
@@ -184,9 +188,9 @@
     <!-- Testimonios/Galería Section -->
     <section class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-heading font-bold text-center mb-4">Nuestra Experiencia en Imágenes</h2>
+            <h2 class="text-3xl font-heading font-bold text-center mb-4">Una Imágen Vale Más Que Mil Palabras</h2>
             <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-                Descubre la belleza de nuestro entorno, la calidad de nuestros platillos y la experiencia única que ofrecemos a nuestros visitantes.
+                Fotos que hablan por sí solas.
             </p>
             
             <!-- Gallery Grid -->
@@ -216,7 +220,7 @@
                             <i class="fas fa-quote-left text-3xl"></i>
                         </div>
                         <blockquote class="text-lg text-gray-700 italic mb-6">
-                            "La experiencia en Laguna Canrash fue mágica. La trucha es la más fresca y deliciosa que he probado, y el entorno natural es espectacular. El paseo en bote por la laguna cristalina con vista a los nevados es algo que recordaré toda mi vida. Definitivamente volveré."
+                            "La mejor trucha que he probado. El paisaje es impresionante y el paseo en bote inolvidable. ¡Volveré!"
                         </blockquote>
                         <div>
                             <p class="font-medium text-gray-800">Anna Schmidt</p>
@@ -233,13 +237,13 @@
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center gap-8">
                 <div class="w-full md:w-1/2">
-                    <h2 class="text-3xl font-heading font-bold mb-6">Visítanos en Laguna Canrash</h2>
+                    <h2 class="text-3xl font-heading font-bold mb-6">¡Visítanos Hoy!</h2>
                     <p class="text-gray-600 mb-6">
-                        Estamos estratégicamente ubicados en la hermosa Laguna Canrash, San Marcos – Huari – Ancash - Perú.
-                        A solo 3 horas de Huaraz y cerca de las principales mineras de la región.
+                        Laguna Canrash, San Marcos – Huari – Ancash - Perú.<br>
+                        A 3 horas de Huaraz | Cerca de Antamina
                     </p>
                     <a href="pages/ubicacion.html" class="inline-flex items-center bg-primary text-white px-6 py-3 rounded-full font-medium hover:bg-secondary transition">
-                        <i class="fas fa-map-marker-alt mr-2"></i> Cómo Llegar
+                        <i class="fas fa-map-marker-alt mr-2"></i> Lléganos Fácil
                     </a>
                 </div>
                 <div class="w-full md:w-1/2 h-80 bg-gray-200 rounded-xl overflow-hidden shadow-md relative group">
@@ -260,6 +264,21 @@
         </div>
     </section>
 
+    <!-- CTA Banner -->
+    <section class="py-10 bg-accent">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl md:text-3xl font-heading font-bold text-white mb-4">¿Listo para una experiencia culinaria inolvidable?</h2>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://wa.me/51943215876" target="_blank" class="inline-flex items-center justify-center bg-white text-accent px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition">
+                    <i class="fab fa-whatsapp mr-2 text-xl"></i> Reserva una Mesa
+                </a>
+                <a href="pages/restaurante.html" class="inline-flex items-center justify-center bg-primary text-white px-6 py-3 rounded-full font-medium hover:bg-secondary transition">
+                    <i class="fas fa-utensils mr-2"></i> Ver Menú Completo
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-gray-800 text-white pt-12 pb-6">
         <div class="container mx-auto px-4">
@@ -270,8 +289,7 @@
                         <img src="assets/images/logos/logo-sin-bg.png" alt="Logo Laguna Canrash" class="h-10">
                     </div>
                     <p class="text-gray-400 mb-4">
-                        Laguna Canrash ofrece una experiencia gastronómica única con la auténtica trucha arcoíris, 
-                        criada en jaulas flotantes en la hermosa Laguna Canrash, Áncash-Perú.
+                        Trucha premium directo de la laguna a tu mesa.
                     </p>
                     <div class="flex space-x-4">
                         <a href="https://www.facebook.com/LagunaCanrashPeru/" target="_blank" class="text-gray-400 hover:text-white transition">
