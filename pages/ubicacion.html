@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubicación y Contacto - Empresa Isla de Canrash (EICA)</title>
+    <meta name="description" content="Encuéntranos en la hermosa Laguna Canrash, San Marcos – Huari – Ancash - Perú. A solo 3 horas de Huaraz, cerca de mineras como Antamina.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#1e88e5',
+                        'secondary': '#0d47a1',
+                        'accent': '#ff7043',
+                        'earth': '#8d6e63',
+                        'muted': '#90a4ae',
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'sans-serif'],
+                        'body': ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-body bg-gray-50 text-gray-800">
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/51999999999" target="_blank" class="whatsapp-button fixed bottom-6 right-6 bg-green-500 text-white rounded-full p-3 shadow-lg z-50 hover:bg-green-600 transition duration-300">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <a href="../index.html" class="flex items-center">
+                    <!-- Replace with actual logo later -->
+                    <span class="text-2xl font-heading font-bold text-primary">EICA</span>
+                    <span class="ml-2 text-sm font-medium text-muted">Laguna Canrash</span>
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                    <i class="fas fa-bars text-2xl text-primary"></i>
+                </button>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="../index.html" class="text-gray-600 font-medium hover:text-accent transition">Inicio</a>
+                    <a href="restaurante.html" class="text-gray-600 font-medium hover:text-accent transition">Restaurante</a>
+                    <a href="criadero.html" class="text-gray-600 font-medium hover:text-accent transition">Criadero</a>
+                    <a href="hospedaje.html" class="text-gray-600 font-medium hover:text-accent transition">Hospedaje</a>
+                    <a href="ubicacion.html" class="text-primary font-medium hover:text-accent transition">Ubicación</a>
+                    <a href="https://wa.me/51999999999" target="_blank" class="bg-accent text-white px-4 py-2 rounded-full font-medium hover:bg-opacity-90 transition">
+                        Reservar por WhatsApp
+                    </a>
+                </nav>
+            </div>
+            
+            <!-- Mobile Navigation (Hidden by default) -->
+            <nav id="mobile-menu" class="hidden md:hidden py-4 border-t border-gray-100">
+                <div class="flex flex-col space-y-3">
+                    <a href="../index.html" class="text-gray-600 font-medium py-2">Inicio</a>
+                    <a href="restaurante.html" class="text-gray-600 font-medium py-2">Restaurante</a>
+                    <a href="criadero.html" class="text-gray-600 font-medium py-2">Criadero</a>
+                    <a href="hospedaje.html" class="text-gray-600 font-medium py-2">Hospedaje</a>
+                    <a href="ubicacion.html" class="text-primary font-medium py-2">Ubicación</a>
+                    <a href="https://wa.me/51999999999" target="_blank" class="bg-accent text-white px-4 py-2 rounded-full font-medium text-center">
+                        Reservar por WhatsApp
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gray-800 text-white py-16" style="background-image: url('../assets/images/ubicacion-hero.jpg'); background-size: cover; background-position: center; position: relative;">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl md:text-5xl font-heading font-bold mb-6">
+                    Encuéntranos y Contáctanos
+                </h1>
+                <p class="text-xl text-gray-200 mb-8 max-w-2xl">
+                    Estamos ubicados en la hermosa Laguna Canrash, San Marcos – Huari – Ancash - Perú.
+                    A solo 3 horas de Huaraz y cerca de las principales mineras de la región.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-heading font-bold text-center mb-12">Nuestra Ubicación</h2>
+            
+            <!-- Interactive Map -->
+            <div class="bg-gray-100 rounded-xl overflow-hidden shadow-lg h-[500px] mb-12">
+                <!-- Google Maps Embed -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.6141020372383!2d-77.13266845776138!3d-9.53865881780579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91a8ddd8c2eb1f45%3A0x7e9b99faebc1f80c!2sLaguna%20Canrash!5e0!3m2!1ses!2spe!4v1634567890123!5m2!1ses!2spe" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            
+            <!-- Route Buttons -->
+            <div class="max-w-4xl mx-auto">
+                <h3 class="text-2xl font-heading font-semibold text-center mb-8">¿Cómo llegar?</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <a href="https://www.google.com/maps/dir/Huaraz,+Perú/Laguna+Canrash/@-9.8123444,-77.2748087,11z/" target="_blank" class="bg-primary text-white px-4 py-3 rounded-lg shadow-md hover:bg-secondary transition text-center flex flex-col items-center justify-center">
+                        <i class="fas fa-map-marker-alt text-xl mb-2"></i>
+                        <span>Cómo llegar desde Huaraz</span>
+                    </a>
+                    <a href="https://www.google.com/maps/dir/Antamina,+Perú/Laguna+Canrash/@-9.6451176,-77.1227236,12z/" target="_blank" class="bg-primary text-white px-4 py-3 rounded-lg shadow-md hover:bg-secondary transition text-center flex flex-col items-center justify-center">
+                        <i class="fas fa-map-marker-alt text-xl mb-2"></i>
+                        <span>Cómo llegar desde Antamina</span>
+                    </a>
+                    <a href="https://www.google.com/maps/dir/San+Marcos,+Perú/Laguna+Canrash/@-9.5631737,-77.1418926,13z/" target="_blank" class="bg-primary text-white px-4 py-3 rounded-lg shadow-md hover:bg-secondary transition text-center flex flex-col items-center justify-center">
+                        <i class="fas fa-map-marker-alt text-xl mb-2"></i>
+                        <span>Cómo llegar desde San Marcos</span>
+                    </a>
+                    <a href="https://www.google.com/maps/dir/Conococha,+Perú/Laguna+Canrash/@-9.8770345,-77.2678328,11z/" target="_blank" class="bg-primary text-white px-4 py-3 rounded-lg shadow-md hover:bg-secondary transition text-center flex flex-col items-center justify-center">
+                        <i class="fas fa-map-marker-alt text-xl mb-2"></i>
+                        <span>Cómo llegar desde Conococha</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Directions -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-heading font-bold text-center mb-12">Indicaciones para Llegar</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- From Huaraz -->
+                    <div class="bg-white p-8 rounded-xl shadow-md">
+                        <h3 class="text-xl font-heading font-semibold mb-4 flex items-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 bg-primary text-white rounded-full mr-3 text-sm">1</span>
+                            Desde Huaraz
+                        </h3>
+                        <ul class="space-y-4">
+                            <li class="flex">
+                                <span class="text-primary mr-2">•</span>
+                                <span class="text-gray-600">Tomar la carretera hacia Catac/La Unión.</span>
+                            </li>
+                            <li class="flex">
+                                <span class="text-primary mr-2">•</span>
+                                <span class="text-gray-600">En Catac, seguir hacia San Marcos.</span>
+                            </li>
+                            <li class="flex">
+                                <span class="text-primary mr-2">•</span>
+                                <span class="text-gray-600">Desde San Marcos, tomar el desvío hacia la Laguna Canrash (hay señalización).</span>
+                            </li>
+                            <li class="flex">
+                                <span class="text-primary mr-2">•</span>
+                                <span class="text-gray-600">Tiempo aproximado de viaje: 3 horas.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- From Antamina -->
+                    <div class="bg-white p-8 rounded-xl shadow-md">
+                        <h3 class="text-xl font-heading font-semibold mb-4 flex items-center">
+                            <span class="inline-flex items-center justify-center w-8 h-8 bg-primary text-white rounded-full mr-3 text-sm">2</span>
+                            Desde Antamina
+                        </h3>
+                        <ul class="space-y-4">
+                            <li class="flex">
+                                <span class="text-primary mr-2">•</span>
+                                <span class="text-gray-600">Tomar la carretera hacia San Marcos.</span>
+                            </li>
+                            <li class="flex">
+                                <span class="text-primary mr-2">•</span>
+                                <span class="text-gray-600">En San Marcos, seguir las indicaciones hacia la Laguna Canrash.</span>
+                            </li>
+                            <li class="flex">
+                                <span class="text-primary mr-2">•</span>
+                                <span class="text-gray-600">El camino es asfaltado en su mayor parte, con un tramo final de trocha en buen estado.</span>
+                            </li>
+                            <li class="flex">
+                                <span class="text-primary mr-2">•</span>
+                                <span class="text-gray-600">Tiempo aproximado de viaje: 1 hora.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-8 p-6 bg-yellow-50 border border-yellow-200 rounded-lg">
+                    <div class="flex">
+                        <div class="flex-shrink-0">
+                            <i class="fas fa-info-circle text-yellow-500 text-xl"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-medium text-yellow-800">Recomendaciones</h4>
+                            <ul class="mt-2 space-y-2 text-yellow-700">
+                                <li class="flex">
+                                    <i class="fas fa-check-circle mr-2 mt-1"></i>
+                                    <span>Se recomienda viajar durante el día para disfrutar del paisaje y por seguridad.</span>
+                                </li>
+                                <li class="flex">
+                                    <i class="fas fa-check-circle mr-2 mt-1"></i>
+                                    <span>El camino es accesible para todo tipo de vehículos, pero se recomienda una camioneta o vehículo con mayor despeje para el último tramo.</span>
+                                </li>
+                                <li class="flex">
+                                    <i class="fas fa-check-circle mr-2 mt-1"></i>
+                                    <span>Ante cualquier duda sobre el camino, puedes contactarnos por WhatsApp para recibir orientación en tiempo real.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-heading font-bold text-center mb-12">Información de Contacto</h2>
+            
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Restaurant Contact -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition text-center">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 text-primary rounded-full mb-6">
+                        <i class="fas fa-utensils text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-semibold mb-4">Restaurante</h3>
+                    <p class="text-gray-600 mb-4">
+                        Para reservaciones o consultas sobre el restaurante.
+                    </p>
+                    <a href="https://wa.me/51999999999" target="_blank" class="inline-flex items-center text-primary hover:text-accent transition">
+                        <i class="fab fa-whatsapp mr-2"></i> +51 999 999 999
+                    </a>
+                </div>
+                
+                <!-- Corporate Contact -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition text-center">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 text-primary rounded-full mb-6">
+                        <i class="fas fa-building text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-semibold mb-4">Corporativo / Administrativo</h3>
+                    <p class="text-gray-600 mb-4">
+                        Para ventas corporativas, cotizaciones y temas administrativos.
+                    </p>
+                    <a href="mailto:administracion@lagunacanrash.com" class="inline-flex items-center text-primary hover:text-accent transition">
+                        <i class="fas fa-envelope mr-2"></i> administracion@lagunacanrash.com
+                    </a>
+                </div>
+                
+                <!-- Lodging Contact -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-md hover:shadow-lg transition text-center">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 text-primary rounded-full mb-6">
+                        <i class="fas fa-bed text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-semibold mb-4">Hospedaje</h3>
+                    <p class="text-gray-600 mb-4">
+                        Para consultas sobre disponibilidad y reservas de hospedaje.
+                    </p>
+                    <a href="https://wa.me/51999999999" target="_blank" class="inline-flex items-center text-primary hover:text-accent transition">
+                        <i class="fab fa-whatsapp mr-2"></i> +51 999 999 999
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Contact Form Card -->
+            <div class="max-w-4xl mx-auto mt-12 bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="flex flex-col md:flex-row">
+                    <div class="w-full md:w-2/5 bg-primary p-8 text-white">
+                        <h3 class="text-2xl font-heading font-semibold mb-6">Escríbenos</h3>
+                        <p class="mb-6">
+                            Completa el formulario y nos pondremos en contacto contigo lo antes posible.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-map-marker-alt mr-3 text-accent"></i>
+                                <span>Laguna Canrash, San Marcos – Huari – Ancash - Perú</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-phone-alt mr-3 text-accent"></i>
+                                <span>+51 999 999 999</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope mr-3 text-accent"></i>
+                                <span>administracion@lagunacanrash.com</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-3/5 p-8">
+                        <form action="#" method="POST" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nombre</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Teléfono</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Mensaje</label>
+                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary"></textarea>
+                            </div>
+                            <div>
+                                <button type="submit" class="w-full bg-accent text-white px-6 py-3 rounded-lg font-medium hover:bg-opacity-90 transition">Enviar Mensaje</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Logo & Description -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <!-- Replace with actual logo later -->
+                        <span class="text-2xl font-heading font-bold text-white">EICA</span>
+                        <span class="ml-2 text-sm font-medium text-gray-400">Laguna Canrash</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Empresa Isla de Canrash (EICA) ofrece una experiencia gastronómica única con la auténtica trucha arcoíris, 
+                        criada en jaulas flotantes en la hermosa Laguna Canrash, Áncash-Perú.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/LagunaCanrashPeru/" target="_blank" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/lagunacanrash/" target="_blank" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 font-heading">Enlaces Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition">Inicio</a></li>
+                        <li><a href="restaurante.html" class="text-gray-400 hover:text-white transition">Restaurante</a></li>
+                        <li><a href="criadero.html" class="text-gray-400 hover:text-white transition">Criadero</a></li>
+                        <li><a href="hospedaje.html" class="text-gray-400 hover:text-white transition">Hospedaje</a></li>
+                        <li><a href="ubicacion.html" class="text-gray-400 hover:text-white transition">Ubicación</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 font-heading">Contacto</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-accent"></i>
+                            <span class="text-gray-400">Laguna Canrash, San Marcos – Huari – Ancash - Perú</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fab fa-whatsapp mr-2 text-accent"></i>
+                            <a href="https://wa.me/51999999999" target="_blank" class="text-gray-400 hover:text-white transition">+51 999 999 999</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-accent"></i>
+                            <a href="mailto:administracion@lagunacanrash.com" class="text-gray-400 hover:text-white transition">administracion@lagunacanrash.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="border-t border-gray-700 pt-6 text-center text-gray-500 text-sm">
+                <p>© 2025 Empresa Isla de Canrash. Todos los derechos reservados.</p>
+                <p class="mt-2">
+                    <a href="https://www.lagunacanrash.com" class="hover:text-gray-400 transition">www.lagunacanrash.com</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for mobile menu toggle -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

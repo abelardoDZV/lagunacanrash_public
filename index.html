@@ -1,1 +1,312 @@
-empezando index
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa Isla de Canrash (EICA) - Trucha Premium y Restaurante Turístico</title>
+    <meta name="description" content="Laguna Canrash: La auténtica trucha arcoiris, de nuestras aguas a tu mesa, en Áncash-Perú, a 3 horas de Huaraz. Restaurante, criadero y hospedaje.">
+    
+    <!-- Favicon (add your own favicon later) -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#1e88e5', // Main blue (water)
+                        'secondary': '#0d47a1', // Dark blue (deep water)
+                        'accent': '#ff7043', // Coral/orange (trout color)
+                        'earth': '#8d6e63', // Earth tones for rustic feel
+                        'muted': '#90a4ae', // Muted blue-grey
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'sans-serif'],
+                        'body': ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-body bg-gray-50 text-gray-800">
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/51999999999" target="_blank" class="whatsapp-button fixed bottom-6 right-6 bg-green-500 text-white rounded-full p-3 shadow-lg z-50 hover:bg-green-600 transition duration-300">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center">
+                    <!-- Replace with actual logo later -->
+                    <span class="text-2xl font-heading font-bold text-primary">EICA</span>
+                    <span class="ml-2 text-sm font-medium text-muted">Laguna Canrash</span>
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                    <i class="fas fa-bars text-2xl text-primary"></i>
+                </button>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-primary font-medium hover:text-accent transition">Inicio</a>
+                    <a href="pages/restaurante.html" class="text-gray-600 font-medium hover:text-accent transition">Restaurante</a>
+                    <a href="pages/criadero.html" class="text-gray-600 font-medium hover:text-accent transition">Criadero</a>
+                    <a href="pages/hospedaje.html" class="text-gray-600 font-medium hover:text-accent transition">Hospedaje</a>
+                    <a href="pages/ubicacion.html" class="text-gray-600 font-medium hover:text-accent transition">Ubicación</a>
+                    <a href="https://wa.me/51999999999" target="_blank" class="bg-accent text-white px-4 py-2 rounded-full font-medium hover:bg-opacity-90 transition">
+                        Reservar por WhatsApp
+                    </a>
+                </nav>
+            </div>
+            
+            <!-- Mobile Navigation (Hidden by default) -->
+            <nav id="mobile-menu" class="hidden md:hidden py-4 border-t border-gray-100">
+                <div class="flex flex-col space-y-3">
+                    <a href="index.html" class="text-primary font-medium py-2">Inicio</a>
+                    <a href="pages/restaurante.html" class="text-gray-600 font-medium py-2">Restaurante</a>
+                    <a href="pages/criadero.html" class="text-gray-600 font-medium py-2">Criadero</a>
+                    <a href="pages/hospedaje.html" class="text-gray-600 font-medium py-2">Hospedaje</a>
+                    <a href="pages/ubicacion.html" class="text-gray-600 font-medium py-2">Ubicación</a>
+                    <a href="https://wa.me/51999999999" target="_blank" class="bg-accent text-white px-4 py-2 rounded-full font-medium text-center">
+                        Reservar por WhatsApp
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section bg-gray-800 text-white" style="background-image: url('assets/images/hero-laguna.jpg');">
+        <div class="container mx-auto px-4 py-24 md:py-36 flex items-center hero-content">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-5xl font-heading font-bold mb-6 leading-tight">
+                    Laguna Canrash: La auténtica trucha arcoíris, de nuestras aguas a tu mesa
+                </h1>
+                <p class="text-lg md:text-xl mb-8 text-gray-200">
+                    Disfruta de una experiencia única en Áncash-Perú, a solo 3 horas de Huaraz. Restaurante, criadero y hospedaje en un entorno natural incomparable.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="pages/restaurante.html" class="bg-accent text-white px-6 py-3 rounded-full font-medium hover:bg-opacity-90 transition text-center">
+                        Ver Menú del Restaurante
+                    </a>
+                    <a href="pages/criadero.html" class="bg-white text-primary px-6 py-3 rounded-full font-medium hover:bg-gray-100 transition text-center">
+                        Cotizar Trucha por Mayor
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nuestra Experiencia Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-heading font-bold text-center mb-12">Nuestra Experiencia</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Restaurante -->
+                <div class="bg-gray-50 rounded-xl p-8 text-center shadow-md hover:shadow-lg transition">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 text-primary rounded-full mb-6">
+                        <i class="fas fa-utensils text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-semibold mb-4">Restaurante</h3>
+                    <p class="text-gray-600">
+                        Disfruta del sabor inigualable de nuestra trucha arcoíris, preparada con recetas tradicionales y servida en un entorno natural impresionante.
+                    </p>
+                    <a href="pages/restaurante.html" class="inline-block mt-6 text-primary font-medium hover:text-accent">
+                        Conoce más <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+                
+                <!-- Criadero -->
+                <div class="bg-gray-50 rounded-xl p-8 text-center shadow-md hover:shadow-lg transition">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 text-primary rounded-full mb-6">
+                        <i class="fas fa-fish text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-semibold mb-4">Criadero</h3>
+                    <p class="text-gray-600">
+                        Calidad que nos distingue. Nuestras truchas son criadas con ovas importadas de Canadá, logrando un sabor y textura similar al salmón.
+                    </p>
+                    <a href="pages/criadero.html" class="inline-block mt-6 text-primary font-medium hover:text-accent">
+                        Conoce más <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+                
+                <!-- Hospedaje -->
+                <div class="bg-gray-50 rounded-xl p-8 text-center shadow-md hover:shadow-lg transition">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 text-primary rounded-full mb-6">
+                        <i class="fas fa-bed text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-semibold mb-4">Hospedaje</h3>
+                    <p class="text-gray-600">
+                        Descanso en la naturaleza. Disfruta de una experiencia rústica y auténtica en nuestras habitaciones con vista a la impresionante laguna.
+                    </p>
+                    <a href="pages/hospedaje.html" class="inline-block mt-6 text-primary font-medium hover:text-accent">
+                        Conoce más <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios/Galería Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-heading font-bold text-center mb-4">Nuestra Experiencia en Imágenes</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+                Descubre la belleza de nuestro entorno, la calidad de nuestros platillos y la experiencia única que ofrecemos a nuestros visitantes.
+            </p>
+            
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="overflow-hidden rounded-lg">
+                    <img src="assets/images/placeholder-1.jpg" alt="Vista de la Laguna Canrash" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="assets/images/placeholder-2.jpg" alt="Plato de trucha a la parrilla" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="assets/images/placeholder-3.jpg" alt="Criadero de truchas" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="assets/images/placeholder-4.jpg" alt="Visitantes disfrutando" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+            </div>
+            
+            <!-- Testimonial -->
+            <div class="mt-12 bg-white p-8 rounded-xl shadow-md max-w-3xl mx-auto">
+                <div class="text-accent text-center mb-4">
+                    <i class="fas fa-quote-left text-3xl"></i>
+                </div>
+                <blockquote class="text-center text-lg text-gray-700 italic mb-6">
+                    "La experiencia en Laguna Canrash fue increíble. La trucha es la más fresca y deliciosa que hemos probado, y el entorno natural es espectacular. Definitivamente volveremos."
+                </blockquote>
+                <div class="text-center">
+                    <p class="font-medium text-gray-800">Familia Rodríguez</p>
+                    <p class="text-sm text-gray-500">Visitantes de Huaraz</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Acceso Directo al Mapa -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-3xl font-heading font-bold mb-6">Visítanos en Laguna Canrash</h2>
+                    <p class="text-gray-600 mb-6">
+                        Estamos estratégicamente ubicados en la hermosa Laguna Canrash, San Marcos – Huari – Ancash - Perú.
+                        A solo 3 horas de Huaraz y cerca de las principales mineras de la región.
+                    </p>
+                    <a href="pages/ubicacion.html" class="inline-flex items-center bg-primary text-white px-6 py-3 rounded-full font-medium hover:bg-secondary transition">
+                        <i class="fas fa-map-marker-alt mr-2"></i> Cómo Llegar
+                    </a>
+                </div>
+                <div class="w-full md:w-1/2 h-80 bg-gray-200 rounded-xl overflow-hidden shadow-md">
+                    <!-- Replace with actual Google Maps embed code -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.6141020372383!2d-77.13266845776138!3d-9.53865881780579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91a8ddd8c2eb1f45%3A0x7e9b99faebc1f80c!2sLaguna%20Canrash!5e0!3m2!1ses!2spe!4v1634567890123!5m2!1ses!2spe" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Logo & Description -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <!-- Replace with actual logo later -->
+                        <span class="text-2xl font-heading font-bold text-white">EICA</span>
+                        <span class="ml-2 text-sm font-medium text-gray-400">Laguna Canrash</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Empresa Isla de Canrash (EICA) ofrece una experiencia gastronómica única con la auténtica trucha arcoíris, 
+                        criada en jaulas flotantes en la hermosa Laguna Canrash, Áncash-Perú.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/LagunaCanrashPeru/" target="_blank" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/lagunacanrash/" target="_blank" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 font-heading">Enlaces Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Inicio</a></li>
+                        <li><a href="pages/restaurante.html" class="text-gray-400 hover:text-white transition">Restaurante</a></li>
+                        <li><a href="pages/criadero.html" class="text-gray-400 hover:text-white transition">Criadero</a></li>
+                        <li><a href="pages/hospedaje.html" class="text-gray-400 hover:text-white transition">Hospedaje</a></li>
+                        <li><a href="pages/ubicacion.html" class="text-gray-400 hover:text-white transition">Ubicación</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 font-heading">Contacto</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-accent"></i>
+                            <span class="text-gray-400">Laguna Canrash, San Marcos – Huari – Ancash - Perú</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fab fa-whatsapp mr-2 text-accent"></i>
+                            <a href="https://wa.me/51999999999" target="_blank" class="text-gray-400 hover:text-white transition">+51 999 999 999</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-accent"></i>
+                            <a href="mailto:administracion@lagunacanrash.com" class="text-gray-400 hover:text-white transition">administracion@lagunacanrash.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="border-t border-gray-700 pt-6 text-center text-gray-500 text-sm">
+                <p>© 2025 Empresa Isla de Canrash. Todos los derechos reservados.</p>
+                <p class="mt-2">
+                    <a href="https://www.lagunacanrash.com" class="hover:text-gray-400 transition">www.lagunacanrash.com</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for mobile menu toggle -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

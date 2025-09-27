@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante - Empresa Isla de Canrash (EICA)</title>
+    <meta name="description" content="Disfruta de la auténtica trucha arcoíris en nuestro restaurante con vista a la laguna. Platos frescos y exquisitos en un entorno natural único.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#1e88e5',
+                        'secondary': '#0d47a1',
+                        'accent': '#ff7043',
+                        'earth': '#8d6e63',
+                        'muted': '#90a4ae',
+                    },
+                    fontFamily: {
+                        'heading': ['Montserrat', 'sans-serif'],
+                        'body': ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-body bg-gray-50 text-gray-800">
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/51999999999" target="_blank" class="whatsapp-button fixed bottom-6 right-6 bg-green-500 text-white rounded-full p-3 shadow-lg z-50 hover:bg-green-600 transition duration-300">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <a href="../index.html" class="flex items-center">
+                    <!-- Replace with actual logo later -->
+                    <span class="text-2xl font-heading font-bold text-primary">EICA</span>
+                    <span class="ml-2 text-sm font-medium text-muted">Laguna Canrash</span>
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                    <i class="fas fa-bars text-2xl text-primary"></i>
+                </button>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="../index.html" class="text-gray-600 font-medium hover:text-accent transition">Inicio</a>
+                    <a href="restaurante.html" class="text-primary font-medium hover:text-accent transition">Restaurante</a>
+                    <a href="criadero.html" class="text-gray-600 font-medium hover:text-accent transition">Criadero</a>
+                    <a href="hospedaje.html" class="text-gray-600 font-medium hover:text-accent transition">Hospedaje</a>
+                    <a href="ubicacion.html" class="text-gray-600 font-medium hover:text-accent transition">Ubicación</a>
+                    <a href="https://wa.me/51999999999" target="_blank" class="bg-accent text-white px-4 py-2 rounded-full font-medium hover:bg-opacity-90 transition">
+                        Reservar por WhatsApp
+                    </a>
+                </nav>
+            </div>
+            
+            <!-- Mobile Navigation (Hidden by default) -->
+            <nav id="mobile-menu" class="hidden md:hidden py-4 border-t border-gray-100">
+                <div class="flex flex-col space-y-3">
+                    <a href="../index.html" class="text-gray-600 font-medium py-2">Inicio</a>
+                    <a href="restaurante.html" class="text-primary font-medium py-2">Restaurante</a>
+                    <a href="criadero.html" class="text-gray-600 font-medium py-2">Criadero</a>
+                    <a href="hospedaje.html" class="text-gray-600 font-medium py-2">Hospedaje</a>
+                    <a href="ubicacion.html" class="text-gray-600 font-medium py-2">Ubicación</a>
+                    <a href="https://wa.me/51999999999" target="_blank" class="bg-accent text-white px-4 py-2 rounded-full font-medium text-center">
+                        Reservar por WhatsApp
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gray-800 text-white py-24" style="background-image: url('../assets/images/restaurante-hero.jpg'); background-size: cover; background-position: center; position: relative;">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl md:text-5xl font-heading font-bold mb-6">
+                    El Sabor de la Laguna en tu Plato
+                </h1>
+                <p class="text-xl text-gray-200 mb-8 max-w-2xl">
+                    Disfruta de nuestra trucha arcoíris criada en aguas cristalinas, del agua a la parrilla, en un entorno natural incomparable.
+                </p>
+                <a href="https://wa.me/51999999999" target="_blank" class="inline-flex items-center bg-accent hover:bg-opacity-90 text-white font-medium px-6 py-3 rounded-full transition">
+                    <i class="fab fa-whatsapp mr-2 text-lg"></i> Reservar Mesa
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Restaurant Experience -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-3xl font-heading font-bold mb-6">Una Experiencia Gastronómica Única</h2>
+                    <p class="text-gray-600 mb-6">
+                        Nuestro restaurante ofrece una experiencia gastronómica inigualable donde la frescura es nuestra prioridad. 
+                        Ubicado a orillas de la Laguna Canrash, disfrutarás de platillos preparados con trucha arcoíris recién
+                        extraída de nuestras jaulas flotantes.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        Cada plato es preparado con dedicación por nuestro equipo de cocina, resaltando el sabor natural
+                        de la trucha, similar al salmón, gracias a su origen en ovas importadas de Canadá y criadas
+                        en las aguas cristalinas de la laguna.
+                    </p>
+                    <p class="text-gray-600">
+                        Ya sea que elijas una trucha a la parrilla, frita, o alguna de nuestras especialidades,
+                        te garantizamos una explosión de sabor acompañada de una vista espectacular al paisaje
+                        natural de la laguna.
+                    </p>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <img src="../assets/images/placeholder-5.jpg" alt="Interior del restaurante" class="rounded-xl shadow-lg w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Digital -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-heading font-bold text-center mb-4">Nuestro Menú</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+                Disfruta de nuestros platillos especiales preparados con la auténtica trucha arcoíris de la Laguna Canrash.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Plato 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md flex">
+                    <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
+                        <img src="../assets/images/menu-1.jpg" alt="Trucha a la Parrilla" class="w-full h-full object-cover">
+                    </div>
+                    <div class="ml-4 flex-grow">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-lg font-heading font-semibold">Trucha a la Parrilla</h3>
+                            <span class="text-accent font-semibold">S/. 35.00</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">
+                            Trucha fresca a la parrilla acompañada de papas nativas, ensalada fresca y salsa de la casa.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Plato 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md flex">
+                    <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
+                        <img src="../assets/images/menu-2.jpg" alt="Trucha Frita" class="w-full h-full object-cover">
+                    </div>
+                    <div class="ml-4 flex-grow">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-lg font-heading font-semibold">Trucha Frita</h3>
+                            <span class="text-accent font-semibold">S/. 32.00</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">
+                            Deliciosa trucha frita en su punto, acompañada de arroz, yuca y ensalada criolla.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Plato 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-md flex">
+                    <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
+                        <img src="../assets/images/menu-3.jpg" alt="Ceviche de Trucha" class="w-full h-full object-cover">
+                    </div>
+                    <div class="ml-4 flex-grow">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-lg font-heading font-semibold">Ceviche de Trucha</h3>
+                            <span class="text-accent font-semibold">S/. 38.00</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">
+                            Refrescante ceviche de trucha marinado con limón, ají, cebolla morada y cilantro. Servido con camote y choclo.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Plato 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-md flex">
+                    <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
+                        <img src="../assets/images/menu-4.jpg" alt="Trucha al Ajillo" class="w-full h-full object-cover">
+                    </div>
+                    <div class="ml-4 flex-grow">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-lg font-heading font-semibold">Trucha al Ajillo</h3>
+                            <span class="text-accent font-semibold">S/. 36.00</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">
+                            Filete de trucha salteado con mantequilla, ajo y hierbas frescas. Acompañado de puré de papas y vegetales.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Plato 5 -->
+                <div class="bg-white p-6 rounded-xl shadow-md flex">
+                    <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
+                        <img src="../assets/images/menu-5.jpg" alt="Sudado de Trucha" class="w-full h-full object-cover">
+                    </div>
+                    <div class="ml-4 flex-grow">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-lg font-heading font-semibold">Sudado de Trucha</h3>
+                            <span class="text-accent font-semibold">S/. 34.00</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">
+                            Trucha cocida al vapor en un caldo aromático con tomates, cebolla, ají amarillo y cilantro. Servido con arroz blanco.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Plato 6 -->
+                <div class="bg-white p-6 rounded-xl shadow-md flex">
+                    <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
+                        <img src="../assets/images/menu-6.jpg" alt="Chicharrón de Trucha" class="w-full h-full object-cover">
+                    </div>
+                    <div class="ml-4 flex-grow">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-lg font-heading font-semibold">Chicharrón de Trucha</h3>
+                            <span class="text-accent font-semibold">S/. 37.00</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">
+                            Trozos de trucha crocantes por fuera y jugosos por dentro. Servidos con yuca frita, salsa criolla y limón.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Información adicional del menú -->
+            <div class="mt-12 max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-md">
+                <h3 class="text-xl font-heading font-semibold mb-4">Incluye:</h3>
+                <ul class="space-y-2 text-gray-600">
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-accent mr-2"></i>
+                        <span>Entrada de cortesía (sopa o ensalada del día)</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-accent mr-2"></i>
+                        <span>Una bebida (chicha morada, refresco o agua)</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-check text-accent mr-2"></i>
+                        <span>Postre regional (mazamorra o fruta fresca)</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-heading font-bold text-center mb-4">Galería de Platos</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+                Disfruta con los ojos antes que con el paladar. Conoce nuestros deliciosos platillos preparados con la trucha más fresca.
+            </p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="overflow-hidden rounded-lg col-span-2">
+                    <img src="../assets/images/gallery-1.jpg" alt="Plato principal de trucha" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="../assets/images/gallery-2.jpg" alt="Detalle de platillo" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="../assets/images/gallery-3.jpg" alt="Presentación especial" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="../assets/images/gallery-4.jpg" alt="Entrada de trucha" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="../assets/images/gallery-5.jpg" alt="Platillo gourmet" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg col-span-2">
+                    <img src="../assets/images/gallery-6.jpg" alt="Vista del restaurante" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Información Práctica -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-heading font-bold text-center mb-12">Información Práctica</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Horarios -->
+                <div class="bg-white p-8 rounded-xl shadow-md text-center">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 text-primary rounded-full mb-6">
+                        <i class="fas fa-clock text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-semibold mb-4">Horarios de Atención</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>
+                            <span class="font-medium">Lunes a Viernes:</span><br>
+                            11:00 AM - 8:00 PM
+                        </li>
+                        <li>
+                            <span class="font-medium">Sábados y Domingos:</span><br>
+                            9:00 AM - 9:00 PM
+                        </li>
+                        <li>
+                            <span class="font-medium">Feriados:</span><br>
+                            9:00 AM - 9:00 PM
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Métodos de Pago -->
+                <div class="bg-white p-8 rounded-xl shadow-md text-center">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 text-primary rounded-full mb-6">
+                        <i class="fas fa-credit-card text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-semibold mb-4">Métodos de Pago</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center justify-center">
+                            <i class="fas fa-money-bill text-accent mr-2"></i>
+                            <span>Efectivo</span>
+                        </li>
+                        <li class="flex items-center justify-center">
+                            <i class="fas fa-mobile-alt text-accent mr-2"></i>
+                            <span>Yape</span>
+                        </li>
+                        <li class="flex items-center justify-center">
+                            <i class="fas fa-university text-accent mr-2"></i>
+                            <span>Transferencia BCP (casos especiales)</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Facturación -->
+                <div class="bg-white p-8 rounded-xl shadow-md text-center">
+                    <div class="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 text-primary rounded-full mb-6">
+                        <i class="fas fa-file-invoice text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-semibold mb-4">Facturación</h3>
+                    <p class="text-gray-600 mb-4">
+                        Emitimos factura electrónica para todos nuestros servicios.
+                    </p>
+                    <div class="p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+                        <p class="text-sm text-yellow-800">
+                            <i class="fas fa-exclamation-triangle text-yellow-600 mr-2"></i>
+                            <strong>Importante:</strong> Solicita tu factura el mismo día de tu consumo antes del cierre de caja.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA Button -->
+            <div class="mt-16 text-center">
+                <a href="https://wa.me/51999999999" target="_blank" class="inline-flex items-center bg-accent text-white px-8 py-4 rounded-full font-medium hover:bg-opacity-90 transition text-lg">
+                    <i class="fab fa-whatsapp mr-2 text-xl"></i> Reserva tu Mesa por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Logo & Description -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <!-- Replace with actual logo later -->
+                        <span class="text-2xl font-heading font-bold text-white">EICA</span>
+                        <span class="ml-2 text-sm font-medium text-gray-400">Laguna Canrash</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Empresa Isla de Canrash (EICA) ofrece una experiencia gastronómica única con la auténtica trucha arcoíris, 
+                        criada en jaulas flotantes en la hermosa Laguna Canrash, Áncash-Perú.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/LagunaCanrashPeru/" target="_blank" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/lagunacanrash/" target="_blank" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 font-heading">Enlaces Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition">Inicio</a></li>
+                        <li><a href="restaurante.html" class="text-gray-400 hover:text-white transition">Restaurante</a></li>
+                        <li><a href="criadero.html" class="text-gray-400 hover:text-white transition">Criadero</a></li>
+                        <li><a href="hospedaje.html" class="text-gray-400 hover:text-white transition">Hospedaje</a></li>
+                        <li><a href="ubicacion.html" class="text-gray-400 hover:text-white transition">Ubicación</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4 font-heading">Contacto</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-accent"></i>
+                            <span class="text-gray-400">Laguna Canrash, San Marcos – Huari – Ancash - Perú</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fab fa-whatsapp mr-2 text-accent"></i>
+                            <a href="https://wa.me/51999999999" target="_blank" class="text-gray-400 hover:text-white transition">+51 999 999 999</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-accent"></i>
+                            <a href="mailto:administracion@lagunacanrash.com" class="text-gray-400 hover:text-white transition">administracion@lagunacanrash.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="border-t border-gray-700 pt-6 text-center text-gray-500 text-sm">
+                <p>© 2025 Empresa Isla de Canrash. Todos los derechos reservados.</p>
+                <p class="mt-2">
+                    <a href="https://www.lagunacanrash.com" class="hover:text-gray-400 transition">www.lagunacanrash.com</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for mobile menu toggle -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

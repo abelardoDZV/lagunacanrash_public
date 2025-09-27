@@ -1,0 +1,47 @@
+/* Custom styles for Empresa Isla de Canrash */
+
+/* Custom animation for the WhatsApp button */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.whatsapp-button {
+    animation: pulse 2s infinite;
+}
+
+/* Custom styles for the hero section */
+.hero-section {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    min-height: 85vh;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Custom styles for smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
