@@ -1,451 +1,124 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criadero de Truchas - Laguna Canrash</title>
-    <meta name="description" content="Proveedor confiable de trucha arcoíris premium para empresas. Criadas en la Laguna Canrash con ovas canadienses, ofrecemos calidad superior y facturación formal.">
-    
-    <!-- Favicon -->
+    <title>Criadero y Venta Corporativa | Laguna Canrash (EICA)</title>
+    <meta name="description" content="Criadero de trucha premium en Laguna Canrash: abastecimiento para restaurantes, hoteles, minería y distribución.">
     <link rel="icon" type="image/png" href="../assets/images/favicon.png">
-    
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Custom CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/styles.css">
-    
-    <!-- Tailwind Config -->
+
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'primary': '#1e88e5',
-                        'secondary': '#0d47a1',
-                        'accent': '#ff7043',
-                        'earth': '#8d6e63',
-                        'muted': '#90a4ae',
+                        ink: '#0B1220', lake: '#0D3B66', deep: '#08253F', mist: '#D9E6F2', moss: '#3F6A4B', stone: '#6B7280'
                     },
-                    fontFamily: {
-                        'heading': ['Montserrat', 'sans-serif'],
-                        'body': ['Poppins', 'sans-serif'],
-                    }
+                    fontFamily: { heading: ['Manrope', 'sans-serif'], body: ['Inter', 'sans-serif'] }
                 }
             }
         }
     </script>
 </head>
-<body class="font-body bg-gray-50 text-gray-800">
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/51943215876" target="_blank" class="whatsapp-button fixed bottom-6 right-6 bg-green-500 text-white rounded-full p-3 shadow-lg z-50 hover:bg-green-600 transition duration-300">
-        <i class="fab fa-whatsapp text-3xl"></i>
-    </a>
 
-    <!-- Header/Navigation -->
-    <header class="bg-white shadow-md sticky top-0 z-40">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-                <!-- Logo -->
-                <a href="../index.html" class="flex items-center">
-                    <img src="../assets/images/logos/logo-sin-bg.png" alt="Logo Laguna Canrash" class="h-12">
-                </a>
-                
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-button" class="md:hidden focus:outline-none">
-                    <i class="fas fa-bars text-2xl text-primary"></i>
-                </button>
-                
-                <!-- Desktop Navigation -->
-                <nav class="hidden md:flex items-center space-x-6">
-                    <a href="../index.html" class="text-gray-600 font-medium hover:text-accent transition">Inicio</a>
-                    <a href="restaurante.html" class="text-gray-600 font-medium hover:text-accent transition">Restaurante</a>
-                    <a href="criadero.html" class="text-primary font-medium hover:text-accent transition">Criadero</a>
-                    <a href="hospedaje.html" class="text-gray-600 font-medium hover:text-accent transition">Hospedaje</a>
-                    <a href="ubicacion.html" class="text-gray-600 font-medium hover:text-accent transition">Ubicación</a>
-                    <a href="https://wa.me/51943215876" target="_blank" class="bg-accent text-white px-4 py-2 rounded-full font-medium hover:bg-opacity-90 transition">
-                        Reservar por WhatsApp
-                    </a>
-                </nav>
-            </div>
-            
-            <!-- Mobile Navigation (Hidden by default) -->
-            <nav id="mobile-menu" class="hidden md:hidden py-4 border-t border-gray-100">
-                <div class="flex flex-col space-y-3">
-                    <a href="../index.html" class="text-gray-600 font-medium py-2">Inicio</a>
-                    <a href="restaurante.html" class="text-gray-600 font-medium py-2">Restaurante</a>
-                    <a href="criadero.html" class="text-primary font-medium py-2">Criadero</a>
-                    <a href="hospedaje.html" class="text-gray-600 font-medium py-2">Hospedaje</a>
-                    <a href="ubicacion.html" class="text-gray-600 font-medium py-2">Ubicación</a>
-                    <a href="https://wa.me/51943215876" target="_blank" class="bg-accent text-white px-4 py-2 rounded-full font-medium text-center">
-                        Reservar por WhatsApp
-                    </a>
-                </div>
+<body class="font-body bg-white text-ink antialiased">
+    <a href="https://wa.me/51957878409" target="_blank" class="whatsapp-button fixed bottom-5 right-5 bg-green-500 text-white rounded-full p-3.5 shadow-soft z-50 hover:bg-green-600 transition" aria-label="Contacto comercial por WhatsApp"><i class="fab fa-whatsapp text-2xl"></i></a>
+    <a href="criadero.html" class="b2b-button fixed bottom-5 left-5 rounded-full bg-deep px-4 py-3 text-xs font-semibold text-white shadow-soft z-50 hover:bg-lake transition" aria-label="Solicitar cotización comercial">Cotización B2B</a>
+
+    <header class="sticky top-0 z-40 border-b border-white/10 bg-deep/70 backdrop-blur-xl">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
+            <a href="../index.html" class="flex items-center gap-3"><img src="../assets/images/logos/logo-sin-bg.png" alt="Logo Laguna Canrash" class="h-11 w-auto"><span class="font-heading text-lg font-bold tracking-tight text-white">Laguna Canrash</span></a>
+            <button id="mobile-menu-button" class="md:hidden text-white" aria-label="Abrir menú"><i class="fas fa-bars text-2xl"></i></button>
+            <nav class="hidden items-center gap-7 md:flex">
+                <a href="../index.html" class="text-sm font-medium text-white/80 hover:text-white transition">Inicio</a>
+                <a href="restaurante.html" class="text-sm font-medium text-white/80 hover:text-white transition">Restaurante</a>
+                <a href="menu.html" class="text-sm font-medium text-white/80 hover:text-white transition">Carta</a>
+                <a href="criadero.html" class="text-sm font-medium text-mist">Criadero</a>
+                <a href="hospedaje.html" class="text-sm font-medium text-white/80 hover:text-white transition">Hospedaje</a>
+                <a href="ubicacion.html" class="text-sm font-medium text-white/80 hover:text-white transition">Ubicación</a>
+                <a href="https://wa.me/51957878409" target="_blank" class="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-deep transition hover:bg-mist">Reservar</a>
             </nav>
         </div>
+        <nav id="mobile-menu" class="hidden border-t border-white/10 px-4 pb-5 md:hidden">
+            <div class="flex flex-col gap-3 pt-4 text-sm">
+                <a href="../index.html" class="text-white/80">Inicio</a>
+                <a href="restaurante.html" class="text-white/80">Restaurante</a>
+                <a href="menu.html" class="text-white/80">Carta</a>
+                <a href="criadero.html" class="text-mist">Criadero</a>
+                <a href="hospedaje.html" class="text-white/80">Hospedaje</a>
+                <a href="ubicacion.html" class="text-white/80">Ubicación</a>
+                <a href="https://wa.me/51957878409" target="_blank" class="mt-2 inline-flex w-fit rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-deep transition hover:bg-mist">Reservar</a>
+            </div>
+        </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="bg-gray-800 text-white py-24" style="background-image: url('../assets/images/laguna/foto_desde_lugar_super_alto_de_toda_la_laguna_canrash.jpg'); background-size: cover; background-position: center; position: relative;">
-        <!-- Overlay -->
-        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-        
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="max-w-3xl">
-                <h1 class="text-4xl md:text-5xl font-heading font-bold mb-6">
-                    Proveedor Confiable de Trucha Premium para tu Empresa
-                </h1>
-                <p class="text-xl text-gray-200 mb-8 max-w-2xl">
-                    Suministramos trucha arcoíris de la más alta calidad para empresas mineras, hoteles, restaurantes y comedores corporativos.
-                </p>
-                <a href="mailto:administracion@lagunacanrash.com" class="inline-flex items-center bg-accent hover:bg-opacity-90 text-white font-medium px-6 py-3 rounded-full transition">
-                    <i class="fas fa-envelope mr-2"></i> Solicitar Cotización
-                </a>
+    <main>
+        <section class="hero-showcase relative isolate min-h-[58vh] overflow-hidden">
+            <img src="../assets/images/laguna/foto_desde_lugar_super_alto_de_toda_la_laguna_canrash.jpg" alt="Vista panorámica de Laguna Canrash" class="absolute inset-0 h-full w-full object-cover show-full-media">
+            <div class="absolute inset-0 hero-overlay"></div>
+            <div class="relative mx-auto flex min-h-[58vh] max-w-7xl items-end px-4 pb-14 pt-24 lg:px-8">
+                <div class="glass-panel max-w-3xl p-8">
+                    <p class="eyebrow !text-mist">Unidad comercial</p>
+                    <h1 class="mt-3 font-heading text-4xl font-extrabold text-white md:text-5xl">Proveedor de trucha premium para clientes corporativos.</h1>
+                    <p class="mt-4 text-white/85">Abastecimiento continuo con manejo responsable, cadena de frío y documentación formal para operaciones B2B.</p>
+                    <a href="mailto:administracion@lagunacanrash.com" class="mt-7 inline-flex rounded-full bg-white px-6 py-3 text-sm font-semibold text-deep hover:bg-mist transition">Solicitar cotización</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Criadero Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="w-full md:w-1/2">
-                    <img src="../assets/images/laguna/bote_lejano_personas_parte_de_jaula_flotante.jpg" alt="Jaulas flotantes en la Laguna Canrash" class="rounded-xl shadow-lg w-full h-auto">
-                </div>
-                <div class="w-full md:w-1/2">
-                    <h2 class="text-3xl font-heading font-bold mb-6">Calidad Premium que nos Distingue</h2>
-                    <p class="text-gray-600 mb-6">
-                        En Laguna Canrash, nos especializamos en la crianza de truchas arcoíris
-                        en jaulas flotantes ubicadas en la cristalina Laguna Canrash. Nuestras truchas son criadas
-                        con ovas importadas de Canadá, lo que les otorga un sabor y textura similar al salmón,
-                        diferenciándonos de otros criaderos locales.
-                    </p>
-                    <p class="text-gray-600 mb-6">
-                        Contamos con una capacidad de producción de hasta 8 toneladas mensuales, lo que nos
-                        permite abastecer de manera constante y puntual a nuestros clientes corporativos.
-                    </p>
-                    <p class="text-gray-600">
-                        Nuestra ubicación estratégica nos permite entregar el producto fresco y eviscerado
-                        en tiempo récord, manteniendo la cadena de frío y garantizando la máxima calidad
-                        desde nuestro criadero hasta su mesa.
-                    </p>
-                </div>
+        <section class="border-y border-slate-200 bg-slate-50/80">
+            <div class="mx-auto grid max-w-7xl grid-cols-2 gap-4 px-4 py-8 md:grid-cols-4 lg:px-8">
+                <article class="stat-card"><p class="text-3xl font-extrabold text-lake">8 Ton</p><p class="mt-1 text-sm text-stone">Capacidad mensual referencial</p></article>
+                <article class="stat-card"><p class="text-3xl font-extrabold text-lake">250-500g</p><p class="mt-1 text-sm text-stone">Rango de peso por unidad</p></article>
+                <article class="stat-card"><p class="text-3xl font-extrabold text-lake">48h</p><p class="mt-1 text-sm text-stone">Programación logística</p></article>
+                <article class="stat-card"><p class="text-3xl font-extrabold text-lake">Formal</p><p class="mt-1 text-sm text-stone">Facturación electrónica</p></article>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Benefits for Companies -->
-    <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-heading font-bold text-center mb-12">¿Por qué Elegirnos como Proveedor?</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Benefit 1 -->
-                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
-                    <div class="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 text-primary rounded-full mb-6 mx-auto">
-                        <i class="fas fa-medal text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-heading font-semibold mb-4 text-center">Calidad Superior</h3>
-                    <p class="text-gray-600">
-                        Nuestras truchas provienen de ovas canadienses de la más alta calidad, criadas
-                        en aguas cristalinas, resultando en un producto de textura y sabor similar al salmón.
-                        Garantizamos truchas de entre 250g y 500g según sus necesidades específicas.
-                    </p>
-                </div>
-                
-                <!-- Benefit 2 -->
-                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
-                    <div class="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 text-primary rounded-full mb-6 mx-auto">
-                        <i class="fas fa-truck-fast text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-heading font-semibold mb-4 text-center">Entregas Puntuales</h3>
-                    <p class="text-gray-600">
-                        Nuestra ubicación estratégica cerca de los principales centros mineros y ciudades
-                        de la región nos permite garantizar entregas puntuales y frecuentes. Ofrecemos
-                        flexibilidad en los calendarios de entrega según sus necesidades operativas.
-                    </p>
-                </div>
-                
-                <!-- Benefit 3 -->
-                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
-                    <div class="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 text-primary rounded-full mb-6 mx-auto">
-                        <i class="fas fa-file-invoice-dollar text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-heading font-semibold mb-4 text-center">Facturación Formal</h3>
-                    <p class="text-gray-600">
-                        Emitimos facturación electrónica formal para todas nuestras ventas corporativas.
-                        Aceptamos pagos por transferencia bancaria, adaptándonos a sus procedimientos
-                        de adquisición y políticas de pago a proveedores.
-                    </p>
-                </div>
+        <section class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
+            <p class="eyebrow">Propuesta de valor</p>
+            <h2 class="mt-3 font-heading text-3xl font-bold">Cadena productiva orientada a calidad y continuidad</h2>
+            <div class="mt-8 grid gap-5 md:grid-cols-3">
+                <article class="panel-card"><h3 class="font-heading text-lg font-bold text-lake">Genética y manejo</h3><p class="mt-2 text-sm text-stone">Crianza técnica en agua de altura con controles de bienestar y rendimiento.</p></article>
+                <article class="panel-card"><h3 class="font-heading text-lg font-bold text-lake">Entrega programada</h3><p class="mt-2 text-sm text-stone">Ajuste por volumen y frecuencia según demanda de hotelería, minería y restauración.</p></article>
+                <article class="panel-card"><h3 class="font-heading text-lg font-bold text-lake">Confianza comercial</h3><p class="mt-2 text-sm text-stone">Soporte administrativo, cotizaciones ágiles y acompañamiento en compras recurrentes.</p></article>
             </div>
-            
-            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Benefit 4 -->
-                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
-                    <div class="flex items-center mb-6">
-                        <div class="inline-flex items-center justify-center w-12 h-12 bg-primary bg-opacity-10 text-primary rounded-full mr-4">
-                            <i class="fas fa-box text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-heading font-semibold">Presentación del Producto</h3>
-                    </div>
-                    <p class="text-gray-600">
-                        Entregamos nuestras truchas evisceradas y frescas, empacadas adecuadamente para
-                        mantener la cadena de frío. También ofrecemos la opción de trucha fileteada según
-                        requerimientos específicos para comedores institucionales o restaurantes de hotel.
-                    </p>
-                </div>
-                
-                <!-- Benefit 5 -->
-                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
-                    <div class="flex items-center mb-6">
-                        <div class="inline-flex items-center justify-center w-12 h-12 bg-primary bg-opacity-10 text-primary rounded-full mr-4">
-                            <i class="fas fa-handshake text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-heading font-semibold">Relaciones a Largo Plazo</h3>
-                    </div>
-                    <p class="text-gray-600">
-                        Nos enfocamos en construir relaciones comerciales duraderas con nuestros clientes corporativos.
-                        Ofrecemos precios competitivos y estables, así como descuentos por volumen y frecuencia de compra
-                        para garantizar un beneficio mutuo.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Video del Criadero -->
-    <section class="py-12 bg-gray-900">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-heading font-bold text-center text-white mb-8">Nuestras Jaulas Flotantes</h2>
-            <div class="max-w-4xl mx-auto overflow-hidden rounded-xl shadow-2xl">
-                <video class="w-full" controls poster="../assets/images/laguna/vista_desde_jaulas_flotantes_en_medio_de_laguna_hacia_la_orilla_de_la_laguna.jpeg">
-                    <source src="../assets/images/laguna/video_drone_toda_laguna.mp4" type="video/mp4">
-                    Tu navegador no soporta la etiqueta de video.
-                </video>
-            </div>
-            <div class="text-center mt-6">
-                <p class="text-white font-medium italic">"Vista aérea de nuestro criadero en las cristalinas aguas de la Laguna Canrash"</p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Production Capacity -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="w-full md:w-1/2">
-                    <h2 class="text-3xl font-heading font-bold mb-6">Capacidad de Producción</h2>
-                    <p class="text-gray-600 mb-6">
-                        Nuestro criadero cuenta con modernas jaulas flotantes en la Laguna Canrash que nos
-                        permiten mantener una producción constante durante todo el año, con capacidad de hasta
-                        8 toneladas mensuales.
-                    </p>
-                    <p class="text-gray-600 mb-6">
-                        Implementamos prácticas sostenibles de acuicultura para garantizar tanto la calidad
-                        de nuestro producto como la preservación del ecosistema de la laguna, asegurando
-                        un negocio responsable y sostenible a largo plazo.
-                    </p>
-                    
-                    <!-- Stats -->
-                    <div class="grid grid-cols-2 gap-4 mt-8">
-                        <div class="bg-gray-50 p-6 rounded-lg text-center">
-                            <span class="block text-3xl font-bold text-primary mb-2">8 Ton</span>
-                            <span class="text-gray-600">Capacidad mensual</span>
-                        </div>
-                        <div class="bg-gray-50 p-6 rounded-lg text-center">
-                            <span class="block text-3xl font-bold text-primary mb-2">250-500g</span>
-                            <span class="text-gray-600">Peso por unidad</span>
-                        </div>
-                        <div class="bg-gray-50 p-6 rounded-lg text-center">
-                            <span class="block text-3xl font-bold text-primary mb-2">100%</span>
-                            <span class="text-gray-600">Producto fresco</span>
-                        </div>
-                        <div class="bg-gray-50 p-6 rounded-lg text-center">
-                            <span class="block text-3xl font-bold text-primary mb-2">5+</span>
-                            <span class="text-gray-600">Años de experiencia</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full md:w-1/2">
-                    <img src="../assets/images/laguna/vista_desde_jaulas_flotantes_en_medio_de_laguna_hacia_la_orilla_de_la_laguna.jpeg" alt="Vista desde las jaulas flotantes" class="rounded-xl shadow-lg w-full h-auto">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Partners Corporativos -->
-    <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-heading font-bold text-center mb-12">Nuestros Clientes Corporativos</h2>
-            
-            <div class="flex flex-col md:flex-row items-center gap-12 max-w-4xl mx-auto">
-                <div class="w-full md:w-1/2">
-                    <img src="../assets/images/antamina/foto_campamento_antamina.jpg" alt="Campamento Antamina" class="rounded-xl shadow-lg w-full h-auto">
-                </div>
-                <div class="w-full md:w-1/2">
-                    <div class="flex items-center bg-white p-4 rounded-lg shadow-md">
-                        <img src="../assets/images/antamina/foto_en_la_garita_control_de_antamina.jpg" alt="Garita de control Antamina" class="w-24 h-24 rounded object-cover mr-4">
-                        <div>
-                            <h4 class="font-medium text-gray-800">Entrega Directa</h4>
-                            <p class="text-gray-600 text-sm">Garantizamos la máxima frescura con entregas programadas y puntuales a las instalaciones mineras.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Contact for Corporate Sales -->
-    <section class="py-16 bg-accent bg-opacity-5">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
-                <div class="flex flex-col md:flex-row">
-                    <div class="w-full md:w-1/2 bg-primary p-12 text-white">
-                        <h2 class="text-3xl font-heading font-bold mb-6">Contacto para Ventas Corporativas</h2>
-                        <p class="mb-8">
-                            Para cotizaciones y pedidos corporativos, contáctenos directamente a través de nuestros canales oficiales:
-                        </p>
-                        <div class="space-y-6">
-                            <div class="flex items-center">
-                                <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-4">
-                                    <i class="fas fa-envelope text-xl"></i>
-                                </div>
-                                <div>
-                                    <p class="text-sm text-gray-200">Email</p>
-                                    <a href="mailto:administracion@lagunacanrash.com" class="font-medium hover:underline">administracion@lagunacanrash.com</a>
-                                </div>
-                            </div>
-                            <div class="flex items-center">
-                                <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-4">
-                                    <i class="fab fa-whatsapp text-xl"></i>
-                                </div>
-                                <div>
-                                    <p class="text-sm text-gray-200">WhatsApp</p>
-                                    <a href="https://wa.me/51943215876" class="font-medium hover:underline">+51 943 215 876</a>
-                                </div>
-                            </div>
-                            <div class="flex items-center">
-                                <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-4">
-                                    <i class="fas fa-map-marker-alt text-xl"></i>
-                                </div>
-                                <div>
-                                    <p class="text-sm text-gray-200">Dirección</p>
-                                    <p class="font-medium">Laguna Canrash, San Marcos – Huari – Ancash - Perú</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-full md:w-1/2 p-12">
-                        <h3 class="text-2xl font-heading font-semibold mb-6">Información de Pedidos</h3>
-                        <div class="space-y-6">
-                            <div>
-                                <h4 class="text-lg font-medium mb-2 text-gray-800">Pedido Mínimo</h4>
-                                <p class="text-gray-600">Para pedidos corporativos, tenemos un mínimo de 50 kg de trucha fresca eviscerada.</p>
-                            </div>
-                            <div>
-                                <h4 class="text-lg font-medium mb-2 text-gray-800">Plazos de Entrega</h4>
-                                <p class="text-gray-600">Programamos entregas con 48 horas de anticipación para garantizar la frescura del producto.</p>
-                            </div>
-                            <div>
-                                <h4 class="text-lg font-medium mb-2 text-gray-800">Formas de Pago</h4>
-                                <p class="text-gray-600">Aceptamos transferencias bancarias a nuestra cuenta BCP corporativa.</p>
-                            </div>
-                            <div class="pt-4">
-                                <a href="mailto:administracion@lagunacanrash.com" class="inline-block bg-accent text-white px-6 py-3 rounded-full font-medium hover:bg-opacity-90 transition">
-                                    Solicitar Cotización
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white pt-12 pb-6">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <!-- Logo & Description -->
-                <div class="col-span-1 md:col-span-2">
-                    <div class="flex items-center mb-4">
-                        <img src="../assets/images/logos/logo-sin-bg.png" alt="Logo Laguna Canrash" class="h-10">
-                    </div>
-                    <p class="text-gray-400 mb-4">
-                        Laguna Canrash ofrece una experiencia gastronómica única con la auténtica trucha arcoíris, 
-                        criada en jaulas flotantes en la hermosa Laguna Canrash, Áncash-Perú.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="https://www.facebook.com/LagunaCanrashPeru/" target="_blank" class="text-gray-400 hover:text-white transition">
-                            <i class="fab fa-facebook-f text-xl"></i>
-                        </a>
-                        <a href="https://www.instagram.com/lagunacanrash/" target="_blank" class="text-gray-400 hover:text-white transition">
-                            <i class="fab fa-instagram text-xl"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Quick Links -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4 font-heading">Enlaces Rápidos</h3>
-                    <ul class="space-y-2">
-                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition">Inicio</a></li>
-                        <li><a href="restaurante.html" class="text-gray-400 hover:text-white transition">Restaurante</a></li>
-                        <li><a href="criadero.html" class="text-gray-400 hover:text-white transition">Criadero</a></li>
-                        <li><a href="hospedaje.html" class="text-gray-400 hover:text-white transition">Hospedaje</a></li>
-                        <li><a href="ubicacion.html" class="text-gray-400 hover:text-white transition">Ubicación</a></li>
+        <section class="mx-auto max-w-7xl px-4 pb-16 lg:px-8">
+            <div class="grid gap-5 md:grid-cols-12">
+                <article class="bento-card md:col-span-7">
+                    <img src="../assets/images/laguna/vista_desde_jaulas_flotantes_en_medio_de_laguna_hacia_la_orilla_de_la_laguna.jpeg" alt="Jaulas flotantes en la laguna" class="absolute inset-0 h-full w-full object-cover show-full-media">
+                    <div class="bento-overlay"></div>
+                    <div class="relative z-10 max-w-md"><p class="text-xs uppercase tracking-[0.16em] text-white/80">Producción</p><h3 class="mt-2 font-heading text-2xl font-bold text-white">Infraestructura en laguna y monitoreo continuo</h3></div>
+                </article>
+                <article class="panel-card md:col-span-5">
+                    <h3 class="font-heading text-2xl font-bold">Contacto comercial</h3>
+                    <ul class="mt-5 space-y-3 text-stone text-sm">
+                        <li><strong>Email:</strong> administracion@lagunacanrash.com</li>
+                        <li><strong>WhatsApp:</strong> +51 957 878 409</li>
+                        <li><strong>Ubicación:</strong> San Marcos · Huari · Áncash</li>
                     </ul>
-                </div>
-                
-                <!-- Contact Info -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4 font-heading">Contacto</h3>
-                    <ul class="space-y-2">
-                        <li class="flex items-start">
-                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-accent"></i>
-                            <span class="text-gray-400">Laguna Canrash, San Marcos – Huari – Ancash - Perú</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fab fa-whatsapp mr-2 text-accent"></i>
-                            <a href="https://wa.me/51943215876" target="_blank" class="text-gray-400 hover:text-white transition">+51 943 215 876</a>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-envelope mr-2 text-accent"></i>
-                            <a href="mailto:administracion@lagunacanrash.com" class="text-gray-400 hover:text-white transition">administracion@lagunacanrash.com</a>
-                        </li>
-                    </ul>
-                </div>
+                    <a href="https://wa.me/51957878409" target="_blank" class="mt-6 inline-flex rounded-full bg-deep px-6 py-3 text-sm font-semibold text-white hover:bg-lake transition">Hablar con ventas</a>
+                </article>
             </div>
-            
-            <!-- Copyright -->
-            <div class="border-t border-gray-700 pt-6 text-center text-gray-500 text-sm">
-                <p>© 2025 Laguna Canrash. Todos los derechos reservados.</p>
-                <p class="mt-2">
-                    <a href="https://www.lagunacanrash.com" class="hover:text-gray-400 transition">www.lagunacanrash.com</a>
-                </p>
-            </div>
-        </div>
-    </footer>
+        </section>
+    </main>
 
-    <!-- JavaScript for mobile menu toggle -->
+    <footer class="border-t border-slate-200 bg-white py-10"><div class="mx-auto flex max-w-7xl flex-col gap-4 px-4 lg:flex-row lg:items-center lg:justify-between lg:px-8"><p class="text-sm text-stone">© 2026 Laguna Canrash · EICA</p><div class="flex items-center gap-5 text-sm text-stone"><a href="restaurante.html" class="hover:text-lake transition">Restaurante</a><a href="hospedaje.html" class="hover:text-lake transition">Hospedaje</a><a href="ubicacion.html" class="hover:text-lake transition">Ubicación</a></div></div></footer>
+
     <script>
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            if (mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.remove('hidden');
-            } else {
-                mobileMenu.classList.add('hidden');
-            }
-        });
+        const button = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        if (button && menu) button.addEventListener('click', () => menu.classList.toggle('hidden'));
     </script>
 </body>
+
 </html>

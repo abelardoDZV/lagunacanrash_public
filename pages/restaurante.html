@@ -1,544 +1,155 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurante - Laguna Canrash</title>
-    <meta name="description" content="Disfruta de la auténtica trucha arcoíris en nuestro restaurante con vista a la laguna. Platos frescos y exquisitos en un entorno natural único.">
-    
-    <!-- Favicon -->
+    <title>Restaurante | Laguna Canrash (EICA)</title>
+    <meta name="description" content="Restaurante de Laguna Canrash: cocina de trucha premium con vista panorámica a la laguna en Áncash.">
     <link rel="icon" type="image/png" href="../assets/images/favicon.png">
-    
-    <!-- Tailwind CSS CDN -->
+
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Custom CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/styles.css">
-    
-    <!-- Tailwind Config -->
+
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'primary': '#1e88e5',
-                        'secondary': '#0d47a1',
-                        'accent': '#ff7043',
-                        'earth': '#8d6e63',
-                        'muted': '#90a4ae',
+                        ink: '#0B1220',
+                        slate: '#1F2937',
+                        lake: '#0D3B66',
+                        deep: '#08253F',
+                        mist: '#D9E6F2',
+                        moss: '#3F6A4B',
+                        stone: '#6B7280'
                     },
                     fontFamily: {
-                        'heading': ['Montserrat', 'sans-serif'],
-                        'body': ['Poppins', 'sans-serif'],
+                        heading: ['Manrope', 'sans-serif'],
+                        body: ['Inter', 'sans-serif']
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="font-body bg-gray-50 text-gray-800">
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/51957878409" target="_blank" class="whatsapp-button fixed bottom-6 right-6 bg-green-500 text-white rounded-full p-3 shadow-lg z-50 hover:bg-green-600 transition duration-300">
-        <i class="fab fa-whatsapp text-3xl"></i>
-    </a>
 
-    <!-- Header/Navigation -->
-    <header class="bg-white shadow-md sticky top-0 z-40">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-                <!-- Logo -->
-                <a href="../index.html" class="flex items-center">
-                    <img src="../assets/images/logos/logo-sin-bg.png" alt="Logo Laguna Canrash" class="h-12">
-                </a>
-                
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-button" class="md:hidden focus:outline-none">
-                    <i class="fas fa-bars text-2xl text-primary"></i>
-                </button>
-                
-                <!-- Desktop Navigation -->
-                <nav class="hidden md:flex items-center space-x-6">
-                    <a href="../index.html" class="text-gray-600 font-medium hover:text-accent transition">Inicio</a>
-                    <a href="restaurante.html" class="text-primary font-medium hover:text-accent transition">Restaurante</a>
-                    <a href="menu.html" class="text-gray-600 font-medium hover:text-accent transition">Carta</a>
-                    <a href="criadero.html" class="text-gray-600 font-medium hover:text-accent transition">Criadero</a>
-                    <a href="hospedaje.html" class="text-gray-600 font-medium hover:text-accent transition">Hospedaje</a>
-                    <a href="ubicacion.html" class="text-gray-600 font-medium hover:text-accent transition">Ubicación</a>
-                    <a href="https://wa.me/51957878409" target="_blank" class="bg-accent text-white px-4 py-2 rounded-full font-medium hover:bg-opacity-90 transition">
-                        Reservar por WhatsApp
-                    </a>
-                </nav>
-            </div>
-            
-            <!-- Mobile Navigation (Hidden by default) -->
-            <nav id="mobile-menu" class="hidden md:hidden py-4 border-t border-gray-100">
-                <div class="flex flex-col space-y-3">
-                    <a href="../index.html" class="text-gray-600 font-medium py-2">Inicio</a>
-                    <a href="restaurante.html" class="text-primary font-medium py-2">Restaurante</a>
-                    <a href="menu.html" class="text-gray-600 font-medium py-2">Carta</a>
-                    <a href="criadero.html" class="text-gray-600 font-medium py-2">Criadero</a>
-                    <a href="hospedaje.html" class="text-gray-600 font-medium py-2">Hospedaje</a>
-                    <a href="ubicacion.html" class="text-gray-600 font-medium py-2">Ubicación</a>
-                    <a href="https://wa.me/51957878409" target="_blank" class="bg-accent text-white px-4 py-2 rounded-full font-medium text-center">
-                        ¡Reserva Ahora! <i class="fas fa-arrow-right ml-1"></i>
-                    </a>
-                </div>
+<body class="font-body bg-white text-ink antialiased">
+    <a href="https://wa.me/51957878409" target="_blank" class="whatsapp-button fixed bottom-5 right-5 bg-green-500 text-white rounded-full p-3.5 shadow-soft z-50 hover:bg-green-600 transition" aria-label="Reservar por WhatsApp">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+    <a href="criadero.html" class="b2b-button fixed bottom-5 left-5 rounded-full bg-deep px-4 py-3 text-xs font-semibold text-white shadow-soft z-50 hover:bg-lake transition" aria-label="Solicitar cotización comercial">Cotización B2B</a>
+
+    <header class="sticky top-0 z-40 border-b border-white/10 bg-deep/70 backdrop-blur-xl">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
+            <a href="../index.html" class="flex items-center gap-3">
+                <img src="../assets/images/logos/logo-sin-bg.png" alt="Logo Laguna Canrash" class="h-11 w-auto">
+                <span class="font-heading text-lg font-bold tracking-tight text-white">Laguna Canrash</span>
+            </a>
+            <button id="mobile-menu-button" class="md:hidden text-white" aria-label="Abrir menú"><i class="fas fa-bars text-2xl"></i></button>
+            <nav class="hidden items-center gap-7 md:flex">
+                <a href="../index.html" class="text-sm font-medium text-white/80 hover:text-white transition">Inicio</a>
+                <a href="restaurante.html" class="text-sm font-medium text-mist">Restaurante</a>
+                <a href="menu.html" class="text-sm font-medium text-white/80 hover:text-white transition">Carta</a>
+                <a href="criadero.html" class="text-sm font-medium text-white/80 hover:text-white transition">Criadero</a>
+                <a href="hospedaje.html" class="text-sm font-medium text-white/80 hover:text-white transition">Hospedaje</a>
+                <a href="ubicacion.html" class="text-sm font-medium text-white/80 hover:text-white transition">Ubicación</a>
+                <a href="https://wa.me/51957878409" target="_blank" class="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-deep transition hover:bg-mist">Reservar</a>
             </nav>
         </div>
+        <nav id="mobile-menu" class="hidden border-t border-white/10 px-4 pb-5 md:hidden">
+            <div class="flex flex-col gap-3 pt-4 text-sm">
+                <a href="../index.html" class="text-white/80">Inicio</a>
+                <a href="restaurante.html" class="text-mist">Restaurante</a>
+                <a href="menu.html" class="text-white/80">Carta</a>
+                <a href="criadero.html" class="text-white/80">Criadero</a>
+                <a href="hospedaje.html" class="text-white/80">Hospedaje</a>
+                <a href="ubicacion.html" class="text-white/80">Ubicación</a>
+                <a href="https://wa.me/51957878409" target="_blank" class="mt-2 inline-flex w-fit rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-deep transition hover:bg-mist">Reservar</a>
+            </div>
+        </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="bg-gray-800 text-white py-24" style="background-image: url('../assets/images/laguna/comedor_vacio_pero_con_vista_completa_a_la_laguna_pared_transparente.jpg'); background-size: cover; background-position: center; position: relative;">
-        <!-- Overlay -->
-        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-        
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="max-w-3xl">
-                <h1 class="text-4xl md:text-5xl font-heading font-bold mb-6">
-                    Trucha Premium a tu Mesa
-                </h1>
-                <p class="text-xl text-gray-200 mb-8 max-w-2xl">
-                    Del agua a la parrilla • Vista espectacular • Sabor inigualable
-                </p>
-                <a href="https://wa.me/51957878409" target="_blank" class="inline-flex items-center bg-accent hover:bg-opacity-90 text-white font-medium px-6 py-3 rounded-full transition animate-pulse">
-                    <i class="fab fa-whatsapp mr-2 text-lg"></i> ¡Reserva Ahora!
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Restaurant Experience -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="w-full md:w-1/2">
-                    <h2 class="text-3xl font-heading font-bold mb-6">Sabor Premium</h2>
-                    <ul class="space-y-4 text-gray-600">
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
-                            <span><strong>Ultra fresca:</strong> De nuestras jaulas flotantes a tu plato</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
-                            <span><strong>Sabor similar al salmón:</strong> Gracias a ovas importadas de Canadá</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
-                            <span><strong>Vista espectacular:</strong> Come mientras disfrutas del paisaje</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
-                            <span><strong>Preparaciones variadas:</strong> A la parrilla, frita, ceviche y más</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="w-full md:w-1/2">
-                    <img src="../assets/images/laguna/trucha_presentada_lista_para_cocinar_chef_la_sostiene_con_herramienta_paisaje_hermoso_detrás_laguna_en_mejor.jpg" alt="Chef presentando trucha fresca con vista a la laguna" class="rounded-xl shadow-lg w-full h-auto">
+    <main>
+        <section class="hero-showcase relative isolate min-h-[62vh] overflow-hidden">
+            <img src="../assets/images/laguna/comedor_vacio_pero_con_vista_completa_a_la_laguna_pared_transparente.jpg" alt="Comedor con vista a la laguna" class="absolute inset-0 h-full w-full object-cover show-full-media">
+            <div class="absolute inset-0 hero-overlay"></div>
+            <div class="relative mx-auto flex min-h-[62vh] max-w-7xl items-end px-4 pb-14 pt-24 lg:px-8">
+                <div class="glass-panel max-w-3xl p-8">
+                    <p class="eyebrow !text-mist">Restaurante de destino</p>
+                    <h1 class="mt-3 font-heading text-4xl font-extrabold text-white md:text-5xl">Trucha premium, cocina honesta y vista abierta.</h1>
+                    <p class="mt-4 text-white/85">Una propuesta gastronómica de altura con insumos frescos del criadero EICA y preparación al momento.</p>
+                    <a href="https://wa.me/51957878409" target="_blank" class="mt-7 inline-flex rounded-full bg-white px-6 py-3 text-sm font-semibold text-deep hover:bg-mist transition">Reservar mesa</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Nuestro Menú -->
-    <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-heading font-bold text-center mb-4">Nuestro Menú</h2>
-            <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-                Especialidades de trucha premium
-            </p>
+        <section class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
+            <div class="grid gap-5 md:grid-cols-12">
+                <article class="bento-card md:col-span-7">
+                    <img src="../assets/images/comida/ceviche_y_chicharron_de_trucha_con_fondo_canrash_platos_bandera.jpg" alt="Platos bandera de trucha" class="absolute inset-0 h-full w-full object-cover show-full-media">
+                    <div class="bento-overlay"></div>
+                    <div class="relative z-10 max-w-lg">
+                        <p class="text-xs uppercase tracking-[0.16em] text-white/80">Platos firma</p>
+                        <h2 class="mt-2 font-heading text-2xl font-bold text-white">Ceviche, chicharrón y parrilla de trucha</h2>
+                        <a href="menu.html" class="bento-link">Ver carta completa</a>
+                    </div>
+                </article>
+                <article class="bento-card md:col-span-5">
+                    <img src="../assets/images/comida/chicharron_de_trucha_plato_en_el_pasto_fondo_laguna.jpg" alt="Chicharrón de trucha" class="absolute inset-0 h-full w-full object-cover show-full-media">
+                    <div class="bento-overlay"></div>
+                    <div class="relative z-10 max-w-sm">
+                        <p class="text-xs uppercase tracking-[0.16em] text-white/80">Sabor premium</p>
+                        <h2 class="mt-2 font-heading text-2xl font-bold text-white">Producto fresco del agua a la mesa</h2>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <!-- Plato 1 -->
-                <div class="bg-white p-6 rounded-xl shadow-md flex relative">
-                    <div class="absolute -top-3 -right-3 bg-accent text-white text-xs px-3 py-1 rounded-full shadow-md">Recomendado</div>
-                    <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
-                        <img src="../assets/images/comida/chicharron_de_trucha_plato_en_el_pasto_fondo_laguna.jpg" alt="Trucha a la Parrilla" class="w-full h-full object-cover">
-                    </div>
-                    <div class="ml-4 flex-grow">
-                        <div class="flex justify-between items-center mb-2">
-                            <h3 class="text-lg font-heading font-semibold">Trucha a la Parrilla</h3>
-                            <span class="text-accent font-semibold">S/. 35.00</span>
-                        </div>
-                        <p class="text-gray-600 text-sm">
-                            Con papas nativas y ensalada fresca.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Plato 2 -->
-                <div class="bg-white p-6 rounded-xl shadow-md flex">
-                    <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
-                        <img src="../assets/images/menu-2.jpg" alt="Trucha Frita" class="w-full h-full object-cover">
-                    </div>
-                    <div class="ml-4 flex-grow">
-                        <div class="flex justify-between items-center mb-2">
-                            <h3 class="text-lg font-heading font-semibold">Trucha Frita</h3>
-                            <span class="text-accent font-semibold">S/. 32.00</span>
-                        </div>
-                        <p class="text-gray-600 text-sm">
-                            Con arroz, yuca y ensalada criolla.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Plato 3 -->
-                <div class="bg-white p-6 rounded-xl shadow-md flex relative">
-                    <div class="absolute -top-3 -right-3 bg-green-500 text-white text-xs px-3 py-1 rounded-full shadow-md">Más Vendido</div>
-                    <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
-                        <img src="../assets/images/comida/ceviche_y_chicharron_de_trucha_con_fondo_canrash_platos_bandera.jpg" alt="Ceviche de Trucha" class="w-full h-full object-cover">
-                    </div>
-                    <div class="ml-4 flex-grow">
-                        <div class="flex justify-between items-center mb-2">
-                            <h3 class="text-lg font-heading font-semibold">Ceviche de Trucha</h3>
-                            <span class="text-accent font-semibold">S/. 38.00</span>
-                        </div>
-                        <p class="text-gray-600 text-sm">
-                            Marinado clásico con camote y choclo.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Plato 4 -->
-                <div class="bg-white p-6 rounded-xl shadow-md flex">
-                    <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
-                        <img src="../assets/images/menu-4.jpg" alt="Trucha al Ajillo" class="w-full h-full object-cover">
-                    </div>
-                    <div class="ml-4 flex-grow">
-                        <div class="flex justify-between items-center mb-2">
-                            <h3 class="text-lg font-heading font-semibold">Trucha al Ajillo</h3>
-                            <span class="text-accent font-semibold">S/. 36.00</span>
-                        </div>
-                        <p class="text-gray-600 text-sm">
-                            Con mantequilla, ajo y hierbas. Pure y vegetales.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Plato 5 -->
-                <div class="bg-white p-6 rounded-xl shadow-md flex">
-                    <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
-                        <img src="../assets/images/menu-5.jpg" alt="Sudado de Trucha" class="w-full h-full object-cover">
-                    </div>
-                    <div class="ml-4 flex-grow">
-                        <div class="flex justify-between items-center mb-2">
-                            <h3 class="text-lg font-heading font-semibold">Sudado de Trucha</h3>
-                            <span class="text-accent font-semibold">S/. 34.00</span>
-                        </div>
-                        <p class="text-gray-600 text-sm">
-                            Caldo aromático y arroz blanco.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Plato 6 -->
-                <div class="bg-white p-6 rounded-xl shadow-md flex">
-                    <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
-                        <img src="../assets/images/menu-6.jpg" alt="Chicharrón de Trucha" class="w-full h-full object-cover">
-                    </div>
-                    <div class="ml-4 flex-grow">
-                        <div class="flex justify-between items-center mb-2">
-                            <h3 class="text-lg font-heading font-semibold">Chicharrón de Trucha</h3>
-                            <span class="text-accent font-semibold">S/. 37.00</span>
-                        </div>
-                        <p class="text-gray-600 text-sm">
-                            Crocante por fuera, jugoso por dentro. Con yuca.
-                        </p>
-                    </div>
+        <section class="bg-slate-50 py-16">
+            <div class="mx-auto max-w-7xl px-4 lg:px-8">
+                <p class="eyebrow">Experiencia</p>
+                <h2 class="mt-3 font-heading text-3xl font-bold">Lo que hace diferente a nuestro restaurante</h2>
+                <div class="mt-8 grid gap-5 md:grid-cols-3">
+                    <article class="panel-card"><h3 class="font-heading text-lg font-bold text-lake">Frescura real</h3><p class="mt-2 text-sm text-stone">Preparación diaria con trucha del criadero Canrash y trazabilidad del origen.</p></article>
+                    <article class="panel-card"><h3 class="font-heading text-lg font-bold text-lake">Vista panorámica</h3><p class="mt-2 text-sm text-stone">Comedor integrado al paisaje andino para una experiencia natural completa.</p></article>
+                    <article class="panel-card"><h3 class="font-heading text-lg font-bold text-lake">Atención simple y cálida</h3><p class="mt-2 text-sm text-stone">Servicio cercano para familias, turistas y grupos corporativos.</p></article>
                 </div>
             </div>
-            
-            <!-- Botones para ver las cartas completas -->
-            <div class="mt-10 text-center">
-                <div class="flex flex-col md:flex-row justify-center gap-4">
-                    <a href="carta.html" class="inline-flex items-center bg-accent text-white px-6 py-3 rounded-full font-medium hover:bg-opacity-90 transition">
-                        <i class="fas fa-clipboard-list mr-2"></i> Ver Carta Digital
-                    </a>
-                    <a href="menu.html" class="inline-flex items-center bg-primary text-white px-6 py-3 rounded-full font-medium hover:bg-opacity-90 transition">
-                        <i class="fas fa-utensils mr-2"></i> Ver Menú Completo
-                    </a>
-                </div>
-                <p class="text-sm text-gray-500 mt-3">Consulta nuestra <a href="carta.html" class="text-accent hover:underline font-medium">carta digital</a> o nuestro <a href="menu.html" class="text-primary hover:underline font-medium">menú completo</a> actualizados</p>
-            </div>
+        </section>
 
-            <!-- Información adicional del menú -->
-            <div class="mt-12 max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-md relative border-2 border-accent">
-                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-accent text-white px-6 py-1 rounded-full font-medium">
-                    Todo Incluido
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4 text-center">
-                    <div class="p-3 rounded-lg bg-gray-50">
-                        <i class="fas fa-soup-bowl text-accent text-2xl mb-2"></i>
-                        <p class="font-medium">Entrada</p>
-                        <p class="text-sm text-gray-600">Sopa o ensalada del día</p>
-                    </div>
-                    <div class="p-3 rounded-lg bg-gray-50">
-                        <i class="fas fa-glass-water text-accent text-2xl mb-2"></i>
-                        <p class="font-medium">Bebida</p>
-                        <p class="text-sm text-gray-600">Chicha morada o refresco</p>
-                    </div>
-                    <div class="p-3 rounded-lg bg-gray-50">
-                        <i class="fas fa-ice-cream text-accent text-2xl mb-2"></i>
-                        <p class="font-medium">Postre</p>
-                        <p class="text-sm text-gray-600">Mazamorra o fruta fresca</p>
-                    </div>
-                </div>
-                <div class="mt-6 text-center">
-                    <p class="text-gray-600">Para ver todos nuestros platos y opciones, consulta nuestra <a href="carta.html" class="text-accent hover:underline font-medium">carta digital</a>.</p>
+        <section class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
+            <div class="panel-card text-center">
+                <h2 class="font-heading text-3xl font-bold">¿Visita turística o parada gastronómica?</h2>
+                <p class="mx-auto mt-3 max-w-2xl text-stone">Podemos ayudarte a planificar almuerzo + recorrido + hospedaje para una experiencia completa en Canrash.</p>
+                <div class="mt-7 flex flex-wrap justify-center gap-3">
+                    <a href="hospedaje.html" class="rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold hover:bg-slate-100 transition">Ver hospedaje</a>
+                    <a href="ubicacion.html" class="rounded-full bg-deep px-6 py-3 text-sm font-semibold text-white hover:bg-lake transition">Ver ubicación</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Video Experience Section -->
-    <section class="py-12 bg-gray-900">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-heading font-bold text-center text-white mb-8">Vive la Experiencia</h2>
-            <div class="max-w-4xl mx-auto overflow-hidden rounded-xl shadow-2xl">
-                <video class="w-full" controls poster="../assets/images/comida/ceviche_y_chicharron_de_trucha_con_fondo_canrash_platos_bandera.jpg">
-                    <source src="../assets/images/laguna/espectacular_video_manejando_en_pista_al_lado_de_laguna_se_ve_la_laguna_y_buses_en_contra.mp4" type="video/mp4">
-                    Tu navegador no soporta la etiqueta de video.
-                </video>
-            </div>
-            <div class="text-center mt-6">
-                <p class="text-white font-medium italic">"Sabor y vistas incomparables"</p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Gallery Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-heading font-bold text-center mb-4">Galería</h2>
-            <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-                La trucha más fresca y el mejor entorno
-            </p>
-            
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="overflow-hidden rounded-lg col-span-2">
-                    <img src="../assets/images/comida/ceviche_y_chicharron_de_trucha_con_fondo_canrash_platos_bandera.jpg" alt="Platos bandera: ceviche y chicharrón de trucha" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
-                </div>
-                <div class="overflow-hidden rounded-lg">
-                    <img src="../assets/images/comida/chicharron_de_trucha_plato_en_el_pasto_fondo_laguna.jpg" alt="Chicharrón de trucha con vista a la laguna" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
-                </div>
-                <div class="overflow-hidden rounded-lg">
-                    <img src="../assets/images/laguna/trucha_presentada_lista_para_cocinar_chef_la_sostiene_con_herramienta_paisaje_hermoso_detrás_laguna_en_mejor.jpg" alt="Chef presentando trucha fresca" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
-                </div>
-                <div class="overflow-hidden rounded-lg">
-                    <img src="../assets/images/comida/cooler_con_tapers_de_comida_delivery_de_eica.jpg" alt="Servicio de delivery de trucha de Laguna Canrash" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
-                </div>
-                <div class="overflow-hidden rounded-lg">
-                    <img src="../assets/images/laguna/estacionamiento_y_parqueo_lleno_de_comensales.jpg" alt="Restaurante lleno de comensales" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
-                </div>
-                <div class="overflow-hidden rounded-lg col-span-2">
-                    <img src="../assets/images/laguna/comedor_vacio_pero_con_vista_completa_a_la_laguna_pared_transparente.jpg" alt="Vista panorámica desde el restaurante" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Información Práctica -->
-    <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-heading font-bold text-center mb-12">Información Práctica</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <!-- Horarios -->
-                <div class="bg-white p-8 rounded-xl shadow-md text-center">
-                    <div class="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 text-primary rounded-full mb-6">
-                        <i class="fas fa-clock text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-heading font-semibold mb-4">Horarios</h3>
-                    <p class="text-green-600 font-medium mb-3">
-                        <i class="fas fa-calendar-check mr-1"></i> Atendemos todos los días del año
-                    </p>
-                    <ul class="space-y-2 text-gray-600">
-                        <li>
-                            <span class="font-medium">Lunes a Viernes:</span><br>
-                            11:00 AM - 8:00 PM
-                        </li>
-                        <li>
-                            <span class="font-medium">Sábados y Domingos:</span><br>
-                            9:00 AM - 9:00 PM
-                        </li>
-                        <li>
-                            <span class="font-medium">Feriados:</span><br>
-                            9:00 AM - 9:00 PM
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Métodos de Pago -->
-                <div class="bg-white p-8 rounded-xl shadow-md text-center">
-                    <div class="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 text-primary rounded-full mb-6">
-                        <i class="fas fa-credit-card text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-heading font-semibold mb-4">Métodos de Pago</h3>
-                    <p class="text-gray-600 mb-3">
-                        La confirmación y reserva es previo pago.
-                    </p>
-                    <ul class="space-y-3 text-gray-600">
-                        <li class="flex flex-col items-center justify-center">
-                            <div class="flex items-center">
-                                <i class="fas fa-mobile-alt text-accent mr-2"></i>
-                                <span class="font-medium">Yape</span>
-                            </div>
-                            <p class="text-sm mt-1">+51 957 878 409</p>
-                            <p class="text-sm italic">"Empresa Isla de Canrash s.r.l"</p>
-                        </li>
-                        <li class="flex flex-col items-center justify-center pt-2">
-                            <div class="flex items-center">
-                                <i class="fas fa-university text-accent mr-2"></i>
-                                <span class="font-medium">Transferencia BCP</span>
-                            </div>
-                            <p class="text-sm mt-1">Cuenta: 375 2654572 0 35</p>
-                            <p class="text-sm">CCI: 00237500265457203546</p>
-                            <p class="text-sm italic">"Empresa Isla de Canrash s.r.l"</p>
-                        </li>
-                        <li class="flex items-center justify-center pt-2">
-                            <i class="fas fa-money-bill text-accent mr-2"></i>
-                            <span>Efectivo (en el local)</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Facturación -->
-                <div class="bg-white p-8 rounded-xl shadow-md text-center">
-                    <div class="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 text-primary rounded-full mb-6">
-                        <i class="fas fa-file-invoice text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-heading font-semibold mb-4">Facturación</h3>
-                    <p class="text-gray-600 mb-4">
-                        Emitimos factura electrónica para todos nuestros servicios.
-                    </p>
-                    <div class="p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-                        <p class="text-sm text-yellow-800">
-                            <i class="fas fa-exclamation-triangle text-yellow-600 mr-2"></i>
-                            <strong>Importante:</strong> Para facturas, indíquenos el monto consumido, RUC y nombre de la empresa. 
-                            Al finalizar el día, le enviaremos su factura por WhatsApp.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Reservas Info -->
-            <div class="bg-white p-8 rounded-xl shadow-md text-center max-w-3xl mx-auto mt-10">
-                <div class="inline-flex items-center justify-center w-16 h-16 bg-accent bg-opacity-20 text-accent rounded-full mb-6">
-                    <i class="fas fa-calendar-check text-2xl"></i>
-                </div>
-                <h3 class="text-xl font-heading font-semibold mb-4">Reservaciones</h3>
-                <p class="text-gray-600 mb-4">
-                    Para realizar una reserva, por favor indíquenos por WhatsApp:
-                </p>
-                <ul class="text-gray-600 text-left max-w-md mx-auto space-y-2 mb-6">
-                    <li class="flex items-center">
-                        <i class="fas fa-utensils text-accent mr-2"></i>
-                        <span>Los platos que desea ordenar</span>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-users text-accent mr-2"></i>
-                        <span>Mesa para cuántas personas</span>
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fas fa-calendar-alt text-accent mr-2"></i>
-                        <span>Fecha y hora de llegada a la laguna</span>
-                    </li>
-                </ul>
-                <p class="text-gray-600 mb-6">
-                    Le enviaremos una cotización y la confirmación será previa al pago.
-                </p>
-                
-                <!-- CTA Button -->
-                <a href="https://wa.me/51957878409" target="_blank" class="inline-flex items-center bg-accent text-white px-8 py-4 rounded-full font-medium hover:bg-opacity-90 transition text-lg animate-pulse">
-                    <i class="fab fa-whatsapp mr-2 text-xl"></i> ¡Haz tu Reserva Ahora!
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white pt-12 pb-6">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <!-- Logo & Description -->
-                <div class="col-span-1 md:col-span-2">
-                    <div class="flex items-center mb-4">
-                        <img src="../assets/images/logos/logo-sin-bg.png" alt="Logo Laguna Canrash" class="h-10">
-                    </div>
-                    <p class="text-gray-400 mb-4">
-                        Laguna Canrash ofrece una experiencia gastronómica única con la auténtica trucha arcoíris, 
-                        criada en jaulas flotantes en la hermosa Laguna Canrash, Áncash-Perú.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="https://www.facebook.com/LagunaCanrashPeru/" target="_blank" class="text-gray-400 hover:text-white transition">
-                            <i class="fab fa-facebook-f text-xl"></i>
-                        </a>
-                        <a href="https://www.instagram.com/lagunacanrash/" target="_blank" class="text-gray-400 hover:text-white transition">
-                            <i class="fab fa-instagram text-xl"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Quick Links -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4 font-heading">Enlaces Rápidos</h3>
-                    <ul class="space-y-2">
-                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition">Inicio</a></li>
-                        <li><a href="restaurante.html" class="text-gray-400 hover:text-white transition">Restaurante</a></li>
-                        <li><a href="menu.html" class="text-gray-400 hover:text-white transition">Carta</a></li>
-                        <li><a href="criadero.html" class="text-gray-400 hover:text-white transition">Criadero</a></li>
-                        <li><a href="hospedaje.html" class="text-gray-400 hover:text-white transition">Hospedaje</a></li>
-                        <li><a href="ubicacion.html" class="text-gray-400 hover:text-white transition">Ubicación</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Contact Info -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4 font-heading">Contacto</h3>
-                    <ul class="space-y-2">
-                        <li class="flex items-start">
-                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-accent"></i>
-                            <span class="text-gray-400">Laguna Canrash, San Marcos – Huari – Ancash - Perú</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fab fa-whatsapp mr-2 text-accent"></i>
-                            <a href="https://wa.me/51957878409" target="_blank" class="text-gray-400 hover:text-white transition">+51 957 878 409</a>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-envelope mr-2 text-accent"></i>
-                            <a href="mailto:administracion@lagunacanrash.com" class="text-gray-400 hover:text-white transition">administracion@lagunacanrash.com</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- Copyright -->
-            <div class="border-t border-gray-700 pt-6 text-center text-gray-500 text-sm">
-                <p>© 2025 Laguna Canrash. Todos los derechos reservados.</p>
-                <p class="mt-2">
-                    <a href="https://www.lagunacanrash.com" class="hover:text-gray-400 transition">www.lagunacanrash.com</a>
-                </p>
+    <footer class="border-t border-slate-200 bg-white py-10">
+        <div class="mx-auto flex max-w-7xl flex-col gap-4 px-4 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+            <p class="text-sm text-stone">© 2026 Laguna Canrash · EICA</p>
+            <div class="flex items-center gap-5 text-sm text-stone">
+                <a href="https://www.facebook.com/LagunaCanrashPeru/" target="_blank" class="hover:text-lake transition">Facebook</a>
+                <a href="https://www.instagram.com/lagunacanrash/" target="_blank" class="hover:text-lake transition">Instagram</a>
+                <a href="mailto:administracion@lagunacanrash.com" class="hover:text-lake transition">Email</a>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript for mobile menu toggle -->
     <script>
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            if (mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.remove('hidden');
-            } else {
-                mobileMenu.classList.add('hidden');
-            }
-        });
+        const button = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        if (button && menu) button.addEventListener('click', () => menu.classList.toggle('hidden'));
     </script>
 </body>
+
 </html>

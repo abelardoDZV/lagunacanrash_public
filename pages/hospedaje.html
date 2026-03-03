@@ -1,506 +1,113 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">                <div class="w-full md:w-1/2">
-                    <img src="../assets/images/laguna/parte_de_las_instalaciones_de_isla_canrash.jpg" alt="Instalaciones en Isla Canrash" class="rounded-xl shadow-lg w-full h-auto">
-                </div>  <title>Hospedaje - Laguna Canrash</title>
-    <meta name="description" content="Desconecta y descansa en nuestro hospedaje rústico en Laguna Canrash. Una experiencia auténtica en la naturaleza con servicios básicos y vistas espectaculares.">
-    
-    <!-- Favicon -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospedaje | Laguna Canrash (EICA)</title>
+    <meta name="description" content="Hospedaje rústico en Laguna Canrash: descanso en entorno natural andino con servicios esenciales y experiencias de naturaleza.">
     <link rel="icon" type="image/png" href="../assets/images/favicon.png">
-    
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Custom CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/styles.css">
-    
-    <!-- Tailwind Config -->
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'primary': '#1e88e5',
-                        'secondary': '#0d47a1',
-                        'accent': '#ff7043',
-                        'earth': '#8d6e63',
-                        'muted': '#90a4ae',
-                    },
-                    fontFamily: {
-                        'heading': ['Montserrat', 'sans-serif'],
-                        'body': ['Poppins', 'sans-serif'],
-                    }
-                }
-            }
-        }
+        tailwind.config = { theme: { extend: { colors: { ink: '#0B1220', lake: '#0D3B66', deep: '#08253F', mist: '#D9E6F2', stone: '#6B7280' }, fontFamily: { heading: ['Manrope', 'sans-serif'], body: ['Inter', 'sans-serif'] } } } }
     </script>
 </head>
-<body class="font-body bg-gray-50 text-gray-800">
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/51943215876" target="_blank" class="whatsapp-button fixed bottom-6 right-6 bg-green-500 text-white rounded-full p-3 shadow-lg z-50 hover:bg-green-600 transition duration-300">
-        <i class="fab fa-whatsapp text-3xl"></i>
-    </a>
 
-    <!-- Header/Navigation -->
-    <header class="bg-white shadow-md sticky top-0 z-40">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-                <!-- Logo -->
-                <a href="../index.html" class="flex items-center">
-                    <img src="../assets/images/logos/logo-sin-bg.png" alt="Logo Laguna Canrash" class="h-12">
-                </a>
-                
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-button" class="md:hidden focus:outline-none">
-                    <i class="fas fa-bars text-2xl text-primary"></i>
-                </button>
-                
-                <!-- Desktop Navigation -->
-                <nav class="hidden md:flex items-center space-x-6">
-                    <a href="../index.html" class="text-gray-600 font-medium hover:text-accent transition">Inicio</a>
-                    <a href="restaurante.html" class="text-gray-600 font-medium hover:text-accent transition">Restaurante</a>
-                    <a href="criadero.html" class="text-gray-600 font-medium hover:text-accent transition">Criadero</a>
-                    <a href="hospedaje.html" class="text-primary font-medium hover:text-accent transition">Hospedaje</a>
-                    <a href="ubicacion.html" class="text-gray-600 font-medium hover:text-accent transition">Ubicación</a>
-                    <a href="https://wa.me/51943215876" target="_blank" class="bg-accent text-white px-4 py-2 rounded-full font-medium hover:bg-opacity-90 transition">
-                        Reservar por WhatsApp
-                    </a>
-                </nav>
-            </div>
-            
-            <!-- Mobile Navigation (Hidden by default) -->
-            <nav id="mobile-menu" class="hidden md:hidden py-4 border-t border-gray-100">
-                <div class="flex flex-col space-y-3">
-                    <a href="../index.html" class="text-gray-600 font-medium py-2">Inicio</a>
-                    <a href="restaurante.html" class="text-gray-600 font-medium py-2">Restaurante</a>
-                    <a href="criadero.html" class="text-gray-600 font-medium py-2">Criadero</a>
-                    <a href="hospedaje.html" class="text-primary font-medium py-2">Hospedaje</a>
-                    <a href="ubicacion.html" class="text-gray-600 font-medium py-2">Ubicación</a>
-                    <a href="https://wa.me/51943215876" target="_blank" class="bg-accent text-white px-4 py-2 rounded-full font-medium text-center">
-                        Reservar por WhatsApp
-                    </a>
-                </div>
+<body class="font-body bg-white text-ink antialiased">
+    <a href="https://wa.me/51957878409" target="_blank" class="whatsapp-button fixed bottom-5 right-5 bg-green-500 text-white rounded-full p-3.5 shadow-soft z-50 hover:bg-green-600 transition" aria-label="Reservar hospedaje por WhatsApp"><i class="fab fa-whatsapp text-2xl"></i></a>
+    <a href="criadero.html" class="b2b-button fixed bottom-5 left-5 rounded-full bg-deep px-4 py-3 text-xs font-semibold text-white shadow-soft z-50 hover:bg-lake transition" aria-label="Solicitar cotización comercial">Cotización B2B</a>
+
+    <header class="sticky top-0 z-40 border-b border-white/10 bg-deep/70 backdrop-blur-xl">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
+            <a href="../index.html" class="flex items-center gap-3"><img src="../assets/images/logos/logo-sin-bg.png" alt="Logo Laguna Canrash" class="h-11 w-auto"><span class="font-heading text-lg font-bold tracking-tight text-white">Laguna Canrash</span></a>
+            <button id="mobile-menu-button" class="md:hidden text-white" aria-label="Abrir menú"><i class="fas fa-bars text-2xl"></i></button>
+            <nav class="hidden items-center gap-7 md:flex">
+                <a href="../index.html" class="text-sm font-medium text-white/80 hover:text-white transition">Inicio</a>
+                <a href="restaurante.html" class="text-sm font-medium text-white/80 hover:text-white transition">Restaurante</a>
+                <a href="menu.html" class="text-sm font-medium text-white/80 hover:text-white transition">Carta</a>
+                <a href="criadero.html" class="text-sm font-medium text-white/80 hover:text-white transition">Criadero</a>
+                <a href="hospedaje.html" class="text-sm font-medium text-mist">Hospedaje</a>
+                <a href="ubicacion.html" class="text-sm font-medium text-white/80 hover:text-white transition">Ubicación</a>
+                <a href="https://wa.me/51957878409" target="_blank" class="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-deep transition hover:bg-mist">Reservar</a>
             </nav>
         </div>
+        <nav id="mobile-menu" class="hidden border-t border-white/10 px-4 pb-5 md:hidden">
+            <div class="flex flex-col gap-3 pt-4 text-sm">
+                <a href="../index.html" class="text-white/80">Inicio</a>
+                <a href="restaurante.html" class="text-white/80">Restaurante</a>
+                <a href="menu.html" class="text-white/80">Carta</a>
+                <a href="criadero.html" class="text-white/80">Criadero</a>
+                <a href="hospedaje.html" class="text-mist">Hospedaje</a>
+                <a href="ubicacion.html" class="text-white/80">Ubicación</a>
+                <a href="https://wa.me/51957878409" target="_blank" class="mt-2 inline-flex w-fit rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-deep transition hover:bg-mist">Reservar</a>
+            </div>
+        </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="bg-gray-800 text-white py-24" style="background-image: url('../assets/images/laguna/vista_desde_laguna_y_orilla_hacia_isla_canrash.jpg'); background-size: cover; background-position: center; position: relative;">
-        <!-- Overlay -->
-        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-        
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="max-w-3xl">
-                <h1 class="text-4xl md:text-5xl font-heading font-bold mb-6">
-                    Desconecta y Descansa en Laguna Canrash
-                </h1>
-                <p class="text-xl text-gray-200 mb-8 max-w-2xl">
-                    Una experiencia rústica y auténtica en plena naturaleza. Hospedaje sencillo con lo esencial para disfrutar de la tranquilidad y belleza del entorno.
-                </p>
-                <a href="https://wa.me/51943215876" target="_blank" class="inline-flex items-center bg-accent hover:bg-opacity-90 text-white font-medium px-6 py-3 rounded-full transition">
-                    <i class="fab fa-whatsapp mr-2"></i> Consultar Disponibilidad
-                </a>
+    <main>
+        <section class="hero-showcase relative isolate min-h-[58vh] overflow-hidden">
+            <img src="../assets/images/laguna/vista_desde_laguna_y_orilla_hacia_isla_canrash.jpg" alt="Vista de la laguna desde zona de hospedaje" class="absolute inset-0 h-full w-full object-cover show-full-media">
+            <div class="absolute inset-0 hero-overlay"></div>
+            <div class="relative mx-auto flex min-h-[58vh] max-w-7xl items-end px-4 pb-14 pt-24 lg:px-8">
+                <div class="glass-panel max-w-3xl p-8">
+                    <p class="eyebrow !text-mist">Stay in nature</p>
+                    <h1 class="mt-3 font-heading text-4xl font-extrabold text-white md:text-5xl">Descanso auténtico frente a la laguna.</h1>
+                    <p class="mt-4 text-white/85">Hospedaje funcional, ambiente tranquilo y contacto directo con la naturaleza andina.</p>
+                    <a href="https://wa.me/51957878409" target="_blank" class="mt-7 inline-flex rounded-full bg-white px-6 py-3 text-sm font-semibold text-deep hover:bg-mist transition">Consultar disponibilidad</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Lodging -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="w-full md:w-1/2">
-                    <h2 class="text-3xl font-heading font-bold mb-6">Una Experiencia Auténtica</h2>
-                    <p class="text-gray-600 mb-6">
-                        Nuestro hospedaje en Laguna Canrash ofrece una experiencia única para quienes buscan
-                        desconectarse de la vida urbana y sumergirse en la tranquilidad de la naturaleza. 
-                        Las habitaciones rústicas de adobe y madera son sencillas pero acogedoras, diseñadas para 
-                        brindar el confort básico mientras disfrutas de una inmersión total en el entorno natural.
-                    </p>
-                    <p class="text-gray-600 mb-6">
-                        Al hospedarte con nosotros, despertarás con impresionantes vistas a la laguna y las montañas,
-                        disfrutando de aire puro y el sonido del agua. Es el complemento perfecto para quienes 
-                        visitan nuestro restaurante y desean prolongar su estancia para disfrutar más tiempo de este paraíso.
-                    </p>
-                    <div class="bg-primary bg-opacity-5 border border-primary border-opacity-20 rounded-lg p-4">
-                        <p class="text-primary font-medium">
-                            <i class="fas fa-info-circle mr-2"></i>
-                            Precio accesible: S/. 20 por noche por persona
-                        </p>
-                    </div>
-                </div>
-                <div class="w-full md:w-1/2">
-                    <img src="../assets/images/laguna/vista_de_la_caseta_de_turistas_y_pescadores.jpeg" alt="Caseta de turistas en Laguna Canrash" class="rounded-xl shadow-lg w-full h-auto">
-                </div>
+        <section class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
+            <p class="eyebrow">Servicios esenciales</p>
+            <h2 class="mt-3 font-heading text-3xl font-bold">Lo necesario para una estadía cómoda</h2>
+            <div class="mt-8 grid gap-5 md:grid-cols-3">
+                <article class="panel-card"><h3 class="font-heading text-lg font-bold text-lake">Tarifa accesible</h3><p class="mt-2 text-sm text-stone">Referencia: S/. 20 por persona y noche (consultar disponibilidad actual).</p></article>
+                <article class="panel-card"><h3 class="font-heading text-lg font-bold text-lake">Conectividad y energía</h3><p class="mt-2 text-sm text-stone">Internet en zona, iluminación y servicios básicos operativos.</p></article>
+                <article class="panel-card"><h3 class="font-heading text-lg font-bold text-lake">Entorno seguro</h3><p class="mt-2 text-sm text-stone">Área de estacionamiento y acompañamiento local para visitantes.</p></article>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Services & Amenities -->
-    <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-heading font-bold text-center mb-12">Servicios y Comodidades</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <!-- Service 1 -->
-                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
-                    <div class="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 text-primary rounded-full mb-6">
-                        <i class="fas fa-parking text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-heading font-semibold mb-4">Estacionamiento</h3>
-                    <p class="text-gray-600">
-                        Contamos con un área de estacionamiento seguro para vehículos, donde podrás dejar tu carro mientras disfrutas de tu estancia.
-                    </p>
-                </div>
-                
-                <!-- Service 2 -->
-                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
-                    <div class="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 text-primary rounded-full mb-6">
-                        <i class="fas fa-faucet text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-heading font-semibold mb-4">Agua Potable y Desagüe</h3>
-                    <p class="text-gray-600">
-                        Disponemos de agua potable y sistema de desagüe adecuado para asegurar una estancia cómoda y segura en nuestras instalaciones.
-                    </p>
-                </div>
-                
-                <!-- Service 3 -->
-                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
-                    <div class="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 text-primary rounded-full mb-6">
-                        <i class="fas fa-lightbulb text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-heading font-semibold mb-4">Energía con Paneles Solares</h3>
-                    <p class="text-gray-600">
-                        Utilizamos energía limpia con nuestros paneles solares, ofreciendo iluminación durante tu estancia mientras cuidamos el medio ambiente.
-                    </p>
-                </div>
-                
-                <!-- Service 4 -->
-                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
-                    <div class="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 text-primary rounded-full mb-6">
-                        <i class="fas fa-wifi text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-heading font-semibold mb-4">Internet Starlink</h3>
-                    <p class="text-gray-600">
-                        Mantenemos la conexión incluso en este entorno remoto gracias a nuestro servicio de Internet Starlink, para que puedas mantenerte comunicado.
-                    </p>
-                </div>
-                
-                <!-- Service 5 -->
-                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
-                    <div class="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 text-primary rounded-full mb-6">
-                        <i class="fas fa-utensils text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-heading font-semibold mb-4">Restaurante en el Lugar</h3>
-                    <p class="text-gray-600">
-                        Disfruta de nuestro restaurante con trucha fresca y otros platillos deliciosos a unos pasos de tu habitación.
-                    </p>
-                </div>
-                
-                <!-- Service 6 -->
-                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
-                    <div class="inline-flex items-center justify-center w-16 h-16 bg-primary bg-opacity-10 text-primary rounded-full mb-6">
-                        <i class="fas fa-mountain text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-heading font-semibold mb-4">Vistas Panorámicas</h3>
-                    <p class="text-gray-600">
-                        Despierta con impresionantes vistas a la laguna y las montañas circundantes, un espectáculo natural inigualable.
-                    </p>
-                </div>
+        <section class="mx-auto max-w-7xl px-4 pb-16 lg:px-8">
+            <div class="grid gap-5 md:grid-cols-12">
+                <article class="bento-card md:col-span-8">
+                    <img src="../assets/images/laguna/parte_de_las_instalaciones_de_isla_canrash.jpg" alt="Instalaciones de hospedaje en Canrash" class="absolute inset-0 h-full w-full object-cover show-full-media">
+                    <div class="bento-overlay"></div>
+                    <div class="relative z-10 max-w-lg"><p class="text-xs uppercase tracking-[0.16em] text-white/80">Entorno</p><h3 class="mt-2 font-heading text-2xl font-bold text-white">Cielo abierto, silencio y paisaje de altura</h3></div>
+                </article>
+                <article class="bento-card md:col-span-4">
+                    <img src="../assets/images/laguna/orilla_de_la_laguna_arboles_y_rocas.jpg" alt="Orilla de laguna Canrash" class="absolute inset-0 h-full w-full object-cover show-full-media">
+                    <div class="bento-overlay"></div>
+                    <div class="relative z-10"><h3 class="font-heading text-xl font-bold text-white">Ideal para desconectar</h3></div>
+                </article>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Gallery -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-heading font-bold text-center mb-4">Galería de Hospedaje</h2>
-            <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-                Conoce nuestras habitaciones rústicas y el entorno natural que te espera en Laguna Canrash.
-            </p>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="overflow-hidden rounded-lg">
-                    <img src="../assets/images/laguna/parte_de_las_instalaciones_de_isla_canrash.jpg" alt="Instalaciones en Isla Canrash" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
-                </div>
-                <div class="overflow-hidden rounded-lg">
-                    <img src="../assets/images/laguna/vista_de_la_caseta_de_turistas_y_pescadores.jpeg" alt="Caseta de turistas" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
-                </div>
-                <div class="overflow-hidden rounded-lg">
-                    <img src="../assets/images/laguna/vista_desde_laguna_y_orilla_hacia_isla_canrash.jpg" alt="Vista desde la laguna" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
-                </div>
-                <div class="overflow-hidden rounded-lg">
-                    <img src="../assets/images/laguna/orilla_de_la_laguna_arboles_y_rocas.jpg" alt="Orilla de la laguna" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
-                </div>
-                <div class="overflow-hidden rounded-lg">
-                    <img src="../assets/images/laguna/foto_desde_lugar_super_alto_de_toda_la_laguna_canrash.jpg" alt="Vista panorámica" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
-                </div>
-                <div class="overflow-hidden rounded-lg">
-                    <img src="../assets/images/laguna/ladera_de_montaña_derecha_de_la_laguna_canrash.jpeg" alt="Ladera de montaña" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+        <section class="bg-slate-50 py-16">
+            <div class="mx-auto max-w-4xl px-4 text-center lg:px-8">
+                <h2 class="font-heading text-3xl font-bold">Plan recomendado</h2>
+                <p class="mt-4 text-stone">Día 1: llegada + almuerzo. Día 2: amanecer en laguna + visita al criadero + retorno.</p>
+                <div class="mt-8 flex flex-wrap justify-center gap-3">
+                    <a href="restaurante.html" class="rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold hover:bg-slate-100 transition">Ver restaurante</a>
+                    <a href="criadero.html" class="rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold hover:bg-slate-100 transition">Ver criadero</a>
+                    <a href="ubicacion.html" class="rounded-full bg-deep px-6 py-3 text-sm font-semibold text-white hover:bg-lake transition">Cómo llegar</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Video del Hospedaje -->
-    <section class="py-12 bg-gray-900">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-heading font-bold text-center text-white mb-8">La Belleza de Laguna Canrash</h2>
-            <div class="max-w-4xl mx-auto overflow-hidden rounded-xl shadow-2xl">
-                <video class="w-full" controls poster="../assets/images/laguna/vista_desde_la_orilla_y_rocas_a_la_laguna_canrash_persona_de_espaldas.jpg">
-                    <source src="../assets/images/laguna/video_drone_panoramica_toda_laguna.mp4" type="video/mp4">
-                    Tu navegador no soporta la etiqueta de video.
-                </video>
-            </div>
-            <div class="text-center mt-6">
-                <p class="text-white font-medium italic">"Disfruta de estas vistas impresionantes durante tu estadía"</p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Experience Highlights -->
-    <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-heading font-bold text-center mb-12">Experiencias para Disfrutar</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <!-- Experience 1 -->
-                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
-                    <div class="flex items-center mb-6">
-                        <div class="inline-flex items-center justify-center w-12 h-12 bg-accent bg-opacity-10 text-accent rounded-full mr-4">
-                            <i class="fas fa-sun text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-heading font-semibold">Amanecer en la Laguna</h3>
-                    </div>
-                    <p class="text-gray-600 mb-4">
-                        Despierta temprano para contemplar uno de los amaneceres más hermosos, con el sol reflejándose en las aguas cristalinas de la laguna.
-                    </p>
-                    <img src="../assets/images/laguna/vista_desde_la_orilla_y_rocas_a_la_laguna_canrash_persona_de_espaldas.jpg" alt="Vista a la laguna" class="w-full h-48 object-cover rounded-lg">
-                </div>
-                
-                <!-- Experience 2 -->
-                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
-                    <div class="flex items-center mb-6">
-                        <div class="inline-flex items-center justify-center w-12 h-12 bg-accent bg-opacity-10 text-accent rounded-full mr-4">
-                            <i class="fas fa-hiking text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-heading font-semibold">Caminatas Alrededor</h3>
-                    </div>
-                    <p class="text-gray-600 mb-4">
-                        Explora los senderos naturales alrededor de la laguna y descubre la flora y fauna local mientras respiras el aire puro de los Andes.
-                    </p>
-                    <img src="../assets/images/ruta_a_canrash/parte_de_la_ruta_a_canrash_vehiculos_en_la_pista_de_montaña.jpg" alt="Ruta a Canrash" class="w-full h-48 object-cover rounded-lg">
-                </div>
-                
-                <!-- Experience 3 -->
-                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
-                    <div class="flex items-center mb-6">
-                        <div class="inline-flex items-center justify-center w-12 h-12 bg-accent bg-opacity-10 text-accent rounded-full mr-4">
-                            <i class="fas fa-fish text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-heading font-semibold">Visita al Criadero</h3>
-                    </div>
-                    <p class="text-gray-600 mb-4">
-                        Conoce nuestras jaulas flotantes y aprende sobre el proceso de crianza sostenible de truchas que realizamos en la laguna.
-                    </p>
-                    <img src="../assets/images/laguna/bote_lejano_personas_parte_de_jaula_flotante.jpg" alt="Jaulas flotantes" class="w-full h-48 object-cover rounded-lg">
-                </div>
-                
-                <!-- Experience 4 -->
-                <div class="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition">
-                    <div class="flex items-center mb-6">
-                        <div class="inline-flex items-center justify-center w-12 h-12 bg-accent bg-opacity-10 text-accent rounded-full mr-4">
-                            <i class="fas fa-star text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-heading font-semibold">Noches Estrelladas</h3>
-                    </div>
-                    <p class="text-gray-600 mb-4">
-                        Disfruta de cielos nocturnos despejados perfectos para la observación de estrellas, lejos de la contaminación lumínica de las ciudades.
-                    </p>
-                    <img src="../assets/images/laguna/vista_de_laguna_y_montañas_desde_lancha_con_carretera_visible.jpg" alt="Vista panorámica" class="w-full h-48 object-cover rounded-lg">
-                </div>
-            </div>
-        </div>
-    </section>
+    <footer class="border-t border-slate-200 bg-white py-10"><div class="mx-auto flex max-w-7xl flex-col gap-4 px-4 lg:flex-row lg:items-center lg:justify-between lg:px-8"><p class="text-sm text-stone">© 2026 Laguna Canrash · EICA</p><a href="https://wa.me/51957878409" target="_blank" class="text-sm text-stone hover:text-lake transition">WhatsApp: +51 957 878 409</a></div></footer>
 
-    <!-- Booking Info -->
-        <!-- Galería de Imágenes -->
-    <section class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-heading font-bold text-center mb-12">Entorno Natural Privilegiado</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="overflow-hidden rounded-xl shadow-lg">
-                    <img src="../assets/images/laguna/ladera_de_montaña_derecha_de_la_laguna_canrash.jpeg" alt="Ladera de montaña" class="w-full h-64 object-cover transform hover:scale-105 transition duration-500">
-                </div>
-                <div class="overflow-hidden rounded-xl shadow-lg">
-                    <img src="../assets/images/laguna/orilla_de_la_laguna_arboles_y_rocas.jpg" alt="Orilla de la laguna" class="w-full h-64 object-cover transform hover:scale-105 transition duration-500">
-                </div>
-                <div class="overflow-hidden rounded-xl shadow-lg">
-                    <img src="../assets/images/laguna/vista_de_laguna_y_montañas_desde_lancha_con_carretera_visible.jpg" alt="Vista de laguna y montañas" class="w-full h-64 object-cover transform hover:scale-105 transition duration-500">
-                </div>
-            </div>
-            
-            <div class="mt-12 bg-white p-6 rounded-lg shadow-md max-w-2xl mx-auto text-center">
-                <h3 class="text-xl font-heading font-semibold mb-4">Experiencia Única en la Naturaleza</h3>
-                <p class="text-gray-600">
-                    Hospedarse en Laguna Canrash es una experiencia incomparable. Rodeado de imponentes montañas y aguas cristalinas, nuestro alojamiento ofrece un escape perfecto de la rutina diaria en un entorno natural privilegiado.                    
-                </p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Reservation Form -->
-    <section class="py-16 bg-accent bg-opacity-5">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
-                <div class="p-12">
-                    <h2 class="text-3xl font-heading font-bold mb-6">Reserva tu Estadía</h2>
-                    <p class="text-gray-600 mb-8">
-                        Para consultar disponibilidad y realizar reservaciones, contáctanos directamente 
-                        por WhatsApp. Recomendamos reservar con anticipación, especialmente durante los 
-                        fines de semana y temporada alta.
-                    </p>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                        <div>
-                            <h3 class="text-xl font-heading font-semibold mb-4">Detalles de la Reserva</h3>
-                            <ul class="space-y-3">
-                                <li class="flex items-center">
-                                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                                    <span class="text-gray-600">Precio: S/. 20 por noche/persona</span>
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                                    <span class="text-gray-600">Check-in: 2:00 PM - 8:00 PM</span>
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                                    <span class="text-gray-600">Check-out: Hasta las 12:00 PM</span>
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
-                                    <span class="text-gray-600">Pago: Efectivo o Yape al momento de llegada</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-heading font-semibold mb-4">Qué Traer</h3>
-                            <ul class="space-y-3">
-                                <li class="flex items-center">
-                                    <i class="fas fa-suitcase text-primary mr-2"></i>
-                                    <span class="text-gray-600">Ropa abrigadora para las noches</span>
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="fas fa-tshirt text-primary mr-2"></i>
-                                    <span class="text-gray-600">Ropa de cambio</span>
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="fas fa-hiking text-primary mr-2"></i>
-                                    <span class="text-gray-600">Calzado adecuado para caminatas</span>
-                                </li>
-                                <li class="flex items-center">
-                                    <i class="fas fa-camera text-primary mr-2"></i>
-                                    <span class="text-gray-600">Cámara para capturar los paisajes</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="text-center">
-                        <a href="https://wa.me/51943215876" target="_blank" class="inline-flex items-center bg-accent text-white px-8 py-4 rounded-full font-medium hover:bg-opacity-90 transition text-lg">
-                            <i class="fab fa-whatsapp mr-2 text-xl"></i> Consulta Disponibilidad por WhatsApp
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white pt-12 pb-6">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <!-- Logo & Description -->
-                <div class="col-span-1 md:col-span-2">
-                    <div class="flex items-center mb-4">
-                        <img src="../assets/images/logos/logo-sin-bg.png" alt="Logo Laguna Canrash" class="h-10">
-                    </div>
-                    <p class="text-gray-400 mb-4">
-                        Laguna Canrash ofrece una experiencia gastronómica única con la auténtica trucha arcoíris, 
-                        criada en jaulas flotantes en la hermosa Laguna Canrash, Áncash-Perú.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="https://www.facebook.com/LagunaCanrashPeru/" target="_blank" class="text-gray-400 hover:text-white transition">
-                            <i class="fab fa-facebook-f text-xl"></i>
-                        </a>
-                        <a href="https://www.instagram.com/lagunacanrash/" target="_blank" class="text-gray-400 hover:text-white transition">
-                            <i class="fab fa-instagram text-xl"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Quick Links -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4 font-heading">Enlaces Rápidos</h3>
-                    <ul class="space-y-2">
-                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition">Inicio</a></li>
-                        <li><a href="restaurante.html" class="text-gray-400 hover:text-white transition">Restaurante</a></li>
-                        <li><a href="criadero.html" class="text-gray-400 hover:text-white transition">Criadero</a></li>
-                        <li><a href="hospedaje.html" class="text-gray-400 hover:text-white transition">Hospedaje</a></li>
-                        <li><a href="ubicacion.html" class="text-gray-400 hover:text-white transition">Ubicación</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Contact Info -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4 font-heading">Contacto</h3>
-                    <ul class="space-y-2">
-                        <li class="flex items-start">
-                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-accent"></i>
-                            <span class="text-gray-400">Laguna Canrash, San Marcos – Huari – Ancash - Perú</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fab fa-whatsapp mr-2 text-accent"></i>
-                            <a href="https://wa.me/51943215876" target="_blank" class="text-gray-400 hover:text-white transition">+51 943 215 876</a>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-envelope mr-2 text-accent"></i>
-                            <a href="mailto:administracion@lagunacanrash.com" class="text-gray-400 hover:text-white transition">administracion@lagunacanrash.com</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- Copyright -->
-            <div class="border-t border-gray-700 pt-6 text-center text-gray-500 text-sm">
-                <p>© 2025 Laguna Canrash. Todos los derechos reservados.</p>
-                <p class="mt-2">
-                    <a href="https://www.lagunacanrash.com" class="hover:text-gray-400 transition">www.lagunacanrash.com</a>
-                </p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- JavaScript for mobile menu toggle -->
     <script>
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            if (mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.remove('hidden');
-            } else {
-                mobileMenu.classList.add('hidden');
-            }
-        });
+        const button = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        if (button && menu) button.addEventListener('click', () => menu.classList.toggle('hidden'));
     </script>
 </body>
+
 </html>

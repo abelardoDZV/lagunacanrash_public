@@ -1,47 +1,230 @@
-/* Custom styles for Empresa Isla de Canrash */
+html {
+    scroll-behavior: smooth;
+}
 
-/* Custom animation for the WhatsApp button */
+body {
+    text-rendering: optimizeLegibility;
+}
+
 @keyframes pulse {
     0% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.05);
     }
+
     100% {
         transform: scale(1);
     }
 }
 
 .whatsapp-button {
-    animation: pulse 2s infinite;
+    animation: pulse 2.2s infinite;
 }
 
-/* Custom styles for the hero section */
-.hero-section {
+.b2b-button {
+    box-shadow: 0 18px 45px -20px rgba(8, 37, 63, 0.45);
+}
+
+.menu-loading {
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+.menu-error {
+    color: #b91c1c;
+    font-size: 0.875rem;
+}
+
+.hero-overlay {
+    background: linear-gradient(120deg, rgba(8, 37, 63, 0.85) 8%, rgba(8, 37, 63, 0.52) 45%, rgba(8, 37, 63, 0.68) 100%);
+}
+
+.hero-showcase {
+    min-height: 0 !important;
+}
+
+.hero-showcase>img {
+    position: static !important;
+    display: block;
+    width: 100%;
+    height: auto !important;
+    max-height: min(68vh, 680px);
+    object-fit: contain !important;
+    background: #f1f5f9;
+}
+
+.hero-showcase>.hero-overlay {
+    display: none;
+}
+
+.hero-showcase>.relative {
+    position: static !important;
+    min-height: 0 !important;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 1.25rem 1rem 1.75rem;
+}
+
+.hero-showcase .glass-panel {
+    max-width: 100%;
+    border: 1px solid #e2e8f0;
+    border-radius: 1.5rem;
+    background: #ffffff;
+    backdrop-filter: none;
+    box-shadow: 0 18px 45px -28px rgba(8, 37, 63, 0.35);
+}
+
+.hero-showcase .glass-panel p,
+.hero-showcase .glass-panel h1,
+.hero-showcase .glass-panel h2 {
+    color: #0b1220 !important;
+}
+
+.hero-showcase .glass-panel .eyebrow {
+    color: #0d3b66 !important;
+}
+
+.hero-showcase .glass-panel a {
+    background: #08253f !important;
+    color: #ffffff !important;
+}
+
+.hero-video-frame {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 18px 45px -20px rgba(8, 37, 63, 0.6);
+}
+
+.hero-video-card {
     position: relative;
-    background-size: cover;
-    background-position: center;
-    min-height: 85vh;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 1.6rem;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    box-shadow: 0 22px 55px -25px rgba(8, 37, 63, 0.75);
 }
 
-.hero-section::before {
+.hero-video-card::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0);
-    z-index: 1;
+    inset: 0;
+    background: none;
+    pointer-events: none;
 }
 
-.hero-content {
+@media (max-width: 1024px) {
+    .hero-video-card {
+        aspect-ratio: 4 / 3;
+    }
+}
+
+.glass-panel {
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 1.5rem;
+    background: rgba(15, 23, 42, 0.34);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 18px 45px -20px rgba(8, 37, 63, 0.55);
+}
+
+.eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #0d3b66;
+}
+
+.stat-card {
+    border-radius: 1rem;
+    border: 1px solid #e2e8f0;
+    background-color: rgba(255, 255, 255, 0.72);
+    padding: 1rem;
+}
+
+.info-card {
+    border-radius: 1rem;
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+    padding: 1rem;
+}
+
+.bento-card {
     position: relative;
-    z-index: 2;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    border: 1px solid #e2e8f0;
+    min-height: 0;
+    padding: 0;
+    display: block;
+    background: #ffffff;
 }
 
-/* Custom styles for smooth scrolling */
-html {
-    scroll-behavior: smooth;
+.bento-card:hover {
+    transform: translateY(-2px);
+    transition: transform 0.25s ease;
+}
+
+.bento-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(8, 37, 63, 0.84), rgba(8, 37, 63, 0.18));
+}
+
+.bento-card>img {
+    position: static !important;
+    display: block;
+    width: 100%;
+    height: auto !important;
+    max-height: 420px;
+    object-fit: contain !important;
+    background: #f1f5f9;
+}
+
+.show-full-media {
+    width: 100% !important;
+    height: auto !important;
+    max-height: min(68vh, 680px);
+    object-fit: contain !important;
+    background: #f1f5f9;
+}
+
+.bento-card .bento-overlay {
+    display: none;
+}
+
+.bento-card>.relative {
+    position: static !important;
+    z-index: auto !important;
+    max-width: 100% !important;
+    padding: 1.1rem 1.25rem 1.25rem;
+}
+
+.bento-card .text-white,
+.bento-card .text-white\/80 {
+    color: #0b1220 !important;
+}
+
+.bento-link {
+    margin-top: 1rem;
+    display: inline-flex;
+    border-radius: 9999px;
+    border: 1px solid #cbd5e1;
+    padding: 0.55rem 1rem;
+    color: #08253f;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.bento-link:hover {
+    background: #f1f5f9;
+}
+
+.panel-card {
+    border-radius: 1.5rem;
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+    padding: 2rem;
+    box-shadow: 0 18px 45px -28px rgba(8, 37, 63, 0.35);
 }
