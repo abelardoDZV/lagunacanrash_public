@@ -133,6 +133,14 @@
             box-shadow: 0 12px 40px -12px rgba(17, 37, 51, 0.35);
         }
 
+        .menu-row {
+            border-bottom: 1px dashed #d9ecf5;
+        }
+
+        .menu-row:last-child {
+            border-bottom: none;
+        }
+
         .section-label::after {
             content: '';
             display: block;
@@ -231,6 +239,7 @@
             <nav class="hidden items-center gap-1 lg:flex" aria-label="Navegación principal">
                 <a href="#inicio" class="nav-link px-3 py-2 text-sm font-medium text-white/85 hover:text-white transition rounded-lg hover:bg-white/10">Inicio</a>
                 <a href="#restaurante" class="nav-link px-3 py-2 text-sm font-medium text-white/85 hover:text-white transition rounded-lg hover:bg-white/10">Restaurante</a>
+                <a href="#carta" class="nav-link px-3 py-2 text-sm font-medium text-white/85 hover:text-white transition rounded-lg hover:bg-white/10">Carta</a>
                 <a href="#servicios" class="nav-link px-3 py-2 text-sm font-medium text-white/85 hover:text-white transition rounded-lg hover:bg-white/10">Servicios</a>
                 <a href="#mayor" class="nav-link px-3 py-2 text-sm font-medium text-white/85 hover:text-white transition rounded-lg hover:bg-white/10">Por Mayor</a>
                 <a href="#ruta" class="nav-link px-3 py-2 text-sm font-medium text-white/85 hover:text-white transition rounded-lg hover:bg-white/10">En la Ruta</a>
@@ -259,6 +268,7 @@
             <div class="flex flex-col gap-1 px-4 py-4">
                 <a href="#inicio" class="mobile-link rounded-lg px-4 py-3 text-sm font-medium text-white/90 hover:bg-white/10">Inicio</a>
                 <a href="#restaurante" class="mobile-link rounded-lg px-4 py-3 text-sm font-medium text-white/90 hover:bg-white/10">Restaurante</a>
+                <a href="#carta" class="mobile-link rounded-lg px-4 py-3 text-sm font-medium text-white/90 hover:bg-white/10">Carta</a>
                 <a href="#servicios" class="mobile-link rounded-lg px-4 py-3 text-sm font-medium text-white/90 hover:bg-white/10">Servicios</a>
                 <a href="#mayor" class="mobile-link rounded-lg px-4 py-3 text-sm font-medium text-white/90 hover:bg-white/10">Venta por Mayor</a>
                 <a href="#ruta" class="mobile-link rounded-lg px-4 py-3 text-sm font-medium text-white/90 hover:bg-white/10">En la Ruta</a>
@@ -431,6 +441,28 @@
                                 <p class="mt-1 text-sm text-lagoon-600">Caldo aromático y reconfortante</p>
                             </div>
                         </article>
+                    </div>
+                </div>
+
+                <!-- Carta con precios en vivo -->
+                <div id="carta" class="mt-20 scroll-mt-24">
+                    <div class="text-center max-w-2xl mx-auto">
+                        <p class="section-label text-xs font-bold uppercase tracking-widest text-lagoon-600 mx-auto">Restaurante</p>
+                        <h3 class="mt-2 font-display text-2xl font-bold text-lagoon-950 sm:text-3xl">Carta y precios</h3>
+                        <p class="mt-3 text-lagoon-700">Platos y precios actualizados desde nuestro sistema. Los valores pueden variar; consulta al momento de tu visita.</p>
+                        <p id="carta-updated" class="mt-2 text-xs text-lagoon-500"></p>
+                    </div>
+
+                    <div id="carta-loading" class="mt-10 text-center text-sm text-lagoon-600">Cargando carta…</div>
+                    <div id="carta-error" class="mt-10 hidden text-center text-sm text-red-600"></div>
+                    <div id="carta-menu" class="mt-10 hidden grid gap-6 lg:grid-cols-3"></div>
+
+                    <div class="mt-8 text-center">
+                        <a href="https://wa.me/51957878409?text=Hola%2C%20quiero%20consultar%20la%20carta%20del%20restaurante"
+                            target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center justify-center rounded-full bg-alpine-moss px-6 py-3 text-sm font-semibold text-white transition hover:bg-alpine-grass">
+                            Consultar disponibilidad por WhatsApp
+                        </a>
                     </div>
                 </div>
 
@@ -993,13 +1025,128 @@
             document.querySelectorAll('video').forEach(function (video) {
                 video.muted = true;
                 video.defaultMuted = true;
+                video.volume = 0;
                 video.setAttribute('muted', '');
+                video.addEventListener('play', function () {
+                    video.muted = true;
+                    video.volume = 0;
+                });
                 video.addEventListener('volumechange', function () {
-                    if (!video.muted) {
-                        video.muted = true;
-                    }
+                    video.muted = true;
+                    video.volume = 0;
                 });
             });
+
+            var CARTA_API = 'https://admin.lagunacanrash.com/carta/carta_api';
+            var CARTA_FALLBACK = 'assets/data/carta.json';
+            var CARTA_LABELS = {
+                trucha: 'Trucha',
+                pollo: 'Pollo',
+                otros: 'Otros platos'
+            };
+
+            function formatSoles(precio) {
+                var n = Number(precio);
+                if (Number.isNaN(n)) return '—';
+                return n % 1 === 0 ? 'S/ ' + n.toFixed(0) : 'S/ ' + n.toFixed(2);
+            }
+
+            function formatFecha(fecha) {
+                if (!fecha) return '';
+                var d = new Date(fecha.replace(' ', 'T'));
+                if (Number.isNaN(d.getTime())) return fecha;
+                return d.toLocaleDateString('es-PE', { day: 'numeric', month: 'long', year: 'numeric' });
+            }
+
+            function dedupeItems(items) {
+                var seen = {};
+                return items.filter(function (item) {
+                    var key = item.nombre + '|' + item.precio;
+                    if (seen[key]) return false;
+                    seen[key] = true;
+                    return true;
+                });
+            }
+
+            function sortItems(items) {
+                return items.slice().sort(function (a, b) {
+                    if (a.precio !== b.precio) return a.precio - b.precio;
+                    return a.nombre.localeCompare(b.nombre, 'es');
+                });
+            }
+
+            function renderCarta(data) {
+                var carta = data.carta;
+                var menuEl = document.getElementById('carta-menu');
+                var loadingEl = document.getElementById('carta-loading');
+                var errorEl = document.getElementById('carta-error');
+                var updatedEl = document.getElementById('carta-updated');
+
+                if (!carta || !carta.productos) {
+                    errorEl.textContent = 'No se pudo mostrar la carta en este momento.';
+                    errorEl.classList.remove('hidden');
+                    loadingEl.classList.add('hidden');
+                    return;
+                }
+
+                if (carta.fecha_actualizacion) {
+                    updatedEl.textContent = 'Última actualización: ' + formatFecha(carta.fecha_actualizacion);
+                }
+
+                menuEl.innerHTML = '';
+                ['trucha', 'pollo', 'otros'].forEach(function (key) {
+                    var items = sortItems(dedupeItems(carta.productos[key] || []));
+                    if (!items.length) return;
+
+                    var card = document.createElement('article');
+                    card.className = 'rounded-2xl border border-lagoon-100 bg-white p-6 shadow-card';
+                    card.innerHTML = '<h4 class="font-display text-xl font-bold text-lagoon-900">' + CARTA_LABELS[key] + '</h4>';
+
+                    var list = document.createElement('ul');
+                    list.className = 'mt-4 divide-y divide-lagoon-100';
+
+                    items.forEach(function (item) {
+                        var li = document.createElement('li');
+                        li.className = 'menu-row flex items-start justify-between gap-4 py-3';
+                        li.innerHTML =
+                            '<span class="text-sm font-medium text-lagoon-800 leading-snug">' + item.nombre + '</span>' +
+                            '<span class="shrink-0 text-sm font-bold text-lagoon-700">' + formatSoles(item.precio) + '</span>';
+                        list.appendChild(li);
+                    });
+
+                    card.appendChild(list);
+                    menuEl.appendChild(card);
+                });
+
+                loadingEl.classList.add('hidden');
+                errorEl.classList.add('hidden');
+                menuEl.classList.remove('hidden');
+            }
+
+            function loadCarta() {
+                fetch(CARTA_API)
+                    .then(function (res) {
+                        if (!res.ok) throw new Error('API error');
+                        return res.json();
+                    })
+                    .then(function (data) {
+                        if (!data.success) throw new Error('API invalid');
+                        renderCarta(data);
+                    })
+                    .catch(function () {
+                        return fetch(CARTA_FALLBACK)
+                            .then(function (res) { return res.json(); })
+                            .then(renderCarta)
+                            .catch(function () {
+                                document.getElementById('carta-loading').classList.add('hidden');
+                                var errorEl = document.getElementById('carta-error');
+                                errorEl.textContent = 'No pudimos cargar la carta. Escríbenos por WhatsApp y te la enviamos.';
+                                errorEl.classList.remove('hidden');
+                            });
+                    });
+            }
+
+            loadCarta();
         })();
     </script>
 </body>
