@@ -213,6 +213,56 @@
             opacity: 0;
             overflow: hidden;
         }
+
+        .route-links-grid a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            border-radius: 9999px;
+            padding: 0.75rem 1.25rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+        }
+
+        .route-links-grid a:nth-child(odd) {
+            background-color: #1e6489;
+            color: #fff;
+        }
+
+        .route-links-grid a:nth-child(odd):hover {
+            background-color: #1a516f;
+        }
+
+        .route-links-grid a:nth-child(even) {
+            border: 1px solid #b8d9eb;
+            background-color: #fff;
+            color: #1a445c;
+        }
+
+        .route-links-grid a:nth-child(even):hover {
+            border-color: #86bdd9;
+            background-color: #f0f7fb;
+        }
+
+        .route-links-grid a.route-link--suggested {
+            box-shadow: inset 0 0 0 2px #3d6b4f;
+            border-color: #3d6b4f;
+        }
+
+        .route-scenic-collapse summary {
+            list-style: none;
+            cursor: pointer;
+        }
+
+        .route-scenic-collapse summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .route-scenic-collapse[open] .route-scenic-chevron {
+            transform: rotate(180deg);
+        }
     </style>
 
     <script type="application/ld+json">
@@ -412,6 +462,10 @@
                                     <p class="font-display text-2xl font-bold text-lagoon-800">~3 h</p>
                                     <p class="text-xs font-semibold uppercase tracking-wide text-lagoon-600">Desde Huaraz</p>
                                 </div>
+                                <div class="rounded-xl bg-white px-4 py-3 text-center shadow-sm ring-2 ring-alpine-moss/50">
+                                    <p class="font-display text-2xl font-bold text-alpine-moss">San Marcos</p>
+                                    <p class="text-xs font-semibold uppercase tracking-wide text-lagoon-600">Ruta sugerida</p>
+                                </div>
                                 <div class="rounded-xl bg-white px-4 py-3 text-center shadow-sm">
                                     <p class="font-display text-2xl font-bold text-lagoon-800">~1 h</p>
                                     <p class="text-xs font-semibold uppercase tracking-wide text-lagoon-600">Desde Huallanca</p>
@@ -420,52 +474,53 @@
                                     <p class="font-display text-2xl font-bold text-lagoon-800">~20 min</p>
                                     <p class="text-xs font-semibold uppercase tracking-wide text-lagoon-600">Desde Antamina</p>
                                 </div>
-                                <div class="rounded-xl bg-white px-4 py-3 text-center shadow-sm">
-                                    <p class="font-display text-2xl font-bold text-lagoon-800">San Marcos</p>
-                                    <p class="text-xs font-semibold uppercase tracking-wide text-lagoon-600">Ruta sugerida</p>
-                                </div>
                             </div>
-                            <div class="mt-6 grid gap-2 sm:grid-cols-2">
-                                <a href="https://maps.app.goo.gl/UEHtnv7U6Dp8MyLT7" target="_blank" rel="noopener noreferrer"
-                                    class="inline-flex items-center justify-center gap-2 rounded-full bg-lagoon-700 px-5 py-3 text-sm font-semibold text-white transition hover:bg-lagoon-800">
+                            <div class="route-links-grid mt-6 grid gap-2 sm:grid-cols-2">
+                                <a href="https://maps.app.goo.gl/UEHtnv7U6Dp8MyLT7" target="_blank" rel="noopener noreferrer">
                                     <svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                                     </svg>
                                     Ruta desde Huaraz
                                 </a>
-                                <a href="https://maps.app.goo.gl/HoMgvGHsV59yDenn6" target="_blank" rel="noopener noreferrer"
-                                    class="inline-flex items-center justify-center gap-2 rounded-full bg-lagoon-700 px-5 py-3 text-sm font-semibold text-white transition hover:bg-lagoon-800">
+                                <a href="https://maps.app.goo.gl/Q9HL2NdzEuszKzP2A" target="_blank" rel="noopener noreferrer"
+                                    class="route-link--suggested">
+                                    <svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                                    </svg>
+                                    Ruta sugerida desde San Marcos
+                                </a>
+                                <a href="https://maps.app.goo.gl/HoMgvGHsV59yDenn6" target="_blank" rel="noopener noreferrer">
                                     <svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                                     </svg>
                                     Ruta desde Huallanca
                                 </a>
-                                <a href="https://maps.app.goo.gl/NLKFKKLkYxEEqPEg6" target="_blank" rel="noopener noreferrer"
-                                    class="inline-flex items-center justify-center gap-2 rounded-full border border-lagoon-200 bg-white px-5 py-3 text-sm font-semibold text-lagoon-700 transition hover:border-lagoon-300 hover:bg-lagoon-50">
+                                <a href="https://maps.app.goo.gl/NLKFKKLkYxEEqPEg6" target="_blank" rel="noopener noreferrer">
                                     <svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                                     </svg>
                                     Ruta desde Antamina
-                                </a>
-                                <a href="https://maps.app.goo.gl/Q9HL2NdzEuszKzP2A" target="_blank" rel="noopener noreferrer"
-                                    class="inline-flex items-center justify-center gap-2 rounded-full border border-lagoon-200 bg-white px-5 py-3 text-sm font-semibold text-lagoon-700 transition hover:border-lagoon-300 hover:bg-lagoon-50">
-                                    <svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-                                    </svg>
-                                    Ruta desde San Marcos
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="mt-16 text-center max-w-2xl mx-auto">
-                    <p class="section-label text-xs font-bold uppercase tracking-widest text-lagoon-600 mx-auto">El viaje es parte de la experiencia</p>
-                    <h3 class="mt-2 font-display text-2xl font-bold text-lagoon-950 sm:text-3xl">En el camino verás</h3>
-                </div>
+                <details class="route-scenic-collapse mt-12 rounded-2xl border border-lagoon-100 bg-lagoon-50 shadow-card">
+                    <summary class="flex items-center justify-between gap-4 px-6 py-5 sm:px-8">
+                        <div class="text-left">
+                            <p class="text-xs font-bold uppercase tracking-widest text-lagoon-600">El viaje es parte de la experiencia</p>
+                            <h3 class="mt-1 font-display text-xl font-bold text-lagoon-950 sm:text-2xl">En el camino verás</h3>
+                            <p class="mt-1 text-sm text-lagoon-600">Paisajes, paradas y un video del recorrido</p>
+                        </div>
+                        <svg class="route-scenic-chevron h-5 w-5 shrink-0 text-lagoon-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </summary>
 
-                <div class="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-                    <article class="gallery-item group overflow-hidden rounded-2xl bg-lagoon-50 shadow-card">
+                    <div class="border-t border-lagoon-100 px-4 pb-6 pt-2 sm:px-6 sm:pb-8">
+                <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                    <article class="gallery-item group overflow-hidden rounded-2xl bg-white shadow-sm">
                         <div class="relative aspect-[4/3] overflow-hidden">
                             <img src="assets/images/derived/medium/huellas_de_dinosarios_en_la_ruta_a_laguna_canrash.webp"
                                 alt="Huellas de dinosaurio en la ruta hacia Laguna Canrash"
@@ -477,7 +532,7 @@
                         </div>
                     </article>
 
-                    <article class="gallery-item group overflow-hidden rounded-2xl bg-lagoon-50 shadow-card">
+                    <article class="gallery-item group overflow-hidden rounded-2xl bg-white shadow-sm">
                         <div class="relative aspect-[4/3] overflow-hidden">
                             <img src="assets/images/derived/medium/flamencos_rosados_en_laguna_conococha_camino_a_laguna_canrash.webp"
                                 alt="Flamencos rosados en la laguna Conococha, camino a Laguna Canrash"
@@ -489,7 +544,7 @@
                         </div>
                     </article>
 
-                    <article class="gallery-item group overflow-hidden rounded-2xl bg-lagoon-50 shadow-card">
+                    <article class="gallery-item group overflow-hidden rounded-2xl bg-white shadow-sm">
                         <div class="relative aspect-[4/3] overflow-hidden">
                             <img src="assets/images/derived/medium/nevado_en_ruta_a_laguna_canrash.webp"
                                 alt="Nevado visible en la ruta hacia Laguna Canrash"
@@ -501,7 +556,7 @@
                         </div>
                     </article>
 
-                    <article class="gallery-item group overflow-hidden rounded-2xl bg-lagoon-50 shadow-card">
+                    <article class="gallery-item group overflow-hidden rounded-2xl bg-white shadow-sm">
                         <div class="relative aspect-[4/3] overflow-hidden">
                             <img src="assets/images/derived/medium/cerro_que_tiene_forma_de_rostro_de_gorilla_en_la_ruta_a_laguna_canrash.webp"
                                 alt="Cerro con forma de rostro de gorila en la ruta a Laguna Canrash"
@@ -514,7 +569,7 @@
                     </article>
                 </div>
 
-                <div class="mt-12 overflow-hidden rounded-2xl bg-lagoon-50 shadow-card">
+                <div class="mt-8 overflow-hidden rounded-2xl bg-white shadow-sm">
                     <div class="grid lg:grid-cols-2 lg:items-center">
                         <div class="aspect-video lg:aspect-auto lg:min-h-[18rem]">
                             <video class="h-full w-full object-cover" controls playsinline muted preload="metadata"
@@ -531,6 +586,8 @@
                         </div>
                     </div>
                 </div>
+                    </div>
+                </details>
             </div>
         </section>
 
