@@ -160,6 +160,24 @@
             box-shadow: 0 12px 40px -12px rgba(17, 37, 51, 0.3);
         }
 
+        .js-lightbox {
+            cursor: zoom-in;
+        }
+
+        #lightbox:not(.hidden) {
+            display: flex;
+        }
+
+        body.lightbox-open {
+            overflow: hidden;
+        }
+
+        .gallery-filter-active {
+            background-color: #1e6489;
+            color: #fff;
+            border-color: transparent;
+        }
+
         .price-table-card {
             background: #ffffff;
             box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.35);
@@ -244,6 +262,7 @@
                 <a href="#mayor" class="nav-link px-3 py-2 text-sm font-medium text-white/85 hover:text-white transition rounded-lg hover:bg-white/10">Por Mayor</a>
                 <a href="#ruta" class="nav-link px-3 py-2 text-sm font-medium text-white/85 hover:text-white transition rounded-lg hover:bg-white/10">En la Ruta</a>
                 <a href="#historia" class="nav-link px-3 py-2 text-sm font-medium text-white/85 hover:text-white transition rounded-lg hover:bg-white/10">Historia</a>
+                <a href="#galeria" class="nav-link px-3 py-2 text-sm font-medium text-white/85 hover:text-white transition rounded-lg hover:bg-white/10">Galería</a>
                 <a href="https://wa.me/51957878409" target="_blank" rel="noopener noreferrer"
                     class="ml-2 rounded-full bg-alpine-moss px-5 py-2 text-sm font-semibold text-white transition hover:bg-alpine-grass">
                     WhatsApp
@@ -273,6 +292,7 @@
                 <a href="#mayor" class="mobile-link rounded-lg px-4 py-3 text-sm font-medium text-white/90 hover:bg-white/10">Venta por Mayor</a>
                 <a href="#ruta" class="mobile-link rounded-lg px-4 py-3 text-sm font-medium text-white/90 hover:bg-white/10">En la Ruta</a>
                 <a href="#historia" class="mobile-link rounded-lg px-4 py-3 text-sm font-medium text-white/90 hover:bg-white/10">Nuestra Historia</a>
+                <a href="#galeria" class="mobile-link rounded-lg px-4 py-3 text-sm font-medium text-white/90 hover:bg-white/10">Galería</a>
                 <a href="https://wa.me/51957878409" target="_blank" rel="noopener noreferrer"
                     class="mt-2 rounded-full bg-[#25D366] px-4 py-3 text-center text-sm font-semibold text-white">
                     WhatsApp: 957 878 409
@@ -397,7 +417,8 @@
                             <div class="aspect-square overflow-hidden">
                                 <img src="assets/images/trucha_presentada_lista_para_cocinar_chef_la_sostiene_con_herramienta_paisaje_hermoso_detrás_laguna_en_mejor.jpg"
                                     alt="Trucha fresca lista para cocinar, presentada por nuestro chef con la laguna de fondo"
-                                    class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+                                    class="js-lightbox h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy"
+                                    data-lightbox-group="platos">
                             </div>
                             <div class="p-4">
                                 <h4 class="font-semibold text-lagoon-900">Trucha frita</h4>
@@ -409,7 +430,8 @@
                             <div class="aspect-square overflow-hidden">
                                 <img src="assets/images/chicharron_de_trucha_plato_en_el_pasto_fondo_laguna.jpg"
                                     alt="Plato de chicharrón de trucha sobre el pasto con la laguna de fondo"
-                                    class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+                                    class="js-lightbox h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy"
+                                    data-lightbox-group="platos">
                             </div>
                             <div class="p-4">
                                 <h4 class="font-semibold text-lagoon-900">Chicharrón de trucha</h4>
@@ -421,7 +443,8 @@
                             <div class="aspect-square overflow-hidden">
                                 <img src="assets/images/ceviche_y_chicharron_de_trucha_con_fondo_laguna_canrash.jpg"
                                     alt="Ceviche y chicharrón de trucha con la laguna Canrash de fondo"
-                                    class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+                                    class="js-lightbox h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy"
+                                    data-lightbox-group="platos">
                             </div>
                             <div class="p-4">
                                 <h4 class="font-semibold text-lagoon-900">Ceviche de trucha</h4>
@@ -433,7 +456,8 @@
                             <div class="aspect-square overflow-hidden">
                                 <img src="assets/images/plato_sudado_de_trucha_fondo_laguna_canrash.jpg"
                                     alt="Plato de sudado de trucha con la laguna Canrash de fondo"
-                                    class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy"
+                                    class="js-lightbox h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy"
+                                    data-lightbox-group="platos"
                                     onerror="this.onerror=null;this.src='assets/images/ceviche_y_chicharron_de_trucha_con_fondo_laguna_canrash.jpg'">
                             </div>
                             <div class="p-4">
@@ -480,13 +504,16 @@
                         <div class="grid grid-cols-2 gap-3 sm:grid-cols-3">
                             <img src="assets/images/varias_personas_caminando_en_muelle.jpg"
                                 alt="Varias personas caminando por el muelle de la laguna"
-                                class="h-36 w-full rounded-xl object-cover sm:h-44" loading="lazy">
+                                class="js-lightbox h-36 w-full rounded-xl object-cover sm:h-44" loading="lazy"
+                                data-lightbox-group="muelle">
                             <img src="assets/images/3_turistas_en_muelle_de_laguna_caminando_como_modelos.jpg"
                                 alt="Turistas caminando por el muelle de la laguna"
-                                class="h-36 w-full rounded-xl object-cover sm:h-44" loading="lazy">
+                                class="js-lightbox h-36 w-full rounded-xl object-cover sm:h-44" loading="lazy"
+                                data-lightbox-group="muelle">
                             <img src="assets/images/laguna_canrash_se_ve_el_muelle_a_lo_lejos_con_2_personas_en_el_vista_panorámica.jpg"
                                 alt="Vista panorámica de la laguna con el muelle a lo lejos y dos personas"
-                                class="col-span-2 h-36 w-full rounded-xl object-cover sm:col-span-1 sm:h-44" loading="lazy">
+                                class="js-lightbox col-span-2 h-36 w-full rounded-xl object-cover sm:col-span-1 sm:h-44" loading="lazy"
+                                data-lightbox-group="muelle">
                         </div>
                 </div>
             </div>
@@ -782,19 +809,24 @@
                             </div>
                             <img src="assets/images/foto_ovejas_en_laguna_canrash_con_cielo_y_cerro.jpg"
                                 alt="Ovejas en Laguna Canrash con cielo abierto y cerro de fondo"
-                                class="h-48 w-full rounded-2xl object-cover sm:h-56" loading="lazy">
+                                class="js-lightbox h-48 w-full rounded-2xl object-cover sm:h-56" loading="lazy"
+                                data-lightbox-group="historia">
                             <img src="assets/images/trabajador_dando_alimento_a_truchas_en_jaulas_flotantes_dentro_de_laguna_canrash_casi_panoramica.jpg"
                                 alt="Trabajador de la laguna alimentando truchas en jaulas flotantes"
-                                class="h-48 w-full rounded-2xl object-cover sm:h-56 mt-8" loading="lazy">
+                                class="js-lightbox h-48 w-full rounded-2xl object-cover sm:h-56 mt-8" loading="lazy"
+                                data-lightbox-group="historia">
                             <img src="assets/images/foto_desde_lejos_aestacionamiento_y_parqueo_lleno_de_comensales.jpg"
                                 alt="Estacionamiento lleno de comensales y visitantes en Laguna Canrash"
-                                class="h-40 w-full rounded-2xl object-cover sm:h-44" loading="lazy">
+                                class="js-lightbox h-40 w-full rounded-2xl object-cover sm:h-44" loading="lazy"
+                                data-lightbox-group="historia">
                             <img src="assets/images/dos_turistas_tomandose_foto_con_canrash_a_lo_lejos_desde_elevada_altura.jpg"
                                 alt="Dos visitantes tomándose una foto con la laguna Canrash de fondo"
-                                class="h-40 w-full rounded-2xl object-cover sm:h-44 mt-6" loading="lazy">
+                                class="js-lightbox h-40 w-full rounded-2xl object-cover sm:h-44 mt-6" loading="lazy"
+                                data-lightbox-group="historia">
                             <img src="assets/images/hermoso_atardecer_en_laguna_canrash.jpg"
                                 alt="Atardecer sobre Laguna Canrash"
-                                class="col-span-2 h-40 w-full rounded-2xl object-cover sm:h-48" loading="lazy">
+                                class="js-lightbox col-span-2 h-40 w-full rounded-2xl object-cover sm:h-48" loading="lazy"
+                                data-lightbox-group="historia">
                         </div>
                     </div>
 
@@ -847,35 +879,23 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- Galería de visitantes -->
-                <div class="mt-20">
-                    <div class="text-center max-w-2xl mx-auto">
-                        <p class="section-label text-xs font-bold uppercase tracking-widest text-lagoon-600 mx-auto">Gente real, momentos reales</p>
-                        <h3 class="mt-2 font-display text-2xl font-bold text-lagoon-950 sm:text-3xl">Quienes nos visitan</h3>
-                        <p class="mt-3 text-lagoon-700">Viajeros, familias y trabajadores de la zona que se quedan con el paisaje — y con un buen plato de trucha.</p>
-                    </div>
-                    <div class="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
-                        <img src="assets/images/turista_de_perfil_con_canrash_detrás_a_lo_lejos.jpg"
-                            alt="Visitante de perfil con la laguna Canrash detrás a lo lejos"
-                            class="aspect-square w-full rounded-xl object-cover" loading="lazy">
-                        <img src="assets/images/turista_alemana_fondo_laguna_canrash_desde_lado_opuesto.jpeg"
-                            alt="Visitante con el paisaje de Laguna Canrash de fondo"
-                            class="aspect-square w-full rounded-xl object-cover" loading="lazy">
-                        <img src="assets/images/foto_panoramica_desde_mirador_laguna_canrash_con_2_turistas_tomandose_fotos_a_lo_lejos.jpg"
-                            alt="Dos visitantes tomándose fotos desde el mirador de la laguna"
-                            class="aspect-square w-full rounded-xl object-cover" loading="lazy">
-                        <img src="assets/images/foto_desde_lejos_a_turista_tomandose_selfile_con_nevados_de_fondo_en_camino_a_canrash.jpg"
-                            alt="Visitante tomándose selfie con nevados de fondo en el camino a Canrash"
-                            class="aspect-square w-full rounded-xl object-cover" loading="lazy">
-                        <img src="assets/images/turista_girada_no_muestra_rostro_lado_opuesto_de_laguna_canrash.jpeg"
-                            alt="Visitante contemplando Laguna Canrash desde el lado opuesto"
-                            class="aspect-square w-full rounded-xl object-cover" loading="lazy">
-                        <img src="assets/images/turista_en_medio_de_la_pista_que_con_punto_focal_al_medio_en_la_ruta_a_canrash.jpg"
-                            alt="Visitante en la pista de la ruta altoandina hacia Canrash"
-                            class="aspect-square w-full rounded-xl object-cover" loading="lazy">
-                    </div>
+        <!-- ═══════════════════ GALERÍA ═══════════════════ -->
+        <section id="galeria" class="py-20 sm:py-28 bg-lagoon-50">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto">
+                    <p class="section-label text-xs font-bold uppercase tracking-widest text-lagoon-600 mx-auto">Momentos reales</p>
+                    <h2 class="mt-2 font-display text-3xl font-bold text-lagoon-950 sm:text-4xl">Galería</h2>
+                    <p class="mt-4 text-lagoon-700">Explora la laguna, la comida, quienes nos visitan y el camino hasta Canrash. Toca una foto para verla en grande.</p>
                 </div>
+
+                <div id="gallery-filters" class="mt-10 flex flex-wrap justify-center gap-2" role="tablist" aria-label="Filtrar galería"></div>
+
+                <div id="gallery-loading" class="mt-10 text-center text-sm text-lagoon-600">Cargando galería…</div>
+                <div id="gallery-grid" class="mt-10 hidden grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4" data-lightbox-group="galeria"></div>
+                <p id="gallery-empty" class="mt-10 hidden text-center text-sm text-lagoon-600">No hay fotos en esta categoría.</p>
             </div>
         </section>
 
@@ -929,6 +949,36 @@
         </section>
 
     </main>
+
+    <div id="lightbox"
+        class="fixed inset-0 z-[60] hidden items-center justify-center bg-lagoon-950/95 p-4 sm:p-8"
+        role="dialog" aria-modal="true" aria-hidden="true" aria-label="Vista ampliada de imagen">
+        <button type="button" id="lightbox-close"
+            class="absolute top-4 right-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
+            aria-label="Cerrar">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <button type="button" id="lightbox-prev"
+            class="absolute left-2 sm:left-6 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
+            aria-label="Imagen anterior">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+        </button>
+        <button type="button" id="lightbox-next"
+            class="absolute right-2 sm:right-6 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
+            aria-label="Imagen siguiente">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+        </button>
+        <figure class="flex max-h-full max-w-full flex-col items-center">
+            <img id="lightbox-img" src="" alt="" class="max-h-[78vh] max-w-full rounded-lg object-contain shadow-float">
+            <figcaption id="lightbox-caption" class="mt-4 max-w-2xl text-center text-sm text-lagoon-200"></figcaption>
+        </figure>
+    </div>
 
     <script>
         (function () {
@@ -1146,6 +1196,193 @@
             }
 
             loadCarta();
+
+            var IMAGES_DATA = 'assets/data/images.json';
+            var GALLERY_BASE = 'assets/images/';
+            var galleryItems = [];
+            var galleryFilter = 'todos';
+
+            var lightboxEl = document.getElementById('lightbox');
+            var lightboxImg = document.getElementById('lightbox-img');
+            var lightboxCaption = document.getElementById('lightbox-caption');
+            var lightboxClose = document.getElementById('lightbox-close');
+            var lightboxPrev = document.getElementById('lightbox-prev');
+            var lightboxNext = document.getElementById('lightbox-next');
+            var lightboxSlides = [];
+            var lightboxIndex = 0;
+
+            function getLightboxGroup(trigger) {
+                var group = trigger.getAttribute('data-lightbox-group');
+                if (!group) return [trigger];
+                return Array.prototype.slice.call(document.querySelectorAll('.js-lightbox[data-lightbox-group="' + group + '"]'));
+            }
+
+            function updateLightbox() {
+                var slide = lightboxSlides[lightboxIndex];
+                if (!slide) return;
+                lightboxImg.src = slide.src;
+                lightboxImg.alt = slide.alt || '';
+                lightboxCaption.textContent = slide.alt || '';
+                var hasNav = lightboxSlides.length > 1;
+                lightboxPrev.classList.toggle('hidden', !hasNav);
+                lightboxNext.classList.toggle('hidden', !hasNav);
+            }
+
+            function openLightbox(trigger) {
+                lightboxSlides = getLightboxGroup(trigger).map(function (el) {
+                    return { src: el.currentSrc || el.src, alt: el.alt || '' };
+                });
+                lightboxIndex = Math.max(0, getLightboxGroup(trigger).indexOf(trigger));
+                updateLightbox();
+                lightboxEl.classList.remove('hidden');
+                lightboxEl.setAttribute('aria-hidden', 'false');
+                document.body.classList.add('lightbox-open');
+                lightboxClose.focus();
+            }
+
+            function closeLightbox() {
+                lightboxEl.classList.add('hidden');
+                lightboxEl.setAttribute('aria-hidden', 'true');
+                document.body.classList.remove('lightbox-open');
+                lightboxImg.removeAttribute('src');
+            }
+
+            function stepLightbox(delta) {
+                if (!lightboxSlides.length) return;
+                lightboxIndex = (lightboxIndex + delta + lightboxSlides.length) % lightboxSlides.length;
+                updateLightbox();
+            }
+
+            document.addEventListener('click', function (e) {
+                var trigger = e.target.closest('.js-lightbox');
+                if (trigger) {
+                    e.preventDefault();
+                    openLightbox(trigger);
+                }
+            });
+
+            document.addEventListener('keydown', function (e) {
+                if (e.target.classList && e.target.classList.contains('js-lightbox') && (e.key === 'Enter' || e.key === ' ')) {
+                    e.preventDefault();
+                    openLightbox(e.target);
+                    return;
+                }
+                if (lightboxEl.classList.contains('hidden')) return;
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') stepLightbox(-1);
+                if (e.key === 'ArrowRight') stepLightbox(1);
+            });
+
+            lightboxClose.addEventListener('click', closeLightbox);
+            lightboxPrev.addEventListener('click', function () { stepLightbox(-1); });
+            lightboxNext.addEventListener('click', function () { stepLightbox(1); });
+            lightboxEl.addEventListener('click', function (e) {
+                if (e.target === lightboxEl) closeLightbox();
+            });
+
+            function buildGalleryItems(data) {
+                var gallery = data.gallery;
+                if (!gallery || !gallery.assignments) return [];
+                var descriptions = gallery.descriptions || {};
+                return Object.keys(gallery.assignments).map(function (file) {
+                    return {
+                        file: file,
+                        src: GALLERY_BASE + file,
+                        alt: descriptions[file] || file.replace(/_/g, ' ').replace(/\.[^.]+$/, ''),
+                        categories: gallery.assignments[file]
+                    };
+                }).sort(function (a, b) {
+                    return a.alt.localeCompare(b.alt, 'es', { sensitivity: 'base' });
+                });
+            }
+
+            function renderGalleryFilters(categories) {
+                var filtersEl = document.getElementById('gallery-filters');
+                filtersEl.innerHTML = '';
+                var allBtn = document.createElement('button');
+                allBtn.type = 'button';
+                allBtn.className = 'gallery-filter rounded-full border border-lagoon-200 bg-white px-4 py-2 text-sm font-medium text-lagoon-700 transition hover:border-lagoon-300';
+                allBtn.setAttribute('data-filter', 'todos');
+                allBtn.setAttribute('role', 'tab');
+                allBtn.setAttribute('aria-selected', 'true');
+                allBtn.textContent = 'Todas';
+                filtersEl.appendChild(allBtn);
+
+                categories.forEach(function (cat) {
+                    var btn = document.createElement('button');
+                    btn.type = 'button';
+                    btn.className = 'gallery-filter rounded-full border border-lagoon-200 bg-white px-4 py-2 text-sm font-medium text-lagoon-700 transition hover:border-lagoon-300';
+                    btn.setAttribute('data-filter', cat.id);
+                    btn.setAttribute('role', 'tab');
+                    btn.setAttribute('aria-selected', 'false');
+                    btn.textContent = cat.label;
+                    filtersEl.appendChild(btn);
+                });
+
+                filtersEl.addEventListener('click', function (e) {
+                    var btn = e.target.closest('.gallery-filter');
+                    if (!btn) return;
+                    galleryFilter = btn.getAttribute('data-filter');
+                    filtersEl.querySelectorAll('.gallery-filter').forEach(function (button) {
+                        var active = button === btn;
+                        button.classList.toggle('gallery-filter-active', active);
+                        button.setAttribute('aria-selected', active ? 'true' : 'false');
+                    });
+                    renderGalleryGrid();
+                });
+
+                allBtn.classList.add('gallery-filter-active');
+            }
+
+            function renderGalleryGrid() {
+                var gridEl = document.getElementById('gallery-grid');
+                var emptyEl = document.getElementById('gallery-empty');
+                var filtered = galleryFilter === 'todos'
+                    ? galleryItems
+                    : galleryItems.filter(function (item) {
+                        return item.categories.indexOf(galleryFilter) >= 0;
+                    });
+
+                gridEl.innerHTML = '';
+                if (!filtered.length) {
+                    gridEl.classList.add('hidden');
+                    emptyEl.classList.remove('hidden');
+                    return;
+                }
+
+                emptyEl.classList.add('hidden');
+                gridEl.classList.remove('hidden');
+
+                filtered.forEach(function (item) {
+                    var img = document.createElement('img');
+                    img.src = item.src;
+                    img.alt = item.alt;
+                    img.loading = 'lazy';
+                    img.className = 'js-lightbox gallery-item aspect-square w-full rounded-xl object-cover';
+                    img.setAttribute('data-lightbox-group', 'galeria');
+                    img.setAttribute('tabindex', '0');
+                    img.addEventListener('error', function () {
+                        img.parentElement.remove();
+                    });
+                    gridEl.appendChild(img);
+                });
+            }
+
+            function initGallery() {
+                fetch(IMAGES_DATA)
+                    .then(function (res) { return res.json(); })
+                    .then(function (data) {
+                        galleryItems = buildGalleryItems(data);
+                        renderGalleryFilters(data.gallery.categories || []);
+                        document.getElementById('gallery-loading').classList.add('hidden');
+                        renderGalleryGrid();
+                    })
+                    .catch(function () {
+                        document.getElementById('gallery-loading').textContent = 'No pudimos cargar la galería.';
+                    });
+            }
+
+            initGallery();
         })();
     </script>
 </body>
