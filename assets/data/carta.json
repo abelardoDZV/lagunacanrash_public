@@ -1,0 +1,38 @@
+{
+  "success": true,
+  "carta": {
+    "id": 1,
+    "nombre": "Laguna Canrash",
+    "fecha_actualizacion": "2025-09-23 23:50:32",
+    "productos": {
+      "trucha": [
+        { "id": 238, "nombre": "Trucha Frita 1/2", "precio": 15.0 },
+        { "id": 230, "nombre": "Trucha Frita", "precio": 25.0 },
+        { "id": 230, "nombre": "Trucha Frita", "precio": 30.0 },
+        { "id": 228, "nombre": "Trucha a la parrilla", "precio": 25.0 },
+        { "id": 41, "nombre": "Ceviche de trucha (normal de picante)", "precio": 30.0 },
+        { "id": 53, "nombre": "Chicharrón de trucha", "precio": 30.0 },
+        { "id": 211, "nombre": "Sudado de trucha", "precio": 30.0 },
+        { "id": 39, "nombre": "Ceviche de trucha (fuentes)", "precio": 60.0 },
+        { "id": 87, "nombre": "Duo ceviche + chicharrón de trucha", "precio": 35.0 },
+        { "id": 57, "nombre": "Chilcano de trucha", "precio": 25.0 }
+      ],
+      "pollo": [
+        { "id": 30, "nombre": "Caldo de pollo", "precio": 20.0 },
+        { "id": 50, "nombre": "Chaufa de pollo", "precio": 20.0 },
+        { "id": 52, "nombre": "Chicharrón de pollo", "precio": 25.0 },
+        { "id": 138, "nombre": "Lomo de pollo", "precio": 25.0 },
+        { "id": 173, "nombre": "Pollo Frito", "precio": 25.0 }
+      ],
+      "otros": [
+        { "id": 12, "nombre": "Arroz Chaufa", "precio": 20.0 },
+        { "id": 51, "nombre": "Chicharrón de chancho", "precio": 30.0 },
+        { "id": 249, "nombre": "Lomo Saltado de Res", "precio": 30.0 },
+        { "id": 251, "nombre": "Trío (Cevichocho + Chicharrón)", "precio": 45.0 },
+        { "id": 256, "nombre": "Trío (Cevichocho + Chicharrón) fuente", "precio": 80.0 },
+        { "id": 166, "nombre": "Picante de cuy entero", "precio": 70.0 },
+        { "id": 216, "nombre": "Taper", "precio": 1.5 }
+      ]
+    }
+  }
+}
