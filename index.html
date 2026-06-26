@@ -595,8 +595,9 @@
                 <div class="mt-12 overflow-hidden rounded-2xl bg-lagoon-50 shadow-card">
                     <div class="grid lg:grid-cols-2 lg:items-center">
                         <div class="aspect-video lg:aspect-auto lg:min-h-[18rem]">
-                            <video class="h-full w-full object-cover" controls playsinline muted preload="metadata"
-                                poster="assets/images/derived/medium/turista_en_medio_de_la_pista_que_con_punto_focal_al_medio_en_la_ruta_a_canrash.webp">
+                            <video class="autoplay-video h-full w-full object-cover" autoplay muted loop playsinline preload="metadata"
+                                poster="assets/images/derived/medium/turista_en_medio_de_la_pista_que_con_punto_focal_al_medio_en_la_ruta_a_canrash.webp"
+                                aria-label="Video del camino bordeando la laguna hacia Laguna Canrash">
                                 <source src="assets/images/espectacular_video_manejando_en_pista_al_lado_de_laguna_se_ve_la_laguna_y_buses_en_contra.mp4" type="video/mp4">
                             </video>
                         </div>
@@ -1010,9 +1011,10 @@
                     <div class="order-2 lg:order-1">
                         <div class="grid grid-cols-2 gap-4">
                             <div class="col-span-2 overflow-hidden rounded-2xl">
-                                <video class="media-video w-full aspect-video object-cover rounded-2xl"
-                                    controls playsinline muted preload="metadata"
-                                    poster="assets/images/derived/medium/foto_ovejas_en_laguna_canrash_con_cielo_y_cerro.webp">
+                                <video class="autoplay-video media-video w-full aspect-video object-cover rounded-2xl"
+                                    autoplay muted loop playsinline preload="metadata"
+                                    poster="assets/images/derived/medium/foto_ovejas_en_laguna_canrash_con_cielo_y_cerro.webp"
+                                    aria-label="Video del pastor guiando sus ovejas en la laguna Canrash">
                                     <source src="assets/images/pastor_guiando_a_sus_ovejas_en_laguna_canrash.mp4" type="video/mp4">
                                 </video>
                                 <p class="mt-2 text-center text-sm text-lagoon-600">El pastor guiando sus ovejas en la laguna — tradición viva de nuestra familia</p>
@@ -1372,6 +1374,39 @@
                     video.volume = 0;
                 });
             });
+
+            var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+            var videoObserver = null;
+
+            function setupAutoplayVideos() {
+                var autoplayVideos = document.querySelectorAll('video.autoplay-video');
+                if (!autoplayVideos.length) return;
+
+                if (prefersReducedMotion.matches) {
+                    autoplayVideos.forEach(function (video) { video.pause(); });
+                    return;
+                }
+
+                if (!videoObserver) {
+                    videoObserver = new IntersectionObserver(function (entries) {
+                        entries.forEach(function (entry) {
+                            var video = entry.target;
+                            if (entry.isIntersecting) {
+                                video.play().catch(function () {});
+                            } else {
+                                video.pause();
+                            }
+                        });
+                    }, { threshold: 0.35 });
+                }
+
+                autoplayVideos.forEach(function (video) {
+                    videoObserver.observe(video);
+                });
+            }
+
+            setupAutoplayVideos();
+            prefersReducedMotion.addEventListener('change', setupAutoplayVideos);
 
             var CARTA_API = 'https://admin.lagunacanrash.com/carta/carta_api';
             var CARTA_FALLBACK = 'assets/data/carta.json';
