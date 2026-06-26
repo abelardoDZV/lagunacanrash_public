@@ -84,12 +84,46 @@
             box-shadow: none;
         }
 
-        #navbar.nav-scrolled {
+        #navbar.nav-scrolled,
+        #navbar.nav-menu-open {
             background-color: rgba(17, 37, 51, 0.98);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08), 0 4px 24px rgba(17, 37, 51, 0.14);
             border-bottom-color: rgba(255, 255, 255, 0.08);
+        }
+
+        #mobile-menu {
+            transition: grid-template-rows 0.28s ease, opacity 0.2s ease;
+            display: grid;
+        }
+
+        .mobile-nav-closed {
+            grid-template-rows: 0fr;
+            opacity: 0;
+            pointer-events: none;
+            border-top-color: transparent;
+        }
+
+        .mobile-nav-open {
+            grid-template-rows: 1fr;
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        #mobile-menu-panel {
+            overflow: hidden;
+            min-height: 0;
+        }
+
+        .mobile-nav-open #mobile-menu-panel {
+            overflow-y: auto;
+            max-height: min(70dvh, 28rem);
+            -webkit-overflow-scrolling: touch;
+        }
+
+        body.mobile-menu-active {
+            overflow: hidden;
         }
 
         @keyframes whatsapp-pulse {
@@ -213,17 +247,6 @@
         .price-table-row--best {
             background: linear-gradient(90deg, #ecfdf3 0%, #f0fdf4 100%);
             border-left: 4px solid #3d6b4f;
-        }
-
-        .mobile-nav-open {
-            max-height: 24rem;
-            opacity: 1;
-        }
-
-        .mobile-nav-closed {
-            max-height: 0;
-            opacity: 0;
-            overflow: hidden;
         }
 
         .route-links-grid a {
@@ -367,9 +390,10 @@
         </div>
 
         <nav id="mobile-menu"
-            class="mobile-nav-closed lg:hidden border-t border-white/10 bg-lagoon-950/98 backdrop-blur-xl transition-all duration-300"
-            aria-label="Menú móvil">
-            <div class="flex flex-col gap-1 px-4 py-4">
+            class="mobile-nav-closed lg:hidden border-t border-white/10 bg-lagoon-950"
+            aria-label="Menú móvil" aria-hidden="true">
+            <div id="mobile-menu-panel">
+                <div class="flex flex-col gap-1 px-4 py-4">
                 <a href="#inicio" class="mobile-link rounded-lg px-4 py-3 text-sm font-medium text-white/90 hover:bg-white/10">Inicio</a>
                 <a href="#como-llegar" class="mobile-link rounded-lg px-4 py-3 text-sm font-medium text-white/90 hover:bg-white/10">Cómo llegar</a>
                 <a href="#restaurante" class="mobile-link rounded-lg px-4 py-3 text-sm font-medium text-white/90 hover:bg-white/10">Restaurante</a>
@@ -379,9 +403,10 @@
                 <a href="#historia" class="mobile-link rounded-lg px-4 py-3 text-sm font-medium text-white/90 hover:bg-white/10">Nuestra Historia</a>
                 <a href="#galeria" class="mobile-link rounded-lg px-4 py-3 text-sm font-medium text-white/90 hover:bg-white/10">Galería</a>
                 <a href="https://wa.me/51957878409" target="_blank" rel="noopener noreferrer"
-                    class="mt-2 rounded-full bg-[#25D366] px-4 py-3 text-center text-sm font-semibold text-white">
+                    class="mobile-menu-whatsapp mt-2 rounded-full bg-[#25D366] px-4 py-3 text-center text-sm font-semibold text-white">
                     WhatsApp: 957 878 409
                 </a>
+                </div>
             </div>
         </nav>
     </header>
@@ -1237,7 +1262,8 @@
             document.getElementById('year').textContent = new Date().getFullYear();
 
             function updateNavbar() {
-                if (window.scrollY > 48) {
+                const menuOpen = mobileMenu.classList.contains('mobile-nav-open');
+                if (menuOpen || window.scrollY > 48) {
                     navbar.classList.add('nav-scrolled');
                     navbar.classList.remove('nav-over-hero');
                 } else {
@@ -1247,23 +1273,36 @@
             }
 
             function handleScroll() {
+                if (mobileMenu.classList.contains('mobile-nav-open')) {
+                    closeMobileMenu();
+                }
                 updateNavbar();
             }
 
             function closeMobileMenu() {
                 mobileMenu.classList.remove('mobile-nav-open');
                 mobileMenu.classList.add('mobile-nav-closed');
+                mobileMenu.setAttribute('aria-hidden', 'true');
+                navbar.classList.remove('nav-menu-open');
+                document.body.classList.remove('mobile-menu-active');
                 iconOpen.classList.remove('hidden');
                 iconClose.classList.add('hidden');
                 menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.setAttribute('aria-label', 'Abrir menú');
+                updateNavbar();
             }
 
             function openMobileMenu() {
                 mobileMenu.classList.remove('mobile-nav-closed');
                 mobileMenu.classList.add('mobile-nav-open');
+                mobileMenu.setAttribute('aria-hidden', 'false');
+                navbar.classList.add('nav-scrolled', 'nav-menu-open');
+                navbar.classList.remove('nav-over-hero');
+                document.body.classList.add('mobile-menu-active');
                 iconOpen.classList.add('hidden');
                 iconClose.classList.remove('hidden');
                 menuToggle.setAttribute('aria-expanded', 'true');
+                menuToggle.setAttribute('aria-label', 'Cerrar menú');
             }
 
             menuToggle.addEventListener('click', function () {
@@ -1277,6 +1316,21 @@
 
             mobileLinks.forEach(function (link) {
                 link.addEventListener('click', closeMobileMenu);
+            });
+
+            document.querySelector('.mobile-menu-whatsapp').addEventListener('click', closeMobileMenu);
+
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && mobileMenu.classList.contains('mobile-nav-open')) {
+                    closeMobileMenu();
+                    menuToggle.focus();
+                }
+            });
+
+            window.addEventListener('resize', function () {
+                if (window.innerWidth >= 1024 && mobileMenu.classList.contains('mobile-nav-open')) {
+                    closeMobileMenu();
+                }
             });
 
             navLinks.forEach(function (link) {
