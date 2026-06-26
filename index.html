@@ -1070,8 +1070,7 @@
 
             function sortItems(items) {
                 return items.slice().sort(function (a, b) {
-                    if (a.precio !== b.precio) return a.precio - b.precio;
-                    return a.nombre.localeCompare(b.nombre, 'es');
+                    return a.nombre.localeCompare(b.nombre, 'es', { sensitivity: 'base' });
                 });
             }
 
