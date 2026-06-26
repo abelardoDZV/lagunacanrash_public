@@ -1,0 +1,486 @@
+{
+  "meta": {
+    "version": 1,
+    "basePath": "assets/images/",
+    "parsingRule": "Reemplazar guiones bajos por espacios para leer el nombre como oración descriptiva.",
+    "boatImagesNote": "Las fotos con botes son decorativas del paisaje. NO promover paseos en bote en la web."
+  },
+  "images": [
+    {
+      "file": "3_turistas_en_muelle_de_laguna_caminando_como_modelos.jpg",
+      "description": "Tres turistas en el muelle de la laguna caminando como modelos",
+      "tags": ["muelle", "turistas", "laguna"],
+      "suggestedUsage": ["seccion-muelle", "galeria-experiencia"],
+      "status": "pending"
+    },
+    {
+      "file": "Logo ruta.png",
+      "description": "Logo de la ruta hacia Laguna Canrash",
+      "tags": ["logo", "ruta"],
+      "suggestedUsage": ["seccion-ruta"],
+      "status": "pending"
+    },
+    {
+      "file": "bote_a_lo_lejos_en_laguna_con_personas_perspectiva_lejana.jpg",
+      "description": "Bote a lo lejos en la laguna con personas, perspectiva lejana",
+      "tags": ["bote", "laguna", "paisaje"],
+      "suggestedUsage": ["decorativo"],
+      "decorativeOnly": true,
+      "status": "available",
+      "resolvedPath": "laguna/bote_a_lo_lejos_en_laguna_con_personas_perspectiva_lejana.jpg"
+    },
+    {
+      "file": "bote_en_laguna_cerro_se_releja_en_laguna_foto_horizontal.jpg",
+      "description": "Bote en laguna; el cerro se refleja en el agua, foto horizontal",
+      "tags": ["bote", "laguna", "reflejo", "cerro"],
+      "suggestedUsage": ["decorativo", "galeria-paisaje"],
+      "decorativeOnly": true,
+      "status": "available",
+      "resolvedPath": "laguna/bote_en_laguna_cerro_se_releja_en_laguna_foto_horizontal.jpg"
+    },
+    {
+      "file": "bote_en_laguna_cerro_se_releja_en_laguna_foto_horizvertical.jpg",
+      "description": "Bote en laguna con reflejo del cerro, encuadre vertical",
+      "tags": ["bote", "laguna", "reflejo"],
+      "suggestedUsage": ["decorativo"],
+      "decorativeOnly": true,
+      "status": "available",
+      "resolvedPath": "laguna/bote_en_laguna_cerro_se_releja_en_laguna_foto_horizvertical.jpg"
+    },
+    {
+      "file": "bote_en_laguna_con_personas_mitad_distancia.jpg",
+      "description": "Bote en la laguna con personas a media distancia",
+      "tags": ["bote", "laguna", "personas"],
+      "suggestedUsage": ["decorativo"],
+      "decorativeOnly": true,
+      "status": "available",
+      "resolvedPath": "laguna/bote_en_laguna_con_personas_mitad_distancia.jpg"
+    },
+    {
+      "file": "cerro_que_tiene_forma_de_rostro_de_gorilla_en_la_ruta_a_laguna_canrash.jpg",
+      "description": "Cerro con forma de rostro de gorila en la ruta a Laguna Canrash",
+      "tags": ["ruta", "cerro", "atractivo"],
+      "suggestedUsage": ["seccion-ruta"],
+      "status": "available",
+      "resolvedPath": "ruta_a_canrash/cerro_que_tiene_forma_de_gorila_en_la_ruta.jpg"
+    },
+    {
+      "file": "ceviche_y_chicharron_de_trucha_con_fondo_laguna_canrash.jpg",
+      "description": "Ceviche y chicharrón de trucha con la laguna Canrash de fondo",
+      "tags": ["comida", "ceviche", "chicharron", "trucha"],
+      "suggestedUsage": ["restaurante-platos", "ceviche"],
+      "status": "available",
+      "resolvedPath": "comida/ceviche_y_chicharron_de_trucha_con_fondo_canrash_platos_bandera.jpg"
+    },
+    {
+      "file": "chicharron_de_trucha_plato_en_el_pasto_fondo_laguna.jpg",
+      "description": "Plato de chicharrón de trucha sobre el pasto con la laguna de fondo",
+      "tags": ["comida", "chicharron", "trucha"],
+      "suggestedUsage": ["restaurante-platos", "chicharron"],
+      "status": "available",
+      "resolvedPath": "comida/chicharron_de_trucha_plato_en_el_pasto_fondo_laguna.jpg"
+    },
+    {
+      "file": "comedor_de_vista_panoramica_vacio_pero_con_vista_completa_a_la_laguna_pared_transparente.jpg",
+      "description": "Comedor vacío con vista panorámica completa a la laguna a través de pared transparente",
+      "tags": ["restaurante", "comedor", "vista", "panoramica"],
+      "suggestedUsage": ["restaurante-ambiente", "salon-panoramico"],
+      "status": "available",
+      "resolvedPath": "laguna/comedor_vacio_pero_con_vista_completa_a_la_laguna_pared_transparente.jpg"
+    },
+    {
+      "file": "cooler_con_tapers_de_comida_delivery_de_eica.jpg",
+      "description": "Cooler con tapers de comida para delivery de Eica",
+      "tags": ["comida", "delivery", "tapers"],
+      "suggestedUsage": ["servicios", "delivery"],
+      "status": "available",
+      "resolvedPath": "comida/cooler_con_tapers_de_comida_delivery_de_eica.jpg"
+    },
+    {
+      "file": "dos_turistas_tomandose_foto_con_canrash_a_lo_lejos_desde_elevada_altura.jpg",
+      "description": "Dos turistas tomándose foto con Canrash a lo lejos desde altura elevada",
+      "tags": ["turistas", "mirador", "laguna"],
+      "suggestedUsage": ["galeria-experiencia", "hero-alternativo"],
+      "status": "available",
+      "resolvedPath": "laguna/2_turistas_tomandose_foto_con_canrash_a_lo_lejos_desde_elevada_altura.jpg"
+    },
+    {
+      "file": "espectacular_video_manejando_en_pista_al_lado_de_laguna_se_ve_la_laguna_y_buses_en_contra.mp4",
+      "description": "Video manejando por la pista junto a la laguna; se ven buses en sentido contrario",
+      "tags": ["video", "ruta", "laguna"],
+      "suggestedUsage": ["seccion-ruta", "video-fondo"],
+      "status": "available",
+      "resolvedPath": "laguna/espectacular_video_manejando_en_pista_al_lado_de_laguna_se_ve_la_laguna_y_buses_en_contra.mp4"
+    },
+    {
+      "file": "flamencos_rosados_en_laguna_conococha_camino_a_laguna_canrash.jpg",
+      "description": "Flamencos rosados en la laguna Conococha, camino a Laguna Canrash",
+      "tags": ["ruta", "flamencos", "conococha", "fauna"],
+      "suggestedUsage": ["seccion-ruta"],
+      "status": "pending"
+    },
+    {
+      "file": "foto_alineada_con_el_muelle_tambien_se_ve_la_laguna_y_el_muelle_abajo_directamente_alineado_a_la_foto.jpg",
+      "description": "Toma alineada con el muelle; se ve la laguna y el muelle abajo, en eje con la foto",
+      "tags": ["muelle", "laguna", "vista"],
+      "suggestedUsage": ["seccion-muelle"],
+      "status": "pending"
+    },
+    {
+      "file": "foto_campamento_antamina.jpg",
+      "description": "Fotografía del campamento de Antamina",
+      "tags": ["antamina", "mineria", "contexto"],
+      "suggestedUsage": ["servicios-cochera", "confianza-mineros"],
+      "status": "available",
+      "resolvedPath": "antamina/foto_campamento_antamina.jpg"
+    },
+    {
+      "file": "foto_desde_lado_opuesto_de_los_servicios_no_se_ve_ningun_servicio_de_la_empresa.jpg",
+      "description": "Vista desde el lado opuesto de la laguna; no se ven los servicios de la empresa",
+      "tags": ["laguna", "paisaje", "naturaleza"],
+      "suggestedUsage": ["galeria-paisaje"],
+      "status": "pending"
+    },
+    {
+      "file": "foto_desde_lejos_a_turista_tomandose_selfile_con_nevados_de_fondo_en_camino_a_canrash.jpg",
+      "description": "Turista tomándose selfie con nevados de fondo en el camino a Canrash",
+      "tags": ["ruta", "turista", "nevado", "selfie"],
+      "suggestedUsage": ["seccion-ruta"],
+      "status": "pending"
+    },
+    {
+      "file": "foto_desde_lejos_aestacionamiento_y_parqueo_lleno_de_comensales.jpg",
+      "description": "Estacionamiento y parqueo lleno de comensales visto desde lejos",
+      "tags": ["estacionamiento", "restaurante", "afluencia"],
+      "suggestedUsage": ["servicios-cochera", "confianza"],
+      "status": "available",
+      "resolvedPath": "laguna/estacionamiento_y_parqueo_lleno_de_comensales.jpg"
+    },
+    {
+      "file": "foto_desde_mirador_superior_de_laguna_canrash.jpg",
+      "description": "Vista desde mirador superior de Laguna Canrash",
+      "tags": ["laguna", "mirador", "panoramica"],
+      "suggestedUsage": ["galeria-paisaje", "historia"],
+      "status": "available",
+      "resolvedPath": "laguna/foto_desde_lugar_super_alto_de_toda_la_laguna_canrash.jpg"
+    },
+    {
+      "file": "foto_en_la_garita_control_de_antamina.jpg",
+      "description": "Garita de control de acceso a Antamina",
+      "tags": ["antamina", "ruta", "mineria"],
+      "suggestedUsage": ["servicios-cochera", "contexto-ruta"],
+      "status": "available",
+      "resolvedPath": "antamina/foto_en_la_garita_control_de_antamina.jpg"
+    },
+    {
+      "file": "foto_hermosa_principal_de_toda_la_laguna_canrash.jpg",
+      "description": "Foto principal panorámica de toda Laguna Canrash",
+      "tags": ["laguna", "panoramica", "principal"],
+      "suggestedUsage": ["hero-alternativo", "galeria-paisaje"],
+      "status": "pending"
+    },
+    {
+      "file": "foto_hospedaje_calidad_media.jpg",
+      "description": "Hospedaje rústico en módulos o casitas, calidad media",
+      "tags": ["hospedaje", "alojamiento"],
+      "suggestedUsage": ["servicios-hospedaje"],
+      "status": "pending"
+    },
+    {
+      "file": "foto_lateral_cochera_con_techo.jpg",
+      "description": "Vista lateral de la cochera cubierta con techo",
+      "tags": ["cochera", "estacionamiento", "techo"],
+      "suggestedUsage": ["servicios-cochera"],
+      "status": "pending"
+    },
+    {
+      "file": "foto_ovejas_en_laguna_canrash_con_cielo_y_cerro.jpg",
+      "description": "Ovejas en Laguna Canrash con cielo abierto y cerro de fondo",
+      "tags": ["ganaderia", "ovejas", "historia", "paisaje"],
+      "suggestedUsage": ["historia", "legado-pastoral"],
+      "status": "available",
+      "resolvedPath": "laguna/foto_ovejas_en_laguna_canrash_con_cielo_y_cerro.jpg"
+    },
+    {
+      "file": "foto_panoramica_del_hospedaje_calidad_baja.jpg",
+      "description": "Vista panorámica del hospedaje rústico",
+      "tags": ["hospedaje", "panoramica"],
+      "suggestedUsage": ["servicios-hospedaje"],
+      "status": "pending"
+    },
+    {
+      "file": "foto_panoramica_desde_lado_opuesto_de_laguna_canrash_los_servicios_se_ven_a_lo_lejos.jpg",
+      "description": "Panorámica desde el lado opuesto; los servicios de la empresa se ven a lo lejos",
+      "tags": ["laguna", "panoramica", "servicios"],
+      "suggestedUsage": ["galeria-paisaje"],
+      "status": "pending"
+    },
+    {
+      "file": "foto_panoramica_desde_mirador_laguna_canrash_con_2_turistas_tomandose_fotos_a_lo_lejos.jpg",
+      "description": "Panorámica desde mirador con dos turistas tomándose fotos a lo lejos",
+      "tags": ["mirador", "turistas", "laguna"],
+      "suggestedUsage": ["galeria-experiencia"],
+      "status": "pending"
+    },
+    {
+      "file": "foto_profesional_preferida_contiene_laguna_bote_casitas_muelle_agua_limpia_cerro_con_nieve_cielo_azul_pasto_verde.jpg",
+      "description": "Foto profesional preferida: laguna, bote decorativo, casitas, muelle, agua limpia, cerro nevado, cielo azul y pasto verde",
+      "tags": ["laguna", "hero", "panoramica", "principal"],
+      "suggestedUsage": ["hero", "portada"],
+      "status": "available",
+      "resolvedPath": "laguna/foto_profesional_preferida_contiene_laguna_bote_casitas_muelle_agua_limpia_cerro_con_nieve_cielo_azul_pasto_verde.jpg"
+    },
+    {
+      "file": "hermoso_atardecer_en_laguna_canrash.jpg",
+      "description": "Atardecer sobre Laguna Canrash",
+      "tags": ["laguna", "atardecer", "paisaje"],
+      "suggestedUsage": ["historia", "galeria-paisaje"],
+      "status": "available",
+      "resolvedPath": "laguna/hermoso_atardecer_en_canrash.jpg"
+    },
+    {
+      "file": "hermoso_atardecer_en_laguna_canrash2.jpg",
+      "description": "Segunda toma de atardecer en Laguna Canrash",
+      "tags": ["laguna", "atardecer"],
+      "suggestedUsage": ["galeria-paisaje"],
+      "status": "available",
+      "resolvedPath": "laguna/hermoso_atardecer_en_canrash2.jpg"
+    },
+    {
+      "file": "huellas_de_dinosarios_en_la_ruta_a_laguna_canrash.jpeg",
+      "description": "Huellas de dinosaurio en la ruta hacia Laguna Canrash",
+      "tags": ["ruta", "dinosaurio", "atractivo"],
+      "suggestedUsage": ["seccion-ruta"],
+      "status": "available",
+      "resolvedPath": "ruta_a_canrash/huellas_de_dinosarios_en_la_ruta_a_laguna_canrash.jpeg"
+    },
+    {
+      "file": "laguna_canrash_se_ve_el_muelle_a_lo_lejos_con_2_personas_en_el_vista_panorámica.jpg",
+      "description": "Vista panorámica de la laguna con el muelle a lo lejos y dos personas en él",
+      "tags": ["muelle", "laguna", "panoramica"],
+      "suggestedUsage": ["seccion-muelle"],
+      "status": "pending"
+    },
+    {
+      "file": "laguna_canrash_vista_panoramica_se_ven_las_jaulas_a_lo_lejos_y_parte_de_un_cerro.jpg",
+      "description": "Panorámica de la laguna con jaulas flotantes a lo lejos y parte de un cerro",
+      "tags": ["laguna", "jaulas", "acuicultura"],
+      "suggestedUsage": ["acuicultura", "mayor"],
+      "status": "pending"
+    },
+    {
+      "file": "logo con fondo blanco.jpg",
+      "description": "Logo de Laguna Canrash con fondo blanco",
+      "tags": ["logo"],
+      "suggestedUsage": ["documentos", "footer"],
+      "status": "available",
+      "resolvedPath": "logos/logo con fondo blanco.jpg"
+    },
+    {
+      "file": "logo-sin-bg.png",
+      "description": "Logo de Laguna Canrash sin fondo",
+      "tags": ["logo"],
+      "suggestedUsage": ["navbar", "favicon"],
+      "status": "available",
+      "resolvedPath": "logos/logo-sin-bg.png"
+    },
+    {
+      "file": "logo_con_gorro_de_navidad.webp",
+      "description": "Logo festivo con gorro de Navidad",
+      "tags": ["logo", "temporada"],
+      "suggestedUsage": ["campanas-temporada"],
+      "status": "available",
+      "resolvedPath": "logos/logo_con_gorro_de_navidad.webp"
+    },
+    {
+      "file": "logo_feliz_anho_2025.png",
+      "description": "Logo con mensaje de feliz año 2025",
+      "tags": ["logo", "temporada"],
+      "suggestedUsage": ["campanas-temporada"],
+      "status": "available",
+      "resolvedPath": "logos/logo_feliz_anho_2025.png"
+    },
+    {
+      "file": "nevado_en_ruta_a_laguna_canrash.jpg",
+      "description": "Nevado visible en la ruta hacia Laguna Canrash",
+      "tags": ["ruta", "nevado", "paisaje"],
+      "suggestedUsage": ["seccion-ruta"],
+      "status": "available",
+      "resolvedPath": "ruta_a_canrash/nevado_en_ruta_a_laguna_canrash.jpg"
+    },
+    {
+      "file": "ovejas_en_la_laguna_canrash.jpg",
+      "description": "Ovejas pastando en la orilla de Laguna Canrash",
+      "tags": ["ganaderia", "ovejas", "historia"],
+      "suggestedUsage": ["historia", "legado-pastoral"],
+      "status": "available",
+      "resolvedPath": "laguna/ovejas_en_la_laguna_canrash.jpg"
+    },
+    {
+      "file": "pastor_guiando_a_sus_ovejas_en_laguna_canrash.mp4",
+      "description": "Video de pastor guiando sus ovejas en Laguna Canrash",
+      "tags": ["video", "ganaderia", "historia"],
+      "suggestedUsage": ["historia"],
+      "status": "available",
+      "resolvedPath": "laguna/pastor_guiando_a_sus_ovejas_en_canrash.mp4"
+    },
+    {
+      "file": "plato_sudado_de_trucha_fondo_laguna_canrash.jpg",
+      "description": "Plato de sudado de trucha con la laguna Canrash de fondo",
+      "tags": ["comida", "sudado", "trucha"],
+      "suggestedUsage": ["restaurante-platos", "sudado"],
+      "status": "pending"
+    },
+    {
+      "file": "poste_interrumpe_vista.jpg",
+      "description": "Poste que interrumpe parcialmente la vista del paisaje",
+      "tags": ["infraestructura"],
+      "suggestedUsage": ["no-usar-portada"],
+      "status": "pending"
+    },
+    {
+      "file": "trabajador_dando_alimento_a_truchas_en_jaulas_flotantes_dentro_de_laguna_canrash_casi_panoramica.jpg",
+      "description": "Trabajador alimentando truchas en jaulas flotantes dentro de la laguna, toma casi panorámica",
+      "tags": ["acuicultura", "trucha", "jaulas", "trabajo"],
+      "suggestedUsage": ["acuicultura", "mayor", "historia"],
+      "status": "pending",
+      "fallback": "vista_desde_jaulas_flotantes_en_medio_de_laguna_hacia_la_orilla_de_la_laguna.jpeg"
+    },
+    {
+      "file": "tres_truchas_frescas_fileteadas_en_una_bandeja_puesta_en_piedra_fondo_laguna_canrash.jpg",
+      "description": "Tres truchas frescas fileteadas en bandeja sobre piedra, con la laguna de fondo",
+      "tags": ["comida", "trucha", "frescura"],
+      "suggestedUsage": ["restaurante-platos", "trucha-frita"],
+      "status": "pending",
+      "fallback": "trucha_presentada_lista_para_cocinar_chef_la_sostiene_con_herramienta_paisaje_hermoso_detrás_laguna_en_mejor.jpg"
+    },
+    {
+      "file": "trucha_presentada_lista_para_cocinar_chef_la_sostiene_con_herramienta_paisaje_hermoso_detrás_laguna_en_mejor.jpg",
+      "description": "Trucha fresca presentada lista para cocinar; chef la sostiene con herramienta, paisaje de laguna detrás",
+      "tags": ["comida", "trucha", "frescura", "cocina"],
+      "suggestedUsage": ["restaurante", "acuicultura"],
+      "status": "available",
+      "resolvedPath": "laguna/trucha_presentada_lista_para_cocinar_chef_la_sostiene_con_herramienta_paisaje_hermoso_detrás_laguna_en_mejor.jpg"
+    },
+    {
+      "file": "turista_alemana_feliz_echada_en_bote_primera_persona_en_medio_de_laguna.jpeg",
+      "description": "Turista echada en bote, vista en primera persona en medio de la laguna",
+      "tags": ["bote", "turista"],
+      "suggestedUsage": ["decorativo"],
+      "decorativeOnly": true,
+      "status": "available",
+      "resolvedPath": "laguna/turista_alemana_feliz_echada_en_bote_primera_persona_en_medio_de_laguna.jpeg"
+    },
+    {
+      "file": "turista_alemana_fondo_laguna_canrash_desde_lado_opuesto.jpeg",
+      "description": "Turista con Laguna Canrash de fondo, tomada desde el lado opuesto",
+      "tags": ["turista", "laguna"],
+      "suggestedUsage": ["galeria-experiencia"],
+      "status": "available",
+      "resolvedPath": "laguna/turista_alemana_con_fondo_canrash.jpeg"
+    },
+    {
+      "file": "turista_de_perfil_con_canrash_detrás_a_lo_lejos.jpg",
+      "description": "Turista de perfil con Canrash visible a lo lejos detrás",
+      "tags": ["turista", "laguna"],
+      "suggestedUsage": ["galeria-experiencia"],
+      "status": "available",
+      "resolvedPath": "laguna/turista_de_perfil_con_canrash_detrás_a_lo_lejos.jpg"
+    },
+    {
+      "file": "turista_en_medio_de_la_pista_que_con_punto_focal_al_medio_en_la_ruta_a_canrash.jpg",
+      "description": "Turista en medio de la pista, con punto focal centrado en la ruta a Canrash",
+      "tags": ["ruta", "turista", "carretera"],
+      "suggestedUsage": ["seccion-ruta"],
+      "status": "available",
+      "resolvedPath": "ruta_a_canrash/turista_en_medio_de_la_pista_que_con_punto_focal_al_medio_en_la_ruta_a_canrash.jpg"
+    },
+    {
+      "file": "turista_girada_no_muestra_rostro_lado_opuesto_de_laguna_canrash.jpeg",
+      "description": "Turista de espaldas sin mostrar rostro, lado opuesto de Laguna Canrash",
+      "tags": ["turista", "laguna"],
+      "suggestedUsage": ["galeria-experiencia"],
+      "status": "pending"
+    },
+    {
+      "file": "turista_parada_al_lado_de_huellas_de_dinosaurio_que_se_encuentra_en_la_ruta_a_laguna_canrash.jpg",
+      "description": "Turista posando junto a huellas de dinosaurio en la ruta",
+      "tags": ["ruta", "dinosaurio", "turista"],
+      "suggestedUsage": ["seccion-ruta"],
+      "status": "available",
+      "resolvedPath": "ruta_a_canrash/turista_con_huellas_de_dinosaurios_en_ruta_a_canrash.jpg"
+    },
+    {
+      "file": "turista_posando_al_lado_de_su_auto_fondo_de_cerros_en_ruta_a_canrash.jpg",
+      "description": "Turista posando junto a su auto con cerros de fondo en la ruta",
+      "tags": ["ruta", "auto", "turista"],
+      "suggestedUsage": ["seccion-ruta", "cochera-contexto"],
+      "status": "available",
+      "resolvedPath": "ruta_a_canrash/turista_con_su_auto_en_ruta_a_canrash.jpg"
+    },
+    {
+      "file": "turista_simulando_agarrar_cerro_con_forma_de_cara_de_gorila_en_la_ruta.jpg",
+      "description": "Turista simulando agarrar el cerro con forma de cara de gorila",
+      "tags": ["ruta", "cerro", "gorila", "turista"],
+      "suggestedUsage": ["seccion-ruta"],
+      "status": "available",
+      "resolvedPath": "ruta_a_canrash/turista_simulando_agarrar_cerro_con_forma_de_cara_de_gorila_en_la_ruta.jpg"
+    },
+    {
+      "file": "turistas_posando_en_bote_en_medio_de_laguna_en_primera_persona.jpg",
+      "description": "Turistas posando en bote en medio de la laguna, vista en primera persona",
+      "tags": ["bote", "turistas"],
+      "suggestedUsage": ["decorativo"],
+      "decorativeOnly": true,
+      "status": "available",
+      "resolvedPath": "laguna/turistas_posando_en_bote_en_medio_de_laguna_en_primera_persona.jpg"
+    },
+    {
+      "file": "varias_personas_caminando_en_muelle.jpg",
+      "description": "Varias personas caminando por el muelle de la laguna",
+      "tags": ["muelle", "turistas", "experiencia"],
+      "suggestedUsage": ["seccion-muelle"],
+      "status": "available",
+      "resolvedPath": "laguna/varias_personas_caminando_en_muelle.jpg"
+    },
+    {
+      "file": "video_18_segundos_vertical_atardecer_panoramico_laguna_canrash.mp4",
+      "description": "Video vertical de 18 segundos: atardecer panorámico en Laguna Canrash",
+      "tags": ["video", "atardecer", "laguna"],
+      "suggestedUsage": ["hero-video", "redes"],
+      "status": "pending"
+    },
+    {
+      "file": "video_drone_toda_laguna.mp4",
+      "description": "Video con drone mostrando toda la laguna Canrash",
+      "tags": ["video", "drone", "laguna"],
+      "suggestedUsage": ["hero-video", "historia"],
+      "status": "available",
+      "resolvedPath": "laguna/video_drone_toda_laguna.mp4"
+    },
+    {
+      "file": "vista_desde_jaulas_flotantes_en_medio_de_laguna_hacia_la_orilla_de_la_laguna.jpeg",
+      "description": "Vista desde las jaulas flotantes en medio de la laguna hacia la orilla",
+      "tags": ["acuicultura", "jaulas", "laguna"],
+      "suggestedUsage": ["acuicultura", "mayor"],
+      "status": "available",
+      "resolvedPath": "laguna/vista_desde_jaulas_flotantes_en_medio_de_laguna_hacia_la_orilla_de_la_laguna.jpeg"
+    }
+  ],
+  "sectionMap": {
+    "hero": ["foto_profesional_preferida_contiene_laguna_bote_casitas_muelle_agua_limpia_cerro_con_nieve_cielo_azul_pasto_verde.jpg"],
+    "restaurante-ambiente": ["comedor_de_vista_panoramica_vacio_pero_con_vista_completa_a_la_laguna_pared_transparente.jpg"],
+    "restaurante-platos": {
+      "trucha-frita": "tres_truchas_frescas_fileteadas_en_una_bandeja_puesta_en_piedra_fondo_laguna_canrash.jpg",
+      "chicharron": "chicharron_de_trucha_plato_en_el_pasto_fondo_laguna.jpg",
+      "ceviche": "ceviche_y_chicharron_de_trucha_con_fondo_laguna_canrash.jpg",
+      "sudado": "plato_sudado_de_trucha_fondo_laguna_canrash.jpg"
+    },
+    "cochera": ["foto_lateral_cochera_con_techo.jpg", "foto_campamento_antamina.jpg", "foto_desde_lejos_aestacionamiento_y_parqueo_lleno_de_comensales.jpg"],
+    "hospedaje": ["foto_hospedaje_calidad_media.jpg", "foto_panoramica_del_hospedaje_calidad_baja.jpg"],
+    "mayor": ["trabajador_dando_alimento_a_truchas_en_jaulas_flotantes_dentro_de_laguna_canrash_casi_panoramica.jpg", "vista_desde_jaulas_flotantes_en_medio_de_laguna_hacia_la_orilla_de_la_laguna.jpeg"],
+    "ruta": ["huellas_de_dinosarios_en_la_ruta_a_laguna_canrash.jpeg", "flamencos_rosados_en_laguna_conococha_camino_a_laguna_canrash.jpg", "nevado_en_ruta_a_laguna_canrash.jpg", "cerro_que_tiene_forma_de_rostro_de_gorilla_en_la_ruta_a_laguna_canrash.jpg"],
+    "muelle": ["varias_personas_caminando_en_muelle.jpg", "foto_alineada_con_el_muelle_tambien_se_ve_la_laguna_y_el_muelle_abajo_directamente_alineado_a_la_foto.jpg", "3_turistas_en_muelle_de_laguna_caminando_como_modelos.jpg"],
+    "historia": ["foto_ovejas_en_laguna_canrash_con_cielo_y_cerro.jpg", "vista_desde_jaulas_flotantes_en_medio_de_laguna_hacia_la_orilla_de_la_laguna.jpeg", "hermoso_atardecer_en_laguna_canrash.jpg"]
+  }
+}
