@@ -74,10 +74,22 @@
             scroll-behavior: smooth;
         }
 
-        .nav-scrolled {
-            background-color: rgba(17, 37, 51, 0.95);
+        #navbar {
+            transition: background-color 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        #navbar.nav-over-hero {
+            background-color: transparent;
+            box-shadow: none;
+        }
+
+        #navbar.nav-scrolled {
+            background-color: rgba(17, 37, 51, 0.98);
             backdrop-filter: blur(12px);
-            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08), 0 4px 24px rgba(17, 37, 51, 0.14);
+            border-bottom-color: rgba(255, 255, 255, 0.08);
         }
 
         @keyframes whatsapp-pulse {
@@ -319,7 +331,7 @@
 
     <!-- Navegación fija -->
     <header id="navbar"
-        class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-transparent">
+        class="nav-over-hero fixed top-0 left-0 right-0 z-40">
         <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
             <a href="#inicio" class="flex items-center gap-2.5 group">
                 <img src="assets/images/logo-sin-bg.png" alt="Laguna Canrash"
@@ -1224,12 +1236,18 @@
 
             document.getElementById('year').textContent = new Date().getFullYear();
 
-            function handleScroll() {
-                if (window.scrollY > 60) {
+            function updateNavbar() {
+                if (window.scrollY > 48) {
                     navbar.classList.add('nav-scrolled');
+                    navbar.classList.remove('nav-over-hero');
                 } else {
                     navbar.classList.remove('nav-scrolled');
+                    navbar.classList.add('nav-over-hero');
                 }
+            }
+
+            function handleScroll() {
+                updateNavbar();
             }
 
             function closeMobileMenu() {
@@ -1277,7 +1295,7 @@
             });
 
             window.addEventListener('scroll', handleScroll, { passive: true });
-            handleScroll();
+            updateNavbar();
 
             const observer = new IntersectionObserver(function (entries) {
                 entries.forEach(function (entry) {
