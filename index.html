@@ -105,6 +105,34 @@
                     rgba(17, 37, 51, 0.55) 100%);
         }
 
+        .hero-video {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .hero-video {
+                display: block;
+            }
+
+            .hero-fallback {
+                display: none;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .hero-video {
+                display: none !important;
+            }
+
+            .hero-fallback {
+                display: block !important;
+            }
+        }
+
+        .media-video {
+            box-shadow: 0 12px 40px -12px rgba(17, 37, 51, 0.35);
+        }
+
         .section-label::after {
             content: '';
             display: block;
@@ -249,7 +277,13 @@
         <section id="inicio" class="relative min-h-screen flex items-center overflow-hidden">
             <img src="assets/images/foto_profesional_preferida_contiene_laguna_bote_casitas_muelle_agua_limpia_cerro_con_nieve_cielo_azul_pasto_verde.jpg"
                 alt="Vista panorámica de Laguna Canrash con laguna, muelle, casitas y nevados"
-                class="absolute inset-0 h-full w-full object-cover" fetchpriority="high">
+                class="hero-fallback absolute inset-0 h-full w-full object-cover" fetchpriority="high">
+            <video class="hero-video media-video absolute inset-0 h-full w-full object-cover"
+                autoplay muted loop playsinline preload="metadata"
+                poster="assets/images/foto_profesional_preferida_contiene_laguna_bote_casitas_muelle_agua_limpia_cerro_con_nieve_cielo_azul_pasto_verde.jpg"
+                aria-label="Video aéreo de toda la laguna Canrash">
+                <source src="assets/images/video_drone_toda_laguna.mp4" type="video/mp4">
+            </video>
             <div class="hero-gradient absolute inset-0"></div>
 
             <div class="relative z-10 mx-auto w-full max-w-7xl px-4 py-28 sm:px-6 lg:px-8">
@@ -648,6 +682,24 @@
                         </div>
                     </article>
                 </div>
+
+                <div class="mt-12 overflow-hidden rounded-2xl bg-white shadow-card">
+                    <div class="grid lg:grid-cols-2 lg:items-center">
+                        <div class="aspect-video lg:aspect-auto lg:min-h-[18rem]">
+                            <video class="h-full w-full object-cover" controls playsinline preload="metadata"
+                                poster="assets/images/turista_en_medio_de_la_pista_que_con_punto_focal_al_medio_en_la_ruta_a_canrash.jpg">
+                                <source src="assets/images/espectacular_video_manejando_en_pista_al_lado_de_laguna_se_ve_la_laguna_y_buses_en_contra.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="p-6 sm:p-8">
+                            <h3 class="font-display text-xl font-bold text-lagoon-950">Así se vive el camino</h3>
+                            <p class="mt-3 text-lagoon-700 leading-relaxed">
+                                La ruta bordea la laguna, pasa buses de trabajadores y regala vistas que no se olvidan.
+                                Llegar a Canrash ya es parte de la experiencia.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -657,6 +709,14 @@
                 <div class="grid gap-12 lg:grid-cols-2 lg:gap-16 items-start">
                     <div class="order-2 lg:order-1">
                         <div class="grid grid-cols-2 gap-4">
+                            <div class="col-span-2 overflow-hidden rounded-2xl">
+                                <video class="media-video w-full aspect-video object-cover rounded-2xl"
+                                    controls playsinline preload="metadata"
+                                    poster="assets/images/foto_ovejas_en_laguna_canrash_con_cielo_y_cerro.jpg">
+                                    <source src="assets/images/pastor_guiando_a_sus_ovejas_en_laguna_canrash.mp4" type="video/mp4">
+                                </video>
+                                <p class="mt-2 text-center text-sm text-lagoon-600">El pastor guiando sus ovejas en la laguna — tradición viva de nuestra familia</p>
+                            </div>
                             <img src="assets/images/foto_ovejas_en_laguna_canrash_con_cielo_y_cerro.jpg"
                                 alt="Ovejas en Laguna Canrash con cielo abierto y cerro de fondo"
                                 class="h-48 w-full rounded-2xl object-cover sm:h-56" loading="lazy">
@@ -724,6 +784,35 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Galería de visitantes -->
+                <div class="mt-20">
+                    <div class="text-center max-w-2xl mx-auto">
+                        <p class="section-label text-xs font-bold uppercase tracking-widest text-lagoon-600 mx-auto">Gente real, momentos reales</p>
+                        <h3 class="mt-2 font-display text-2xl font-bold text-lagoon-950 sm:text-3xl">Quienes nos visitan</h3>
+                        <p class="mt-3 text-lagoon-700">Viajeros, familias y trabajadores de la zona que se quedan con el paisaje — y con un buen plato de trucha.</p>
+                    </div>
+                    <div class="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+                        <img src="assets/images/turista_de_perfil_con_canrash_detrás_a_lo_lejos.jpg"
+                            alt="Visitante de perfil con la laguna Canrash detrás a lo lejos"
+                            class="aspect-square w-full rounded-xl object-cover" loading="lazy">
+                        <img src="assets/images/turista_alemana_fondo_laguna_canrash_desde_lado_opuesto.jpeg"
+                            alt="Visitante con el paisaje de Laguna Canrash de fondo"
+                            class="aspect-square w-full rounded-xl object-cover" loading="lazy">
+                        <img src="assets/images/foto_panoramica_desde_mirador_laguna_canrash_con_2_turistas_tomandose_fotos_a_lo_lejos.jpg"
+                            alt="Dos visitantes tomándose fotos desde el mirador de la laguna"
+                            class="aspect-square w-full rounded-xl object-cover" loading="lazy">
+                        <img src="assets/images/foto_desde_lejos_a_turista_tomandose_selfile_con_nevados_de_fondo_en_camino_a_canrash.jpg"
+                            alt="Visitante tomándose selfie con nevados de fondo en el camino a Canrash"
+                            class="aspect-square w-full rounded-xl object-cover" loading="lazy">
+                        <img src="assets/images/turista_girada_no_muestra_rostro_lado_opuesto_de_laguna_canrash.jpeg"
+                            alt="Visitante contemplando Laguna Canrash desde el lado opuesto"
+                            class="aspect-square w-full rounded-xl object-cover" loading="lazy">
+                        <img src="assets/images/turista_en_medio_de_la_pista_que_con_punto_focal_al_medio_en_la_ruta_a_canrash.jpg"
+                            alt="Visitante en la pista de la ruta altoandina hacia Canrash"
+                            class="aspect-square w-full rounded-xl object-cover" loading="lazy">
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -735,6 +824,7 @@
                         <img src="assets/images/logo-sin-bg.png" alt="Laguna Canrash" class="h-16 w-auto mb-4">
                         <h2 class="font-display text-2xl font-bold">Laguna Canrash</h2>
                         <p class="mt-1 text-sm text-lagoon-300">Eica S.R.L. · RUC 20530753396</p>
+                        <p class="mt-3 text-sm text-lagoon-200 leading-relaxed">Familia andina, trucha del día y una laguna que vale la pena conocer.</p>
                     </div>
 
                     <div>
