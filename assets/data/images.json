@@ -1182,5 +1182,19 @@
       "video_drone_toda_laguna.mp4": "Video con drone mostrando toda la laguna Canrash",
       "vista_desde_jaulas_flotantes_en_medio_de_laguna_hacia_la_orilla_de_la_laguna.jpeg": "Vista desde las jaulas flotantes en medio de la laguna hacia la orilla"
     }
+  },
+  "variants": {
+    "version": 1,
+    "generatedAt": "2026-06-26T07:14:55.316Z",
+    "thumb": {
+      "dir": "assets/images/derived/thumb/",
+      "maxWidth": 480,
+      "format": "webp"
+    },
+    "medium": {
+      "dir": "assets/images/derived/medium/",
+      "maxWidth": 1280,
+      "format": "webp"
+    }
   }
 }

@@ -1,0 +1,17 @@
+{
+  "name": "lagunacanrash_public",
+  "private": true,
+  "description": "Sitio público de Laguna Canrash",
+  "scripts": {
+    "images:variants": "node scripts/generate-image-variants.mjs",
+    "images:validate": "node scripts/validate-images.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abelardoDZV/lagunacanrash_public.git"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "sharp": "^0.35.2"
+  }
+}

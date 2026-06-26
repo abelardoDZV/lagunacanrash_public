@@ -1,0 +1,283 @@
+{
+  "meta": {
+    "version": 1,
+    "generatedAt": "2026-06-26T07:14:55.316Z",
+    "thumb": {
+      "dir": "assets/images/derived/thumb/",
+      "maxWidth": 480,
+      "format": "webp"
+    },
+    "medium": {
+      "dir": "assets/images/derived/medium/",
+      "maxWidth": 1280,
+      "format": "webp"
+    }
+  },
+  "files": {
+    "3_turistas_en_muelle_de_laguna_caminando_como_modelos.jpg": {
+      "thumb": "assets/images/derived/thumb/3_turistas_en_muelle_de_laguna_caminando_como_modelos.webp",
+      "medium": "assets/images/derived/medium/3_turistas_en_muelle_de_laguna_caminando_como_modelos.webp",
+      "full": "assets/images/3_turistas_en_muelle_de_laguna_caminando_como_modelos.jpg"
+    },
+    "bote_a_lo_lejos_en_laguna_con_personas_perspectiva_lejana.jpg": {
+      "thumb": "assets/images/derived/thumb/bote_a_lo_lejos_en_laguna_con_personas_perspectiva_lejana.webp",
+      "medium": "assets/images/derived/medium/bote_a_lo_lejos_en_laguna_con_personas_perspectiva_lejana.webp",
+      "full": "assets/images/bote_a_lo_lejos_en_laguna_con_personas_perspectiva_lejana.jpg"
+    },
+    "bote_en_laguna_cerro_se_releja_en_laguna_foto_horizontal.jpg": {
+      "thumb": "assets/images/derived/thumb/bote_en_laguna_cerro_se_releja_en_laguna_foto_horizontal.webp",
+      "medium": "assets/images/derived/medium/bote_en_laguna_cerro_se_releja_en_laguna_foto_horizontal.webp",
+      "full": "assets/images/bote_en_laguna_cerro_se_releja_en_laguna_foto_horizontal.jpg"
+    },
+    "bote_en_laguna_cerro_se_releja_en_laguna_foto_horizvertical.jpg": {
+      "thumb": "assets/images/derived/thumb/bote_en_laguna_cerro_se_releja_en_laguna_foto_horizvertical.webp",
+      "medium": "assets/images/derived/medium/bote_en_laguna_cerro_se_releja_en_laguna_foto_horizvertical.webp",
+      "full": "assets/images/bote_en_laguna_cerro_se_releja_en_laguna_foto_horizvertical.jpg"
+    },
+    "bote_en_laguna_con_personas_mitad_distancia.jpg": {
+      "thumb": "assets/images/derived/thumb/bote_en_laguna_con_personas_mitad_distancia.webp",
+      "medium": "assets/images/derived/medium/bote_en_laguna_con_personas_mitad_distancia.webp",
+      "full": "assets/images/bote_en_laguna_con_personas_mitad_distancia.jpg"
+    },
+    "bote_lejano_personas_parte_de_jaula_flotante.jpg": {
+      "thumb": "assets/images/derived/thumb/bote_lejano_personas_parte_de_jaula_flotante.webp",
+      "medium": "assets/images/derived/medium/bote_lejano_personas_parte_de_jaula_flotante.webp",
+      "full": "assets/images/bote_lejano_personas_parte_de_jaula_flotante.jpg"
+    },
+    "cerro_que_tiene_forma_de_rostro_de_gorilla_en_la_ruta_a_laguna_canrash.jpg": {
+      "thumb": "assets/images/derived/thumb/cerro_que_tiene_forma_de_rostro_de_gorilla_en_la_ruta_a_laguna_canrash.webp",
+      "medium": "assets/images/derived/medium/cerro_que_tiene_forma_de_rostro_de_gorilla_en_la_ruta_a_laguna_canrash.webp",
+      "full": "assets/images/cerro_que_tiene_forma_de_rostro_de_gorilla_en_la_ruta_a_laguna_canrash.jpg"
+    },
+    "ceviche_y_chicharron_de_trucha_con_fondo_laguna_canrash.jpg": {
+      "thumb": "assets/images/derived/thumb/ceviche_y_chicharron_de_trucha_con_fondo_laguna_canrash.webp",
+      "medium": "assets/images/derived/medium/ceviche_y_chicharron_de_trucha_con_fondo_laguna_canrash.webp",
+      "full": "assets/images/ceviche_y_chicharron_de_trucha_con_fondo_laguna_canrash.jpg"
+    },
+    "chicharron_de_trucha_plato_en_el_pasto_fondo_laguna.jpg": {
+      "thumb": "assets/images/derived/thumb/chicharron_de_trucha_plato_en_el_pasto_fondo_laguna.webp",
+      "medium": "assets/images/derived/medium/chicharron_de_trucha_plato_en_el_pasto_fondo_laguna.webp",
+      "full": "assets/images/chicharron_de_trucha_plato_en_el_pasto_fondo_laguna.jpg"
+    },
+    "comedor_de_vista_panoramica_vacio_pero_con_vista_completa_a_la_laguna_pared_transparente.jpg": {
+      "thumb": "assets/images/derived/thumb/comedor_de_vista_panoramica_vacio_pero_con_vista_completa_a_la_laguna_pared_transparente.webp",
+      "medium": "assets/images/derived/medium/comedor_de_vista_panoramica_vacio_pero_con_vista_completa_a_la_laguna_pared_transparente.webp",
+      "full": "assets/images/comedor_de_vista_panoramica_vacio_pero_con_vista_completa_a_la_laguna_pared_transparente.jpg"
+    },
+    "cooler_con_tapers_de_comida_delivery_de_eica.jpg": {
+      "thumb": "assets/images/derived/thumb/cooler_con_tapers_de_comida_delivery_de_eica.webp",
+      "medium": "assets/images/derived/medium/cooler_con_tapers_de_comida_delivery_de_eica.webp",
+      "full": "assets/images/cooler_con_tapers_de_comida_delivery_de_eica.jpg"
+    },
+    "dos_turistas_tomandose_foto_con_canrash_a_lo_lejos_desde_elevada_altura.jpg": {
+      "thumb": "assets/images/derived/thumb/dos_turistas_tomandose_foto_con_canrash_a_lo_lejos_desde_elevada_altura.webp",
+      "medium": "assets/images/derived/medium/dos_turistas_tomandose_foto_con_canrash_a_lo_lejos_desde_elevada_altura.webp",
+      "full": "assets/images/dos_turistas_tomandose_foto_con_canrash_a_lo_lejos_desde_elevada_altura.jpg"
+    },
+    "flamencos_rosados_en_laguna_conococha_camino_a_laguna_canrash.jpg": {
+      "thumb": "assets/images/derived/thumb/flamencos_rosados_en_laguna_conococha_camino_a_laguna_canrash.webp",
+      "medium": "assets/images/derived/medium/flamencos_rosados_en_laguna_conococha_camino_a_laguna_canrash.webp",
+      "full": "assets/images/flamencos_rosados_en_laguna_conococha_camino_a_laguna_canrash.jpg"
+    },
+    "foto_alineada_con_el_muelle_tambien_se_ve_la_laguna_y_el_muelle_abajo_directamente_alineado_a_la_foto.jpg": {
+      "thumb": "assets/images/derived/thumb/foto_alineada_con_el_muelle_tambien_se_ve_la_laguna_y_el_muelle_abajo_directamente_alineado_a_la_foto.webp",
+      "medium": "assets/images/derived/medium/foto_alineada_con_el_muelle_tambien_se_ve_la_laguna_y_el_muelle_abajo_directamente_alineado_a_la_foto.webp",
+      "full": "assets/images/foto_alineada_con_el_muelle_tambien_se_ve_la_laguna_y_el_muelle_abajo_directamente_alineado_a_la_foto.jpg"
+    },
+    "foto_campamento_antamina.jpg": {
+      "thumb": "assets/images/derived/thumb/foto_campamento_antamina.webp",
+      "medium": "assets/images/derived/medium/foto_campamento_antamina.webp",
+      "full": "assets/images/foto_campamento_antamina.jpg"
+    },
+    "foto_cercana_perfil_turista_en_bote.jpg": {
+      "thumb": "assets/images/derived/thumb/foto_cercana_perfil_turista_en_bote.webp",
+      "medium": "assets/images/derived/medium/foto_cercana_perfil_turista_en_bote.webp",
+      "full": "assets/images/foto_cercana_perfil_turista_en_bote.jpg"
+    },
+    "foto_desde_lado_opuesto_de_los_servicios_no_se_ve_ningun_servicio_de_la_empresa.jpg": {
+      "thumb": "assets/images/derived/thumb/foto_desde_lado_opuesto_de_los_servicios_no_se_ve_ningun_servicio_de_la_empresa.webp",
+      "medium": "assets/images/derived/medium/foto_desde_lado_opuesto_de_los_servicios_no_se_ve_ningun_servicio_de_la_empresa.webp",
+      "full": "assets/images/foto_desde_lado_opuesto_de_los_servicios_no_se_ve_ningun_servicio_de_la_empresa.jpg"
+    },
+    "foto_desde_lejos_a_turista_tomandose_selfile_con_nevados_de_fondo_en_camino_a_canrash.jpg": {
+      "thumb": "assets/images/derived/thumb/foto_desde_lejos_a_turista_tomandose_selfile_con_nevados_de_fondo_en_camino_a_canrash.webp",
+      "medium": "assets/images/derived/medium/foto_desde_lejos_a_turista_tomandose_selfile_con_nevados_de_fondo_en_camino_a_canrash.webp",
+      "full": "assets/images/foto_desde_lejos_a_turista_tomandose_selfile_con_nevados_de_fondo_en_camino_a_canrash.jpg"
+    },
+    "foto_desde_lejos_aestacionamiento_y_parqueo_lleno_de_comensales.jpg": {
+      "thumb": "assets/images/derived/thumb/foto_desde_lejos_aestacionamiento_y_parqueo_lleno_de_comensales.webp",
+      "medium": "assets/images/derived/medium/foto_desde_lejos_aestacionamiento_y_parqueo_lleno_de_comensales.webp",
+      "full": "assets/images/foto_desde_lejos_aestacionamiento_y_parqueo_lleno_de_comensales.jpg"
+    },
+    "foto_desde_mirador_superior_de_laguna_canrash.jpg": {
+      "thumb": "assets/images/derived/thumb/foto_desde_mirador_superior_de_laguna_canrash.webp",
+      "medium": "assets/images/derived/medium/foto_desde_mirador_superior_de_laguna_canrash.webp",
+      "full": "assets/images/foto_desde_mirador_superior_de_laguna_canrash.jpg"
+    },
+    "foto_en_la_garita_control_de_antamina.jpg": {
+      "thumb": "assets/images/derived/thumb/foto_en_la_garita_control_de_antamina.webp",
+      "medium": "assets/images/derived/medium/foto_en_la_garita_control_de_antamina.webp",
+      "full": "assets/images/foto_en_la_garita_control_de_antamina.jpg"
+    },
+    "foto_hermosa_principal_de_toda_la_laguna_canrash.jpg": {
+      "thumb": "assets/images/derived/thumb/foto_hermosa_principal_de_toda_la_laguna_canrash.webp",
+      "medium": "assets/images/derived/medium/foto_hermosa_principal_de_toda_la_laguna_canrash.webp",
+      "full": "assets/images/foto_hermosa_principal_de_toda_la_laguna_canrash.jpg"
+    },
+    "foto_hospedaje_calidad_media.jpg": {
+      "thumb": "assets/images/derived/thumb/foto_hospedaje_calidad_media.webp",
+      "medium": "assets/images/derived/medium/foto_hospedaje_calidad_media.webp",
+      "full": "assets/images/foto_hospedaje_calidad_media.jpg"
+    },
+    "foto_lateral_cochera_con_techo.jpg": {
+      "thumb": "assets/images/derived/thumb/foto_lateral_cochera_con_techo.webp",
+      "medium": "assets/images/derived/medium/foto_lateral_cochera_con_techo.webp",
+      "full": "assets/images/foto_lateral_cochera_con_techo.jpg"
+    },
+    "foto_ovejas_en_laguna_canrash_con_cielo_y_cerro.jpg": {
+      "thumb": "assets/images/derived/thumb/foto_ovejas_en_laguna_canrash_con_cielo_y_cerro.webp",
+      "medium": "assets/images/derived/medium/foto_ovejas_en_laguna_canrash_con_cielo_y_cerro.webp",
+      "full": "assets/images/foto_ovejas_en_laguna_canrash_con_cielo_y_cerro.jpg"
+    },
+    "foto_panoramica_del_hospedaje_calidad_baja.jpg": {
+      "thumb": "assets/images/derived/thumb/foto_panoramica_del_hospedaje_calidad_baja.webp",
+      "medium": "assets/images/derived/medium/foto_panoramica_del_hospedaje_calidad_baja.webp",
+      "full": "assets/images/foto_panoramica_del_hospedaje_calidad_baja.jpg"
+    },
+    "foto_panoramica_desde_lado_opuesto_de_laguna_canrash_los_servicios_se_ven_a_lo_lejos.jpg": {
+      "thumb": "assets/images/derived/thumb/foto_panoramica_desde_lado_opuesto_de_laguna_canrash_los_servicios_se_ven_a_lo_lejos.webp",
+      "medium": "assets/images/derived/medium/foto_panoramica_desde_lado_opuesto_de_laguna_canrash_los_servicios_se_ven_a_lo_lejos.webp",
+      "full": "assets/images/foto_panoramica_desde_lado_opuesto_de_laguna_canrash_los_servicios_se_ven_a_lo_lejos.jpg"
+    },
+    "foto_panoramica_desde_mirador_laguna_canrash_con_2_turistas_tomandose_fotos_a_lo_lejos.jpg": {
+      "thumb": "assets/images/derived/thumb/foto_panoramica_desde_mirador_laguna_canrash_con_2_turistas_tomandose_fotos_a_lo_lejos.webp",
+      "medium": "assets/images/derived/medium/foto_panoramica_desde_mirador_laguna_canrash_con_2_turistas_tomandose_fotos_a_lo_lejos.webp",
+      "full": "assets/images/foto_panoramica_desde_mirador_laguna_canrash_con_2_turistas_tomandose_fotos_a_lo_lejos.jpg"
+    },
+    "foto_perfil_turista_laguna_parcial_detras.jpg": {
+      "thumb": "assets/images/derived/thumb/foto_perfil_turista_laguna_parcial_detras.webp",
+      "medium": "assets/images/derived/medium/foto_perfil_turista_laguna_parcial_detras.webp",
+      "full": "assets/images/foto_perfil_turista_laguna_parcial_detras.jpg"
+    },
+    "foto_profesional_preferida_contiene_laguna_bote_casitas_muelle_agua_limpia_cerro_con_nieve_cielo_azul_pasto_verde.jpg": {
+      "thumb": "assets/images/derived/thumb/foto_profesional_preferida_contiene_laguna_bote_casitas_muelle_agua_limpia_cerro_con_nieve_cielo_azul_pasto_verde.webp",
+      "medium": "assets/images/derived/medium/foto_profesional_preferida_contiene_laguna_bote_casitas_muelle_agua_limpia_cerro_con_nieve_cielo_azul_pasto_verde.webp",
+      "full": "assets/images/foto_profesional_preferida_contiene_laguna_bote_casitas_muelle_agua_limpia_cerro_con_nieve_cielo_azul_pasto_verde.jpg"
+    },
+    "hermoso_atardecer_en_laguna_canrash.jpg": {
+      "thumb": "assets/images/derived/thumb/hermoso_atardecer_en_laguna_canrash.webp",
+      "medium": "assets/images/derived/medium/hermoso_atardecer_en_laguna_canrash.webp",
+      "full": "assets/images/hermoso_atardecer_en_laguna_canrash.jpg"
+    },
+    "hermoso_atardecer_en_laguna_canrash2.jpg": {
+      "thumb": "assets/images/derived/thumb/hermoso_atardecer_en_laguna_canrash2.webp",
+      "medium": "assets/images/derived/medium/hermoso_atardecer_en_laguna_canrash2.webp",
+      "full": "assets/images/hermoso_atardecer_en_laguna_canrash2.jpg"
+    },
+    "huellas_de_dinosarios_en_la_ruta_a_laguna_canrash.jpeg": {
+      "thumb": "assets/images/derived/thumb/huellas_de_dinosarios_en_la_ruta_a_laguna_canrash.webp",
+      "medium": "assets/images/derived/medium/huellas_de_dinosarios_en_la_ruta_a_laguna_canrash.webp",
+      "full": "assets/images/huellas_de_dinosarios_en_la_ruta_a_laguna_canrash.jpeg"
+    },
+    "laguna_canrash_se_ve_el_muelle_a_lo_lejos_con_2_personas_en_el_vista_panorámica.jpg": {
+      "thumb": "assets/images/derived/thumb/laguna_canrash_se_ve_el_muelle_a_lo_lejos_con_2_personas_en_el_vista_panorámica.webp",
+      "medium": "assets/images/derived/medium/laguna_canrash_se_ve_el_muelle_a_lo_lejos_con_2_personas_en_el_vista_panorámica.webp",
+      "full": "assets/images/laguna_canrash_se_ve_el_muelle_a_lo_lejos_con_2_personas_en_el_vista_panorámica.jpg"
+    },
+    "laguna_canrash_vista_panoramica_se_ven_las_jaulas_a_lo_lejos_y_parte_de_un_cerro.jpg": {
+      "thumb": "assets/images/derived/thumb/laguna_canrash_vista_panoramica_se_ven_las_jaulas_a_lo_lejos_y_parte_de_un_cerro.webp",
+      "medium": "assets/images/derived/medium/laguna_canrash_vista_panoramica_se_ven_las_jaulas_a_lo_lejos_y_parte_de_un_cerro.webp",
+      "full": "assets/images/laguna_canrash_vista_panoramica_se_ven_las_jaulas_a_lo_lejos_y_parte_de_un_cerro.jpg"
+    },
+    "nevado_en_ruta_a_laguna_canrash.jpg": {
+      "thumb": "assets/images/derived/thumb/nevado_en_ruta_a_laguna_canrash.webp",
+      "medium": "assets/images/derived/medium/nevado_en_ruta_a_laguna_canrash.webp",
+      "full": "assets/images/nevado_en_ruta_a_laguna_canrash.jpg"
+    },
+    "ovejas_en_la_laguna_canrash.jpg": {
+      "thumb": "assets/images/derived/thumb/ovejas_en_la_laguna_canrash.webp",
+      "medium": "assets/images/derived/medium/ovejas_en_la_laguna_canrash.webp",
+      "full": "assets/images/ovejas_en_la_laguna_canrash.jpg"
+    },
+    "plato_sudado_de_trucha_fondo_laguna_canrash.jpg": {
+      "thumb": "assets/images/derived/thumb/plato_sudado_de_trucha_fondo_laguna_canrash.webp",
+      "medium": "assets/images/derived/medium/plato_sudado_de_trucha_fondo_laguna_canrash.webp",
+      "full": "assets/images/plato_sudado_de_trucha_fondo_laguna_canrash.jpg"
+    },
+    "poste_interrumpe_vista.jpg": {
+      "thumb": "assets/images/derived/thumb/poste_interrumpe_vista.webp",
+      "medium": "assets/images/derived/medium/poste_interrumpe_vista.webp",
+      "full": "assets/images/poste_interrumpe_vista.jpg"
+    },
+    "trabajador_dando_alimento_a_truchas_en_jaulas_flotantes_dentro_de_laguna_canrash_casi_panoramica.jpg": {
+      "thumb": "assets/images/derived/thumb/trabajador_dando_alimento_a_truchas_en_jaulas_flotantes_dentro_de_laguna_canrash_casi_panoramica.webp",
+      "medium": "assets/images/derived/medium/trabajador_dando_alimento_a_truchas_en_jaulas_flotantes_dentro_de_laguna_canrash_casi_panoramica.webp",
+      "full": "assets/images/trabajador_dando_alimento_a_truchas_en_jaulas_flotantes_dentro_de_laguna_canrash_casi_panoramica.jpg"
+    },
+    "tres_truchas_frescas_fileteadas_en_una_bandeja_puesta_en_piedra_fondo_laguna_canrash.jpg": {
+      "thumb": "assets/images/derived/thumb/tres_truchas_frescas_fileteadas_en_una_bandeja_puesta_en_piedra_fondo_laguna_canrash.webp",
+      "medium": "assets/images/derived/medium/tres_truchas_frescas_fileteadas_en_una_bandeja_puesta_en_piedra_fondo_laguna_canrash.webp",
+      "full": "assets/images/tres_truchas_frescas_fileteadas_en_una_bandeja_puesta_en_piedra_fondo_laguna_canrash.jpg"
+    },
+    "trucha_presentada_lista_para_cocinar_chef_la_sostiene_con_herramienta_paisaje_hermoso_detrás_laguna_en_mejor.jpg": {
+      "thumb": "assets/images/derived/thumb/trucha_presentada_lista_para_cocinar_chef_la_sostiene_con_herramienta_paisaje_hermoso_detrás_laguna_en_mejor.webp",
+      "medium": "assets/images/derived/medium/trucha_presentada_lista_para_cocinar_chef_la_sostiene_con_herramienta_paisaje_hermoso_detrás_laguna_en_mejor.webp",
+      "full": "assets/images/trucha_presentada_lista_para_cocinar_chef_la_sostiene_con_herramienta_paisaje_hermoso_detrás_laguna_en_mejor.jpg"
+    },
+    "turista_alemana_feliz_echada_en_bote_primera_persona_en_medio_de_laguna.jpeg": {
+      "thumb": "assets/images/derived/thumb/turista_alemana_feliz_echada_en_bote_primera_persona_en_medio_de_laguna.webp",
+      "medium": "assets/images/derived/medium/turista_alemana_feliz_echada_en_bote_primera_persona_en_medio_de_laguna.webp",
+      "full": "assets/images/turista_alemana_feliz_echada_en_bote_primera_persona_en_medio_de_laguna.jpeg"
+    },
+    "turista_alemana_fondo_laguna_canrash_desde_lado_opuesto.jpeg": {
+      "thumb": "assets/images/derived/thumb/turista_alemana_fondo_laguna_canrash_desde_lado_opuesto.webp",
+      "medium": "assets/images/derived/medium/turista_alemana_fondo_laguna_canrash_desde_lado_opuesto.webp",
+      "full": "assets/images/turista_alemana_fondo_laguna_canrash_desde_lado_opuesto.jpeg"
+    },
+    "turista_de_perfil_con_canrash_detrás_a_lo_lejos.jpg": {
+      "thumb": "assets/images/derived/thumb/turista_de_perfil_con_canrash_detrás_a_lo_lejos.webp",
+      "medium": "assets/images/derived/medium/turista_de_perfil_con_canrash_detrás_a_lo_lejos.webp",
+      "full": "assets/images/turista_de_perfil_con_canrash_detrás_a_lo_lejos.jpg"
+    },
+    "turista_en_medio_de_la_pista_que_con_punto_focal_al_medio_en_la_ruta_a_canrash.jpg": {
+      "thumb": "assets/images/derived/thumb/turista_en_medio_de_la_pista_que_con_punto_focal_al_medio_en_la_ruta_a_canrash.webp",
+      "medium": "assets/images/derived/medium/turista_en_medio_de_la_pista_que_con_punto_focal_al_medio_en_la_ruta_a_canrash.webp",
+      "full": "assets/images/turista_en_medio_de_la_pista_que_con_punto_focal_al_medio_en_la_ruta_a_canrash.jpg"
+    },
+    "turista_girada_no_muestra_rostro_lado_opuesto_de_laguna_canrash.jpeg": {
+      "thumb": "assets/images/derived/thumb/turista_girada_no_muestra_rostro_lado_opuesto_de_laguna_canrash.webp",
+      "medium": "assets/images/derived/medium/turista_girada_no_muestra_rostro_lado_opuesto_de_laguna_canrash.webp",
+      "full": "assets/images/turista_girada_no_muestra_rostro_lado_opuesto_de_laguna_canrash.jpeg"
+    },
+    "turista_parada_al_lado_de_huellas_de_dinosaurio_que_se_encuentra_en_la_ruta_a_laguna_canrash.jpg": {
+      "thumb": "assets/images/derived/thumb/turista_parada_al_lado_de_huellas_de_dinosaurio_que_se_encuentra_en_la_ruta_a_laguna_canrash.webp",
+      "medium": "assets/images/derived/medium/turista_parada_al_lado_de_huellas_de_dinosaurio_que_se_encuentra_en_la_ruta_a_laguna_canrash.webp",
+      "full": "assets/images/turista_parada_al_lado_de_huellas_de_dinosaurio_que_se_encuentra_en_la_ruta_a_laguna_canrash.jpg"
+    },
+    "turista_posando_al_lado_de_su_auto_fondo_de_cerros_en_ruta_a_canrash.jpg": {
+      "thumb": "assets/images/derived/thumb/turista_posando_al_lado_de_su_auto_fondo_de_cerros_en_ruta_a_canrash.webp",
+      "medium": "assets/images/derived/medium/turista_posando_al_lado_de_su_auto_fondo_de_cerros_en_ruta_a_canrash.webp",
+      "full": "assets/images/turista_posando_al_lado_de_su_auto_fondo_de_cerros_en_ruta_a_canrash.jpg"
+    },
+    "turista_simulando_agarrar_cerro_con_forma_de_cara_de_gorila_en_la_ruta.jpg": {
+      "thumb": "assets/images/derived/thumb/turista_simulando_agarrar_cerro_con_forma_de_cara_de_gorila_en_la_ruta.webp",
+      "medium": "assets/images/derived/medium/turista_simulando_agarrar_cerro_con_forma_de_cara_de_gorila_en_la_ruta.webp",
+      "full": "assets/images/turista_simulando_agarrar_cerro_con_forma_de_cara_de_gorila_en_la_ruta.jpg"
+    },
+    "turistas_posando_en_bote_en_medio_de_laguna_en_primera_persona.jpg": {
+      "thumb": "assets/images/derived/thumb/turistas_posando_en_bote_en_medio_de_laguna_en_primera_persona.webp",
+      "medium": "assets/images/derived/medium/turistas_posando_en_bote_en_medio_de_laguna_en_primera_persona.webp",
+      "full": "assets/images/turistas_posando_en_bote_en_medio_de_laguna_en_primera_persona.jpg"
+    },
+    "varias_personas_caminando_en_muelle.jpg": {
+      "thumb": "assets/images/derived/thumb/varias_personas_caminando_en_muelle.webp",
+      "medium": "assets/images/derived/medium/varias_personas_caminando_en_muelle.webp",
+      "full": "assets/images/varias_personas_caminando_en_muelle.jpg"
+    },
+    "vista_desde_jaulas_flotantes_en_medio_de_laguna_hacia_la_orilla_de_la_laguna.jpeg": {
+      "thumb": "assets/images/derived/thumb/vista_desde_jaulas_flotantes_en_medio_de_laguna_hacia_la_orilla_de_la_laguna.webp",
+      "medium": "assets/images/derived/medium/vista_desde_jaulas_flotantes_en_medio_de_laguna_hacia_la_orilla_de_la_laguna.webp",
+      "full": "assets/images/vista_desde_jaulas_flotantes_en_medio_de_laguna_hacia_la_orilla_de_la_laguna.jpeg"
+    }
+  }
+}

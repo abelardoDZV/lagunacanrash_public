@@ -1216,6 +1216,7 @@
             loadCarta();
 
             var IMAGES_DATA = 'assets/data/images.json';
+            var VARIANTS_DATA = 'assets/data/image-variants.json';
             var GALLERY_BASE = 'assets/images/';
             var GALLERY_PAGE_SIZE = 12;
             var galleryItems = [];
@@ -1319,14 +1320,19 @@
                 if (e.target === lightboxEl) closeLightbox();
             });
 
-            function buildGalleryItems(data) {
+            function buildGalleryItems(data, variants) {
                 var gallery = data.gallery;
                 if (!gallery || !gallery.assignments) return [];
                 var descriptions = gallery.descriptions || {};
+                var variantFiles = (variants && variants.files) || {};
                 return Object.keys(gallery.assignments).map(function (file) {
+                    var variant = variantFiles[file] || {};
+                    var fullSrc = variant.full || (GALLERY_BASE + file);
+                    var thumbSrc = variant.thumb || fullSrc;
                     return {
                         file: file,
-                        src: GALLERY_BASE + file,
+                        src: fullSrc,
+                        thumbSrc: thumbSrc,
                         alt: descriptions[file] || file.replace(/_/g, ' ').replace(/\.[^.]+$/, ''),
                         categories: gallery.assignments[file]
                     };
@@ -1363,7 +1369,7 @@
 
             function createGalleryThumb(item, index) {
                 var img = document.createElement('img');
-                img.setAttribute('data-src', item.src);
+                img.setAttribute('data-src', item.thumbSrc);
                 img.alt = item.alt;
                 img.decoding = 'async';
                 img.className = 'js-lightbox gallery-item gallery-thumb-loading aspect-square w-full rounded-xl object-cover';
@@ -1479,11 +1485,16 @@
             function initGallery() {
                 var loadingEl = document.getElementById('gallery-loading');
                 loadingEl.textContent = 'Cargando galería…';
-                fetch(IMAGES_DATA)
-                    .then(function (res) { return res.json(); })
-                    .then(function (data) {
-                        galleryItems = buildGalleryItems(data);
-                        renderGalleryFilters(data.gallery.categories || []);
+                Promise.all([
+                    fetch(IMAGES_DATA).then(function (res) { return res.json(); }),
+                    fetch(VARIANTS_DATA).then(function (res) {
+                        if (!res.ok) return { files: {} };
+                        return res.json();
+                    }).catch(function () { return { files: {} }; })
+                ])
+                    .then(function (results) {
+                        galleryItems = buildGalleryItems(results[0], results[1]);
+                        renderGalleryFilters(results[0].gallery.categories || []);
                         loadingEl.classList.add('hidden');
                         renderGalleryGrid(true);
                     })
