@@ -124,8 +124,18 @@
             box-shadow: 0 12px 40px -12px rgba(17, 37, 51, 0.3);
         }
 
-        .price-row:nth-child(even) {
+        .price-table-card {
+            background: #ffffff;
+            box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.35);
+        }
+
+        .price-table-row:nth-child(even) {
             background-color: #f0f7fb;
+        }
+
+        .price-table-row--best {
+            background: linear-gradient(90deg, #ecfdf3 0%, #f0fdf4 100%);
+            border-left: 4px solid #3d6b4f;
         }
 
         .mobile-nav-open {
@@ -508,33 +518,65 @@
                         </div>
                     </div>
 
-                    <div class="overflow-hidden rounded-2xl border border-lagoon-700/50 bg-lagoon-900/50 backdrop-blur-sm">
-                        <div class="border-b border-lagoon-700/50 px-6 py-4">
-                            <h3 class="font-semibold text-lg">Tabla de precios por kilo</h3>
-                            <p class="text-sm text-lagoon-300 mt-1">Volumen total de compra</p>
+                    <div class="price-table-card overflow-hidden rounded-2xl">
+                        <div class="border-b border-lagoon-100 bg-lagoon-50 px-6 py-5 sm:px-8">
+                            <h3 class="font-display text-xl font-bold text-lagoon-950 sm:text-2xl">Tabla de precios por kilo</h3>
+                            <p class="mt-1 text-sm font-medium text-lagoon-600">Según volumen total de compra</p>
                         </div>
-                        <div class="divide-y divide-lagoon-700/30">
-                            <div class="price-row flex items-center justify-between px-6 py-4 bg-lagoon-800/30">
-                                <span class="text-lagoon-100">Menor a 5 kg</span>
-                                <span class="font-display text-xl font-bold text-white">S/ 22<span class="text-sm font-sans font-normal text-lagoon-300">/kg</span></span>
+
+                        <div class="divide-y divide-lagoon-100">
+                            <div class="price-table-row flex items-center justify-between gap-4 px-6 py-5 sm:px-8">
+                                <div>
+                                    <p class="font-semibold text-lagoon-900">Menor a 5 kg</p>
+                                    <p class="text-xs text-lagoon-500 mt-0.5">Compra pequeña</p>
+                                </div>
+                                <p class="shrink-0 text-right">
+                                    <span class="font-display text-3xl font-bold text-lagoon-800">22</span>
+                                    <span class="text-sm font-semibold text-lagoon-600"> soles/kg</span>
+                                </p>
                             </div>
-                            <div class="price-row flex items-center justify-between px-6 py-4">
-                                <span class="text-lagoon-100">De 5 a 10 kg</span>
-                                <span class="font-display text-xl font-bold text-white">S/ 21<span class="text-sm font-sans font-normal text-lagoon-300">/kg</span></span>
+
+                            <div class="price-table-row flex items-center justify-between gap-4 px-6 py-5 sm:px-8">
+                                <div>
+                                    <p class="font-semibold text-lagoon-900">De 5 a 10 kg</p>
+                                    <p class="text-xs text-lagoon-500 mt-0.5">Volumen medio</p>
+                                </div>
+                                <p class="shrink-0 text-right">
+                                    <span class="font-display text-3xl font-bold text-lagoon-800">21</span>
+                                    <span class="text-sm font-semibold text-lagoon-600"> soles/kg</span>
+                                </p>
                             </div>
-                            <div class="price-row flex items-center justify-between px-6 py-4 bg-lagoon-800/30">
-                                <span class="text-lagoon-100">De 10 a 25 kg</span>
-                                <span class="font-display text-xl font-bold text-white">S/ 20<span class="text-sm font-sans font-normal text-lagoon-300">/kg</span></span>
+
+                            <div class="price-table-row flex items-center justify-between gap-4 px-6 py-5 sm:px-8">
+                                <div>
+                                    <p class="font-semibold text-lagoon-900">De 10 a 25 kg</p>
+                                    <p class="text-xs text-lagoon-500 mt-0.5">Restaurantes y negocios</p>
+                                </div>
+                                <p class="shrink-0 text-right">
+                                    <span class="font-display text-3xl font-bold text-lagoon-800">20</span>
+                                    <span class="text-sm font-semibold text-lagoon-600"> soles/kg</span>
+                                </p>
                             </div>
-                            <div class="price-row flex items-center justify-between px-6 py-4">
-                                <span class="text-lagoon-100">Mayor a 25 kg</span>
-                                <span class="font-display text-xl font-bold text-alpine-grass">S/ 19<span class="text-sm font-sans font-normal text-lagoon-300">/kg</span></span>
+
+                            <div class="price-table-row price-table-row--best flex items-center justify-between gap-4 px-6 py-5 sm:px-8">
+                                <div>
+                                    <p class="flex flex-wrap items-center gap-2">
+                                        <span class="font-semibold text-lagoon-900">Mayor a 25 kg</span>
+                                        <span class="rounded-full bg-alpine-moss px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">Mejor precio</span>
+                                    </p>
+                                    <p class="text-xs text-alpine-moss mt-0.5 font-medium">Distribuidores y alto volumen</p>
+                                </div>
+                                <p class="shrink-0 text-right">
+                                    <span class="font-display text-3xl font-bold text-alpine-moss">19</span>
+                                    <span class="text-sm font-semibold text-lagoon-700"> soles/kg</span>
+                                </p>
                             </div>
                         </div>
-                        <div class="px-6 py-5 border-t border-lagoon-700/50">
+
+                        <div class="border-t border-lagoon-100 bg-white px-6 py-5 sm:px-8">
                             <a href="https://wa.me/51957878409?text=Hola%2C%20quiero%20cotizar%20trucha%20al%20por%20mayor"
                                 target="_blank" rel="noopener noreferrer"
-                                class="flex w-full items-center justify-center gap-2 rounded-full bg-alpine-moss px-6 py-3 text-sm font-semibold text-white transition hover:bg-alpine-grass">
+                                class="flex w-full items-center justify-center gap-2 rounded-full bg-alpine-moss px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-alpine-grass shadow-md">
                                 Solicitar cotización por WhatsApp
                             </a>
                         </div>
