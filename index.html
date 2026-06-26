@@ -491,8 +491,17 @@
                                     </svg>
                                     <span class="text-sm text-lagoon-800"><strong>Sin techo:</strong> S/ 5 por día — amplio parqueo al aire libre</span>
                                 </li>
+                                <li class="flex items-start gap-3">
+                                    <svg class="mt-0.5 h-5 w-5 shrink-0 text-lagoon-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                    </svg>
+                                    <span class="text-sm text-lagoon-800"><strong>Seguridad:</strong> cámaras en todo el recinto y respaldo de la central de la PNP vinculada a Antamina.</span>
+                                </li>
                             </ul>
                             <div class="mt-5 grid grid-cols-2 gap-3">
+                                <img src="assets/images/foto_en_la_garita_control_de_antamina.jpg"
+                                    alt="Garita de control en la ruta hacia Antamina"
+                                    class="h-24 w-full rounded-xl object-cover" loading="lazy">
                                 <img src="assets/images/foto_campamento_antamina.jpg"
                                     alt="Campamento de Antamina, a 20 minutos de la laguna"
                                     class="h-24 w-full rounded-xl object-cover" loading="lazy">
@@ -686,7 +695,7 @@
                 <div class="mt-12 overflow-hidden rounded-2xl bg-white shadow-card">
                     <div class="grid lg:grid-cols-2 lg:items-center">
                         <div class="aspect-video lg:aspect-auto lg:min-h-[18rem]">
-                            <video class="h-full w-full object-cover" controls playsinline preload="metadata"
+                            <video class="h-full w-full object-cover" controls playsinline muted preload="metadata"
                                 poster="assets/images/turista_en_medio_de_la_pista_que_con_punto_focal_al_medio_en_la_ruta_a_canrash.jpg">
                                 <source src="assets/images/espectacular_video_manejando_en_pista_al_lado_de_laguna_se_ve_la_laguna_y_buses_en_contra.mp4" type="video/mp4">
                             </video>
@@ -711,7 +720,7 @@
                         <div class="grid grid-cols-2 gap-4">
                             <div class="col-span-2 overflow-hidden rounded-2xl">
                                 <video class="media-video w-full aspect-video object-cover rounded-2xl"
-                                    controls playsinline preload="metadata"
+                                    controls playsinline muted preload="metadata"
                                     poster="assets/images/foto_ovejas_en_laguna_canrash_con_cielo_y_cerro.jpg">
                                     <source src="assets/images/pastor_guiando_a_sus_ovejas_en_laguna_canrash.mp4" type="video/mp4">
                                 </video>
@@ -957,6 +966,17 @@
 
             sections.forEach(function (section) {
                 observer.observe(section);
+            });
+
+            document.querySelectorAll('video').forEach(function (video) {
+                video.muted = true;
+                video.defaultMuted = true;
+                video.setAttribute('muted', '');
+                video.addEventListener('volumechange', function () {
+                    if (!video.muted) {
+                        video.muted = true;
+                    }
+                });
             });
         })();
     </script>
