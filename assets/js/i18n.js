@@ -429,8 +429,7 @@
     function detectLang() {
         var saved = localStorage.getItem(STORAGE_KEY);
         if (saved === 'es' || saved === 'en') return saved;
-        var browser = (navigator.language || navigator.userLanguage || 'es').toLowerCase();
-        return browser.startsWith('en') ? 'en' : 'es';
+        return 'es';
     }
 
     function t(key, vars) {
