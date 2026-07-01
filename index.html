@@ -16,6 +16,9 @@
     <meta name="geo.region" content="PE-ANC">
     <meta name="geo.placename" content="San Marcos, Huari, Áncash, Perú">
     <link rel="canonical" href="https://www.lagunacanrash.com/">
+    <link rel="alternate" hreflang="es" href="https://www.lagunacanrash.com/">
+    <link rel="alternate" hreflang="en" href="https://www.lagunacanrash.com/">
+    <link rel="alternate" hreflang="x-default" href="https://www.lagunacanrash.com/">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
     <meta name="theme-color" content="#112533">
 
@@ -309,7 +312,38 @@
         .carta-collapse[open] .carta-chevron {
             transform: rotate(180deg);
         }
+
+        .lang-btn {
+            border-radius: 9999px;
+            padding: 0.25rem 0.625rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.7);
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .lang-btn:hover {
+            color: #fff;
+        }
+
+        .lang-btn-active {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+        }
+
+        #navbar.nav-scrolled .lang-btn,
+        #navbar.nav-menu-open .lang-btn {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        #navbar.nav-scrolled .lang-btn-active,
+        #navbar.nav-menu-open .lang-btn-active {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+        }
     </style>
+
+    <script src="assets/js/i18n.js"></script>
 
     <script type="application/ld+json">
     {
@@ -410,10 +444,10 @@
 <body class="font-sans text-lagoon-950 bg-white antialiased">
 
     <!-- WhatsApp flotante -->
-    <a href="https://wa.me/51957878409?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20sobre%20Laguna%20Canrash"
+    <a href="https://wa.me/51957878409"
         target="_blank" rel="noopener noreferrer"
         class="whatsapp-fab fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white transition hover:bg-[#1ebe57]"
-        aria-label="Contactar por WhatsApp: 957 878 409">
+        data-i18n-aria="ui.whatsappAria">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24">
             <path
                 d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.884 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
@@ -430,24 +464,34 @@
                 <span class="font-display text-lg font-bold text-white sm:text-xl tracking-tight">Laguna Canrash</span>
             </a>
 
-            <nav class="hidden items-center gap-1 lg:flex" aria-label="Navegación principal">
-                <a href="#inicio" class="nav-link px-3 py-2 text-sm font-medium text-white/85 hover:text-white transition rounded-lg hover:bg-white/10">Inicio</a>
-                <a href="#como-llegar" class="nav-link px-3 py-2 text-sm font-medium text-white/85 hover:text-white transition rounded-lg hover:bg-white/10">Cómo llegar</a>
-                <a href="#restaurante" class="nav-link px-3 py-2 text-sm font-medium text-white/85 hover:text-white transition rounded-lg hover:bg-white/10">Restaurante</a>
-                <a href="#carta" class="nav-link px-3 py-2 text-sm font-medium text-white/85 hover:text-white transition rounded-lg hover:bg-white/10">Carta</a>
-                <a href="#servicios" class="nav-link px-3 py-2 text-sm font-medium text-white/85 hover:text-white transition rounded-lg hover:bg-white/10">Servicios</a>
-                <a href="#mayor" class="nav-link px-3 py-2 text-sm font-medium text-white/85 hover:text-white transition rounded-lg hover:bg-white/10">Por Mayor</a>
-                <a href="#historia" class="nav-link px-3 py-2 text-sm font-medium text-white/85 hover:text-white transition rounded-lg hover:bg-white/10">Historia</a>
-                <a href="#galeria" class="nav-link px-3 py-2 text-sm font-medium text-white/85 hover:text-white transition rounded-lg hover:bg-white/10">Galería</a>
+            <nav class="hidden items-center gap-1 lg:flex" data-i18n-aria="nav.label" aria-label="Navegación principal">
+                <a href="#inicio" class="nav-link px-3 py-2 text-sm font-medium text-white/85 hover:text-white transition rounded-lg hover:bg-white/10" data-i18n="nav.inicio">Inicio</a>
+                <a href="#como-llegar" class="nav-link px-3 py-2 text-sm font-medium text-white/85 hover:text-white transition rounded-lg hover:bg-white/10" data-i18n="nav.comoLlegar">Cómo llegar</a>
+                <a href="#restaurante" class="nav-link px-3 py-2 text-sm font-medium text-white/85 hover:text-white transition rounded-lg hover:bg-white/10" data-i18n="nav.restaurante">Restaurante</a>
+                <a href="#carta" class="nav-link px-3 py-2 text-sm font-medium text-white/85 hover:text-white transition rounded-lg hover:bg-white/10" data-i18n="nav.carta">Carta</a>
+                <a href="#servicios" class="nav-link px-3 py-2 text-sm font-medium text-white/85 hover:text-white transition rounded-lg hover:bg-white/10" data-i18n="nav.servicios">Servicios</a>
+                <a href="#mayor" class="nav-link px-3 py-2 text-sm font-medium text-white/85 hover:text-white transition rounded-lg hover:bg-white/10" data-i18n="nav.mayor">Por Mayor</a>
+                <a href="#historia" class="nav-link px-3 py-2 text-sm font-medium text-white/85 hover:text-white transition rounded-lg hover:bg-white/10" data-i18n="nav.historia">Historia</a>
+                <a href="#galeria" class="nav-link px-3 py-2 text-sm font-medium text-white/85 hover:text-white transition rounded-lg hover:bg-white/10" data-i18n="nav.galeria">Galería</a>
+                <div class="lang-switcher ml-1 flex items-center gap-0.5 rounded-full border border-white/25 bg-white/10 px-1 py-0.5" role="group" data-i18n-aria="nav.langSwitch" aria-label="Cambiar idioma">
+                    <button type="button" data-lang-btn="es" class="lang-btn lang-btn-active" aria-pressed="true">ES</button>
+                    <button type="button" data-lang-btn="en" class="lang-btn" aria-pressed="false">EN</button>
+                </div>
                 <a href="https://wa.me/51957878409" target="_blank" rel="noopener noreferrer"
-                    class="ml-2 rounded-full bg-alpine-moss px-5 py-2 text-sm font-semibold text-white transition hover:bg-alpine-grass">
+                    class="ml-2 rounded-full bg-alpine-moss px-5 py-2 text-sm font-semibold text-white transition hover:bg-alpine-grass"
+                    data-i18n="nav.whatsapp">
                     WhatsApp
                 </a>
             </nav>
 
+            <div class="flex items-center gap-2 lg:hidden">
+                <div class="lang-switcher flex items-center gap-0.5 rounded-full border border-white/25 bg-white/10 px-1 py-0.5" role="group" data-i18n-aria="nav.langSwitch" aria-label="Cambiar idioma">
+                    <button type="button" data-lang-btn="es" class="lang-btn lang-btn-active" aria-pressed="true">ES</button>
+                    <button type="button" data-lang-btn="en" class="lang-btn" aria-pressed="false">EN</button>
+                </div>
             <button id="menu-toggle" type="button"
-                class="lg:hidden flex h-10 w-10 items-center justify-center rounded-lg text-white hover:bg-white/10 transition"
-                aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+                class="flex h-10 w-10 items-center justify-center rounded-lg text-white hover:bg-white/10 transition"
+                data-i18n-aria="nav.openMenu" aria-expanded="false" aria-controls="mobile-menu">
                 <svg id="icon-open" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
@@ -455,21 +499,22 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
+            </div>
         </div>
 
         <nav id="mobile-menu"
             class="mobile-nav-closed lg:hidden border-t border-white/10 bg-lagoon-950"
-            aria-label="Menú móvil" aria-hidden="true">
+            data-i18n-aria="nav.mobileLabel" aria-label="Menú móvil" aria-hidden="true">
             <div id="mobile-menu-panel">
                 <div class="flex flex-col gap-1 px-4 py-4">
-                <a href="#inicio" class="mobile-link rounded-lg px-4 py-3 text-sm font-medium text-white/90 hover:bg-white/10">Inicio</a>
-                <a href="#como-llegar" class="mobile-link rounded-lg px-4 py-3 text-sm font-medium text-white/90 hover:bg-white/10">Cómo llegar</a>
-                <a href="#restaurante" class="mobile-link rounded-lg px-4 py-3 text-sm font-medium text-white/90 hover:bg-white/10">Restaurante</a>
-                <a href="#carta" class="mobile-link rounded-lg px-4 py-3 text-sm font-medium text-white/90 hover:bg-white/10">Carta</a>
-                <a href="#servicios" class="mobile-link rounded-lg px-4 py-3 text-sm font-medium text-white/90 hover:bg-white/10">Servicios</a>
-                <a href="#mayor" class="mobile-link rounded-lg px-4 py-3 text-sm font-medium text-white/90 hover:bg-white/10">Venta por Mayor</a>
-                <a href="#historia" class="mobile-link rounded-lg px-4 py-3 text-sm font-medium text-white/90 hover:bg-white/10">Nuestra Historia</a>
-                <a href="#galeria" class="mobile-link rounded-lg px-4 py-3 text-sm font-medium text-white/90 hover:bg-white/10">Galería</a>
+                <a href="#inicio" class="mobile-link rounded-lg px-4 py-3 text-sm font-medium text-white/90 hover:bg-white/10" data-i18n="nav.inicio">Inicio</a>
+                <a href="#como-llegar" class="mobile-link rounded-lg px-4 py-3 text-sm font-medium text-white/90 hover:bg-white/10" data-i18n="nav.comoLlegar">Cómo llegar</a>
+                <a href="#restaurante" class="mobile-link rounded-lg px-4 py-3 text-sm font-medium text-white/90 hover:bg-white/10" data-i18n="nav.restaurante">Restaurante</a>
+                <a href="#carta" class="mobile-link rounded-lg px-4 py-3 text-sm font-medium text-white/90 hover:bg-white/10" data-i18n="nav.carta">Carta</a>
+                <a href="#servicios" class="mobile-link rounded-lg px-4 py-3 text-sm font-medium text-white/90 hover:bg-white/10" data-i18n="nav.servicios">Servicios</a>
+                <a href="#mayor" class="mobile-link rounded-lg px-4 py-3 text-sm font-medium text-white/90 hover:bg-white/10" data-i18n="nav.mayorMobile">Venta por Mayor</a>
+                <a href="#historia" class="mobile-link rounded-lg px-4 py-3 text-sm font-medium text-white/90 hover:bg-white/10" data-i18n="nav.historiaMobile">Nuestra Historia</a>
+                <a href="#galeria" class="mobile-link rounded-lg px-4 py-3 text-sm font-medium text-white/90 hover:bg-white/10" data-i18n="nav.galeria">Galería</a>
                 <a href="https://wa.me/51957878409" target="_blank" rel="noopener noreferrer"
                     class="mobile-menu-whatsapp mt-2 rounded-full bg-[#25D366] px-4 py-3 text-center text-sm font-semibold text-white">
                     WhatsApp: 957 878 409
@@ -484,12 +529,13 @@
         <!-- ═══════════════════ HERO ═══════════════════ -->
         <section id="inicio" class="relative min-h-screen flex items-center overflow-hidden">
             <img src="assets/images/derived/medium/foto_profesional_preferida_contiene_laguna_bote_casitas_muelle_agua_limpia_cerro_con_nieve_cielo_azul_pasto_verde.webp"
+                data-i18n-alt="hero.imageAlt"
                 alt="Vista panorámica de Laguna Canrash con laguna, muelle, casitas y nevados"
                 class="hero-fallback absolute inset-0 h-full w-full object-cover" fetchpriority="high" decoding="async">
             <video class="hero-video media-video absolute inset-0 h-full w-full object-cover"
                 autoplay muted loop playsinline preload="metadata"
                 poster="assets/images/derived/medium/foto_profesional_preferida_contiene_laguna_bote_casitas_muelle_agua_limpia_cerro_con_nieve_cielo_azul_pasto_verde.webp"
-                aria-label="Video aéreo de toda la laguna Canrash">
+                data-i18n-aria="hero.videoLabel" aria-label="Video aéreo de toda la laguna Canrash">
                 <source src="assets/images/video_drone_toda_laguna.mp4" type="video/mp4">
             </video>
             <div class="hero-gradient absolute inset-0"></div>
@@ -498,38 +544,41 @@
                 <div class="max-w-2xl">
                     <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-white/90 backdrop-blur-sm">
                         <span class="h-1.5 w-1.5 rounded-full bg-alpine-grass"></span>
-                        San Marcos · Áncash · Perú · A 20 min de Antamina
+                        <span data-i18n="hero.badge">San Marcos · Áncash · Perú · A 20 min de Antamina</span>
                     </p>
-                    <h1 class="font-display text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
+                    <h1 class="font-display text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl" data-i18n="hero.title">
                         Trucha fresca de la laguna a tu plato
                     </h1>
-                    <p class="mt-5 text-lg text-white/85 leading-relaxed sm:text-xl">
+                    <p class="mt-5 text-lg text-white/85 leading-relaxed sm:text-xl" data-i18n="hero.subtitle">
                         Somos una familia de los andes peruanos que te recibe con trucha del día, cocina honesta
                         y el paisaje de San Marcos, en el corazón de Áncash. Del criadero a tu mesa, en un solo lugar.
                     </p>
                     <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
                         <a href="#como-llegar"
-                            class="inline-flex items-center justify-center rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-lagoon-900 transition hover:bg-lagoon-50 shadow-float">
+                            class="inline-flex items-center justify-center rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-lagoon-900 transition hover:bg-lagoon-50 shadow-float"
+                            data-i18n="hero.ctaRoute">
                             Cómo llegar
                         </a>
                         <a href="#restaurante"
-                            class="inline-flex items-center justify-center rounded-full border border-white/40 bg-white/10 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/20">
+                            class="inline-flex items-center justify-center rounded-full border border-white/40 bg-white/10 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/20"
+                            data-i18n="hero.ctaRestaurant">
                             Ver restaurante
                         </a>
-                        <a href="https://wa.me/51957878409?text=Hola%2C%20quiero%20reservar%20en%20Laguna%20Canrash"
+                        <a href="https://wa.me/51957878409"
+                            data-wa="reserve"
                             target="_blank" rel="noopener noreferrer"
                             class="inline-flex items-center justify-center gap-2 rounded-full border border-white/40 bg-white/10 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/20">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.884 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
                             </svg>
-                            Reservar: 957 878 409
+                            <span data-i18n="hero.ctaReserve">Reservar: 957 878 409</span>
                         </a>
                     </div>
                 </div>
             </div>
 
             <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-white/60">
-                <a href="#como-llegar" aria-label="Desplazarse hacia abajo">
+                <a href="#como-llegar" data-i18n-aria="hero.scrollDown" aria-label="Desplazarse hacia abajo">
                     <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                     </svg>
@@ -541,9 +590,9 @@
         <section id="como-llegar" class="py-20 sm:py-28 bg-white">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto">
-                    <p class="section-label text-xs font-bold uppercase tracking-widest text-lagoon-600 mx-auto">Tu viaje, sin sorpresas</p>
-                    <h2 class="mt-2 font-display text-3xl font-bold text-lagoon-950 sm:text-4xl">Cómo llegar a Laguna Canrash</h2>
-                    <p class="mt-4 text-lg text-lagoon-700">Carretera asfaltada en excelente estado hasta la puerta. Elige tu ruta en Google Maps y llega directo — sin caminar tramos.</p>
+                    <p class="section-label text-xs font-bold uppercase tracking-widest text-lagoon-600 mx-auto" data-i18n="route.label">Tu viaje, sin sorpresas</p>
+                    <h2 class="mt-2 font-display text-3xl font-bold text-lagoon-950 sm:text-4xl" data-i18n="route.title">Cómo llegar a Laguna Canrash</h2>
+                    <p class="mt-4 text-lg text-lagoon-700" data-i18n="route.intro">Carretera asfaltada en excelente estado hasta la puerta. Elige tu ruta en Google Maps y llega directo — sin caminar tramos.</p>
                 </div>
 
                 <div class="mt-10 mx-auto max-w-4xl rounded-2xl border-2 border-alpine-moss/40 bg-lagoon-50 p-6 sm:p-8 shadow-card">
@@ -553,10 +602,10 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                             </svg>
                         </div>
-                        <h3 class="font-display text-xl font-bold text-lagoon-950 sm:text-2xl">Ruta asfaltada, sin caminar</h3>
+                        <h3 class="font-display text-xl font-bold text-lagoon-950 sm:text-2xl" data-i18n="route.pavedTitle">Ruta asfaltada, sin caminar</h3>
                     </div>
                     <div class="mt-4">
-                            <p class="text-lagoon-700 leading-relaxed">
+                            <p class="text-lagoon-700 leading-relaxed" data-i18n-html="route.pavedText">
                                 Muchos visitantes nos preguntan si la carretera tiene asfalto o si habrá que caminar un tramo —
                                 sobre todo quienes viajan con niños, les afecta la altura o temen por su vehículo.
                                 Hoy la ruta está en <strong>excelentes condiciones</strong>: de Huaraz a Conococha el tramo lo
@@ -566,15 +615,15 @@
                             <div class="mt-5 grid grid-cols-3 gap-2 sm:gap-3">
                                 <div class="min-w-0 rounded-xl bg-white px-2 py-3 sm:px-4 text-center shadow-sm">
                                     <p class="font-display text-lg font-bold text-lagoon-800 sm:text-2xl">~3 h</p>
-                                    <p class="mt-1 text-[11px] font-medium leading-tight text-lagoon-600 sm:text-xs">Huaraz</p>
+                                    <p class="mt-1 text-[11px] font-medium leading-tight text-lagoon-600 sm:text-xs" data-i18n="route.fromHuaraz">Huaraz</p>
                                 </div>
                                 <div class="min-w-0 rounded-xl bg-white px-2 py-3 sm:px-4 text-center shadow-sm">
                                     <p class="font-display text-lg font-bold text-lagoon-800 sm:text-2xl">~1 h</p>
-                                    <p class="mt-1 text-[11px] font-medium leading-tight text-lagoon-600 sm:text-xs">Huallanca</p>
+                                    <p class="mt-1 text-[11px] font-medium leading-tight text-lagoon-600 sm:text-xs" data-i18n="route.fromHuallanca">Huallanca</p>
                                 </div>
                                 <div class="min-w-0 rounded-xl bg-white px-2 py-3 sm:px-4 text-center shadow-sm">
                                     <p class="font-display text-lg font-bold text-lagoon-800 sm:text-2xl">~20 min</p>
-                                    <p class="mt-1 text-[11px] font-medium leading-tight text-lagoon-600 sm:text-xs">Antamina</p>
+                                    <p class="mt-1 text-[11px] font-medium leading-tight text-lagoon-600 sm:text-xs" data-i18n="route.fromAntamina">Antamina</p>
                                 </div>
                             </div>
                             <div class="route-links-grid mt-6 grid gap-2 sm:grid-cols-2">
@@ -582,28 +631,28 @@
                                     <svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                                     </svg>
-                                    Ruta desde Huaraz
+                                    <span data-i18n="route.linkHuaraz">Ruta desde Huaraz</span>
                                 </a>
                                 <a href="https://maps.app.goo.gl/HoMgvGHsV59yDenn6" target="_blank" rel="noopener noreferrer">
                                     <svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                                     </svg>
-                                    Ruta desde Huallanca
+                                    <span data-i18n="route.linkHuallanca">Ruta desde Huallanca</span>
                                 </a>
                                 <a href="https://maps.app.goo.gl/NLKFKKLkYxEEqPEg6" target="_blank" rel="noopener noreferrer">
                                     <svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                                     </svg>
-                                    Ruta desde Antamina
+                                    <span data-i18n="route.linkAntamina">Ruta desde Antamina</span>
                                 </a>
                                 <a href="https://maps.app.goo.gl/Q9HL2NdzEuszKzP2A" target="_blank" rel="noopener noreferrer">
                                     <svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
                                     </svg>
-                                    Ruta desde San Marcos
+                                    <span data-i18n="route.linkSanMarcos">Ruta desde San Marcos</span>
                                 </a>
                             </div>
-                            <p class="mt-4 text-sm text-lagoon-600 leading-relaxed">
+                            <p class="mt-4 text-sm text-lagoon-600 leading-relaxed" data-i18n-html="route.mapsNote">
                                 Si partes de San Marcos, Google Maps puede mostrarte <strong>dos rutas</strong>.
                                 Usa el enlace «Ruta desde San Marcos»: es la correcta para llegar a la laguna.
                             </p>
@@ -611,8 +660,8 @@
                 </div>
 
                 <div class="mt-16 text-center max-w-2xl mx-auto">
-                    <p class="section-label text-xs font-bold uppercase tracking-widest text-lagoon-600 mx-auto">El viaje es parte de la experiencia</p>
-                    <h3 class="mt-2 font-display text-2xl font-bold text-lagoon-950 sm:text-3xl">En el camino verás</h3>
+                    <p class="section-label text-xs font-bold uppercase tracking-widest text-lagoon-600 mx-auto" data-i18n="route.sightsLabel">El viaje es parte de la experiencia</p>
+                    <h3 class="mt-2 font-display text-2xl font-bold text-lagoon-950 sm:text-3xl" data-i18n="route.sightsTitle">En el camino verás</h3>
                 </div>
 
                 <div class="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -623,8 +672,8 @@
                                 class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" decoding="async">
                         </div>
                         <div class="p-5">
-                            <h4 class="font-semibold text-lagoon-900">Huellas de dinosaurio</h4>
-                            <p class="mt-1.5 text-sm text-lagoon-600">Restos fósiles visibles a lo largo del camino, un viaje al pasado prehistórico.</p>
+                            <h4 class="font-semibold text-lagoon-900" data-i18n="route.dinoTitle">Huellas de dinosaurio</h4>
+                            <p class="mt-1.5 text-sm text-lagoon-600" data-i18n="route.dinoDesc">Restos fósiles visibles a lo largo del camino, un viaje al pasado prehistórico.</p>
                         </div>
                     </article>
 
@@ -635,8 +684,8 @@
                                 class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" decoding="async">
                         </div>
                         <div class="p-5">
-                            <h4 class="font-semibold text-lagoon-900">Flamencos en Conococha</h4>
-                            <p class="mt-1.5 text-sm text-lagoon-600">Avistamiento de flamencos rosados en la laguna Conococha, rumbo a Canrash.</p>
+                            <h4 class="font-semibold text-lagoon-900" data-i18n="route.flamingoTitle">Flamencos en Conococha</h4>
+                            <p class="mt-1.5 text-sm text-lagoon-600" data-i18n="route.flamingoDesc">Avistamiento de flamencos rosados en la laguna Conococha, rumbo a Canrash.</p>
                         </div>
                     </article>
 
@@ -647,8 +696,8 @@
                                 class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" decoding="async">
                         </div>
                         <div class="p-5">
-                            <h4 class="font-semibold text-lagoon-900">Nevados en ruta</h4>
-                            <p class="mt-1.5 text-sm text-lagoon-600">Cordillera nevada que acompaña el recorrido con panoramas de postal.</p>
+                            <h4 class="font-semibold text-lagoon-900" data-i18n="route.snowTitle">Nevados en ruta</h4>
+                            <p class="mt-1.5 text-sm text-lagoon-600" data-i18n="route.snowDesc">Cordillera nevada que acompaña el recorrido con panoramas de postal.</p>
                         </div>
                     </article>
 
@@ -659,8 +708,8 @@
                                 class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" decoding="async">
                         </div>
                         <div class="p-5">
-                            <h4 class="font-semibold text-lagoon-900">Cerro del gorila</h4>
-                            <p class="mt-1.5 text-sm text-lagoon-600">Formación rocosa con perfil de cara de gorila, parada obligatoria para la foto.</p>
+                            <h4 class="font-semibold text-lagoon-900" data-i18n="route.gorillaTitle">Cerro del gorila</h4>
+                            <p class="mt-1.5 text-sm text-lagoon-600" data-i18n="route.gorillaDesc">Formación rocosa con perfil de cara de gorila, parada obligatoria para la foto.</p>
                         </div>
                     </article>
                 </div>
@@ -670,13 +719,13 @@
                         <div class="aspect-video lg:aspect-auto lg:min-h-[18rem]">
                             <video class="autoplay-video h-full w-full object-cover" autoplay muted loop playsinline preload="metadata"
                                 poster="assets/images/derived/medium/turista_en_medio_de_la_pista_que_con_punto_focal_al_medio_en_la_ruta_a_canrash.webp"
-                                aria-label="Video del camino bordeando la laguna hacia Laguna Canrash">
+                                data-i18n-aria="route.roadVideoLabel" aria-label="Video del camino bordeando la laguna hacia Laguna Canrash">
                                 <source src="assets/images/espectacular_video_manejando_en_pista_al_lado_de_laguna_se_ve_la_laguna_y_buses_en_contra.mp4" type="video/mp4">
                             </video>
                         </div>
                         <div class="p-6 sm:p-8">
-                            <h3 class="font-display text-xl font-bold text-lagoon-950">Así se vive el camino</h3>
-                            <p class="mt-3 text-lagoon-700 leading-relaxed">
+                            <h3 class="font-display text-xl font-bold text-lagoon-950" data-i18n="route.roadTitle">Así se vive el camino</h3>
+                            <p class="mt-3 text-lagoon-700 leading-relaxed" data-i18n="route.roadDesc">
                                 La ruta bordea la laguna, pasa buses de trabajadores y regala vistas que no se olvidan.
                                 Llegar a Canrash ya es parte de la experiencia.
                             </p>
@@ -691,31 +740,31 @@
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
                     <div>
-                        <p class="section-label text-xs font-bold uppercase tracking-widest text-lagoon-600">Gastronomía</p>
-                        <h2 class="mt-2 font-display text-3xl font-bold text-lagoon-950 sm:text-4xl">
+                        <p class="section-label text-xs font-bold uppercase tracking-widest text-lagoon-600" data-i18n="rest.label">Gastronomía</p>
+                        <h2 class="mt-2 font-display text-3xl font-bold text-lagoon-950 sm:text-4xl" data-i18n="rest.title">
                             Frescura extrema, sabor auténtico
                         </h2>
-                        <p class="mt-5 text-lagoon-700 leading-relaxed">
+                        <p class="mt-5 text-lagoon-700 leading-relaxed" data-i18n="rest.p1">
                             Aquí todo gira en torno a la laguna y a la gente que la cuida. Incubamos ovas importadas y criamos trucha arcoíris
                             en jaulas flotantes en medio del agua — por eso en el Restaurante Laguna Canrash siempre hay trucha fresca.
                         </p>
-                        <p class="mt-4 text-lagoon-700 leading-relaxed">
+                        <p class="mt-4 text-lagoon-700 leading-relaxed" data-i18n="rest.p2">
                             Los platos más pedidos son trucha frita, chicharrón de trucha, ceviche de trucha y sudado de trucha.
                             También servimos pollo y carne de res, aunque en menor proporción.
                         </p>
-                        <p class="mt-4 text-lagoon-700 leading-relaxed">
+                        <p class="mt-4 text-lagoon-700 leading-relaxed" data-i18n="rest.p3">
                             Somos un restaurante genuinamente rústico, con tres ambientes:
                         </p>
                         <ul class="mt-3 space-y-2 text-lagoon-700">
-                            <li class="flex gap-2"><span class="text-alpine-moss font-bold">1.</span> <span><strong>Salón pionero</strong> — casa de adobe con poca vista al exterior; aquí funciona también la tiendita (agua, cerveza, galletas).</span></li>
-                            <li class="flex gap-2"><span class="text-alpine-moss font-bold">2.</span> <span><strong>Ambiente intermedio</strong> — junto a la carretera, cerrado para resguardarse del viento; más vista a la pista que a la laguna.</span></li>
-                            <li class="flex gap-2"><span class="text-alpine-moss font-bold">3.</span> <span><strong>Salón panorámico</strong> — pared transparente con vista total a la laguna (un plástico resistente que simula vidrio, instalado con ingenio y poco presupuesto).</span></li>
+                            <li class="flex gap-2"><span class="text-alpine-moss font-bold">1.</span> <span data-i18n-html="rest.room1"><strong>Salón pionero</strong> — casa de adobe con poca vista al exterior; aquí funciona también la tiendita (agua, cerveza, galletas).</span></li>
+                            <li class="flex gap-2"><span class="text-alpine-moss font-bold">2.</span> <span data-i18n-html="rest.room2"><strong>Ambiente intermedio</strong> — junto a la carretera, cerrado para resguardarse del viento; más vista a la pista que a la laguna.</span></li>
+                            <li class="flex gap-2"><span class="text-alpine-moss font-bold">3.</span> <span data-i18n-html="rest.room3"><strong>Salón panorámico</strong> — pared transparente con vista total a la laguna (un plástico resistente que simula vidrio, instalado con ingenio y poco presupuesto).</span></li>
                         </ul>
                         <div class="mt-6 flex items-start gap-3 rounded-xl border border-lagoon-200 bg-white p-4 shadow-card">
                             <svg class="mt-0.5 h-5 w-5 shrink-0 text-lagoon-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
-                            <p class="text-sm text-lagoon-700">
+                            <p class="text-sm text-lagoon-700" data-i18n-html="rest.dockNote">
                                 Tenemos un <strong>muelle habilitado y seguro</strong> donde muchos visitantes toman sus mejores fotos.
                                 Por falta de personal, costos y seguridad, <strong>no ofrecemos paseos en bote</strong>.
                             </p>
@@ -724,7 +773,7 @@
                             <svg class="mt-0.5 h-5 w-5 shrink-0 text-alpine-moss" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                             </svg>
-                            <p class="text-sm text-lagoon-700">
+                            <p class="text-sm text-lagoon-700" data-i18n-html="rest.securityNote">
                                 <strong>Tu tranquilidad importa:</strong> cámaras de seguridad en todo el recinto y respaldo de la
                                 central de la PNP vinculada a Antamina — también en el restaurante y todas las áreas de atención.
                             </p>
@@ -740,8 +789,8 @@
 
                 <!-- Platos estrella -->
                 <div class="mt-16">
-                    <h3 class="text-center font-display text-2xl font-bold text-lagoon-950 sm:text-3xl">Platos estrella</h3>
-                    <p class="mt-2 text-center text-lagoon-600">Cuatro preparaciones que definen nuestra cocina</p>
+                    <h3 class="text-center font-display text-2xl font-bold text-lagoon-950 sm:text-3xl" data-i18n="rest.starTitle">Platos estrella</h3>
+                    <p class="mt-2 text-center text-lagoon-600" data-i18n="rest.starSubtitle">Cuatro preparaciones que definen nuestra cocina</p>
 
                     <div class="mt-10 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
                         <article class="group overflow-hidden rounded-2xl bg-white shadow-card">
@@ -752,8 +801,8 @@
                                     data-lightbox-group="platos" data-lightbox-full="assets/images/trucha_presentada_lista_para_cocinar_chef_la_sostiene_con_herramienta_paisaje_hermoso_detrás_laguna_en_mejor.jpg" decoding="async">
                             </div>
                             <div class="p-4">
-                                <h4 class="font-semibold text-lagoon-900">Trucha frita</h4>
-                                <p class="mt-1 text-sm text-lagoon-600">Del criadero al sartén el mismo día</p>
+                                <h4 class="font-semibold text-lagoon-900" data-i18n="rest.friedTitle">Trucha frita</h4>
+                                <p class="mt-1 text-sm text-lagoon-600" data-i18n="rest.friedDesc">Del criadero al sartén el mismo día</p>
                             </div>
                         </article>
 
@@ -765,8 +814,8 @@
                                     data-lightbox-group="platos" data-lightbox-full="assets/images/chicharron_de_trucha_plato_en_el_pasto_fondo_laguna.jpg" decoding="async">
                             </div>
                             <div class="p-4">
-                                <h4 class="font-semibold text-lagoon-900">Chicharrón de trucha</h4>
-                                <p class="mt-1 text-sm text-lagoon-600">Textura crujiente, sabor intenso</p>
+                                <h4 class="font-semibold text-lagoon-900" data-i18n="rest.chicharronTitle">Chicharrón de trucha</h4>
+                                <p class="mt-1 text-sm text-lagoon-600" data-i18n="rest.chicharronDesc">Textura crujiente, sabor intenso</p>
                             </div>
                         </article>
 
@@ -778,8 +827,8 @@
                                     data-lightbox-group="platos" data-lightbox-full="assets/images/ceviche_y_chicharron_de_trucha_con_fondo_laguna_canrash.jpg" decoding="async">
                             </div>
                             <div class="p-4">
-                                <h4 class="font-semibold text-lagoon-900">Ceviche de trucha</h4>
-                                <p class="mt-1 text-sm text-lagoon-600">Frescura marina en altura</p>
+                                <h4 class="font-semibold text-lagoon-900" data-i18n="rest.cevicheTitle">Ceviche de trucha</h4>
+                                <p class="mt-1 text-sm text-lagoon-600" data-i18n="rest.cevicheDesc">Frescura marina en altura</p>
                             </div>
                         </article>
 
@@ -792,8 +841,8 @@
                                     onerror="this.onerror=null;this.src='assets/images/derived/medium/ceviche_y_chicharron_de_trucha_con_fondo_laguna_canrash.webp'" data-lightbox-full="assets/images/plato_sudado_de_trucha_fondo_laguna_canrash.jpg" decoding="async">
                             </div>
                             <div class="p-4">
-                                <h4 class="font-semibold text-lagoon-900">Sudado de trucha</h4>
-                                <p class="mt-1 text-sm text-lagoon-600">Caldo aromático y reconfortante</p>
+                                <h4 class="font-semibold text-lagoon-900" data-i18n="rest.sudadoTitle">Sudado de trucha</h4>
+                                <p class="mt-1 text-sm text-lagoon-600" data-i18n="rest.sudadoDesc">Caldo aromático y reconfortante</p>
                             </div>
                         </article>
                     </div>
@@ -802,21 +851,23 @@
                 <!-- Carta con precios en vivo -->
                 <div id="carta" class="mt-20 scroll-mt-24">
                     <div class="text-center max-w-2xl mx-auto">
-                        <p class="section-label text-xs font-bold uppercase tracking-widest text-lagoon-600 mx-auto">Restaurante</p>
-                        <h3 class="mt-2 font-display text-2xl font-bold text-lagoon-950 sm:text-3xl">Carta y precios</h3>
-                        <p class="mt-3 text-lagoon-700">Platos y precios actualizados desde nuestro sistema. Los valores pueden variar; consulta al momento de tu visita.</p>
-                        <p class="mt-2 text-sm text-lagoon-500">Toca cada categoría para ver los platos y precios.</p>
+                        <p class="section-label text-xs font-bold uppercase tracking-widest text-lagoon-600 mx-auto" data-i18n="carta.label">Restaurante</p>
+                        <h3 class="mt-2 font-display text-2xl font-bold text-lagoon-950 sm:text-3xl" data-i18n="carta.title">Carta y precios</h3>
+                        <p class="mt-3 text-lagoon-700" data-i18n="carta.intro">Platos y precios actualizados desde nuestro sistema. Los valores pueden variar; consulta al momento de tu visita.</p>
+                        <p class="mt-2 text-sm text-lagoon-500" data-i18n="carta.hint">Toca cada categoría para ver los platos y precios.</p>
                         <p id="carta-updated" class="mt-2 text-xs text-lagoon-500"></p>
                     </div>
 
-                    <div id="carta-loading" class="mt-10 text-center text-sm text-lagoon-600">Cargando carta…</div>
+                    <div id="carta-loading" class="mt-10 text-center text-sm text-lagoon-600" data-i18n="carta.loading">Cargando carta…</div>
                     <div id="carta-error" class="mt-10 hidden text-center text-sm text-red-600"></div>
                     <div id="carta-menu" class="mt-10 hidden mx-auto max-w-3xl grid gap-4"></div>
 
                     <div class="mt-8 text-center">
-                        <a href="https://wa.me/51957878409?text=Hola%2C%20quiero%20consultar%20la%20carta%20del%20restaurante"
+                        <a href="https://wa.me/51957878409"
+                            data-wa="menu"
                             target="_blank" rel="noopener noreferrer"
-                            class="inline-flex items-center justify-center rounded-full bg-alpine-moss px-6 py-3 text-sm font-semibold text-white transition hover:bg-alpine-grass">
+                            class="inline-flex items-center justify-center rounded-full bg-alpine-moss px-6 py-3 text-sm font-semibold text-white transition hover:bg-alpine-grass"
+                            data-i18n="carta.whatsapp">
                             Consultar disponibilidad por WhatsApp
                         </a>
                     </div>
@@ -826,9 +877,9 @@
                 <div class="mt-20 rounded-2xl border border-lagoon-100 bg-white p-6 sm:p-8 shadow-card">
                     <div class="grid gap-8 lg:grid-cols-2 lg:items-center">
                         <div>
-                            <p class="text-xs font-bold uppercase tracking-widest text-lagoon-600">Experiencia</p>
-                            <h3 class="mt-2 font-display text-2xl font-bold text-lagoon-950">El muelle de la laguna</h3>
-                            <p class="mt-4 text-lagoon-700 leading-relaxed">
+                            <p class="text-xs font-bold uppercase tracking-widest text-lagoon-600" data-i18n="dock.label">Experiencia</p>
+                            <h3 class="mt-2 font-display text-2xl font-bold text-lagoon-950" data-i18n="dock.title">El muelle de la laguna</h3>
+                            <p class="mt-4 text-lagoon-700 leading-relaxed" data-i18n-html="dock.text">
                                 Nuestro muelle es un rincón querido: familias, viajeros y trabajadores de la zona se toman aquí
                                 sus mejores fotos. Por falta de personal, costos y seguridad, <strong>no ofrecemos paseos en bote</strong>.
                             </p>
@@ -855,9 +906,9 @@
         <section id="servicios" class="py-20 sm:py-28">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-2xl mx-auto">
-                    <p class="section-label text-xs font-bold uppercase tracking-widest text-lagoon-600 mx-auto">Más que un restaurante</p>
-                    <h2 class="mt-2 font-display text-3xl font-bold text-lagoon-950 sm:text-4xl">Servicios adicionales</h2>
-                    <p class="mt-4 text-lagoon-700">Para quienes trabajan en la ruta, dejan su auto varios días o necesitan un techo donde dormir.</p>
+                    <p class="section-label text-xs font-bold uppercase tracking-widest text-lagoon-600 mx-auto" data-i18n="serv.label">Más que un restaurante</p>
+                    <h2 class="mt-2 font-display text-3xl font-bold text-lagoon-950 sm:text-4xl" data-i18n="serv.title">Servicios adicionales</h2>
+                    <p class="mt-4 text-lagoon-700" data-i18n="serv.intro">Para quienes trabajan en la ruta, dejan su auto varios días o necesitan un techo donde dormir.</p>
                 </div>
 
                 <div class="mt-10 grid gap-4 sm:grid-cols-3">
@@ -867,8 +918,8 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                         </div>
-                        <h3 class="mt-3 font-semibold text-lagoon-950">Horario de atención</h3>
-                        <p class="mt-1 text-sm text-lagoon-700">Todos los días de <strong>7:00 a.m. a 7:00 p.m.</strong></p>
+                        <h3 class="mt-3 font-semibold text-lagoon-950" data-i18n="serv.hoursTitle">Horario de atención</h3>
+                        <p class="mt-1 text-sm text-lagoon-700" data-i18n-html="serv.hoursDesc">Todos los días de <strong>7:00 a.m. a 7:00 p.m.</strong></p>
                     </div>
                     <div class="rounded-2xl border border-lagoon-100 bg-white p-5 shadow-card text-center sm:text-left">
                         <div class="mx-auto sm:mx-0 flex h-11 w-11 items-center justify-center rounded-full bg-lagoon-100 text-lagoon-700">
@@ -876,8 +927,8 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
                             </svg>
                         </div>
-                        <h3 class="mt-3 font-semibold text-lagoon-950">Internet gratis</h3>
-                        <p class="mt-1 text-sm text-lagoon-700">Wi‑Fi <strong>gratuito y continuo</strong> para quienes nos visitan, gracias a Starlink.</p>
+                        <h3 class="mt-3 font-semibold text-lagoon-950" data-i18n="serv.wifiTitle">Internet gratis</h3>
+                        <p class="mt-1 text-sm text-lagoon-700" data-i18n-html="serv.wifiDesc">Wi‑Fi <strong>gratuito y continuo</strong> para quienes nos visitan, gracias a Starlink.</p>
                     </div>
                     <div class="rounded-2xl border border-lagoon-100 bg-white p-5 shadow-card text-center sm:text-left">
                         <div class="mx-auto sm:mx-0 flex h-11 w-11 items-center justify-center rounded-full bg-lagoon-100 text-lagoon-700">
@@ -886,8 +937,8 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                             </svg>
                         </div>
-                        <h3 class="mt-3 font-semibold text-lagoon-950">¿Desde dónde vienes?</h3>
-                        <p class="mt-1 text-sm text-lagoon-700"><strong>3 h</strong> desde Huaraz · <strong>1 h</strong> desde Huallanca · <strong>20 min</strong> desde Antamina</p>
+                        <h3 class="mt-3 font-semibold text-lagoon-950" data-i18n="serv.whereTitle">¿Desde dónde vienes?</h3>
+                        <p class="mt-1 text-sm text-lagoon-700" data-i18n-html="serv.whereDesc"><strong>3 h</strong> desde Huaraz · <strong>1 h</strong> desde Huallanca · <strong>20 min</strong> desde Antamina</p>
                     </div>
                 </div>
 
@@ -899,8 +950,8 @@
                             </svg>
                         </div>
                         <div>
-                            <h3 class="font-semibold text-lagoon-950">Seguridad en todos nuestros servicios</h3>
-                            <p class="mt-2 text-sm text-lagoon-700 leading-relaxed">
+                            <h3 class="font-semibold text-lagoon-950" data-i18n="serv.securityTitle">Seguridad en todos nuestros servicios</h3>
+                            <p class="mt-2 text-sm text-lagoon-700 leading-relaxed" data-i18n-html="serv.securityDesc">
                                 Contamos con <strong>cámaras de seguridad en todo el recinto</strong> y respaldo de la
                                 <strong>central de la PNP vinculada a Antamina</strong>. Restaurante, cochera, hospedaje,
                                 estacionamiento y áreas de trabajo están bajo la misma vigilancia.
@@ -917,13 +968,13 @@
                                 alt="Vista lateral de la cochera cubierta con techo"
                                 class="h-full w-full object-cover" loading="lazy" decoding="async">
                             <div class="absolute inset-0 bg-gradient-to-t from-lagoon-950/70 to-transparent"></div>
-                            <span class="absolute bottom-4 left-4 rounded-full bg-alpine-moss px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
+                            <span class="absolute bottom-4 left-4 rounded-full bg-alpine-moss px-3 py-1 text-xs font-bold uppercase tracking-wide text-white" data-i18n="serv.garageBadge">
                                 Cochera segura
                             </span>
                         </div>
                         <div class="p-6 sm:p-8">
-                            <h3 class="font-display text-xl font-bold text-lagoon-950">Cochera para mineros y viajeros</h3>
-                            <p class="mt-3 text-lagoon-700 leading-relaxed">
+                            <h3 class="font-display text-xl font-bold text-lagoon-950" data-i18n="serv.garageTitle">Cochera para mineros y viajeros</h3>
+                            <p class="mt-3 text-lagoon-700 leading-relaxed" data-i18n="serv.garageDesc">
                                 Ideal para trabajadores de Antamina que dejan sus vehículos por 10 días o más.
                                 Espacios cubiertos con techo y estacionamiento amplio al aire libre.
                             </p>
@@ -932,13 +983,13 @@
                                     <svg class="mt-0.5 h-5 w-5 shrink-0 text-alpine-moss" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                                     </svg>
-                                    <span class="text-sm text-lagoon-800"><strong>Con techo:</strong> S/ 10 por día — 6 espacios disponibles</span>
+                                    <span class="text-sm text-lagoon-800" data-i18n-html="serv.garageRoof"><strong>Con techo:</strong> S/ 10 por día — 6 espacios disponibles</span>
                                 </li>
                                 <li class="flex items-start gap-3">
                                     <svg class="mt-0.5 h-5 w-5 shrink-0 text-alpine-moss" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                                     </svg>
-                                    <span class="text-sm text-lagoon-800"><strong>Sin techo:</strong> S/ 5 por día — amplio parqueo al aire libre</span>
+                                    <span class="text-sm text-lagoon-800" data-i18n-html="serv.garageOpen"><strong>Sin techo:</strong> S/ 5 por día — amplio parqueo al aire libre</span>
                                 </li>
                             </ul>
                             <div class="mt-5 grid grid-cols-3 gap-3">
@@ -962,23 +1013,23 @@
                                 alt="Hospedaje rústico en módulos de madera o casitas de adobe"
                                 class="h-full w-full object-cover" loading="lazy" decoding="async">
                             <div class="absolute inset-0 bg-gradient-to-t from-lagoon-950/70 to-transparent"></div>
-                            <span class="absolute bottom-4 left-4 rounded-full bg-alpine-bark px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
+                            <span class="absolute bottom-4 left-4 rounded-full bg-alpine-bark px-3 py-1 text-xs font-bold uppercase tracking-wide text-white" data-i18n="serv.lodgeBadge">
                                 Hospedaje rústico
                             </span>
                         </div>
                         <div class="p-6 sm:p-8">
-                            <h3 class="font-display text-xl font-bold text-lagoon-950">Descanso en los Andes peruanos</h3>
-                            <p class="mt-3 text-lagoon-700 leading-relaxed">
+                            <h3 class="font-display text-xl font-bold text-lagoon-950" data-i18n="serv.lodgeTitle">Descanso en los Andes peruanos</h3>
+                            <p class="mt-3 text-lagoon-700 leading-relaxed" data-i18n="serv.lodgeDesc">
                                 Habitaciones en módulos de madera y acogedoras casitas de adobe.
                                 Pensado para transportistas de ruta y personal de empresas de la zona.
                             </p>
                             <div class="mt-5 flex items-center gap-4 rounded-xl bg-lagoon-50 p-4">
                                 <div class="text-center">
                                     <p class="font-display text-3xl font-bold text-lagoon-700">S/ 30</p>
-                                    <p class="text-xs text-lagoon-600 uppercase tracking-wide">por noche</p>
+                                    <p class="text-xs text-lagoon-600 uppercase tracking-wide" data-i18n="serv.lodgePrice">por noche</p>
                                 </div>
                                 <div class="h-10 w-px bg-lagoon-200"></div>
-                                <p class="text-sm text-lagoon-700">Ambiente tranquilo, cálido y rodeado de paisaje andino — con la misma vigilancia que el resto de instalaciones.</p>
+                                <p class="text-sm text-lagoon-700" data-i18n="serv.lodgeNote">Ambiente tranquilo, cálido y rodeado de paisaje andino — con la misma vigilancia que el resto de instalaciones.</p>
                             </div>
                             <div class="mt-5 overflow-hidden rounded-xl aspect-[4/3] max-h-28 sm:max-h-none">
                                 <img src="assets/images/derived/medium/foto_panoramica_del_hospedaje_calidad_baja.webp"
@@ -996,9 +1047,9 @@
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
                     <div>
-                        <p class="text-xs font-bold uppercase tracking-widest text-lagoon-300">Distribución</p>
-                        <h2 class="mt-2 font-display text-3xl font-bold sm:text-4xl">Venta de trucha por mayor</h2>
-                        <p class="mt-4 text-lagoon-200 leading-relaxed">
+                        <p class="text-xs font-bold uppercase tracking-widest text-lagoon-300" data-i18n="mayor.label">Distribución</p>
+                        <h2 class="mt-2 font-display text-3xl font-bold sm:text-4xl" data-i18n="mayor.title">Venta de trucha por mayor</h2>
+                        <p class="mt-4 text-lagoon-200 leading-relaxed" data-i18n="mayor.intro">
                             Trucha arcoíris fresca, fileteada o entera, directamente del criadero.
                             Precios escalonados según volumen para restaurantes, distribuidores y negocios de la región.
                             Toda la operación cuenta con cámaras de seguridad y respaldo de la central PNP vinculada a Antamina.
@@ -1012,63 +1063,65 @@
 
                     <div class="price-table-card overflow-hidden rounded-2xl">
                         <div class="border-b border-lagoon-100 bg-lagoon-50 px-6 py-5 sm:px-8">
-                            <h3 class="font-display text-xl font-bold text-lagoon-950 sm:text-2xl">Tabla de precios por kilo</h3>
-                            <p class="mt-1 text-sm font-medium text-lagoon-600">Según volumen total de compra</p>
+                            <h3 class="font-display text-xl font-bold text-lagoon-950 sm:text-2xl" data-i18n="mayor.tableTitle">Tabla de precios por kilo</h3>
+                            <p class="mt-1 text-sm font-medium text-lagoon-600" data-i18n="mayor.tableSubtitle">Según volumen total de compra</p>
                         </div>
 
                         <div class="divide-y divide-lagoon-100">
                             <div class="price-table-row flex items-center justify-between gap-4 px-6 py-5 sm:px-8">
                                 <div>
-                                    <p class="font-semibold text-lagoon-900">Menor a 5 kg</p>
-                                    <p class="text-xs text-lagoon-500 mt-0.5">Compra pequeña</p>
+                                    <p class="font-semibold text-lagoon-900" data-i18n="mayor.tier1">Menor a 5 kg</p>
+                                    <p class="text-xs text-lagoon-500 mt-0.5" data-i18n="mayor.tier1sub">Compra pequeña</p>
                                 </div>
                                 <p class="shrink-0 text-right">
                                     <span class="font-display text-3xl font-bold text-lagoon-800">22</span>
-                                    <span class="text-sm font-semibold text-lagoon-600"> soles/kg</span>
+                                    <span class="text-sm font-semibold text-lagoon-600" data-i18n="mayor.perKg"> soles/kg</span>
                                 </p>
                             </div>
 
                             <div class="price-table-row flex items-center justify-between gap-4 px-6 py-5 sm:px-8">
                                 <div>
-                                    <p class="font-semibold text-lagoon-900">De 5 a 10 kg</p>
-                                    <p class="text-xs text-lagoon-500 mt-0.5">Volumen medio</p>
+                                    <p class="font-semibold text-lagoon-900" data-i18n="mayor.tier2">De 5 a 10 kg</p>
+                                    <p class="text-xs text-lagoon-500 mt-0.5" data-i18n="mayor.tier2sub">Volumen medio</p>
                                 </div>
                                 <p class="shrink-0 text-right">
                                     <span class="font-display text-3xl font-bold text-lagoon-800">21</span>
-                                    <span class="text-sm font-semibold text-lagoon-600"> soles/kg</span>
+                                    <span class="text-sm font-semibold text-lagoon-600" data-i18n="mayor.perKg"> soles/kg</span>
                                 </p>
                             </div>
 
                             <div class="price-table-row flex items-center justify-between gap-4 px-6 py-5 sm:px-8">
                                 <div>
-                                    <p class="font-semibold text-lagoon-900">De 10 a 25 kg</p>
-                                    <p class="text-xs text-lagoon-500 mt-0.5">Restaurantes y negocios</p>
+                                    <p class="font-semibold text-lagoon-900" data-i18n="mayor.tier3">De 10 a 25 kg</p>
+                                    <p class="text-xs text-lagoon-500 mt-0.5" data-i18n="mayor.tier3sub">Restaurantes y negocios</p>
                                 </div>
                                 <p class="shrink-0 text-right">
                                     <span class="font-display text-3xl font-bold text-lagoon-800">20</span>
-                                    <span class="text-sm font-semibold text-lagoon-600"> soles/kg</span>
+                                    <span class="text-sm font-semibold text-lagoon-600" data-i18n="mayor.perKg"> soles/kg</span>
                                 </p>
                             </div>
 
                             <div class="price-table-row price-table-row--best flex items-center justify-between gap-4 px-6 py-5 sm:px-8">
                                 <div>
                                     <p class="flex flex-wrap items-center gap-2">
-                                        <span class="font-semibold text-lagoon-900">Mayor a 25 kg</span>
-                                        <span class="rounded-full bg-alpine-moss px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">Mejor precio</span>
+                                        <span class="font-semibold text-lagoon-900" data-i18n="mayor.tier4">Mayor a 25 kg</span>
+                                        <span class="rounded-full bg-alpine-moss px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white" data-i18n="mayor.bestPrice">Mejor precio</span>
                                     </p>
-                                    <p class="text-xs text-alpine-moss mt-0.5 font-medium">Distribuidores y alto volumen</p>
+                                    <p class="text-xs text-alpine-moss mt-0.5 font-medium" data-i18n="mayor.tier4sub">Distribuidores y alto volumen</p>
                                 </div>
                                 <p class="shrink-0 text-right">
                                     <span class="font-display text-3xl font-bold text-alpine-moss">19</span>
-                                    <span class="text-sm font-semibold text-lagoon-700"> soles/kg</span>
+                                    <span class="text-sm font-semibold text-lagoon-700" data-i18n="mayor.perKg"> soles/kg</span>
                                 </p>
                             </div>
                         </div>
 
                         <div class="border-t border-lagoon-100 bg-white px-6 py-5 sm:px-8">
-                            <a href="https://wa.me/51957878409?text=Hola%2C%20quiero%20cotizar%20trucha%20al%20por%20mayor"
+                            <a href="https://wa.me/51957878409"
+                                data-wa="wholesale"
                                 target="_blank" rel="noopener noreferrer"
-                                class="flex w-full items-center justify-center gap-2 rounded-full bg-alpine-moss px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-alpine-grass shadow-md">
+                                class="flex w-full items-center justify-center gap-2 rounded-full bg-alpine-moss px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-alpine-grass shadow-md"
+                                data-i18n="mayor.quote">
                                 Solicitar cotización por WhatsApp
                             </a>
                         </div>
@@ -1090,7 +1143,7 @@
                                     aria-label="Video del pastor guiando sus ovejas en la laguna Canrash">
                                     <source src="assets/images/pastor_guiando_a_sus_ovejas_en_laguna_canrash.mp4" type="video/mp4">
                                 </video>
-                                <p class="mt-2 text-center text-sm text-lagoon-600">El pastor guiando sus ovejas en la laguna — tradición viva de nuestra familia</p>
+                                <p class="mt-2 text-center text-sm text-lagoon-600" data-i18n="hist.sheepCaption">El pastor guiando sus ovejas en la laguna — tradición viva de nuestra familia</p>
                             </div>
                             <img src="assets/images/derived/medium/foto_ovejas_en_laguna_canrash_con_cielo_y_cerro.webp"
                                 alt="Ovejas en Laguna Canrash con cielo abierto y cerro de fondo"
@@ -1116,35 +1169,35 @@
                     </div>
 
                     <div class="order-1 lg:order-2">
-                        <p class="section-label text-xs font-bold uppercase tracking-widest text-lagoon-600">Legado familiar</p>
-                        <h2 class="mt-2 font-display text-3xl font-bold text-lagoon-950 sm:text-4xl">Nuestra historia</h2>
+                        <p class="section-label text-xs font-bold uppercase tracking-widest text-lagoon-600" data-i18n="hist.label">Legado familiar</p>
+                        <h2 class="mt-2 font-display text-3xl font-bold text-lagoon-950 sm:text-4xl" data-i18n="hist.title">Nuestra historia</h2>
 
                         <div class="mt-8 space-y-6 text-lagoon-700 leading-relaxed">
-                            <p>
+                            <p data-i18n="hist.p1">
                                 Somos una familia que lleva décadas en estas tierras. En los años 70, nuestro abuelo compró
                                 los campos alrededor de la laguna para pastorear ovejas y vacas, cuando este rincón de los Andes peruanos
                                 casi no tenía valor. De ese trabajo sencillo nació el amor por este lugar.
                             </p>
-                            <p>
+                            <p data-i18n="hist.p2">
                                 El hijo de aquel pastor se había formado ya como ingeniero agrícola en la UNAM — por sus propios
                                 esfuerzos, mucho antes de que llegara Antamina — y soñaba con llevar la laguna un paso más allá:
                                 criar trucha arcoíris en jaulas flotantes, con sus propias manos y estudio.
                                 En el año 2000 la carretera hacia la mina pasó muy cerca y el paisaje cambió para siempre.
                                 Hubo robos, engaños y noches difíciles, pero no soltó el sueño.
                             </p>
-                            <p>
+                            <p data-i18n="hist.p3">
                                 Hoy las ovejas siguen en el paisaje, como herencia viva de nuestro abuelo. La ganadería ya no es
                                 el sustento principal desde los años 90, pero cuida la tierra y a las familias de pastores que
                                 colaboran con nosotros. Nuestro abuelo defendió esta laguna cuando pocos lo harían; ese orgullo
                                 familiar sigue presente en cada rincón.
                             </p>
-                            <p>
+                            <p data-i18n="hist.p4">
                                 Vivir tan alejados del pueblo nos obligó a inventarlo todo: agua, desagüe, luz con paneles solares.
                                 En 2023 llegó Starlink y por fin tuvimos internet estable en plena altura. En 2025 ganamos el Procompite
                                 de San Marcos y pudimos mejorar los ambientes del restaurante, cerrar el salón contra el viento
                                 y ampliar la vista panorámica a la laguna.
                             </p>
-                            <p>
+                            <p data-i18n="hist.p5">
                                 Hoy somos hermanos y familia trabajando juntos. Te recibimos como llegamos a recibir a transportistas,
                                 mineros y viajeros de todas partes: con un plato caliente, trucha fresca y la calidez de quien sabe
                                 lo que es vivir en altura.
@@ -1154,13 +1207,13 @@
                         <div class="mt-8 grid gap-4 sm:grid-cols-2">
                             <div class="rounded-xl border border-lagoon-100 bg-lagoon-50 p-5">
                                 <p class="text-2xl font-display font-bold text-lagoon-700">2023</p>
-                                <p class="mt-1 text-sm font-semibold text-lagoon-900">Internet en la laguna</p>
-                                <p class="mt-1 text-sm text-lagoon-600">Llegó Starlink: conexión estable y Wi‑Fi gratuito para quienes nos visitan.</p>
+                                <p class="mt-1 text-sm font-semibold text-lagoon-900" data-i18n="hist.milestone2023title">Internet en la laguna</p>
+                                <p class="mt-1 text-sm text-lagoon-600" data-i18n="hist.milestone2023desc">Llegó Starlink: conexión estable y Wi‑Fi gratuito para quienes nos visitan.</p>
                             </div>
                             <div class="rounded-xl border border-lagoon-100 bg-lagoon-50 p-5">
                                 <p class="text-2xl font-display font-bold text-lagoon-700">2025</p>
-                                <p class="mt-1 text-sm font-semibold text-lagoon-900">Procompite San Marcos</p>
-                                <p class="mt-1 text-sm text-lagoon-600">Ganamos el fondo distrital y pudimos crecer: mejores ambientes, más comodidad para quien nos visita.</p>
+                                <p class="mt-1 text-sm font-semibold text-lagoon-900" data-i18n="hist.milestone2025title">Procompite San Marcos</p>
+                                <p class="mt-1 text-sm text-lagoon-600" data-i18n="hist.milestone2025desc">Ganamos el fondo distrital y pudimos crecer: mejores ambientes, más comodidad para quien nos visita.</p>
                             </div>
                         </div>
                     </div>
@@ -1172,23 +1225,24 @@
         <section id="galeria" class="py-20 sm:py-28 bg-lagoon-50">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-2xl mx-auto">
-                    <p class="section-label text-xs font-bold uppercase tracking-widest text-lagoon-600 mx-auto">Momentos reales</p>
-                    <h2 class="mt-2 font-display text-3xl font-bold text-lagoon-950 sm:text-4xl">Galería</h2>
-                    <p class="mt-4 text-lagoon-700">Explora la laguna, la comida, quienes nos visitan y el camino hasta Canrash. Toca una foto para verla en grande.</p>
+                    <p class="section-label text-xs font-bold uppercase tracking-widest text-lagoon-600 mx-auto" data-i18n="gal.label">Momentos reales</p>
+                    <h2 class="mt-2 font-display text-3xl font-bold text-lagoon-950 sm:text-4xl" data-i18n="gal.title">Galería</h2>
+                    <p class="mt-4 text-lagoon-700" data-i18n="gal.intro">Explora la laguna, la comida, quienes nos visitan y el camino hasta Canrash. Toca una foto para verla en grande.</p>
                 </div>
 
-                <div id="gallery-filters" class="mt-10 flex flex-wrap justify-center gap-2" role="tablist" aria-label="Filtrar galería"></div>
+                <div id="gallery-filters" class="mt-10 flex flex-wrap justify-center gap-2" role="tablist" data-i18n-aria="gal.filterLabel" aria-label="Filtrar galería"></div>
 
-                <div id="gallery-loading" class="mt-10 text-center text-sm text-lagoon-600">La galería se cargará al acercarte a esta sección…</div>
+                <div id="gallery-loading" class="mt-10 text-center text-sm text-lagoon-600" data-i18n="gal.loadingLazy">La galería se cargará al acercarte a esta sección…</div>
                 <div id="gallery-grid" class="mt-10 hidden grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4" data-lightbox-group="galeria"></div>
                 <p id="gallery-status" class="mt-6 hidden text-center text-xs text-lagoon-500"></p>
                 <div id="gallery-more-wrap" class="mt-6 hidden text-center">
                     <button type="button" id="gallery-more"
-                        class="inline-flex items-center justify-center rounded-full border border-lagoon-200 bg-white px-6 py-3 text-sm font-semibold text-lagoon-700 transition hover:border-lagoon-300 hover:bg-lagoon-50">
+                        class="inline-flex items-center justify-center rounded-full border border-lagoon-200 bg-white px-6 py-3 text-sm font-semibold text-lagoon-700 transition hover:border-lagoon-300 hover:bg-lagoon-50"
+                        data-i18n="gal.loadMore">
                         Cargar más fotos
                     </button>
                 </div>
-                <p id="gallery-empty" class="mt-10 hidden text-center text-sm text-lagoon-600">No hay fotos en esta categoría.</p>
+                <p id="gallery-empty" class="mt-10 hidden text-center text-sm text-lagoon-600" data-i18n="gal.empty">No hay fotos en esta categoría.</p>
             </div>
         </section>
 
@@ -1200,7 +1254,7 @@
                         <img src="assets/images/logo-sin-bg.png" alt="Laguna Canrash" class="h-16 w-auto mb-4">
                         <h2 class="font-display text-2xl font-bold">Laguna Canrash</h2>
                         <p class="mt-1 text-sm text-lagoon-300">Eica S.R.L. · RUC 20530753396</p>
-                        <p class="mt-3 text-sm text-lagoon-200 leading-relaxed">Familia andina, trucha del día y una laguna que vale la pena conocer.</p>
+                        <p class="mt-3 text-sm text-lagoon-200 leading-relaxed" data-i18n="contact.tagline">Familia andina, trucha del día y una laguna que vale la pena conocer.</p>
                         <div class="mt-5 flex gap-3">
                             <a href="https://www.facebook.com/LagunaCanrash/" target="_blank" rel="noopener noreferrer"
                                 class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
@@ -1220,15 +1274,15 @@
                     </div>
 
                     <div>
-                        <h3 class="text-sm font-bold uppercase tracking-widest text-lagoon-300 mb-4">Ubicación</h3>
-                        <p class="text-lagoon-100 leading-relaxed">
+                        <h3 class="text-sm font-bold uppercase tracking-widest text-lagoon-300 mb-4" data-i18n="contact.locationTitle">Ubicación</h3>
+                        <p class="text-lagoon-100 leading-relaxed" data-i18n-html="contact.location">
                             Distrito de San Marcos, provincia de Huari,<br>
                             departamento de Áncash, Perú.
                         </p>
                         <ul class="mt-3 space-y-1 text-sm text-lagoon-300">
-                            <li>~3 horas desde Huaraz</li>
-                            <li>~1 hora desde Huallanca</li>
-                            <li>~20 minutos desde Antamina</li>
+                            <li data-i18n="contact.hoursFromHuaraz">~3 horas desde Huaraz</li>
+                            <li data-i18n="contact.hoursFromHuallanca">~1 hora desde Huallanca</li>
+                            <li data-i18n="contact.hoursFromAntamina">~20 minutos desde Antamina</li>
                         </ul>
                         <a href="https://maps.app.goo.gl/UEHtnv7U6Dp8MyLT7" target="_blank" rel="noopener noreferrer"
                             class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-alpine-grass hover:text-white transition">
@@ -1236,26 +1290,26 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                             </svg>
-                            Ver ruta en Google Maps
+                            <span data-i18n="contact.mapsLink">Ver ruta en Google Maps</span>
                         </a>
-                        <a href="#como-llegar" class="mt-2 block text-xs text-lagoon-400 hover:text-lagoon-200 transition">
+                        <a href="#como-llegar" class="mt-2 block text-xs text-lagoon-400 hover:text-lagoon-200 transition" data-i18n="contact.moreRoutes">
                             Más rutas y detalles del camino →
                         </a>
                     </div>
 
                     <div>
-                        <h3 class="text-sm font-bold uppercase tracking-widest text-lagoon-300 mb-4">Atención</h3>
-                        <p class="text-lagoon-100 leading-relaxed">
+                        <h3 class="text-sm font-bold uppercase tracking-widest text-lagoon-300 mb-4" data-i18n="contact.hoursTitle">Atención</h3>
+                        <p class="text-lagoon-100 leading-relaxed" data-i18n-html="contact.hours">
                             <strong class="text-white">7:00 a.m. – 7:00 p.m.</strong><br>
                             Todos los días de la semana.
                         </p>
-                        <p class="mt-4 text-sm text-lagoon-200 leading-relaxed">
+                        <p class="mt-4 text-sm text-lagoon-200 leading-relaxed" data-i18n-html="contact.wifiNote">
                             <strong class="text-lagoon-100">Internet gratis</strong> y continuo para visitantes, gracias a Starlink.
                         </p>
                     </div>
 
                     <div>
-                        <h3 class="text-sm font-bold uppercase tracking-widest text-lagoon-300 mb-4">Contacto</h3>
+                        <h3 class="text-sm font-bold uppercase tracking-widest text-lagoon-300 mb-4" data-i18n="contact.contactTitle">Contacto</h3>
                         <a href="https://wa.me/51957878409" target="_blank" rel="noopener noreferrer"
                             class="flex items-center gap-3 rounded-xl bg-white/10 px-5 py-4 transition hover:bg-white/15">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24">
@@ -1263,14 +1317,14 @@
                             </svg>
                             <div>
                                 <p class="font-semibold">957 878 409</p>
-                                <p class="text-xs text-lagoon-300">WhatsApp directo</p>
+                                <p class="text-xs text-lagoon-300" data-i18n="contact.whatsappDirect">WhatsApp directo</p>
                             </div>
                         </a>
                     </div>
                 </div>
 
                 <div class="mt-12 border-t border-lagoon-700/50 pt-8 text-center text-sm text-lagoon-400">
-                    <p>&copy; <span id="year"></span> Eica S.R.L. — Laguna Canrash. Todos los derechos reservados.</p>
+                    <p>&copy; <span id="year"></span> <span data-i18n="contact.copyright">Eica S.R.L. — Laguna Canrash. Todos los derechos reservados.</span></p>
                 </div>
             </div>
         </section>
@@ -1279,24 +1333,24 @@
 
     <div id="lightbox"
         class="fixed inset-0 z-[60] hidden items-center justify-center bg-lagoon-950/95 p-4 sm:p-8"
-        role="dialog" aria-modal="true" aria-hidden="true" aria-label="Vista ampliada de imagen">
+        role="dialog" aria-modal="true" aria-hidden="true" data-i18n-aria="ui.lightboxLabel" aria-label="Vista ampliada de imagen">
         <button type="button" id="lightbox-close"
             class="absolute top-4 right-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
-            aria-label="Cerrar">
+            data-i18n-aria="ui.lightboxClose" aria-label="Cerrar">
             <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
         </button>
         <button type="button" id="lightbox-prev"
             class="absolute left-2 sm:left-6 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
-            aria-label="Imagen anterior">
+            data-i18n-aria="ui.lightboxPrev" aria-label="Imagen anterior">
             <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
             </svg>
         </button>
         <button type="button" id="lightbox-next"
             class="absolute right-2 sm:right-6 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
-            aria-label="Imagen siguiente">
+            data-i18n-aria="ui.lightboxNext" aria-label="Imagen siguiente">
             <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
@@ -1349,7 +1403,7 @@
                 iconOpen.classList.remove('hidden');
                 iconClose.classList.add('hidden');
                 menuToggle.setAttribute('aria-expanded', 'false');
-                menuToggle.setAttribute('aria-label', 'Abrir menú');
+                menuToggle.setAttribute('aria-label', window.LC_I18N.t('nav.openMenu'));
                 updateNavbar();
             }
 
@@ -1363,7 +1417,7 @@
                 iconOpen.classList.add('hidden');
                 iconClose.classList.remove('hidden');
                 menuToggle.setAttribute('aria-expanded', 'true');
-                menuToggle.setAttribute('aria-label', 'Cerrar menú');
+                menuToggle.setAttribute('aria-label', window.LC_I18N.t('nav.closeMenu'));
             }
 
             menuToggle.addEventListener('click', function () {
@@ -1484,11 +1538,15 @@
 
             var CARTA_API = 'https://admin.lagunacanrash.com/carta/carta_api';
             var CARTA_FALLBACK = 'assets/data/carta.json';
-            var CARTA_LABELS = {
-                trucha: 'Trucha',
-                pollo: 'Pollo',
-                otros: 'Otros platos'
-            };
+            var cartaDataCache = null;
+
+            function getCartaLabels() {
+                return {
+                    trucha: window.LC_I18N.t('carta.cat.trucha'),
+                    pollo: window.LC_I18N.t('carta.cat.pollo'),
+                    otros: window.LC_I18N.t('carta.cat.otros')
+                };
+            }
 
             function formatSoles(precio) {
                 var n = Number(precio);
@@ -1500,7 +1558,7 @@
                 if (!fecha) return '';
                 var d = new Date(fecha.replace(' ', 'T'));
                 if (Number.isNaN(d.getTime())) return fecha;
-                return d.toLocaleDateString('es-PE', { day: 'numeric', month: 'long', year: 'numeric' });
+                return d.toLocaleDateString(window.LC_I18N.getLocale(), { day: 'numeric', month: 'long', year: 'numeric' });
             }
 
             function dedupeItems(items) {
@@ -1514,27 +1572,30 @@
             }
 
             function sortItems(items) {
+                var locale = window.LC_I18N.getLang() === 'en' ? 'en' : 'es';
                 return items.slice().sort(function (a, b) {
-                    return a.nombre.localeCompare(b.nombre, 'es', { sensitivity: 'base' });
+                    return window.LC_I18N.translateDish(a.nombre).localeCompare(window.LC_I18N.translateDish(b.nombre), locale, { sensitivity: 'base' });
                 });
             }
 
             function renderCarta(data) {
+                cartaDataCache = data;
                 var carta = data.carta;
                 var menuEl = document.getElementById('carta-menu');
                 var loadingEl = document.getElementById('carta-loading');
                 var errorEl = document.getElementById('carta-error');
                 var updatedEl = document.getElementById('carta-updated');
+                var CARTA_LABELS = getCartaLabels();
 
                 if (!carta || !carta.productos) {
-                    errorEl.textContent = 'No se pudo mostrar la carta en este momento.';
+                    errorEl.textContent = window.LC_I18N.t('carta.error');
                     errorEl.classList.remove('hidden');
                     loadingEl.classList.add('hidden');
                     return;
                 }
 
                 if (carta.fecha_actualizacion) {
-                    updatedEl.textContent = 'Última actualización: ' + formatFecha(carta.fecha_actualizacion);
+                    updatedEl.textContent = window.LC_I18N.t('carta.updated') + formatFecha(carta.fecha_actualizacion);
                 }
 
                 menuEl.innerHTML = '';
@@ -1550,7 +1611,7 @@
                     summary.innerHTML =
                         '<div class="text-left">' +
                             '<h4 class="font-display text-xl font-bold text-lagoon-900">' + CARTA_LABELS[key] + '</h4>' +
-                            '<p class="mt-0.5 text-sm text-lagoon-500">' + items.length + ' ' + (items.length === 1 ? 'plato' : 'platos') + '</p>' +
+                            '<p class="mt-0.5 text-sm text-lagoon-500">' + items.length + ' ' + (items.length === 1 ? window.LC_I18N.t('carta.dish') : window.LC_I18N.t('carta.dishes')) + '</p>' +
                         '</div>' +
                         '<svg class="carta-chevron h-5 w-5 shrink-0 text-lagoon-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">' +
                             '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />' +
@@ -1566,7 +1627,7 @@
                         var li = document.createElement('li');
                         li.className = 'menu-row flex items-start justify-between gap-4 py-3';
                         li.innerHTML =
-                            '<span class="text-sm font-medium text-lagoon-800 leading-snug">' + item.nombre + '</span>' +
+                            '<span class="text-sm font-medium text-lagoon-800 leading-snug">' + window.LC_I18N.translateDish(item.nombre) + '</span>' +
                             '<span class="shrink-0 text-sm font-bold text-lagoon-700">' + formatSoles(item.precio) + '</span>';
                         list.appendChild(li);
                     });
@@ -1583,6 +1644,8 @@
             }
 
             function loadCarta() {
+                var loadingEl = document.getElementById('carta-loading');
+                loadingEl.textContent = window.LC_I18N.t('carta.loading');
                 fetch(CARTA_API)
                     .then(function (res) {
                         if (!res.ok) throw new Error('API error');
@@ -1599,7 +1662,7 @@
                             .catch(function () {
                                 document.getElementById('carta-loading').classList.add('hidden');
                                 var errorEl = document.getElementById('carta-error');
-                                errorEl.textContent = 'No pudimos cargar la carta. Escríbenos por WhatsApp y te la enviamos.';
+                                errorEl.textContent = window.LC_I18N.t('carta.errorFallback');
                                 errorEl.classList.remove('hidden');
                             });
                     });
@@ -1616,6 +1679,20 @@
             var galleryVisibleCount = GALLERY_PAGE_SIZE;
             var galleryImgObserver = null;
             var galleryFiltersBound = false;
+            var galleryCategoriesCache = [];
+            var galleryInitialized = false;
+
+            document.addEventListener('langchange', function () {
+                if (cartaDataCache) renderCarta(cartaDataCache);
+                if (galleryInitialized && galleryCategoriesCache.length) {
+                    renderGalleryFilters(galleryCategoriesCache);
+                    renderGalleryGrid(false);
+                }
+                var galleryLoading = document.getElementById('gallery-loading');
+                if (galleryLoading && !galleryInitialized) {
+                    galleryLoading.textContent = window.LC_I18N.t('gal.loadingLazy');
+                }
+            });
 
             var lightboxEl = document.getElementById('lightbox');
             var lightboxImg = document.getElementById('lightbox-img');
@@ -1792,12 +1869,12 @@
                     return;
                 }
 
-                statusEl.textContent = 'Mostrando ' + shown + ' de ' + total + ' fotos';
+                statusEl.textContent = window.LC_I18N.t('gal.showing', { shown: shown, total: total });
                 statusEl.classList.remove('hidden');
 
                 if (shown < total) {
                     moreWrap.classList.remove('hidden');
-                    moreBtn.textContent = 'Cargar más fotos (' + (total - shown) + ' restantes)';
+                    moreBtn.textContent = window.LC_I18N.t('gal.loadMoreRemaining', { n: total - shown });
                 } else {
                     moreWrap.classList.add('hidden');
                 }
@@ -1836,6 +1913,12 @@
                 updateGalleryMeta(filtered.length, gridEl.children.length);
             }
 
+            function getCategoryLabel(catId) {
+                var key = 'gal.cat.' + catId;
+                var translated = window.LC_I18N.t(key);
+                return translated !== key ? translated : catId;
+            }
+
             function renderGalleryFilters(categories) {
                 var filtersEl = document.getElementById('gallery-filters');
                 filtersEl.innerHTML = '';
@@ -1844,8 +1927,9 @@
                 allBtn.className = 'gallery-filter rounded-full border border-lagoon-200 bg-white px-4 py-2 text-sm font-medium text-lagoon-700 transition hover:border-lagoon-300';
                 allBtn.setAttribute('data-filter', 'todos');
                 allBtn.setAttribute('role', 'tab');
-                allBtn.setAttribute('aria-selected', 'true');
-                allBtn.textContent = 'Todas';
+                allBtn.setAttribute('aria-selected', galleryFilter === 'todos' ? 'true' : 'false');
+                allBtn.textContent = window.LC_I18N.t('gal.cat.all');
+                if (galleryFilter === 'todos') allBtn.classList.add('gallery-filter-active');
                 filtersEl.appendChild(allBtn);
 
                 categories.forEach(function (cat) {
@@ -1854,8 +1938,10 @@
                     btn.className = 'gallery-filter rounded-full border border-lagoon-200 bg-white px-4 py-2 text-sm font-medium text-lagoon-700 transition hover:border-lagoon-300';
                     btn.setAttribute('data-filter', cat.id);
                     btn.setAttribute('role', 'tab');
-                    btn.setAttribute('aria-selected', 'false');
-                    btn.textContent = cat.label;
+                    var active = galleryFilter === cat.id;
+                    btn.setAttribute('aria-selected', active ? 'true' : 'false');
+                    if (active) btn.classList.add('gallery-filter-active');
+                    btn.textContent = getCategoryLabel(cat.id);
                     filtersEl.appendChild(btn);
                 });
 
@@ -1865,21 +1951,19 @@
                         if (!btn) return;
                         galleryFilter = btn.getAttribute('data-filter');
                         filtersEl.querySelectorAll('.gallery-filter').forEach(function (button) {
-                            var active = button === btn;
-                            button.classList.toggle('gallery-filter-active', active);
-                            button.setAttribute('aria-selected', active ? 'true' : 'false');
+                            var isActive = button === btn;
+                            button.classList.toggle('gallery-filter-active', isActive);
+                            button.setAttribute('aria-selected', isActive ? 'true' : 'false');
                         });
                         renderGalleryGrid(true);
                     });
                     galleryFiltersBound = true;
                 }
-
-                allBtn.classList.add('gallery-filter-active');
             }
 
             function initGallery() {
                 var loadingEl = document.getElementById('gallery-loading');
-                loadingEl.textContent = 'Cargando galería…';
+                loadingEl.textContent = window.LC_I18N.t('gal.loading');
                 Promise.all([
                     fetch(IMAGES_DATA).then(function (res) { return res.json(); }),
                     fetch(VARIANTS_DATA).then(function (res) {
@@ -1889,12 +1973,14 @@
                 ])
                     .then(function (results) {
                         galleryItems = buildGalleryItems(results[0], results[1]);
-                        renderGalleryFilters(results[0].gallery.categories || []);
+                        galleryCategoriesCache = results[0].gallery.categories || [];
+                        renderGalleryFilters(galleryCategoriesCache);
                         loadingEl.classList.add('hidden');
                         renderGalleryGrid(true);
+                        galleryInitialized = true;
                     })
                     .catch(function () {
-                        loadingEl.textContent = 'No pudimos cargar la galería.';
+                        loadingEl.textContent = window.LC_I18N.t('gal.error');
                     });
             }
 
