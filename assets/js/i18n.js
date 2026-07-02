@@ -126,6 +126,10 @@
             'serv.lodgeDesc': 'Habitaciones en módulos de madera y acogedoras casitas de adobe. Pensado para transportistas de ruta y personal de empresas de la zona.',
             'serv.lodgePrice': 'por noche',
             'serv.lodgeNote': 'Ambiente tranquilo, cálido y rodeado de paisaje andino — con la misma vigilancia que el resto de instalaciones.',
+            'serv.astroBadge': 'Experiencia nocturna',
+            'serv.astroTitle': 'Observatorio Andino',
+            'serv.astroDesc': 'A más de 4 000 m, el cielo de Laguna Canrash es ideal para observar estrellas, la Luna y los planetas. Consulta nuestra guía del cielo con fases lunares, mapa estelar y qué ver cada noche.',
+            'serv.astroLink': 'Ver guía del cielo',
 
             'mayor.label': 'Distribución',
             'mayor.title': 'Venta de trucha por mayor',
@@ -188,6 +192,7 @@
             'contact.wifiNote': '<strong class="text-lagoon-100">Internet gratis</strong> y continuo para visitantes, gracias a Starlink.',
             'contact.contactTitle': 'Contacto',
             'contact.whatsappDirect': 'WhatsApp directo',
+            'contact.astroLink': 'Observatorio Andino — guía del cielo',
             'contact.copyright': 'Eica S.R.L. — Laguna Canrash. Todos los derechos reservados.',
 
             'ui.whatsappAria': 'Contactar por WhatsApp: 957 878 409',
@@ -323,6 +328,10 @@
             'serv.lodgeDesc': 'Rooms in wooden modules and cozy adobe cabins. Designed for route drivers and company staff in the area.',
             'serv.lodgePrice': 'per night',
             'serv.lodgeNote': 'Quiet, warm atmosphere surrounded by Andean landscape — with the same security as the rest of our facilities.',
+            'serv.astroBadge': 'Night experience',
+            'serv.astroTitle': 'Andean Observatory',
+            'serv.astroDesc': 'At over 4,000 m, the sky at Laguna Canrash is ideal for watching stars, the Moon and planets. Check our sky guide with lunar phases, star map and what to see each night.',
+            'serv.astroLink': 'Open sky guide',
 
             'mayor.label': 'Distribution',
             'mayor.title': 'Wholesale trout sales',
@@ -385,6 +394,7 @@
             'contact.wifiNote': '<strong class="text-lagoon-100">Free internet</strong> and reliable Wi‑Fi for visitors, thanks to Starlink.',
             'contact.contactTitle': 'Contact',
             'contact.whatsappDirect': 'Direct WhatsApp',
+            'contact.astroLink': 'Andean Observatory — sky guide',
             'contact.copyright': 'Eica S.R.L. — Laguna Canrash. All rights reserved.',
 
             'ui.whatsappAria': 'Contact via WhatsApp: +51 957 878 409',
