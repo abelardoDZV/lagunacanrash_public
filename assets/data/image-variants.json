@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": 1,
-    "generatedAt": "2026-06-26T07:14:55.316Z",
+    "generatedAt": "2026-07-05T01:16:11.316Z",
     "thumb": {
       "dir": "assets/images/derived/thumb/",
       "maxWidth": 480,
@@ -18,6 +18,11 @@
       "thumb": "assets/images/derived/thumb/3_turistas_en_muelle_de_laguna_caminando_como_modelos.webp",
       "medium": "assets/images/derived/medium/3_turistas_en_muelle_de_laguna_caminando_como_modelos.webp",
       "full": "assets/images/3_turistas_en_muelle_de_laguna_caminando_como_modelos.jpg"
+    },
+    "Ambiente_intermedio_lado_carretera.jpeg": {
+      "thumb": "assets/images/derived/thumb/Ambiente_intermedio_lado_carretera.webp",
+      "medium": "assets/images/derived/medium/Ambiente_intermedio_lado_carretera.webp",
+      "full": "assets/images/Ambiente_intermedio_lado_carretera.jpeg"
     },
     "bote_a_lo_lejos_en_laguna_con_personas_perspectiva_lejana.jpg": {
       "thumb": "assets/images/derived/thumb/bote_a_lo_lejos_en_laguna_con_personas_perspectiva_lejana.webp",
