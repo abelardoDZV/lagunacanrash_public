@@ -738,57 +738,85 @@
         <!-- ═══════════════════ RESTAURANTE ═══════════════════ -->
         <section id="restaurante" class="py-20 sm:py-28 bg-lagoon-50">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
-                    <div>
-                        <p class="section-label text-xs font-bold uppercase tracking-widest text-lagoon-600" data-i18n="rest.label">Gastronomía</p>
-                        <h2 class="mt-2 font-display text-3xl font-bold text-lagoon-950 sm:text-4xl" data-i18n="rest.title">
-                            Frescura extrema, sabor auténtico
-                        </h2>
-                        <p class="mt-5 text-lagoon-700 leading-relaxed" data-i18n="rest.p1">
-                            Aquí todo gira en torno a la laguna y a la gente que la cuida. Incubamos ovas importadas y criamos trucha arcoíris
-                            en jaulas flotantes en medio del agua — por eso en el Restaurante Laguna Canrash siempre hay trucha fresca.
-                        </p>
-                        <p class="mt-4 text-lagoon-700 leading-relaxed" data-i18n="rest.p2">
-                            Los platos más pedidos son trucha frita, chicharrón de trucha, ceviche de trucha y sudado de trucha.
-                            También servimos pollo y carne de res, aunque en menor proporción.
-                        </p>
-                        <p class="mt-4 text-lagoon-700 leading-relaxed" data-i18n="rest.p3">
-                            Somos un restaurante genuinamente rústico, con tres ambientes:
-                        </p>
-                        <ul class="mt-3 space-y-2 text-lagoon-700">
-                            <li class="flex gap-2"><span class="text-alpine-moss font-bold">1.</span> <span data-i18n-html="rest.room1"><strong>Salón pionero</strong> — casa de adobe con poca vista al exterior; aquí funciona también la tiendita (agua, cerveza, galletas).</span></li>
-                            <li class="flex gap-2"><span class="text-alpine-moss font-bold">2.</span> <span data-i18n-html="rest.room2"><strong>Comedor vista carretera</strong> — junto a la carretera, cerrado para resguardarse del viento; más vista a la pista que a la laguna.</span></li>
-                            <li class="flex gap-2"><span class="text-alpine-moss font-bold">3.</span> <span data-i18n-html="rest.room3"><strong>Comedor vista laguna</strong> — pared transparente con vista total a la laguna (un plástico resistente que simula vidrio, instalado con ingenio y poco presupuesto).</span></li>
-                        </ul>
-                        <div class="mt-6 flex items-start gap-3 rounded-xl border border-lagoon-200 bg-white p-4 shadow-card">
-                            <svg class="mt-0.5 h-5 w-5 shrink-0 text-lagoon-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            <p class="text-sm text-lagoon-700" data-i18n-html="rest.dockNote">
-                                Tenemos un <strong>muelle habilitado y seguro</strong> donde muchos visitantes toman sus mejores fotos.
-                                Por falta de personal, costos y seguridad, <strong>no ofrecemos paseos en bote</strong>.
-                            </p>
+                <div class="max-w-3xl">
+                    <p class="section-label text-xs font-bold uppercase tracking-widest text-lagoon-600" data-i18n="rest.label">Gastronomía</p>
+                    <h2 class="mt-2 font-display text-3xl font-bold text-lagoon-950 sm:text-4xl" data-i18n="rest.title">
+                        Frescura extrema, sabor auténtico
+                    </h2>
+                    <p class="mt-5 text-lagoon-700 leading-relaxed" data-i18n="rest.p1">
+                        Aquí todo gira en torno a la laguna y a la gente que la cuida. Incubamos ovas importadas y criamos trucha arcoíris
+                        en jaulas flotantes en medio del agua — por eso en el Restaurante Laguna Canrash siempre hay trucha fresca.
+                    </p>
+                    <p class="mt-4 text-lagoon-700 leading-relaxed" data-i18n="rest.p2">
+                        Los platos más pedidos son trucha frita, chicharrón de trucha, ceviche de trucha y sudado de trucha.
+                        También servimos pollo y carne de res, aunque en menor proporción.
+                    </p>
+                    <p class="mt-4 text-lagoon-700 leading-relaxed" data-i18n="rest.p3">
+                        Somos un restaurante genuinamente rústico, con tres ambientes:
+                    </p>
+                </div>
+
+                <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    <div class="group overflow-hidden rounded-2xl bg-white shadow-card">
+                        <div class="relative flex aspect-[4/3] items-center justify-center bg-gradient-to-br from-lagoon-100 to-lagoon-50">
+                            <span class="absolute top-3 left-3 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-sm font-bold text-alpine-moss shadow-sm">1</span>
+                            <div class="flex flex-col items-center gap-2 text-lagoon-400">
+                                <svg class="h-10 w-10" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 15.75M4.5 12v6.75a1.5 1.5 0 001.5 1.5h3.75v-4.5a1.5 1.5 0 011.5-1.5h1.5a1.5 1.5 0 011.5 1.5v4.5H18a1.5 1.5 0 001.5-1.5V12M8.25 21.75h7.5" />
+                                </svg>
+                                <span class="text-xs font-medium" data-i18n="rest.photoSoon">Foto próximamente</span>
+                            </div>
                         </div>
-                        <div class="mt-4 flex items-start gap-3 rounded-xl border border-alpine-moss/30 bg-alpine-moss/5 p-4">
-                            <svg class="mt-0.5 h-5 w-5 shrink-0 text-alpine-moss" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                            </svg>
-                            <p class="text-sm text-lagoon-700" data-i18n-html="rest.securityNote">
-                                <strong>Tu tranquilidad importa:</strong> cámaras de seguridad en todo el recinto y respaldo de la
-                                central de la PNP vinculada a Antamina — también en el restaurante y todas las áreas de atención.
-                            </p>
+                        <div class="p-5">
+                            <p class="text-sm text-lagoon-700" data-i18n-html="rest.room1"><strong>Salón pionero</strong> — casa de adobe con poca vista al exterior; aquí funciona también la tiendita (agua, cerveza, galletas).</p>
                         </div>
                     </div>
 
-                    <div class="grid gap-4">
-                        <img src="assets/images/derived/medium/Ambiente_intermedio_lado_carretera.webp"
-                            alt="Comedor vista carretera"
-                            data-i18n-alt="rest.diningRoadAlt"
-                            class="w-full h-auto rounded-2xl shadow-float" loading="lazy" decoding="async">
-                        <img src="assets/images/derived/medium/comedor_de_vista_panoramica_vacio_pero_con_vista_completa_a_la_laguna_pared_transparente.webp"
-                            alt="Comedor vista laguna"
-                            data-i18n-alt="rest.diningAlt"
-                            class="w-full h-auto rounded-2xl shadow-float" loading="lazy" decoding="async">
+                    <div class="group overflow-hidden rounded-2xl bg-white shadow-card">
+                        <div class="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-lagoon-100 to-lagoon-50">
+                            <span class="absolute top-3 left-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-sm font-bold text-alpine-moss shadow-sm">2</span>
+                            <img src="assets/images/derived/medium/Ambiente_intermedio_lado_carretera.webp"
+                                alt="Comedor vista carretera"
+                                data-i18n-alt="rest.diningRoadAlt"
+                                class="absolute inset-0 h-full w-full object-contain p-3" loading="lazy" decoding="async">
+                        </div>
+                        <div class="p-5">
+                            <p class="text-sm text-lagoon-700" data-i18n-html="rest.room2"><strong>Comedor vista carretera</strong> — junto a la carretera, cerrado para resguardarse del viento; más vista a la pista que a la laguna.</p>
+                        </div>
+                    </div>
+
+                    <div class="group overflow-hidden rounded-2xl bg-white shadow-card">
+                        <div class="relative aspect-[4/3] overflow-hidden">
+                            <span class="absolute top-3 left-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-sm font-bold text-alpine-moss shadow-sm">3</span>
+                            <img src="assets/images/derived/medium/comedor_de_vista_panoramica_vacio_pero_con_vista_completa_a_la_laguna_pared_transparente.webp"
+                                alt="Comedor vista laguna"
+                                data-i18n-alt="rest.diningAlt"
+                                class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" decoding="async">
+                        </div>
+                        <div class="p-5">
+                            <p class="text-sm text-lagoon-700" data-i18n-html="rest.room3"><strong>Comedor vista laguna</strong> — pared transparente con vista total a la laguna (un plástico resistente que simula vidrio, instalado con ingenio y poco presupuesto).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 grid gap-4 sm:grid-cols-2">
+                    <div class="flex items-start gap-3 rounded-xl border border-lagoon-200 bg-white p-4 shadow-card">
+                        <svg class="mt-0.5 h-5 w-5 shrink-0 text-lagoon-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <p class="text-sm text-lagoon-700" data-i18n-html="rest.dockNote">
+                            Tenemos un <strong>muelle habilitado y seguro</strong> donde muchos visitantes toman sus mejores fotos.
+                            Por falta de personal, costos y seguridad, <strong>no ofrecemos paseos en bote</strong>.
+                        </p>
+                    </div>
+                    <div class="flex items-start gap-3 rounded-xl border border-alpine-moss/30 bg-alpine-moss/5 p-4">
+                        <svg class="mt-0.5 h-5 w-5 shrink-0 text-alpine-moss" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                        <p class="text-sm text-lagoon-700" data-i18n-html="rest.securityNote">
+                            <strong>Tu tranquilidad importa:</strong> cámaras de seguridad en todo el recinto y respaldo de la
+                            central de la PNP vinculada a Antamina — también en el restaurante y todas las áreas de atención.
+                        </p>
                     </div>
                 </div>
 
