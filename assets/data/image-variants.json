@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": 1,
-    "generatedAt": "2026-07-05T01:16:11.316Z",
+    "generatedAt": "2026-07-05T02:13:27.179Z",
     "thumb": {
       "dir": "assets/images/derived/thumb/",
       "maxWidth": 480,
@@ -213,6 +213,11 @@
       "thumb": "assets/images/derived/thumb/poste_interrumpe_vista.webp",
       "medium": "assets/images/derived/medium/poste_interrumpe_vista.webp",
       "full": "assets/images/poste_interrumpe_vista.jpg"
+    },
+    "salon_pionero.png": {
+      "thumb": "assets/images/derived/thumb/salon_pionero.webp",
+      "medium": "assets/images/derived/medium/salon_pionero.webp",
+      "full": "assets/images/salon_pionero.png"
     },
     "trabajador_dando_alimento_a_truchas_en_jaulas_flotantes_dentro_de_laguna_canrash_casi_panoramica.jpg": {
       "thumb": "assets/images/derived/thumb/trabajador_dando_alimento_a_truchas_en_jaulas_flotantes_dentro_de_laguna_canrash_casi_panoramica.webp",

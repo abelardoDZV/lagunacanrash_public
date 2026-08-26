@@ -508,7 +508,7 @@
     <!-- Navegación fija -->
     <header id="navbar"
         class="nav-over-hero fixed top-0 left-0 right-0 z-40">
-        <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        <div id="navbar-bar" class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
             <a href="#inicio" class="flex items-center gap-2.5 group">
                 <img src="assets/images/logo-sin-bg.png" alt="Laguna Canrash"
                     class="h-10 w-auto transition group-hover:scale-105 sm:h-11" width="44" height="44">
@@ -823,16 +823,15 @@
 
                 <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     <div class="group overflow-hidden rounded-2xl bg-white shadow-card">
-                        <div class="relative aspect-[4/3] overflow-hidden">
+                        <div class="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-lagoon-100 to-lagoon-50">
                             <span class="absolute top-3 left-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-sm font-bold text-alpine-moss shadow-sm">1</span>
-                            <img src="assets/images/salon_pionero.png"
-                                alt="Interior del salón pionero con mesas, sillas de madera y piso de piedra"
-                                data-i18n-alt="rest.pioneerAlt"
-                                class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" decoding="async"
-                                width="2730" height="1536">
+                            <img src="assets/images/derived/medium/salon_pionero.webp"
+                                alt="Comedor interno"
+                                data-i18n-alt="rest.diningIndoorAlt"
+                                class="absolute inset-0 h-full w-full object-contain p-3" loading="lazy" decoding="async">
                         </div>
                         <div class="p-5">
-                            <p class="text-sm text-lagoon-700" data-i18n-html="rest.room1"><strong>Salón pionero</strong> — casa de adobe con poca vista al exterior; aquí funciona también la tiendita (agua, cerveza, galletas).</p>
+                            <p class="text-sm text-lagoon-700" data-i18n-html="rest.room1"><strong>Comedor interno</strong> — casa de adobe con poca vista al exterior; aquí funciona también la tiendita (agua, cerveza, galletas).</p>
                         </div>
                     </div>
 
@@ -1508,6 +1507,7 @@
             'use strict';
 
             const navbar = document.getElementById('navbar');
+            const navbarBar = document.getElementById('navbar-bar');
             const menuToggle = document.getElementById('menu-toggle');
             const mobileMenu = document.getElementById('mobile-menu');
             const iconOpen = document.getElementById('icon-open');
@@ -1597,7 +1597,7 @@
                         e.preventDefault();
                         const target = document.querySelector(href);
                         if (target) {
-                            const offset = navbar.offsetHeight;
+                            const offset = navbarBar.offsetHeight;
                             const top = target.getBoundingClientRect().top + window.scrollY - offset;
                             window.scrollTo({ top: top, behavior: 'smooth' });
                         }

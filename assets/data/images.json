@@ -140,6 +140,20 @@
       "resolvedPath": "comida/chicharron_de_trucha_plato_en_el_pasto_fondo_laguna.jpg"
     },
     {
+      "file": "salon_pionero.png",
+      "description": "Comedor interno",
+      "tags": [
+        "restaurante",
+        "comedor",
+        "interior"
+      ],
+      "suggestedUsage": [
+        "restaurante-ambiente",
+        "comedor-interno"
+      ],
+      "status": "available"
+    },
+    {
       "file": "Ambiente_intermedio_lado_carretera.jpeg",
       "description": "Comedor vista carretera",
       "tags": [
@@ -910,6 +924,7 @@
       "foto_profesional_preferida_contiene_laguna_bote_casitas_muelle_agua_limpia_cerro_con_nieve_cielo_azul_pasto_verde.jpg"
     ],
     "restaurante-ambiente": [
+      "salon_pionero.png",
       "Ambiente_intermedio_lado_carretera.jpeg",
       "comedor_de_vista_panoramica_vacio_pero_con_vista_completa_a_la_laguna_pared_transparente.jpg"
     ],
@@ -998,6 +1013,9 @@
       ],
       "chicharron_de_trucha_plato_en_el_pasto_fondo_laguna.jpg": [
         "comida"
+      ],
+      "salon_pionero.png": [
+        "laguna"
       ],
       "Ambiente_intermedio_lado_carretera.jpeg": [
         "laguna"
@@ -1149,6 +1167,7 @@
       "cerro_que_tiene_forma_de_rostro_de_gorilla_en_la_ruta_a_laguna_canrash.jpg": "Cerro con forma de rostro de gorila en la ruta a Laguna Canrash",
       "ceviche_y_chicharron_de_trucha_con_fondo_laguna_canrash.jpg": "Ceviche y chicharrón de trucha con la laguna Canrash de fondo",
       "chicharron_de_trucha_plato_en_el_pasto_fondo_laguna.jpg": "Plato de chicharrón de trucha sobre el pasto con la laguna de fondo",
+      "salon_pionero.png": "Comedor interno",
       "Ambiente_intermedio_lado_carretera.jpeg": "Comedor vista carretera",
       "comedor_de_vista_panoramica_vacio_pero_con_vista_completa_a_la_laguna_pared_transparente.jpg": "Comedor vista laguna",
       "cooler_con_tapers_de_comida_delivery_de_eica.jpg": "Cooler con tapers de comida para delivery de Eica",
@@ -1204,7 +1223,7 @@
   },
   "variants": {
     "version": 1,
-    "generatedAt": "2026-07-05T01:16:11.316Z",
+    "generatedAt": "2026-07-05T02:13:27.179Z",
     "thumb": {
       "dir": "assets/images/derived/thumb/",
       "maxWidth": 480,
