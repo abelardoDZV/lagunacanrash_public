@@ -91,7 +91,26 @@
     <style>
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 5rem;
         }
+
+        body {
+            background-image: radial-gradient(circle at 10% 20%, rgba(77, 155, 192, 0.035), transparent 24rem);
+        }
+
+        section[id] { scroll-margin-top: 4.75rem; }
+
+        .skip-link {
+            position: fixed; left: 1rem; top: 1rem; z-index: 100;
+            transform: translateY(-160%); border-radius: 9999px;
+            background: #fff; color: #112533; padding: 0.75rem 1.25rem;
+            font-weight: 700; box-shadow: 0 8px 32px rgba(17, 37, 51, 0.25);
+            transition: transform 0.2s ease;
+        }
+
+        .skip-link:focus { transform: translateY(0); }
+
+        :focus-visible { outline: 3px solid #86bdd9; outline-offset: 3px; }
 
         #navbar {
             transition: background-color 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
@@ -192,6 +211,15 @@
             .hero-fallback {
                 display: block !important;
             }
+
+            *, *::before, *::after {
+                scroll-behavior: auto !important;
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+
+            .reveal-ready { opacity: 1; transform: none; }
         }
 
         .media-video {
@@ -223,6 +251,27 @@
         .gallery-item:hover {
             transform: translateY(-4px);
             box-shadow: 0 12px 40px -12px rgba(17, 37, 51, 0.3);
+        }
+
+        .nav-link[aria-current="true"] { background: rgba(255, 255, 255, 0.14); color: #fff; }
+
+        .hero-trust-item { position: relative; }
+        .hero-trust-item + .hero-trust-item::before {
+            content: ''; position: absolute; left: -1rem; top: 20%;
+            height: 60%; width: 1px; background: rgba(255, 255, 255, 0.22);
+        }
+
+        .reveal-ready {
+            opacity: 0; transform: translateY(18px);
+            transition: opacity 0.65s ease, transform 0.65s ease;
+        }
+        .reveal-ready.reveal-visible { opacity: 1; transform: translateY(0); }
+
+        .mobile-action-bar { display: none; }
+        @media (max-width: 767px) {
+            body { padding-bottom: 4.5rem; }
+            .mobile-action-bar { display: grid; }
+            .whatsapp-fab { display: none; }
         }
 
         .js-lightbox {
@@ -443,6 +492,8 @@
 
 <body class="font-sans text-lagoon-950 bg-white antialiased">
 
+    <a href="#contenido" class="skip-link" data-i18n="ui.skipContent">Saltar al contenido</a>
+
     <!-- WhatsApp flotante -->
     <a href="https://wa.me/51957878409"
         target="_blank" rel="noopener noreferrer"
@@ -524,7 +575,7 @@
         </nav>
     </header>
 
-    <main>
+    <main id="contenido" tabindex="-1">
 
         <!-- ═══════════════════ HERO ═══════════════════ -->
         <section id="inicio" class="relative min-h-screen flex items-center overflow-hidden">
@@ -573,6 +624,20 @@
                             </svg>
                             <span data-i18n="hero.ctaReserve">Reservar: 957 878 409</span>
                         </a>
+                    </div>
+                    <div class="mt-9 grid max-w-xl grid-cols-3 gap-8 border-t border-white/20 pt-5 text-white">
+                        <div class="hero-trust-item">
+                            <p class="font-display text-xl font-bold sm:text-2xl">7 a.m.–7 p.m.</p>
+                            <p class="mt-1 text-xs text-white/65" data-i18n="hero.statHours">Todos los días</p>
+                        </div>
+                        <div class="hero-trust-item">
+                            <p class="font-display text-xl font-bold sm:text-2xl">100%</p>
+                            <p class="mt-1 text-xs text-white/65" data-i18n="hero.statPaved">Ruta asfaltada</p>
+                        </div>
+                        <div class="hero-trust-item">
+                            <p class="font-display text-xl font-bold sm:text-2xl">20 min</p>
+                            <p class="mt-1 text-xs text-white/65" data-i18n="hero.statAntamina">Desde Antamina</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -758,14 +823,13 @@
 
                 <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     <div class="group overflow-hidden rounded-2xl bg-white shadow-card">
-                        <div class="relative flex aspect-[4/3] items-center justify-center bg-gradient-to-br from-lagoon-100 to-lagoon-50">
-                            <span class="absolute top-3 left-3 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-sm font-bold text-alpine-moss shadow-sm">1</span>
-                            <div class="flex flex-col items-center gap-2 text-lagoon-400">
-                                <svg class="h-10 w-10" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 15.75M4.5 12v6.75a1.5 1.5 0 001.5 1.5h3.75v-4.5a1.5 1.5 0 011.5-1.5h1.5a1.5 1.5 0 011.5 1.5v4.5H18a1.5 1.5 0 001.5-1.5V12M8.25 21.75h7.5" />
-                                </svg>
-                                <span class="text-xs font-medium" data-i18n="rest.photoSoon">Foto próximamente</span>
-                            </div>
+                        <div class="relative aspect-[4/3] overflow-hidden">
+                            <span class="absolute top-3 left-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-sm font-bold text-alpine-moss shadow-sm">1</span>
+                            <img src="assets/images/salon_pionero.png"
+                                alt="Interior del salón pionero con mesas, sillas de madera y piso de piedra"
+                                data-i18n-alt="rest.pioneerAlt"
+                                class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" decoding="async"
+                                width="2730" height="1536">
                         </div>
                         <div class="p-5">
                             <p class="text-sm text-lagoon-700" data-i18n-html="rest.room1"><strong>Salón pionero</strong> — casa de adobe con poca vista al exterior; aquí funciona también la tiendita (agua, cerveza, galletas).</p>
@@ -891,8 +955,8 @@
                         <p id="carta-updated" class="mt-2 text-xs text-lagoon-500"></p>
                     </div>
 
-                    <div id="carta-loading" class="mt-10 text-center text-sm text-lagoon-600" data-i18n="carta.loading">Cargando carta…</div>
-                    <div id="carta-error" class="mt-10 hidden text-center text-sm text-red-600"></div>
+                    <div id="carta-loading" class="mt-10 text-center text-sm text-lagoon-600" role="status" aria-live="polite" data-i18n="carta.loading">Cargando carta…</div>
+                    <div id="carta-error" class="mt-10 hidden text-center text-sm text-red-600" role="alert"></div>
                     <div id="carta-menu" class="mt-10 hidden mx-auto max-w-3xl grid gap-4"></div>
 
                     <div class="mt-8 text-center">
@@ -1211,10 +1275,11 @@
                                 alt="Ovejas en Laguna Canrash con cielo abierto y cerro de fondo"
                                 class="js-lightbox h-48 w-full rounded-2xl object-cover sm:h-56" loading="lazy"
                                 data-lightbox-group="historia" data-lightbox-full="assets/images/foto_ovejas_en_laguna_canrash_con_cielo_y_cerro.jpg" decoding="async">
-                            <img src="assets/images/derived/medium/trabajador_dando_alimento_a_truchas_en_jaulas_flotantes_dentro_de_laguna_canrash_casi_panoramica.webp"
-                                alt="Trabajador de la laguna alimentando truchas en jaulas flotantes"
+                            <img src="assets/images/derived/medium/vista_desde_jaulas_flotantes_en_medio_de_laguna_hacia_la_orilla_de_la_laguna.webp"
+                                alt="Vista desde las jaulas flotantes en medio de la laguna hacia la orilla"
+                                data-i18n-alt="hist.cagesAlt"
                                 class="js-lightbox h-48 w-full rounded-2xl object-cover sm:h-56 mt-8" loading="lazy"
-                                data-lightbox-group="historia" data-lightbox-full="assets/images/trabajador_dando_alimento_a_truchas_en_jaulas_flotantes_dentro_de_laguna_canrash_casi_panoramica.jpg" decoding="async">
+                                data-lightbox-group="historia" data-lightbox-full="assets/images/vista_desde_jaulas_flotantes_en_medio_de_laguna_hacia_la_orilla_de_la_laguna.jpeg" decoding="async">
                             <img src="assets/images/derived/medium/foto_desde_lejos_aestacionamiento_y_parqueo_lleno_de_comensales.webp"
                                 alt="Estacionamiento lleno de comensales y visitantes en Laguna Canrash"
                                 class="js-lightbox h-40 w-full rounded-2xl object-cover sm:h-44" loading="lazy"
@@ -1294,7 +1359,7 @@
 
                 <div id="gallery-filters" class="mt-10 flex flex-wrap justify-center gap-2" role="tablist" data-i18n-aria="gal.filterLabel" aria-label="Filtrar galería"></div>
 
-                <div id="gallery-loading" class="mt-10 text-center text-sm text-lagoon-600" data-i18n="gal.loadingLazy">La galería se cargará al acercarte a esta sección…</div>
+                <div id="gallery-loading" class="mt-10 text-center text-sm text-lagoon-600" role="status" aria-live="polite" data-i18n="gal.loadingLazy">La galería se cargará al acercarte a esta sección…</div>
                 <div id="gallery-grid" class="mt-10 hidden grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4" data-lightbox-group="galeria"></div>
                 <p id="gallery-status" class="mt-6 hidden text-center text-xs text-lagoon-500"></p>
                 <div id="gallery-more-wrap" class="mt-6 hidden text-center">
@@ -1402,6 +1467,11 @@
         </section>
 
     </main>
+
+    <nav class="mobile-action-bar fixed inset-x-0 bottom-0 z-50 grid-cols-2 gap-2 border-t border-lagoon-100 bg-white/95 p-2 shadow-[0_-8px_30px_rgba(17,37,51,0.12)] backdrop-blur" data-i18n-aria="nav.quickActions" aria-label="Acciones rápidas">
+        <a href="https://maps.app.goo.gl/UEHtnv7U6Dp8MyLT7" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 rounded-xl border border-lagoon-200 px-3 py-3 text-sm font-bold text-lagoon-800" data-i18n="hero.ctaRoute">Cómo llegar</a>
+        <a href="https://wa.me/51957878409" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 rounded-xl bg-[#25D366] px-3 py-3 text-sm font-bold text-white" data-i18n="nav.whatsapp">WhatsApp</a>
+    </nav>
 
     <div id="lightbox"
         class="fixed inset-0 z-[60] hidden items-center justify-center bg-lagoon-950/95 p-4 sm:p-8"
@@ -1547,9 +1617,13 @@
                             if (href === '#' + id) {
                                 link.classList.add('text-white');
                                 link.classList.remove('text-white/85');
+                                link.setAttribute('aria-current', 'true');
                             } else if (link.classList.contains('nav-link')) {
                                 link.classList.remove('text-white');
                                 link.classList.add('text-white/85');
+                                link.removeAttribute('aria-current');
+                            } else {
+                                link.removeAttribute('aria-current');
                             }
                         });
                     }
@@ -1559,6 +1633,22 @@
             sections.forEach(function (section) {
                 observer.observe(section);
             });
+
+            var revealObserver = null;
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                revealObserver = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (!entry.isIntersecting) return;
+                        entry.target.classList.add('reveal-visible');
+                        revealObserver.unobserve(entry.target);
+                    });
+                }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+                document.querySelectorAll('main section > div').forEach(function (element) {
+                    if (element.closest('#inicio')) return;
+                    element.classList.add('reveal-ready');
+                    revealObserver.observe(element);
+                });
+            }
 
             document.querySelectorAll('video').forEach(function (video) {
                 video.muted = true;
@@ -1774,6 +1864,7 @@
             var lightboxNext = document.getElementById('lightbox-next');
             var lightboxSlides = [];
             var lightboxIndex = 0;
+            var lightboxTrigger = null;
 
             function getLightboxGroup(trigger) {
                 var group = trigger.getAttribute('data-lightbox-group');
@@ -1800,6 +1891,7 @@
             }
 
             function openLightbox(trigger) {
+                lightboxTrigger = trigger;
                 var group = trigger.getAttribute('data-lightbox-group');
                 if (group === 'galeria') {
                     var filtered = getFilteredGalleryItems();
@@ -1829,6 +1921,8 @@
                 lightboxEl.setAttribute('aria-hidden', 'true');
                 document.body.classList.remove('lightbox-open');
                 lightboxImg.removeAttribute('src');
+                if (lightboxTrigger && document.contains(lightboxTrigger)) lightboxTrigger.focus();
+                lightboxTrigger = null;
             }
 
             function stepLightbox(delta) {

@@ -26,6 +26,7 @@
             'nav.openMenu': 'Abrir menú',
             'nav.closeMenu': 'Cerrar menú',
             'nav.langSwitch': 'Cambiar idioma',
+            'nav.quickActions': 'Acciones rápidas',
 
             'hero.badge': 'San Marcos · Áncash · Perú · A 20 min de Antamina',
             'hero.title': 'Trucha fresca de la laguna a tu plato',
@@ -36,6 +37,9 @@
             'hero.scrollDown': 'Desplazarse hacia abajo',
             'hero.videoLabel': 'Video aéreo de toda la laguna Canrash',
             'hero.imageAlt': 'Vista panorámica de Laguna Canrash con laguna, muelle, casitas y nevados',
+            'hero.statHours': 'Todos los días',
+            'hero.statPaved': 'Ruta asfaltada',
+            'hero.statAntamina': 'Desde Antamina',
 
             'route.label': 'Tu viaje, sin sorpresas',
             'route.title': 'Cómo llegar a Laguna Canrash',
@@ -70,6 +74,7 @@
             'rest.p2': 'Los platos más pedidos son trucha frita, chicharrón de trucha, ceviche de trucha y sudado de trucha. También servimos pollo y carne de res, aunque en menor proporción.',
             'rest.p3': 'Somos un restaurante genuinamente rústico, con tres ambientes:',
             'rest.photoSoon': 'Foto próximamente',
+            'rest.pioneerAlt': 'Interior del salón pionero con mesas, sillas de madera y piso de piedra',
             'rest.room1': '<strong>Salón pionero</strong> — casa de adobe con poca vista al exterior; aquí funciona también la tiendita (agua, cerveza, galletas).',
             'rest.room2': '<strong>Comedor vista carretera</strong> — junto a la carretera, cerrado para resguardarse del viento; más vista a la pista que a la laguna.',
             'rest.room3': '<strong>Comedor vista laguna</strong> — pared transparente con vista total a la laguna (un plástico resistente que simula vidrio, instalado con ingenio y poco presupuesto).',
@@ -158,6 +163,7 @@
             'hist.p4': 'Vivir tan alejados del pueblo nos obligó a inventarlo todo: agua, desagüe, luz con paneles solares. En 2023 llegó Starlink y por fin tuvimos internet estable en plena altura. En 2025 ganamos el Procompite de San Marcos y pudimos mejorar los ambientes del restaurante, cerrar el salón contra el viento y ampliar la vista panorámica a la laguna.',
             'hist.p5': 'Hoy somos hermanos y familia trabajando juntos. Te recibimos como llegamos a recibir a transportistas, mineros y viajeros de todas partes: con un plato caliente, trucha fresca y la calidez de quien sabe lo que es vivir en altura.',
             'hist.sheepCaption': 'El pastor guiando sus ovejas en la laguna — tradición viva de nuestra familia',
+            'hist.cagesAlt': 'Vista desde las jaulas flotantes en medio de la laguna hacia la orilla',
             'hist.milestone2023title': 'Internet en la laguna',
             'hist.milestone2023desc': 'Llegó Starlink: conexión estable y Wi‑Fi gratuito para quienes nos visitan.',
             'hist.milestone2025title': 'Procompite San Marcos',
@@ -198,6 +204,7 @@
             'contact.copyright': 'Eica S.R.L. — Laguna Canrash. Todos los derechos reservados.',
 
             'ui.whatsappAria': 'Contactar por WhatsApp: 957 878 409',
+            'ui.skipContent': 'Saltar al contenido',
             'ui.lightboxLabel': 'Vista ampliada de imagen',
             'ui.lightboxClose': 'Cerrar',
             'ui.lightboxPrev': 'Imagen anterior',
@@ -230,6 +237,7 @@
             'nav.openMenu': 'Open menu',
             'nav.closeMenu': 'Close menu',
             'nav.langSwitch': 'Change language',
+            'nav.quickActions': 'Quick actions',
 
             'hero.badge': 'San Marcos · Áncash · Peru · 20 min from Antamina',
             'hero.title': 'Fresh trout from the lagoon to your plate',
@@ -240,6 +248,9 @@
             'hero.scrollDown': 'Scroll down',
             'hero.videoLabel': 'Aerial video of Laguna Canrash',
             'hero.imageAlt': 'Panoramic view of Laguna Canrash with lagoon, dock, cabins and snow-capped peaks',
+            'hero.statHours': 'Open every day',
+            'hero.statPaved': 'Paved road',
+            'hero.statAntamina': 'From Antamina',
 
             'route.label': 'Your trip, no surprises',
             'route.title': 'How to get to Laguna Canrash',
@@ -274,6 +285,7 @@
             'rest.p2': 'The most popular dishes are fried trout, trout cracklings, trout ceviche and trout sudado stew. We also serve chicken and beef, though in smaller proportion.',
             'rest.p3': 'We are a genuinely rustic restaurant with three dining areas:',
             'rest.photoSoon': 'Photo coming soon',
+            'rest.pioneerAlt': 'Inside the original dining room with tables, wooden chairs and a stone floor',
             'rest.room1': '<strong>Pioneer hall</strong> — adobe house with limited outside views; our small shop (water, beer, snacks) is also here.',
             'rest.room2': '<strong>Road-view dining room</strong> — next to the road, enclosed to shelter from the wind; more view of the road than the lagoon.',
             'rest.room3': '<strong>Lagoon-view dining room</strong> — transparent wall with full lagoon view (a sturdy plastic that mimics glass, installed with ingenuity and a modest budget).',
@@ -362,6 +374,7 @@
             'hist.p4': 'Living so far from town forced us to invent everything: water, drainage, solar power. In 2023 Starlink arrived and we finally had stable internet at altitude. In 2025 we won the Procompite grant in San Marcos and improved the restaurant spaces, enclosed the hall against the wind and expanded the panoramic lagoon view.',
             'hist.p5': 'Today we are siblings and family working together. We welcome you as we have welcomed truck drivers, miners and travelers from everywhere: with a hot meal, fresh trout and the warmth of those who know what it means to live at altitude.',
             'hist.sheepCaption': 'The shepherd guiding his sheep at the lagoon — a living tradition of our family',
+            'hist.cagesAlt': 'View from the floating trout cages in the middle of the lagoon toward the shore',
             'hist.milestone2023title': 'Internet at the lagoon',
             'hist.milestone2023desc': 'Starlink arrived: stable connection and free Wi‑Fi for visitors.',
             'hist.milestone2025title': 'Procompite San Marcos',
@@ -402,6 +415,7 @@
             'contact.copyright': 'Eica S.R.L. — Laguna Canrash. All rights reserved.',
 
             'ui.whatsappAria': 'Contact via WhatsApp: +51 957 878 409',
+            'ui.skipContent': 'Skip to content',
             'ui.lightboxLabel': 'Enlarged image view',
             'ui.lightboxClose': 'Close',
             'ui.lightboxPrev': 'Previous image',
