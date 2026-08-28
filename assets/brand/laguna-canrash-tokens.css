@@ -1,0 +1,18 @@
+:root {
+  --canrash-tinta: #163B43;
+  --canrash-agua: #2E7B82;
+  --canrash-cielo: #88BBC4;
+  --canrash-ichu: #8E9652;
+  --canrash-roca: #686860;
+  --canrash-trucha: #D76F43;
+  --canrash-nieve: #F5F1E8;
+  --canrash-blanco: #FFFFFF;
+
+  --font-display: "Manrope", "DM Sans", system-ui, sans-serif;
+  --font-body: "Source Sans 3", "DM Sans", system-ui, sans-serif;
+  --font-story: "Source Serif 4", Georgia, serif;
+
+  --radius-card: 1.25rem;
+  --radius-pill: 999px;
+  --shadow-soft: 0 18px 50px rgba(22, 59, 67, .13);
+}
