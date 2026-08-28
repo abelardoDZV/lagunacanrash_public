@@ -115,22 +115,18 @@
         :focus-visible { outline: 3px solid #88BBC4; outline-offset: 3px; }
 
         #navbar {
-            transition: background-color 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-            border-bottom: 1px solid transparent;
-        }
-
-        #navbar.nav-over-hero {
-            background-color: transparent;
-            box-shadow: none;
-        }
-
-        #navbar.nav-scrolled,
-        #navbar.nav-menu-open {
-            background-color: rgba(22, 59, 67, 0.98);
+            background-color: rgba(22, 59, 67, 0.96);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08), 0 4px 24px rgba(22, 59, 67, 0.14);
-            border-bottom-color: rgba(255, 255, 255, 0.08);
+            transition: background-color 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        #navbar.nav-over-hero,
+        #navbar.nav-scrolled,
+        #navbar.nav-menu-open {
+            background-color: rgba(22, 59, 67, 0.96);
         }
 
         #mobile-menu {
@@ -2198,3 +2194,13 @@
                         galleryBootObserver.disconnect();
                         initGallery();
                     }
+                }, { rootMargin: '280px' });
+                galleryBootObserver.observe(gallerySection);
+            } else {
+                initGallery();
+            }
+        })();
+    </script>
+</body>
+
+</html>
