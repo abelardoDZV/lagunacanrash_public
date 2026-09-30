@@ -178,6 +178,8 @@
 
         .whatsapp-fab {
             animation: whatsapp-pulse 2.5s ease-in-out infinite;
+            bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
+            right: calc(1.25rem + env(safe-area-inset-right, 0px));
         }
 
         .hero-gradient {
@@ -264,13 +266,6 @@
             transition: opacity 0.65s ease, transform 0.65s ease;
         }
         .reveal-ready.reveal-visible { opacity: 1; transform: translateY(0); }
-
-        .mobile-action-bar { display: none; }
-        @media (max-width: 767px) {
-            body { padding-bottom: 4.5rem; }
-            .mobile-action-bar { display: grid; }
-            .whatsapp-fab { display: none; }
-        }
 
         .js-lightbox {
             cursor: zoom-in;
@@ -390,7 +385,7 @@
         }
     </style>
 
-    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/i18n.js?v=20260930-mobile-fix"></script>
 
     <script type="application/ld+json">
     {
@@ -495,7 +490,7 @@
     <!-- WhatsApp flotante -->
     <a href="https://wa.me/51957878409"
         target="_blank" rel="noopener noreferrer"
-        class="whatsapp-fab fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white transition hover:bg-[#1ebe57]"
+        class="whatsapp-fab fixed z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white transition hover:bg-[#1ebe57]"
         data-i18n-aria="ui.whatsappAria">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24">
             <path
@@ -1559,11 +1554,6 @@
         </section>
 
     </main>
-
-    <nav class="mobile-action-bar fixed inset-x-0 bottom-0 z-50 grid-cols-2 gap-2 border-t border-lagoon-100 bg-white/95 p-2 shadow-[0_-8px_30px_rgba(22,59,67,0.12)] backdrop-blur" data-i18n-aria="nav.quickActions" aria-label="Acciones rápidas">
-        <a href="https://maps.app.goo.gl/UEHtnv7U6Dp8MyLT7" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 rounded-xl border border-lagoon-200 px-3 py-3 text-sm font-bold text-lagoon-800" data-i18n="hero.ctaRoute">Cómo llegar</a>
-        <a href="https://wa.me/51957878409" data-wa="reserve" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 rounded-xl bg-alpine-wood px-3 py-3 text-sm font-bold text-white" data-i18n="nav.whatsapp">Planea tu visita</a>
-    </nav>
 
     <div id="lightbox"
         class="fixed inset-0 z-[60] hidden items-center justify-center bg-lagoon-950/95 p-4 sm:p-8"
