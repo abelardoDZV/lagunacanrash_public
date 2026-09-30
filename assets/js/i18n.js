@@ -500,10 +500,13 @@
         return 'es';
     }
 
+    function lookupTranslation(key) {
+        return (TRANSLATIONS[currentLang] && TRANSLATIONS[currentLang][key])
+            || (TRANSLATIONS.es && TRANSLATIONS.es[key]);
+    }
+
     function t(key, vars) {
-        var str = (TRANSLATIONS[currentLang] && TRANSLATIONS[currentLang][key])
-            || (TRANSLATIONS.es && TRANSLATIONS.es[key])
-            || key;
+        var str = lookupTranslation(key) || key;
         if (vars) {
             Object.keys(vars).forEach(function (k) {
                 str = str.replace('{' + k + '}', vars[k]);
@@ -547,17 +550,22 @@
     }
 
     function applyTranslations() {
+        // Keep the HTML fallback when a cached dictionary does not yet include a key.
         document.querySelectorAll('[data-i18n]').forEach(function (el) {
-            el.textContent = t(el.getAttribute('data-i18n'));
+            var text = lookupTranslation(el.getAttribute('data-i18n'));
+            if (typeof text === 'string') el.textContent = text;
         });
         document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
-            el.innerHTML = t(el.getAttribute('data-i18n-html'));
+            var html = lookupTranslation(el.getAttribute('data-i18n-html'));
+            if (typeof html === 'string') el.innerHTML = html;
         });
         document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
-            el.setAttribute('aria-label', t(el.getAttribute('data-i18n-aria')));
+            var label = lookupTranslation(el.getAttribute('data-i18n-aria'));
+            if (typeof label === 'string') el.setAttribute('aria-label', label);
         });
         document.querySelectorAll('[data-i18n-alt]').forEach(function (el) {
-            el.setAttribute('alt', t(el.getAttribute('data-i18n-alt')));
+            var alt = lookupTranslation(el.getAttribute('data-i18n-alt'));
+            if (typeof alt === 'string') el.setAttribute('alt', alt);
         });
         updateMeta();
         updateWhatsAppLinks();
