@@ -16,6 +16,7 @@
             'nav.restaurante': 'Restaurante',
             'nav.carta': 'Carta',
             'nav.servicios': 'Hospedaje',
+            'nav.resenas': 'Reseñas',
             'nav.mayor': 'Por Mayor',
             'nav.historia': 'Historia',
             'nav.galeria': 'Galería',
@@ -150,6 +151,13 @@
             'serv.astroDesc': 'A más de 4 000 m, el cielo de Laguna Canrash es ideal para observar estrellas, la Luna y los planetas. Consulta nuestra guía del cielo con fases lunares, mapa estelar y qué ver cada noche.',
             'serv.astroLink': 'Ver guía del cielo',
 
+            'reviews.label': 'Reseñas destacadas · Google Maps',
+            'reviews.title': 'Quienes vinieron, te lo cuentan.',
+            'reviews.intro': 'La trucha, el paisaje y esos momentos junto a la laguna, en palabras de quienes nos visitaron.',
+            'reviews.all': 'Ver todas las reseñas en Google Maps',
+            'reviews.fiveStars': '5 de 5 estrellas',
+            'reviews.note': 'Fragmentos de reseñas del Restaurante Laguna Canrash, en su idioma original. Lee las opiniones completas en Google Maps.',
+
             'mayor.label': 'Distribución',
             'mayor.title': 'Venta de trucha por mayor',
             'mayor.intro': 'Trucha arcoíris fresca, fileteada o entera, directamente del criadero. Precios escalonados según volumen para restaurantes, distribuidores y negocios de la región. Toda la operación cuenta con cámaras de seguridad y respaldo de la central PNP vinculada a Antamina.',
@@ -239,6 +247,7 @@
             'nav.restaurante': 'Restaurant',
             'nav.carta': 'Menu',
             'nav.servicios': 'Lodging',
+            'nav.resenas': 'Reviews',
             'nav.mayor': 'Wholesale',
             'nav.historia': 'Our story',
             'nav.galeria': 'Gallery',
@@ -372,6 +381,13 @@
             'serv.astroTitle': 'Andean Observatory',
             'serv.astroDesc': 'At over 4,000 m, the sky at Laguna Canrash is ideal for watching stars, the Moon and planets. Check our sky guide with lunar phases, star map and what to see each night.',
             'serv.astroLink': 'Open sky guide',
+
+            'reviews.label': 'Featured reviews · Google Maps',
+            'reviews.title': 'Hear from those who have visited.',
+            'reviews.intro': 'The trout, the scenery and moments by the lake, in our visitors’ own words.',
+            'reviews.all': 'Read all reviews on Google Maps',
+            'reviews.fiveStars': '5 out of 5 stars',
+            'reviews.note': 'Excerpts from reviews of Restaurante Laguna Canrash, in the original Spanish. Read the full reviews on Google Maps.',
 
             'mayor.label': 'Distribution',
             'mayor.title': 'Wholesale trout sales',
