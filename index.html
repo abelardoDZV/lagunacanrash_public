@@ -219,7 +219,13 @@
                 transition-duration: 0.01ms !important;
             }
 
-            .reveal-ready { opacity: 1; transform: none; }
+            @media (max-width: 639px) {
+            .hero-trust-grid > .hero-trust-item:nth-child(2)::before {
+                display: none;
+            }
+        }
+
+        .reveal-ready { opacity: 1; transform: none; }
         }
 
         .media-video {
@@ -611,9 +617,9 @@
                             <span data-i18n="hero.ctaExperience">Descubre la experiencia</span>
                         </a>
                     </div>
-                    <div class="mt-9 grid max-w-xl grid-cols-3 gap-8 border-t border-white/20 pt-5 text-white">
-                        <div class="hero-trust-item">
-                            <p class="font-display text-xl font-bold sm:text-2xl">7 a.m.–7 p.m.</p>
+                    <div class="hero-trust-grid mt-9 grid max-w-xl grid-cols-2 gap-8 border-t border-white/20 pt-5 text-white sm:grid-cols-3">
+                        <div class="hero-trust-item col-span-2 sm:col-span-1">
+                            <p class="whitespace-nowrap font-display text-xl font-bold sm:text-2xl">7 a.m.–7 p.m.</p>
                             <p class="mt-1 text-xs text-white/65" data-i18n="hero.statHours">Todos los días</p>
                         </div>
                         <div class="hero-trust-item">
