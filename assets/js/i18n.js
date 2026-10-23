@@ -5,6 +5,58 @@
 
     var TRANSLATIONS = {
         es: {
+            "visit.label": "ANTES DE VENIR",
+            "visit.title": "Te esperamos en Canrash.",
+            "visit.intro": "Cuéntanos cuándo quieres visitarnos. Te ayudamos a coordinar tu comida, hospedaje o estacionamiento.",
+            "visit.hours": "Atención todos los días · 7 a.m. a 7 p.m.",
+            "visit.formTitle": "Prepara tu consulta al restaurante",
+            "visit.optional": "Datos opcionales de tu visita",
+            "visit.date": "Fecha de visita (opcional)",
+            "visit.guests": "Personas (opcional)",
+            "visit.continue": "Continuar en WhatsApp",
+            "visit.help": "Abriremos WhatsApp con tu consulta. La disponibilidad se confirma por ese medio.",
+            "visit.direct": "Escribir sin completar datos",
+            "visit.explore": "Explora Canrash",
+            "visit.follow": "Síguenos",
+            "visit.call": "Llamar al 957 878 409",
+            "visit.top": "Volver arriba",
+            "visit.message": "Hola, quisiera consultar disponibilidad para visitar el restaurante de Laguna Canrash.",
+            "visit.messageDate": "Fecha: {date}.",
+            "visit.messageGuests": "Personas: {guests}.",
+            "ui.lightboxCounter": "Foto {current} de {total}",
+            "ui.lightboxLoading": "Cargando foto…",
+            "ui.lightboxError": "No se pudo cargar esta foto.",
+            "ui.lightboxRetry": "Reintentar",
+            "wa.lodge": "Hola, quisiera consultar disponibilidad de hospedaje en Laguna Canrash. Mi fecha y cantidad de personas son:",
+            "wa.garage": "Hola, quisiera consultar disponibilidad de cochera en Laguna Canrash. Mi fecha y cantidad de días son:",
+            "review.routeTitle": "Elige desde dónde vienes",
+            "review.routeIntro": "Llegas en auto hasta el restaurante por carretera asfaltada. Estos tiempos son aproximados.",
+            "review.openMaps": "Abrir en Google Maps",
+            "review.sanMarcos": "Ruta recomendada",
+            "review.routeDetails": "Qué ver en el camino",
+            "review.restaurantIntro": "Criamos trucha arcoíris en la propia laguna. La preparamos frita, en chicharrón, ceviche y sudado, para disfrutarla en nuestro restaurante rústico.",
+            "review.restaurantOther": "También encontrarás platos de pollo y res, y tres ambientes para compartir.",
+            "review.rooms": "Conoce nuestros tres ambientes",
+            "review.askLodge": "Consultar hospedaje",
+            "review.askGarage": "Consultar cochera",
+            "review.servicesIntro": "Un lugar sencillo para descansar y dejar tu vehículo. Consulta disponibilidad antes de venir.",
+            "review.security": "Seguridad durante tu visita",
+            "review.story": "Leer la historia completa",
+            "v2.location": "SAN MARCOS · ÁNCASH · PERÚ",
+            "v2.heroFirst": "Una escapada",
+            "v2.heroLast": "a la altura.",
+            "v2.heroIntro": "La laguna frente a ti. Trucha de nuestra crianza en tu mesa. Y tiempo para disfrutar de los Andes.",
+            "v2.seeMenu": "Ver nuestra carta",
+            "v2.paved": "Hasta la puerta",
+            "v2.explore": "Conoce Canrash",
+            "v2.menuLabel": "EL SABOR DE CANRASH",
+            "v2.menuTitle": "Nuestra carta",
+            "v2.menuIntro": "La misma que encontrarás en tu mesa, con todos los platos, precios y anticipación.",
+            "v2.fullMenu": "Abrir carta completa",
+            "v2.menuHelp": "Desliza dentro de la carta para ver todos los platos.",
+            "v2.originalMenu": "¿No carga? Abre la carta original ↗",
+            "v2.freshTitle": "Trucha de crianza propia",
+            "v2.freshDesc": "El origen de nuestra cocina",
             'meta.title': 'Laguna Canrash | Una escapada a la altura en Áncash',
             'meta.description': 'Planea una escapada a Laguna Canrash: paisaje andino, trucha de crianza propia, restaurante, hospedaje rústico y ruta asfaltada en San Marcos, Áncash.',
             'meta.ogDescription': 'Laguna, trucha y descanso en los Andes de Áncash. Conoce la ruta, el restaurante y el hospedaje para planear tu visita.',
@@ -20,7 +72,7 @@
             'nav.mayor': 'Por Mayor',
             'nav.historia': 'Historia',
             'nav.galeria': 'Galería',
-            'nav.whatsapp': 'Planea tu visita',
+            'nav.whatsapp': 'Consultar por WhatsApp',
             'nav.mobileLabel': 'Menú móvil',
             'nav.mayorMobile': 'Venta por Mayor',
             'nav.historiaMobile': 'Nuestra Historia',
@@ -67,7 +119,7 @@
             'route.linkHuallanca': 'Ruta desde Huallanca',
             'route.linkAntamina': 'Ruta desde Antamina',
             'route.linkSanMarcos': 'Ruta desde San Marcos',
-            'route.mapsNote': 'Si partes de San Marcos, Google Maps puede mostrarte <strong>dos rutas</strong>. Usa el enlace «Ruta desde San Marcos»: es la correcta para llegar a la laguna.',
+            'route.mapsNote': 'Si partes de San Marcos, Google Maps puede mostrarte <strong>dos rutas</strong>. Elige aquí «San Marcos» para abrir la ruta recomendada.',
             'route.sightsLabel': 'El viaje es parte de la experiencia',
             'route.sightsTitle': 'En el camino verás',
             'route.dinoTitle': 'Huellas de dinosaurio',
@@ -96,7 +148,7 @@
             'rest.diningRoadAlt': 'Comedor vista carretera',
             'rest.diningAlt': 'Comedor vista laguna',
             'rest.starTitle': 'Platos estrella',
-            'rest.starSubtitle': 'Cuatro preparaciones que definen nuestra cocina',
+            'rest.starSubtitle': 'El origen y los sabores de nuestra cocina',
             'rest.friedTitle': 'Trucha frita',
             'rest.friedDesc': 'Del criadero al sartén el mismo día',
             'rest.chicharronTitle': 'Chicharrón de trucha',
@@ -139,7 +191,7 @@
             'serv.garageBadge': 'Cochera segura',
             'serv.garageTitle': 'Cochera para mineros y viajeros',
             'serv.garageDesc': 'Ideal para trabajadores de Antamina que dejan sus vehículos por 10 días o más. Espacios cubiertos con techo y estacionamiento amplio al aire libre.',
-            'serv.garageRoof': '<strong>Con techo:</strong> S/ 10 por día — 6 espacios disponibles',
+            'serv.garageRoof': '<strong>Con techo:</strong> S/ 10 por día — capacidad: 6 vehículos',
             'serv.garageOpen': '<strong>Sin techo:</strong> S/ 5 por día — amplio parqueo al aire libre',
             'serv.lodgeBadge': 'Hospedaje rústico',
             'serv.lodgeTitle': 'Descanso en los Andes peruanos',
@@ -236,6 +288,58 @@
             'wa.wholesale': 'Hola, quiero cotizar trucha al por mayor'
         },
         en: {
+            "visit.label": "BEFORE YOU COME",
+            "visit.title": "We look forward to welcoming you.",
+            "visit.intro": "Tell us when you’d like to visit. We can help arrange your meal, lodging or parking.",
+            "visit.hours": "Open every day · 7 a.m. to 7 p.m.",
+            "visit.formTitle": "Prepare your restaurant enquiry",
+            "visit.optional": "Optional visit details",
+            "visit.date": "Visit date (optional)",
+            "visit.guests": "Guests (optional)",
+            "visit.continue": "Continue in WhatsApp",
+            "visit.help": "We’ll open WhatsApp with your enquiry. Availability is confirmed there.",
+            "visit.direct": "Send a message without filling this in",
+            "visit.explore": "Explore Canrash",
+            "visit.follow": "Follow us",
+            "visit.call": "Call +51 957 878 409",
+            "visit.top": "Back to top",
+            "visit.message": "Hello, I would like to ask about availability to visit the restaurant at Laguna Canrash.",
+            "visit.messageDate": "Date: {date}.",
+            "visit.messageGuests": "Guests: {guests}.",
+            "ui.lightboxCounter": "Photo {current} of {total}",
+            "ui.lightboxLoading": "Loading photo…",
+            "ui.lightboxError": "This photo could not be loaded.",
+            "ui.lightboxRetry": "Try again",
+            "wa.lodge": "Hello, I would like to ask about lodging availability at Laguna Canrash. My dates and number of guests are:",
+            "wa.garage": "Hello, I would like to ask about parking availability at Laguna Canrash. My dates and number of days are:",
+            "review.routeTitle": "Choose where you’re travelling from",
+            "review.routeIntro": "A paved road takes you right to the restaurant. Travel times are approximate.",
+            "review.openMaps": "Open in Google Maps",
+            "review.sanMarcos": "Recommended route",
+            "review.routeDetails": "What to see along the way",
+            "review.restaurantIntro": "We raise rainbow trout in the lagoon itself. Enjoy it fried, as crispy chicharrón, ceviche or a warming sudado in our rustic restaurant.",
+            "review.restaurantOther": "You’ll also find chicken and beef dishes, and three dining areas to share.",
+            "review.rooms": "Explore our three dining areas",
+            "review.askLodge": "Ask about lodging",
+            "review.askGarage": "Ask about parking",
+            "review.servicesIntro": "A simple place to rest and leave your vehicle. Please check availability before travelling.",
+            "review.security": "Safety during your visit",
+            "review.story": "Read our full story",
+            "v2.location": "SAN MARCOS · ÁNCASH · PERU",
+            "v2.heroFirst": "A getaway",
+            "v2.heroLast": "above it all.",
+            "v2.heroIntro": "The lagoon before you. Our own farm-raised trout on your table. And time to enjoy the Andes.",
+            "v2.seeMenu": "Explore our menu",
+            "v2.paved": "Right to our door",
+            "v2.explore": "Discover Canrash",
+            "v2.menuLabel": "A TASTE OF CANRASH",
+            "v2.menuTitle": "Our menu",
+            "v2.menuIntro": "The same Spanish-language menu we hand you at the table, with every dish, price and advance-order notice.",
+            "v2.fullMenu": "Open the full menu",
+            "v2.menuHelp": "Scroll inside the menu to see every dish.",
+            "v2.originalMenu": "Not loading? Open the original menu ↗",
+            "v2.freshTitle": "Our own farm-raised trout",
+            "v2.freshDesc": "Where our cooking begins",
             'meta.title': 'Laguna Canrash | A high-altitude Andean escape',
             'meta.description': 'Plan an escape to Laguna Canrash: Andean landscape, trout from our own farm, restaurant, rustic lodging and a paved road in San Marcos, Áncash.',
             'meta.ogDescription': 'Lagoon, trout and rest in the Andes of Áncash. Explore the route, restaurant and lodging to plan your visit.',
@@ -251,7 +355,7 @@
             'nav.mayor': 'Wholesale',
             'nav.historia': 'Our story',
             'nav.galeria': 'Gallery',
-            'nav.whatsapp': 'Plan your visit',
+            'nav.whatsapp': 'Ask on WhatsApp',
             'nav.mobileLabel': 'Mobile menu',
             'nav.mayorMobile': 'Wholesale',
             'nav.historiaMobile': 'Our story',
@@ -298,7 +402,7 @@
             'route.linkHuallanca': 'Route from Huallanca',
             'route.linkAntamina': 'Route from Antamina',
             'route.linkSanMarcos': 'Route from San Marcos',
-            'route.mapsNote': 'If you start from San Marcos, Google Maps may show you <strong>two routes</strong>. Use the "Route from San Marcos" link — it is the correct one to reach the lagoon.',
+            'route.mapsNote': 'If you start from San Marcos, Google Maps may show you <strong>two routes</strong>. Choose "San Marcos" here to open the recommended route.',
             'route.sightsLabel': 'The journey is part of the experience',
             'route.sightsTitle': 'Along the way you will see',
             'route.dinoTitle': 'Dinosaur footprints',
@@ -327,7 +431,7 @@
             'rest.diningRoadAlt': 'Road-view dining room',
             'rest.diningAlt': 'Lagoon-view dining room',
             'rest.starTitle': 'Signature dishes',
-            'rest.starSubtitle': 'Four preparations that define our kitchen',
+            'rest.starSubtitle': 'The origin and flavours of our cooking',
             'rest.friedTitle': 'Fried trout',
             'rest.friedDesc': 'From farm to pan the same day',
             'rest.chicharronTitle': 'Trout cracklings',
@@ -370,7 +474,7 @@
             'serv.garageBadge': 'Secure parking',
             'serv.garageTitle': 'Parking for miners and travelers',
             'serv.garageDesc': 'Ideal for Antamina workers who leave their vehicles for 10 days or more. Covered spaces and ample open-air parking.',
-            'serv.garageRoof': '<strong>Covered:</strong> S/ 10 per day — 6 spaces available',
+            'serv.garageRoof': '<strong>Covered:</strong> S/ 10 per day — capacity: 6 vehicles',
             'serv.garageOpen': '<strong>Uncovered:</strong> S/ 5 per day — ample open parking',
             'serv.lodgeBadge': 'Rustic lodging',
             'serv.lodgeTitle': 'Rest in the Peruvian Andes',
@@ -495,8 +599,12 @@
     var currentLang = 'es';
 
     function detectLang() {
-        var saved = localStorage.getItem(STORAGE_KEY);
-        if (saved === 'es' || saved === 'en') return saved;
+        try {
+            var saved = localStorage.getItem(STORAGE_KEY);
+            if (saved === 'es' || saved === 'en') return saved;
+        } catch (_) {
+            // El idioma sigue disponible aunque el navegador bloquee el almacenamiento.
+        }
         return 'es';
     }
 
@@ -584,7 +692,11 @@
     function setLang(lang) {
         if (lang !== 'es' && lang !== 'en') return;
         currentLang = lang;
-        localStorage.setItem(STORAGE_KEY, lang);
+        try {
+            localStorage.setItem(STORAGE_KEY, lang);
+        } catch (_) {
+            // La selección se conserva en memoria durante esta visita.
+        }
         applyTranslations();
         document.dispatchEvent(new CustomEvent('langchange', { detail: { lang: lang } }));
     }

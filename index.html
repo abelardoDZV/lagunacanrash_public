@@ -43,349 +43,15 @@
     <link rel="icon" type="image/svg+xml" href="assets/brand/favicon.svg">
     <link rel="stylesheet" href="assets/brand/laguna-canrash-tokens.css">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,600;1,600&display=swap"
-        rel="stylesheet">
+    <link rel="preload" href="assets/fonts/source-serif-4-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/source-serif-4-latin-600-italic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/source-sans-3-latin-400-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="assets/css/fonts.css">
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        lagoon: {
-                            50: '#F5F1E8',
-                            100: '#E7EFF0',
-                            200: '#C6DCDD',
-                            300: '#88BBC4',
-                            400: '#5A989F',
-                            500: '#2E7B82',
-                            600: '#286C72',
-                            700: '#245A60',
-                            800: '#1D4A50',
-                            900: '#163B43',
-                            950: '#102D33',
-                        },
-                        alpine: {
-                            moss: '#8E9652',
-                            grass: '#A7AE70',
-                            stone: '#686860',
-                            wood: '#D76F43',
-                            bark: '#686860',
-                        }
-                    },
-                    fontFamily: {
-                        display: ['"Manrope"', 'system-ui', 'sans-serif'],
-                        sans: ['"Source Sans 3"', 'system-ui', 'sans-serif'],
-                        story: ['"Source Serif 4"', 'Georgia', 'serif'],
-                    },
-                    boxShadow: {
-                        card: '0 10px 32px -12px rgba(22, 59, 67, 0.22)',
-                        float: '0 16px 42px -14px rgba(22, 59, 67, 0.34)',
-                    }
-                }
-            }
-        }
-    </script>
 
-    <style>
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 5rem;
-        }
+    <link rel="stylesheet" href="assets/css/site.css?v=2.2">
 
-        body {
-            background-image: radial-gradient(circle at 10% 20%, rgba(77, 155, 192, 0.035), transparent 24rem);
-        }
-
-        section[id] { scroll-margin-top: 4.75rem; }
-
-        .skip-link {
-            position: fixed; left: 1rem; top: 1rem; z-index: 100;
-            transform: translateY(-160%); border-radius: 9999px;
-            background: #fff; color: #163B43; padding: 0.75rem 1.25rem;
-            font-weight: 700; box-shadow: 0 8px 32px rgba(22, 59, 67, 0.25);
-            transition: transform 0.2s ease;
-        }
-
-        .skip-link:focus { transform: translateY(0); }
-
-        :focus-visible { outline: 3px solid #88BBC4; outline-offset: 3px; }
-
-        #navbar {
-            background-color: rgba(22, 59, 67, 0.96);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08), 0 4px 24px rgba(22, 59, 67, 0.14);
-            transition: background-color 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        #navbar.nav-over-hero,
-        #navbar.nav-scrolled,
-        #navbar.nav-menu-open {
-            background-color: rgba(22, 59, 67, 0.96);
-        }
-
-        #mobile-menu {
-            transition: grid-template-rows 0.28s ease, opacity 0.2s ease;
-            display: grid;
-        }
-
-        .mobile-nav-closed {
-            grid-template-rows: 0fr;
-            opacity: 0;
-            pointer-events: none;
-            border-top-color: transparent;
-        }
-
-        .mobile-nav-open {
-            grid-template-rows: 1fr;
-            opacity: 1;
-            pointer-events: auto;
-        }
-
-        #mobile-menu-panel {
-            overflow: hidden;
-            min-height: 0;
-        }
-
-        .mobile-nav-open #mobile-menu-panel {
-            overflow-y: auto;
-            max-height: min(70dvh, 28rem);
-            -webkit-overflow-scrolling: touch;
-        }
-
-        body.mobile-menu-active {
-            overflow: hidden;
-        }
-
-        @keyframes whatsapp-pulse {
-
-            0%,
-            100% {
-                transform: scale(1);
-                box-shadow: 0 8px 32px -8px rgba(37, 211, 102, 0.5);
-            }
-
-            50% {
-                transform: scale(1.06);
-                box-shadow: 0 12px 40px -6px rgba(37, 211, 102, 0.65);
-            }
-        }
-
-        .whatsapp-fab {
-            animation: whatsapp-pulse 2.5s ease-in-out infinite;
-            bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
-            right: calc(1.25rem + env(safe-area-inset-right, 0px));
-        }
-
-        .hero-gradient {
-            background: linear-gradient(135deg,
-                    rgba(22, 59, 67, 0.88) 0%,
-                    rgba(46, 123, 130, 0.72) 45%,
-                    rgba(22, 59, 67, 0.55) 100%);
-        }
-
-        .hero-video {
-            display: none;
-        }
-
-        @media (min-width: 768px) {
-            .hero-video {
-                display: block;
-            }
-
-            .hero-fallback {
-                display: none;
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            .hero-video {
-                display: none !important;
-            }
-
-            .hero-fallback {
-                display: block !important;
-            }
-
-            *, *::before, *::after {
-                scroll-behavior: auto !important;
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-
-            .reveal-ready { opacity: 1; transform: none; }
-        }
-
-        .media-video {
-            box-shadow: 0 12px 40px -12px rgba(22, 59, 67, 0.35);
-        }
-
-        .menu-row {
-            border-bottom: 1px dashed #E7EFF0;
-        }
-
-        .menu-row:last-child {
-            border-bottom: none;
-        }
-
-        .section-label::after {
-            content: '';
-            display: block;
-            width: 2.5rem;
-            height: 2px;
-            margin-top: 0.5rem;
-            background: linear-gradient(90deg, #2E7B82, #8E9652);
-            border-radius: 1px;
-        }
-
-        .gallery-item {
-            transition: transform 0.35s ease, box-shadow 0.35s ease;
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 40px -12px rgba(22, 59, 67, 0.3);
-        }
-
-        .nav-link[aria-current="true"] { background: rgba(255, 255, 255, 0.14); color: #fff; }
-
-        .hero-trust-item { position: relative; }
-        .hero-trust-item + .hero-trust-item::before {
-            content: ''; position: absolute; left: -1rem; top: 20%;
-            height: 60%; width: 1px; background: rgba(255, 255, 255, 0.22);
-        }
-
-        .reveal-ready {
-            opacity: 0; transform: translateY(18px);
-            transition: opacity 0.65s ease, transform 0.65s ease;
-        }
-        .reveal-ready.reveal-visible { opacity: 1; transform: translateY(0); }
-
-        .js-lightbox {
-            cursor: zoom-in;
-        }
-
-        #lightbox:not(.hidden) {
-            display: flex;
-        }
-
-        body.lightbox-open {
-            overflow: hidden;
-        }
-
-        .gallery-filter-active {
-            background-color: #286C72;
-            color: #fff;
-            border-color: transparent;
-        }
-
-        .gallery-thumb-loading {
-            background: linear-gradient(90deg, #E7EFF0 25%, #F5F1E8 50%, #E7EFF0 75%);
-            background-size: 200% 100%;
-            animation: gallery-shimmer 1.2s ease-in-out infinite;
-        }
-
-        @keyframes gallery-shimmer {
-            0% { background-position: 200% 0; }
-            100% { background-position: -200% 0; }
-        }
-
-        .price-table-card {
-            background: #ffffff;
-            box-shadow: 0 20px 50px -12px rgba(0, 0, 0, 0.35);
-        }
-
-        .price-table-row:nth-child(even) {
-            background-color: #F5F1E8;
-        }
-
-        .price-table-row--best {
-            background: linear-gradient(90deg, #ecfdf3 0%, #f0fdf4 100%);
-            border-left: 4px solid #8E9652;
-        }
-
-        .route-links-grid a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            border-radius: 9999px;
-            padding: 0.75rem 1.25rem;
-            font-size: 0.875rem;
-            font-weight: 600;
-            transition: background-color 0.2s, border-color 0.2s, color 0.2s;
-        }
-
-        .route-links-grid a:nth-child(odd) {
-            background-color: #286C72;
-            color: #fff;
-        }
-
-        .route-links-grid a:nth-child(odd):hover {
-            background-color: #245A60;
-        }
-
-        .route-links-grid a:nth-child(even) {
-            border: 1px solid #C6DCDD;
-            background-color: #fff;
-            color: #1D4A50;
-        }
-
-        .route-links-grid a:nth-child(even):hover {
-            border-color: #88BBC4;
-            background-color: #F5F1E8;
-        }
-
-        .carta-collapse summary {
-            list-style: none;
-            cursor: pointer;
-        }
-
-        .carta-collapse summary::-webkit-details-marker {
-            display: none;
-        }
-
-        .carta-collapse[open] .carta-chevron {
-            transform: rotate(180deg);
-        }
-
-        .lang-btn {
-            border-radius: 9999px;
-            padding: 0.25rem 0.625rem;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: rgba(255, 255, 255, 0.7);
-            transition: background-color 0.2s, color 0.2s;
-        }
-
-        .lang-btn:hover {
-            color: #fff;
-        }
-
-        .lang-btn-active {
-            background-color: rgba(255, 255, 255, 0.2);
-            color: #fff;
-        }
-
-        #navbar.nav-scrolled .lang-btn,
-        #navbar.nav-menu-open .lang-btn {
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        #navbar.nav-scrolled .lang-btn-active,
-        #navbar.nav-menu-open .lang-btn-active {
-            background-color: rgba(255, 255, 255, 0.2);
-            color: #fff;
-        }
-    </style>
-
-    <script src="assets/js/i18n.js?v=20260930-mobile-fix"></script>
+    <script src="assets/js/i18n.js?v=2.2"></script>
 
     <script type="application/ld+json">
     {
@@ -416,7 +82,7 @@
                 "servesCuisine": ["Peruana", "Trucha"],
                 "priceRange": "S/",
                 "acceptsReservations": true,
-                "hasMenu": "https://lagunacanrash.com/#carta",
+                "hasMenu": "https://lagunacanrash.com/carta.html",
                 "hasMap": "https://maps.app.goo.gl/UEHtnv7U6Dp8MyLT7",
                 "sameAs": [
                     "https://www.facebook.com/LagunaCanrash/",
@@ -488,6 +154,7 @@
     <a href="#contenido" class="skip-link" data-i18n="ui.skipContent">Saltar al contenido</a>
 
     <!-- WhatsApp flotante -->
+    <nav aria-label="Contacto rápido">
     <a href="https://wa.me/51957878409"
         target="_blank" rel="noopener noreferrer"
         class="whatsapp-fab fixed z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white transition hover:bg-[#1ebe57]"
@@ -497,6 +164,7 @@
                 d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.884 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
         </svg>
     </a>
+    </nav>
 
     <!-- Navegación fija -->
     <header id="navbar"
@@ -508,7 +176,7 @@
             </a>
 
             <nav class="hidden items-center gap-1 lg:flex" data-i18n-aria="nav.label" aria-label="Navegación principal">
-                <a href="#inicio" class="nav-link px-3 py-2 text-sm font-medium text-white/85 hover:text-white transition rounded-lg hover:bg-white/10" data-i18n="nav.inicio">Inicio</a>
+                <a href="#carta" class="nav-link px-3 py-2 text-sm font-medium text-white/85 hover:text-white transition rounded-lg hover:bg-white/10" data-i18n="nav.carta">Carta</a>
                 <a href="#como-llegar" class="nav-link px-3 py-2 text-sm font-medium text-white/85 hover:text-white transition rounded-lg hover:bg-white/10" data-i18n="nav.comoLlegar">Cómo llegar</a>
                 <a href="#restaurante" class="nav-link px-3 py-2 text-sm font-medium text-white/85 hover:text-white transition rounded-lg hover:bg-white/10" data-i18n="nav.restaurante">Restaurante</a>
                 <a href="#servicios" class="nav-link px-3 py-2 text-sm font-medium text-white/85 hover:text-white transition rounded-lg hover:bg-white/10" data-i18n="nav.servicios">Hospedaje</a>
@@ -546,10 +214,10 @@
 
         <nav id="mobile-menu"
             class="mobile-nav-closed lg:hidden border-t border-white/10 bg-lagoon-950"
-            data-i18n-aria="nav.mobileLabel" aria-label="Menú móvil" aria-hidden="true">
+            data-i18n-aria="nav.mobileLabel" aria-label="Menú móvil" aria-hidden="true" inert>
             <div id="mobile-menu-panel">
                 <div class="flex flex-col gap-1 px-4 py-4">
-                <a href="#inicio" class="mobile-link rounded-lg px-4 py-3 text-sm font-medium text-white/90 hover:bg-white/10" data-i18n="nav.inicio">Inicio</a>
+                <a href="#carta" class="mobile-link rounded-lg px-4 py-3 text-sm font-medium text-white/90 hover:bg-white/10" data-i18n="nav.carta">Carta</a>
                 <a href="#como-llegar" class="mobile-link rounded-lg px-4 py-3 text-sm font-medium text-white/90 hover:bg-white/10" data-i18n="nav.comoLlegar">Cómo llegar</a>
                 <a href="#restaurante" class="mobile-link rounded-lg px-4 py-3 text-sm font-medium text-white/90 hover:bg-white/10" data-i18n="nav.restaurante">Restaurante</a>
                 <a href="#servicios" class="mobile-link rounded-lg px-4 py-3 text-sm font-medium text-white/90 hover:bg-white/10" data-i18n="nav.servicios">Hospedaje</a>
@@ -566,195 +234,57 @@
 
     <main id="contenido" tabindex="-1">
 
-        <!-- ═══════════════════ HERO ═══════════════════ -->
-        <section id="inicio" class="relative min-h-[92svh] flex items-center overflow-hidden">
+        <section id="inicio" tabindex="-1" class="v2-hero" aria-labelledby="hero-title">
             <img src="assets/images/derived/medium/foto_profesional_preferida_contiene_laguna_bote_casitas_muelle_agua_limpia_cerro_con_nieve_cielo_azul_pasto_verde.webp"
-                data-i18n-alt="hero.imageAlt"
-                alt="Vista panorámica de Laguna Canrash con laguna, muelle, casitas y nevados"
-                class="hero-fallback absolute inset-0 h-full w-full object-cover" fetchpriority="high" decoding="async">
-            <video class="hero-video media-video absolute inset-0 h-full w-full object-cover"
-                autoplay muted loop playsinline preload="metadata"
-                poster="assets/images/derived/medium/foto_profesional_preferida_contiene_laguna_bote_casitas_muelle_agua_limpia_cerro_con_nieve_cielo_azul_pasto_verde.webp"
-                data-i18n-aria="hero.videoLabel" aria-label="Video aéreo de toda la laguna Canrash">
-                <source src="assets/images/video_drone_toda_laguna.mp4" type="video/mp4">
-            </video>
-            <div class="hero-gradient absolute inset-0"></div>
-
-            <div class="relative z-10 mx-auto w-full max-w-7xl px-4 py-28 sm:px-6 lg:px-8">
-                <div class="max-w-2xl">
-                    <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-white/90 backdrop-blur-sm">
-                        <span class="h-1.5 w-1.5 rounded-full bg-alpine-grass"></span>
-                        <span data-i18n="hero.badge">San Marcos · Áncash · Perú · A 20 min de Antamina</span>
-                    </p>
-                    <h1 class="max-w-xl font-display text-4xl font-extrabold leading-[1.05] text-white sm:text-5xl lg:text-6xl" data-i18n="hero.title">
-                        Una escapada a la altura
-                    </h1>
-                    <p class="mt-5 max-w-xl text-lg text-white/90 leading-relaxed sm:text-xl" data-i18n="hero.subtitle">
-                        Laguna, trucha y descanso en los Andes de Áncash. Ven por el paisaje, prueba nuestra trucha
-                        y quédate a vivir Canrash con calma.
-                    </p>
-                    <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-                        <a href="https://wa.me/51957878409"
-                            data-wa="reserve"
-                            target="_blank" rel="noopener noreferrer"
-                            class="inline-flex items-center justify-center rounded-full bg-alpine-wood px-7 py-3.5 text-sm font-bold text-white transition hover:brightness-110 shadow-float"
-                            data-i18n="hero.ctaReserve">
-                            Planea tu visita
-                        </a>
-                        <a href="#como-llegar"
-                            class="inline-flex items-center justify-center rounded-full bg-white px-7 py-3.5 text-sm font-bold text-lagoon-900 transition hover:bg-lagoon-50"
-                            data-i18n="hero.ctaRoute">
-                            Cómo llegar
-                        </a>
-                        <a href="#experiencias"
-                            class="inline-flex items-center justify-center gap-2 rounded-full border border-white/40 bg-white/10 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/20">
-                            <span data-i18n="hero.ctaExperience">Descubre la experiencia</span>
-                        </a>
-                    </div>
-                    <div class="mt-9 grid max-w-xl grid-cols-3 gap-8 border-t border-white/20 pt-5 text-white">
-                        <div class="hero-trust-item">
-                            <p class="font-display text-xl font-bold sm:text-2xl">7 a.m.–7 p.m.</p>
-                            <p class="mt-1 text-xs text-white/65" data-i18n="hero.statHours">Todos los días</p>
-                        </div>
-                        <div class="hero-trust-item">
-                            <p class="font-display text-xl font-bold sm:text-2xl">100%</p>
-                            <p class="mt-1 text-xs text-white/65" data-i18n="hero.statPaved">Ruta asfaltada</p>
-                        </div>
-                        <div class="hero-trust-item">
-                            <p class="font-display text-xl font-bold sm:text-2xl">20 min</p>
-                            <p class="mt-1 text-xs text-white/65" data-i18n="hero.statAntamina">Desde Antamina</p>
-                        </div>
-                    </div>
+                data-i18n-alt="hero.imageAlt" alt="Vista panorámica de Laguna Canrash con laguna, muelle, casitas y nevados"
+                class="v2-hero-image" fetchpriority="high" decoding="async" width="1280" height="960" loading="eager">
+            <div class="v2-hero-shade"></div>
+            <div class="v2-hero-content">
+                <p class="v2-eyebrow" data-i18n="v2.location">SAN MARCOS · ÁNCASH · PERÚ</p>
+                <h1 id="hero-title"><span data-i18n="v2.heroFirst">Una escapada</span><em data-i18n="v2.heroLast">a la altura.</em></h1>
+                <p class="v2-hero-intro" data-i18n="v2.heroIntro">La laguna frente a ti. Trucha de nuestra crianza en tu mesa. Y tiempo para disfrutar de los Andes.</p>
+                <div class="v2-hero-actions">
+                    <a class="v2-button v2-button-light" href="#carta"><span data-i18n="v2.seeMenu">Ver nuestra carta</span><span aria-hidden="true">↗</span></a>
+                    <a class="v2-button v2-button-outline" href="#como-llegar"><span data-i18n="hero.ctaRoute">Cómo llegar</span><span aria-hidden="true">→</span></a>
                 </div>
             </div>
-
-            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-white/60">
-                <a href="#experiencias" data-i18n-aria="hero.scrollDown" aria-label="Desplazarse hacia abajo">
-                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                    </svg>
-                </a>
+            <div class="v2-hero-bottom">
+                <p><strong>7 a.m. — 7 p.m.</strong><span data-i18n="hero.statHours">Todos los días</span></p>
+                <p><strong data-i18n="v2.paved">Hasta la puerta</strong><span data-i18n="hero.statPaved">Ruta asfaltada</span></p>
+                <p><strong>20 min</strong><span data-i18n="hero.statAntamina">Desde Antamina</span></p>
+                <a href="#experiencias" class="v2-explore"><span data-i18n="v2.explore">Conoce Canrash</span><span aria-hidden="true">↓</span></a>
             </div>
         </section>
 
-        <!-- ═══════════════════ EXPERIENCIA COMPLETA ═══════════════════ -->
-        <section id="experiencias" class="bg-lagoon-50 py-20 sm:py-24">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
-                    <div>
-                        <p class="section-label text-xs font-bold uppercase tracking-widest text-alpine-wood" data-i18n="experience.label">Una experiencia completa</p>
-                        <h2 class="mt-3 max-w-xl font-display text-3xl font-extrabold leading-tight text-lagoon-950 sm:text-4xl" data-i18n="experience.title">Ven por el paisaje. Quédate por todo lo demás.</h2>
-                    </div>
-                    <p class="max-w-2xl font-story text-lg leading-relaxed text-lagoon-700 sm:text-xl" data-i18n="experience.intro">Canrash reúne alta montaña, trucha criada en la propia laguna, comida honesta y un lugar sencillo donde descansar.</p>
-                </div>
+        <section id="carta" tabindex="-1" class="v2-menu" aria-labelledby="carta-title">
+  <div class="v2-menu-layout">
+    <div class="v2-menu-copy">
+      <p class="v2-eyebrow" data-i18n="v2.menuLabel">EL SABOR DE CANRASH</p>
+      <h2 id="carta-title" data-i18n="v2.menuTitle">Nuestra carta</h2>
+      <p data-i18n="v2.menuIntro">La misma que encontrarás en tu mesa, con todos los platos, precios y anticipación.</p>
+      <a href="carta.html" class="v2-button v2-button-dark"><span data-i18n="v2.fullMenu">Abrir carta completa</span><span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="v2-menu-document"><iframe src="https://admin.lagunacanrash.com/carta/publica" title="Carta original de Laguna Canrash" aria-describedby="carta-help" loading="lazy" allow="clipboard-write"></iframe></div>
+    <div class="v2-menu-support">
+      <p id="carta-help" data-i18n="v2.menuHelp">Desliza dentro de la carta para ver todos los platos.</p>
+      <a href="https://wa.me/51957878409" data-wa="menu" target="_blank" rel="noopener noreferrer" data-i18n="carta.whatsapp">Consultar disponibilidad por WhatsApp</a>
+      <a href="https://admin.lagunacanrash.com/carta/publica" target="_blank" rel="noopener noreferrer" data-i18n="v2.originalMenu">¿No carga? Abre la carta original ↗</a>
+    </div>
+  </div>
+</section>
 
-                <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-                    <a href="#galeria" class="group overflow-hidden rounded-[1.25rem] bg-white shadow-card transition hover:-translate-y-1">
-                        <img src="assets/images/derived/medium/foto_hermosa_principal_de_toda_la_laguna_canrash.webp" alt="Paisaje de Laguna Canrash" class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" decoding="async">
-                        <div class="p-5">
-                            <p class="text-xs font-bold uppercase tracking-widest text-alpine-wood">01 · <span data-i18n="experience.landscapeLabel">Paisaje</span></p>
-                            <h3 class="mt-2 font-display text-xl font-bold text-lagoon-950" data-i18n="experience.landscapeTitle">Alta montaña y agua viva</h3>
-                        </div>
-                    </a>
-                    <a href="#restaurante" class="group overflow-hidden rounded-[1.25rem] bg-white shadow-card transition hover:-translate-y-1">
-                        <img src="assets/images/derived/medium/ceviche_y_chicharron_de_trucha_con_fondo_laguna_canrash.webp" alt="Platos de trucha con la laguna de fondo" class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" decoding="async">
-                        <div class="p-5">
-                            <p class="text-xs font-bold uppercase tracking-widest text-alpine-wood">02 · <span data-i18n="experience.foodLabel">Origen</span></p>
-                            <h3 class="mt-2 font-display text-xl font-bold text-lagoon-950" data-i18n="experience.foodTitle">De la laguna a tu mesa</h3>
-                        </div>
-                    </a>
-                    <a href="#servicios" class="group overflow-hidden rounded-[1.25rem] bg-white shadow-card transition hover:-translate-y-1">
-                        <img src="assets/images/derived/medium/foto_hospedaje_calidad_media.webp" alt="Hospedaje rústico de Laguna Canrash" class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" decoding="async">
-                        <div class="p-5">
-                            <p class="text-xs font-bold uppercase tracking-widest text-alpine-wood">03 · <span data-i18n="experience.restLabel">Descanso</span></p>
-                            <h3 class="mt-2 font-display text-xl font-bold text-lagoon-950" data-i18n="experience.restTitle">Hospitalidad a la altura</h3>
-                        </div>
-                    </a>
-                    <a href="#como-llegar" class="group overflow-hidden rounded-[1.25rem] bg-white shadow-card transition hover:-translate-y-1">
-                        <img src="assets/images/derived/medium/nevado_en_ruta_a_laguna_canrash.webp" alt="Nevados en la ruta a Laguna Canrash" class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" decoding="async">
-                        <div class="p-5">
-                            <p class="text-xs font-bold uppercase tracking-widest text-alpine-wood">04 · <span data-i18n="experience.routeLabel">Camino</span></p>
-                            <h3 class="mt-2 font-display text-xl font-bold text-lagoon-950" data-i18n="experience.routeTitle">La ruta también se vive</h3>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ═══════════════════ CÓMO LLEGAR ═══════════════════ -->
-        <section id="como-llegar" class="py-20 sm:py-28 bg-white">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto">
-                    <p class="section-label text-xs font-bold uppercase tracking-widest text-lagoon-600 mx-auto" data-i18n="route.label">Tu viaje, sin sorpresas</p>
-                    <h2 class="mt-2 font-display text-3xl font-bold text-lagoon-950 sm:text-4xl" data-i18n="route.title">Cómo llegar a Laguna Canrash</h2>
-                    <p class="mt-4 text-lg text-lagoon-700" data-i18n="route.intro">Carretera asfaltada en excelente estado hasta la puerta. Elige tu ruta en Google Maps y llega directo — sin caminar tramos.</p>
-                </div>
-
-                <div class="mt-10 mx-auto max-w-4xl rounded-2xl border-2 border-alpine-moss/40 bg-lagoon-50 p-6 sm:p-8 shadow-card">
-                    <div class="flex items-center gap-3">
-                        <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-alpine-moss/15 text-alpine-moss">
-                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                            </svg>
-                        </div>
-                        <h3 class="font-display text-xl font-bold text-lagoon-950 sm:text-2xl" data-i18n="route.pavedTitle">Ruta asfaltada, sin caminar</h3>
-                    </div>
-                    <div class="mt-4">
-                            <p class="text-lagoon-700 leading-relaxed" data-i18n-html="route.pavedText">
+        <section id="como-llegar" tabindex="-1" class="v2-route">
+ <div class="v2-container">
+   <div class="v2-section-heading"><p class="v2-eyebrow" data-i18n="route.label">Tu viaje, sin sorpresas</p><h2 data-i18n="review.routeTitle">Elige desde dónde vienes</h2><p data-i18n="review.routeIntro">Llegas en auto hasta el restaurante por carretera asfaltada. Estos tiempos son aproximados.</p></div>
+   <div class="v2-route-grid"><a href="https://maps.app.goo.gl/UEHtnv7U6Dp8MyLT7" target="_blank" rel="noopener noreferrer"><span class="v2-route-origin">Huaraz</span><span class="v2-route-time">~3 h</span><span class="v2-route-action"><span data-i18n="review.openMaps">Abrir en Google Maps</span> <span aria-hidden="true">↗</span></span></a><a href="https://maps.app.goo.gl/HoMgvGHsV59yDenn6" target="_blank" rel="noopener noreferrer"><span class="v2-route-origin">Huallanca</span><span class="v2-route-time">~1 h</span><span class="v2-route-action"><span data-i18n="review.openMaps">Abrir en Google Maps</span> <span aria-hidden="true">↗</span></span></a><a href="https://maps.app.goo.gl/NLKFKKLkYxEEqPEg6" target="_blank" rel="noopener noreferrer"><span class="v2-route-origin">Antamina</span><span class="v2-route-time">~20 min</span><span class="v2-route-action"><span data-i18n="review.openMaps">Abrir en Google Maps</span> <span aria-hidden="true">↗</span></span></a><a href="https://maps.app.goo.gl/Q9HL2NdzEuszKzP2A" target="_blank" rel="noopener noreferrer"><span class="v2-route-origin">San Marcos</span><span class="v2-route-time"><span data-i18n="review.sanMarcos">Ruta recomendada</span></span><span class="v2-route-action"><span data-i18n="review.openMaps">Abrir en Google Maps</span> <span aria-hidden="true">↗</span></span></a></div>
+   <p class="v2-route-note" data-i18n-html="route.mapsNote">Si partes de San Marcos, Google Maps puede mostrarte <strong>dos rutas</strong>. Elige aquí «San Marcos» para abrir la ruta recomendada.</p>
+   <details class="v2-details"><summary><span data-i18n="review.routeDetails">Qué ver en el camino</span><span aria-hidden="true">+</span></summary><div class="v2-details-body"><p class="text-lagoon-700 leading-relaxed" data-i18n-html="route.pavedText">
                                 Muchos visitantes nos preguntan si la carretera tiene asfalto o si habrá que caminar un tramo —
                                 sobre todo quienes viajan con niños, les afecta la altura o temen por su vehículo.
                                 Hoy la ruta está en <strong>excelentes condiciones</strong>: de Huaraz a Conococha el tramo lo
                                 mantiene el Estado peruano, y de Conococha hasta la laguna lo cuida Antamina.
                                 <strong>Llegas en auto directo al restaurante</strong>; en ningún momento tendrás que caminar por falta de camino.
-                            </p>
-                            <div class="mt-5 grid grid-cols-3 gap-2 sm:gap-3">
-                                <div class="min-w-0 rounded-xl bg-white px-2 py-3 sm:px-4 text-center shadow-sm">
-                                    <p class="font-display text-lg font-bold text-lagoon-800 sm:text-2xl">~3 h</p>
-                                    <p class="mt-1 text-[11px] font-medium leading-tight text-lagoon-600 sm:text-xs" data-i18n="route.fromHuaraz">Huaraz</p>
-                                </div>
-                                <div class="min-w-0 rounded-xl bg-white px-2 py-3 sm:px-4 text-center shadow-sm">
-                                    <p class="font-display text-lg font-bold text-lagoon-800 sm:text-2xl">~1 h</p>
-                                    <p class="mt-1 text-[11px] font-medium leading-tight text-lagoon-600 sm:text-xs" data-i18n="route.fromHuallanca">Huallanca</p>
-                                </div>
-                                <div class="min-w-0 rounded-xl bg-white px-2 py-3 sm:px-4 text-center shadow-sm">
-                                    <p class="font-display text-lg font-bold text-lagoon-800 sm:text-2xl">~20 min</p>
-                                    <p class="mt-1 text-[11px] font-medium leading-tight text-lagoon-600 sm:text-xs" data-i18n="route.fromAntamina">Antamina</p>
-                                </div>
-                            </div>
-                            <div class="route-links-grid mt-6 grid gap-2 sm:grid-cols-2">
-                                <a href="https://maps.app.goo.gl/UEHtnv7U6Dp8MyLT7" target="_blank" rel="noopener noreferrer">
-                                    <svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-                                    </svg>
-                                    <span data-i18n="route.linkHuaraz">Ruta desde Huaraz</span>
-                                </a>
-                                <a href="https://maps.app.goo.gl/HoMgvGHsV59yDenn6" target="_blank" rel="noopener noreferrer">
-                                    <svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-                                    </svg>
-                                    <span data-i18n="route.linkHuallanca">Ruta desde Huallanca</span>
-                                </a>
-                                <a href="https://maps.app.goo.gl/NLKFKKLkYxEEqPEg6" target="_blank" rel="noopener noreferrer">
-                                    <svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-                                    </svg>
-                                    <span data-i18n="route.linkAntamina">Ruta desde Antamina</span>
-                                </a>
-                                <a href="https://maps.app.goo.gl/Q9HL2NdzEuszKzP2A" target="_blank" rel="noopener noreferrer">
-                                    <svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-                                    </svg>
-                                    <span data-i18n="route.linkSanMarcos">Ruta desde San Marcos</span>
-                                </a>
-                            </div>
-                            <p class="mt-4 text-sm text-lagoon-600 leading-relaxed" data-i18n-html="route.mapsNote">
-                                Si partes de San Marcos, Google Maps puede mostrarte <strong>dos rutas</strong>.
-                                Usa el enlace «Ruta desde San Marcos»: es la correcta para llegar a la laguna.
-                            </p>
-                    </div>
-                </div>
-
-                <div class="mt-16 text-center max-w-2xl mx-auto">
+                            </p><div class="mt-16 text-center max-w-2xl mx-auto">
                     <p class="section-label text-xs font-bold uppercase tracking-widest text-lagoon-600 mx-auto" data-i18n="route.sightsLabel">El viaje es parte de la experiencia</p>
                     <h3 class="mt-2 font-display text-2xl font-bold text-lagoon-950 sm:text-3xl" data-i18n="route.sightsTitle">En el camino verás</h3>
                 </div>
@@ -764,7 +294,7 @@
                         <div class="relative aspect-[4/3] overflow-hidden">
                             <img src="assets/images/derived/medium/huellas_de_dinosarios_en_la_ruta_a_laguna_canrash.webp"
                                 alt="Huellas de dinosaurio en la ruta hacia Laguna Canrash"
-                                class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" decoding="async">
+                                class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" decoding="async" width="1280" height="1707" srcset="assets/images/derived/thumb/huellas_de_dinosarios_en_la_ruta_a_laguna_canrash.webp 480w, assets/images/derived/medium/huellas_de_dinosarios_en_la_ruta_a_laguna_canrash.webp 1280w" sizes="(min-width: 1320px) 283px, (min-width: 1024px) calc(22.5vw - 15px), (min-width: 640px) calc(45vw - 10px), (min-width: 480px) 90vw, calc(100vw - 48px)">
                         </div>
                         <div class="p-5">
                             <h4 class="font-semibold text-lagoon-900" data-i18n="route.dinoTitle">Huellas de dinosaurio</h4>
@@ -776,7 +306,7 @@
                         <div class="relative aspect-[4/3] overflow-hidden">
                             <img src="assets/images/derived/medium/flamencos_rosados_en_laguna_conococha_camino_a_laguna_canrash.webp"
                                 alt="Flamencos rosados en la laguna Conococha, camino a Laguna Canrash"
-                                class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" decoding="async">
+                                class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" decoding="async" width="1280" height="721" srcset="assets/images/derived/thumb/flamencos_rosados_en_laguna_conococha_camino_a_laguna_canrash.webp 480w, assets/images/derived/medium/flamencos_rosados_en_laguna_conococha_camino_a_laguna_canrash.webp 1280w" sizes="(min-width: 1320px) 283px, (min-width: 1024px) calc(22.5vw - 15px), (min-width: 640px) calc(45vw - 10px), (min-width: 480px) 90vw, calc(100vw - 48px)">
                         </div>
                         <div class="p-5">
                             <h4 class="font-semibold text-lagoon-900" data-i18n="route.flamingoTitle">Flamencos en Conococha</h4>
@@ -788,7 +318,7 @@
                         <div class="relative aspect-[4/3] overflow-hidden">
                             <img src="assets/images/derived/medium/nevado_en_ruta_a_laguna_canrash.webp"
                                 alt="Nevado visible en la ruta hacia Laguna Canrash"
-                                class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" decoding="async">
+                                class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" decoding="async" width="1280" height="721" srcset="assets/images/derived/thumb/nevado_en_ruta_a_laguna_canrash.webp 480w, assets/images/derived/medium/nevado_en_ruta_a_laguna_canrash.webp 1280w" sizes="(min-width: 1320px) 283px, (min-width: 1024px) calc(22.5vw - 15px), (min-width: 640px) calc(45vw - 10px), (min-width: 480px) 90vw, calc(100vw - 48px)">
                         </div>
                         <div class="p-5">
                             <h4 class="font-semibold text-lagoon-900" data-i18n="route.snowTitle">Nevados en ruta</h4>
@@ -800,7 +330,7 @@
                         <div class="relative aspect-[4/3] overflow-hidden">
                             <img src="assets/images/derived/medium/cerro_que_tiene_forma_de_rostro_de_gorilla_en_la_ruta_a_laguna_canrash.webp"
                                 alt="Cerro con forma de rostro de gorila en la ruta a Laguna Canrash"
-                                class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" decoding="async">
+                                class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" decoding="async" width="1280" height="2274" srcset="assets/images/derived/thumb/cerro_que_tiene_forma_de_rostro_de_gorilla_en_la_ruta_a_laguna_canrash.webp 480w, assets/images/derived/medium/cerro_que_tiene_forma_de_rostro_de_gorilla_en_la_ruta_a_laguna_canrash.webp 1280w" sizes="(min-width: 1320px) 283px, (min-width: 1024px) calc(22.5vw - 15px), (min-width: 640px) calc(45vw - 10px), (min-width: 480px) 90vw, calc(100vw - 48px)">
                         </div>
                         <div class="p-5">
                             <h4 class="font-semibold text-lagoon-900" data-i18n="route.gorillaTitle">Cerro del gorila</h4>
@@ -812,8 +342,8 @@
                 <div class="mt-12 overflow-hidden rounded-2xl bg-lagoon-50 shadow-card">
                     <div class="grid lg:grid-cols-2 lg:items-center">
                         <div class="aspect-video lg:aspect-auto lg:min-h-[18rem]">
-                            <video class="autoplay-video h-full w-full object-cover" autoplay muted loop playsinline preload="metadata"
-                                poster="assets/images/derived/medium/turista_en_medio_de_la_pista_que_con_punto_focal_al_medio_en_la_ruta_a_canrash.webp"
+                            <video class="autoplay-video h-full w-full object-cover" controls playsinline preload="none" loading="lazy"
+                                poster="assets/images/derived/thumb/turista_en_medio_de_la_pista_que_con_punto_focal_al_medio_en_la_ruta_a_canrash.webp"
                                 data-i18n-aria="route.roadVideoLabel" aria-label="Video del camino bordeando la laguna hacia Laguna Canrash">
                                 <source src="assets/images/espectacular_video_manejando_en_pista_al_lado_de_laguna_se_ve_la_laguna_y_buses_en_contra.mp4" type="video/mp4">
                             </video>
@@ -827,117 +357,71 @@
                         </div>
                     </div>
                 </div>
+</div></details>
+ </div>
+</section>
+
+        <section id="experiencias" tabindex="-1" class="v2-experiences bg-lagoon-50 py-20 sm:py-24">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+                    <div>
+                        <p class="section-label text-xs font-bold uppercase tracking-widest text-alpine-wood" data-i18n="experience.label">Una experiencia completa</p>
+                        <h2 class="mt-3 max-w-xl font-display text-3xl font-extrabold leading-tight text-lagoon-950 sm:text-4xl" data-i18n="experience.title">Ven por el paisaje. Quédate por todo lo demás.</h2>
+                    </div>
+                    <p class="max-w-2xl font-story text-lg leading-relaxed text-lagoon-700 sm:text-xl" data-i18n="experience.intro">Canrash reúne alta montaña, trucha criada en la propia laguna, comida honesta y un lugar sencillo donde descansar.</p>
+                </div>
+
+                <div class="v2-experience-grid mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                    <a href="#galeria" class="group overflow-hidden rounded-[1.25rem] bg-white shadow-card transition hover:-translate-y-1">
+                        <img src="assets/images/derived/medium/foto_hermosa_principal_de_toda_la_laguna_canrash.webp" alt="Paisaje de Laguna Canrash" class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" decoding="async" width="1280" height="960" srcset="assets/images/derived/thumb/foto_hermosa_principal_de_toda_la_laguna_canrash.webp 480w, assets/images/derived/medium/foto_hermosa_principal_de_toda_la_laguna_canrash.webp 1280w" sizes="(min-width: 1320px) 280px, (min-width: 1024px) calc(22.5vw - 18px), (min-width: 768px) calc(45vw - 12px), (min-width: 480px) calc(45vw - 8px), calc(50vw - 32px)">
+                        <div class="p-5">
+                            <p class="text-xs font-bold uppercase tracking-widest text-alpine-wood">01 · <span data-i18n="experience.landscapeLabel">Paisaje</span></p>
+                            <h3 class="mt-2 font-display text-xl font-bold text-lagoon-950" data-i18n="experience.landscapeTitle">Alta montaña y agua viva</h3>
+                        </div>
+                    </a>
+                    <a href="#restaurante" class="group overflow-hidden rounded-[1.25rem] bg-white shadow-card transition hover:-translate-y-1">
+                        <img src="assets/images/derived/medium/ceviche_y_chicharron_de_trucha_con_fondo_laguna_canrash.webp" alt="Platos de trucha con la laguna de fondo" class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" decoding="async" width="1280" height="960" srcset="assets/images/derived/thumb/ceviche_y_chicharron_de_trucha_con_fondo_laguna_canrash.webp 480w, assets/images/derived/medium/ceviche_y_chicharron_de_trucha_con_fondo_laguna_canrash.webp 1280w" sizes="(min-width: 1320px) 280px, (min-width: 1024px) calc(22.5vw - 18px), (min-width: 768px) calc(45vw - 12px), (min-width: 480px) calc(45vw - 8px), calc(50vw - 32px)">
+                        <div class="p-5">
+                            <p class="text-xs font-bold uppercase tracking-widest text-alpine-wood">02 · <span data-i18n="experience.foodLabel">Origen</span></p>
+                            <h3 class="mt-2 font-display text-xl font-bold text-lagoon-950" data-i18n="experience.foodTitle">De la laguna a tu mesa</h3>
+                        </div>
+                    </a>
+                    <a href="#servicios" class="group overflow-hidden rounded-[1.25rem] bg-white shadow-card transition hover:-translate-y-1">
+                        <img src="assets/images/derived/medium/foto_hospedaje_calidad_media.webp" alt="Hospedaje rústico de Laguna Canrash" class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" decoding="async" width="1280" height="960" srcset="assets/images/derived/thumb/foto_hospedaje_calidad_media.webp 480w, assets/images/derived/medium/foto_hospedaje_calidad_media.webp 1280w" sizes="(min-width: 1320px) 280px, (min-width: 1024px) calc(22.5vw - 18px), (min-width: 768px) calc(45vw - 12px), (min-width: 480px) calc(45vw - 8px), calc(50vw - 32px)">
+                        <div class="p-5">
+                            <p class="text-xs font-bold uppercase tracking-widest text-alpine-wood">03 · <span data-i18n="experience.restLabel">Descanso</span></p>
+                            <h3 class="mt-2 font-display text-xl font-bold text-lagoon-950" data-i18n="experience.restTitle">Hospitalidad a la altura</h3>
+                        </div>
+                    </a>
+                    <a href="#como-llegar" class="group overflow-hidden rounded-[1.25rem] bg-white shadow-card transition hover:-translate-y-1">
+                        <img src="assets/images/derived/medium/nevado_en_ruta_a_laguna_canrash.webp" alt="Nevados en la ruta a Laguna Canrash" class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" decoding="async" width="1280" height="721" srcset="assets/images/derived/thumb/nevado_en_ruta_a_laguna_canrash.webp 480w, assets/images/derived/medium/nevado_en_ruta_a_laguna_canrash.webp 1280w" sizes="(min-width: 1320px) 280px, (min-width: 1024px) calc(22.5vw - 18px), (min-width: 768px) calc(45vw - 12px), (min-width: 480px) calc(45vw - 8px), calc(50vw - 32px)">
+                        <div class="p-5">
+                            <p class="text-xs font-bold uppercase tracking-widest text-alpine-wood">04 · <span data-i18n="experience.routeLabel">Camino</span></p>
+                            <h3 class="mt-2 font-display text-xl font-bold text-lagoon-950" data-i18n="experience.routeTitle">La ruta también se vive</h3>
+                        </div>
+                    </a>
+                </div>
             </div>
         </section>
 
-        <!-- ═══════════════════ RESTAURANTE ═══════════════════ -->
-        <section id="restaurante" class="py-20 sm:py-28 bg-lagoon-50">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="max-w-3xl">
-                    <p class="section-label text-xs font-bold uppercase tracking-widest text-lagoon-600" data-i18n="rest.label">Origen y cocina</p>
-                    <h2 class="mt-2 font-display text-3xl font-bold text-lagoon-950 sm:text-4xl" data-i18n="rest.title">
-                        De la laguna a tu mesa
-                    </h2>
-                    <p class="mt-5 text-lagoon-700 leading-relaxed" data-i18n="rest.p1">
-                        Aquí todo gira en torno a la laguna y a la gente que la cuida. Incubamos ovas importadas y criamos trucha arcoíris
-                        en jaulas flotantes en medio del agua — por eso en el Restaurante Laguna Canrash siempre hay trucha fresca.
-                    </p>
-                    <p class="mt-4 text-lagoon-700 leading-relaxed" data-i18n="rest.p2">
-                        Los platos más pedidos son trucha frita, chicharrón de trucha, ceviche de trucha y sudado de trucha.
-                        También servimos pollo y carne de res, aunque en menor proporción.
-                    </p>
-                    <p class="mt-4 text-lagoon-700 leading-relaxed" data-i18n="rest.p3">
-                        Somos un restaurante genuinamente rústico, con tres ambientes:
-                    </p>
-                </div>
-
-                <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                    <div class="group overflow-hidden rounded-2xl bg-white shadow-card">
-                        <div class="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-lagoon-100 to-lagoon-50">
-                            <span class="absolute top-3 left-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-sm font-bold text-alpine-moss shadow-sm">1</span>
-                            <img src="assets/images/derived/medium/salon_pionero.webp"
-                                alt="Comedor interno"
-                                data-i18n-alt="rest.diningIndoorAlt"
-                                class="absolute inset-0 h-full w-full object-contain p-3" loading="lazy" decoding="async">
-                        </div>
-                        <div class="p-5">
-                            <p class="text-sm text-lagoon-700" data-i18n-html="rest.room1"><strong>Comedor interno</strong> — casa de adobe con poca vista al exterior; aquí funciona también la tiendita (agua, cerveza, galletas).</p>
-                        </div>
-                    </div>
-
-                    <div class="group overflow-hidden rounded-2xl bg-white shadow-card">
-                        <div class="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-lagoon-100 to-lagoon-50">
-                            <span class="absolute top-3 left-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-sm font-bold text-alpine-moss shadow-sm">2</span>
-                            <img src="assets/images/derived/medium/Ambiente_intermedio_lado_carretera.webp"
-                                alt="Comedor vista carretera"
-                                data-i18n-alt="rest.diningRoadAlt"
-                                class="absolute inset-0 h-full w-full object-contain p-3" loading="lazy" decoding="async">
-                        </div>
-                        <div class="p-5">
-                            <p class="text-sm text-lagoon-700" data-i18n-html="rest.room2"><strong>Comedor vista carretera</strong> — junto a la carretera, cerrado para resguardarse del viento; más vista a la pista que a la laguna.</p>
-                        </div>
-                    </div>
-
-                    <div class="group overflow-hidden rounded-2xl bg-white shadow-card">
-                        <div class="relative aspect-[4/3] overflow-hidden">
-                            <span class="absolute top-3 left-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-sm font-bold text-alpine-moss shadow-sm">3</span>
-                            <img src="assets/images/derived/medium/comedor_de_vista_panoramica_vacio_pero_con_vista_completa_a_la_laguna_pared_transparente.webp"
-                                alt="Comedor vista laguna"
-                                data-i18n-alt="rest.diningAlt"
-                                class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" decoding="async">
-                        </div>
-                        <div class="p-5">
-                            <p class="text-sm text-lagoon-700" data-i18n-html="rest.room3"><strong>Comedor vista laguna</strong> — pared transparente con vista total a la laguna (un plástico resistente que simula vidrio, instalado con ingenio y poco presupuesto).</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-8 grid gap-4 sm:grid-cols-2">
-                    <div class="flex items-start gap-3 rounded-xl border border-lagoon-200 bg-white p-4 shadow-card">
-                        <svg class="mt-0.5 h-5 w-5 shrink-0 text-lagoon-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <p class="text-sm text-lagoon-700" data-i18n-html="rest.dockNote">
-                            Tenemos un <strong>muelle habilitado y seguro</strong> donde muchos visitantes toman sus mejores fotos.
-                            Por falta de personal, costos y seguridad, <strong>no ofrecemos paseos en bote</strong>.
-                        </p>
-                    </div>
-                    <div class="flex items-start gap-3 rounded-xl border border-alpine-moss/30 bg-alpine-moss/5 p-4">
-                        <svg class="mt-0.5 h-5 w-5 shrink-0 text-alpine-moss" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                        </svg>
-                        <p class="text-sm text-lagoon-700" data-i18n-html="rest.securityNote">
-                            <strong>Tu tranquilidad importa:</strong> cámaras de seguridad en todo el recinto y respaldo de la
-                            central de la PNP vinculada a Antamina — también en el restaurante y todas las áreas de atención.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Platos estrella -->
-                <div class="mt-16">
+        <section id="restaurante" tabindex="-1" class="v2-restaurant">
+ <div class="v2-container">
+  <div class="v2-restaurant-intro">
+   <img src="assets/images/derived/medium/comedor_de_vista_panoramica_vacio_pero_con_vista_completa_a_la_laguna_pared_transparente.webp" alt="Nuestro comedor frente a la laguna" loading="lazy" decoding="async" width="1280" height="960" srcset="assets/images/derived/thumb/comedor_de_vista_panoramica_vacio_pero_con_vista_completa_a_la_laguna_pared_transparente.webp 480w, assets/images/derived/medium/comedor_de_vista_panoramica_vacio_pero_con_vista_completa_a_la_laguna_pared_transparente.webp 1280w" sizes="(min-width: 1320px) 569px, (min-width: 768px) calc(45vw - 27px), (min-width: 480px) 90vw, calc(100vw - 48px)">
+   <div><p class="v2-eyebrow" data-i18n="rest.label">Origen y cocina</p><h2 data-i18n="rest.title">De la laguna a tu mesa</h2><p data-i18n="review.restaurantIntro">Criamos trucha arcoíris en la propia laguna. La preparamos frita, en chicharrón, ceviche y sudado, para disfrutarla en nuestro restaurante rústico.</p><p data-i18n="review.restaurantOther">También encontrarás platos de pollo y res, y tres ambientes para compartir.</p><a href="#carta" class="v2-text-link" data-i18n="v2.seeMenu">Ver nuestra carta</a></div>
+  </div>
+  <div class="mt-16">
                     <h3 class="text-center font-display text-2xl font-bold text-lagoon-950 sm:text-3xl" data-i18n="rest.starTitle">Platos estrella</h3>
-                    <p class="mt-2 text-center text-lagoon-600" data-i18n="rest.starSubtitle">Cuatro preparaciones que definen nuestra cocina</p>
+                    <p class="mt-2 text-center text-lagoon-600" data-i18n="rest.starSubtitle">El origen y los sabores de nuestra cocina</p>
 
-                    <div class="mt-10 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
-                        <article class="group overflow-hidden rounded-2xl bg-white shadow-card">
-                            <div class="aspect-square overflow-hidden">
-                                <img src="assets/images/derived/medium/trucha_presentada_lista_para_cocinar_chef_la_sostiene_con_herramienta_paisaje_hermoso_detrás_laguna_en_mejor.webp"
-                                    alt="Trucha fresca lista para cocinar, presentada por nuestro chef con la laguna de fondo"
-                                    class="js-lightbox h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy"
-                                    data-lightbox-group="platos" data-lightbox-full="assets/images/trucha_presentada_lista_para_cocinar_chef_la_sostiene_con_herramienta_paisaje_hermoso_detrás_laguna_en_mejor.jpg" decoding="async">
-                            </div>
-                            <div class="p-4">
-                                <h4 class="font-semibold text-lagoon-900" data-i18n="rest.friedTitle">Trucha frita</h4>
-                                <p class="mt-1 text-sm text-lagoon-600" data-i18n="rest.friedDesc">Del criadero al sartén el mismo día</p>
-                            </div>
-                        </article>
+                    <div class="v2-dishes mt-6 grid gap-4 sm:gap-6">
 
                         <article class="group overflow-hidden rounded-2xl bg-white shadow-card">
                             <div class="aspect-square overflow-hidden">
                                 <img src="assets/images/derived/medium/chicharron_de_trucha_plato_en_el_pasto_fondo_laguna.webp"
                                     alt="Plato de chicharrón de trucha sobre el pasto con la laguna de fondo"
                                     class="js-lightbox h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy"
-                                    data-lightbox-group="platos" data-lightbox-full="assets/images/chicharron_de_trucha_plato_en_el_pasto_fondo_laguna.jpg" decoding="async">
+                                    data-lightbox-group="platos" data-lightbox-full="assets/images/chicharron_de_trucha_plato_en_el_pasto_fondo_laguna.jpg" decoding="async" width="1280" height="960" srcset="assets/images/derived/thumb/chicharron_de_trucha_plato_en_el_pasto_fondo_laguna.webp 480w, assets/images/derived/medium/chicharron_de_trucha_plato_en_el_pasto_fondo_laguna.webp 1280w" sizes="(min-width: 1320px) 379px, (min-width: 768px) calc(30vw - 16px), 100px">
                             </div>
                             <div class="p-4">
                                 <h4 class="font-semibold text-lagoon-900" data-i18n="rest.chicharronTitle">Chicharrón de trucha</h4>
@@ -950,7 +434,7 @@
                                 <img src="assets/images/derived/medium/ceviche_y_chicharron_de_trucha_con_fondo_laguna_canrash.webp"
                                     alt="Ceviche y chicharrón de trucha con la laguna Canrash de fondo"
                                     class="js-lightbox h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy"
-                                    data-lightbox-group="platos" data-lightbox-full="assets/images/ceviche_y_chicharron_de_trucha_con_fondo_laguna_canrash.jpg" decoding="async">
+                                    data-lightbox-group="platos" data-lightbox-full="assets/images/ceviche_y_chicharron_de_trucha_con_fondo_laguna_canrash.jpg" decoding="async" width="1280" height="960" srcset="assets/images/derived/thumb/ceviche_y_chicharron_de_trucha_con_fondo_laguna_canrash.webp 480w, assets/images/derived/medium/ceviche_y_chicharron_de_trucha_con_fondo_laguna_canrash.webp 1280w" sizes="(min-width: 1320px) 379px, (min-width: 768px) calc(30vw - 16px), 100px">
                             </div>
                             <div class="p-4">
                                 <h4 class="font-semibold text-lagoon-900" data-i18n="rest.cevicheTitle">Ceviche de trucha</h4>
@@ -964,7 +448,7 @@
                                     alt="Plato de sudado de trucha con la laguna Canrash de fondo"
                                     class="js-lightbox h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy"
                                     data-lightbox-group="platos"
-                                    onerror="this.onerror=null;this.src='assets/images/derived/medium/ceviche_y_chicharron_de_trucha_con_fondo_laguna_canrash.webp'" data-lightbox-full="assets/images/plato_sudado_de_trucha_fondo_laguna_canrash.jpg" decoding="async">
+                                    onerror="this.onerror=null;this.src='assets/images/derived/medium/ceviche_y_chicharron_de_trucha_con_fondo_laguna_canrash.webp'" data-lightbox-full="assets/images/plato_sudado_de_trucha_fondo_laguna_canrash.jpg" decoding="async" width="1280" height="960" srcset="assets/images/derived/thumb/plato_sudado_de_trucha_fondo_laguna_canrash.webp 480w, assets/images/derived/medium/plato_sudado_de_trucha_fondo_laguna_canrash.webp 1280w" sizes="(min-width: 1320px) 379px, (min-width: 768px) calc(30vw - 16px), 100px">
                             </div>
                             <div class="p-4">
                                 <h4 class="font-semibold text-lagoon-900" data-i18n="rest.sudadoTitle">Sudado de trucha</h4>
@@ -973,34 +457,47 @@
                         </article>
                     </div>
                 </div>
-
-                <!-- Carta con precios en vivo -->
-                <div id="carta" class="mt-20 scroll-mt-24">
-                    <div class="text-center max-w-2xl mx-auto">
-                        <p class="section-label text-xs font-bold uppercase tracking-widest text-lagoon-600 mx-auto" data-i18n="carta.label">Restaurante</p>
-                        <h3 class="mt-2 font-display text-2xl font-bold text-lagoon-950 sm:text-3xl" data-i18n="carta.title">Carta y precios</h3>
-                        <p class="mt-3 text-lagoon-700" data-i18n="carta.intro">Platos y precios actualizados desde nuestro sistema. Los valores pueden variar; consulta al momento de tu visita.</p>
-                        <p class="mt-2 text-sm text-lagoon-500" data-i18n="carta.hint">Toca cada categoría para ver los platos y precios.</p>
-                        <p id="carta-updated" class="mt-2 text-xs text-lagoon-500"></p>
+  <details class="v2-details"><summary><span data-i18n="review.rooms">Conoce nuestros tres ambientes</span><span aria-hidden="true">+</span></summary><div class="v2-details-body"><div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    <div class="group overflow-hidden rounded-2xl bg-white shadow-card">
+                        <div class="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-lagoon-100 to-lagoon-50">
+                            <span class="absolute top-3 left-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-sm font-bold text-alpine-moss shadow-sm">1</span>
+                            <img src="assets/images/derived/medium/salon_pionero.webp"
+                                alt="Comedor interno"
+                                data-i18n-alt="rest.diningIndoorAlt"
+                                class="absolute inset-0 h-full w-full object-contain p-3" loading="lazy" decoding="async" width="1280" height="720" srcset="assets/images/derived/thumb/salon_pionero.webp 480w, assets/images/derived/medium/salon_pionero.webp 1280w" sizes="(min-width: 1320px) 381px, (min-width: 1024px) calc(30vw - 16px), (min-width: 640px) calc(45vw - 12px), (min-width: 480px) 90vw, calc(100vw - 48px)">
+                        </div>
+                        <div class="p-5">
+                            <p class="text-sm text-lagoon-700" data-i18n-html="rest.room1"><strong>Comedor interno</strong> — casa de adobe con poca vista al exterior; aquí funciona también la tiendita (agua, cerveza, galletas).</p>
+                        </div>
                     </div>
 
-                    <div id="carta-loading" class="mt-10 text-center text-sm text-lagoon-600" role="status" aria-live="polite" data-i18n="carta.loading">Cargando carta…</div>
-                    <div id="carta-error" class="mt-10 hidden text-center text-sm text-red-600" role="alert"></div>
-                    <div id="carta-menu" class="mt-10 hidden mx-auto max-w-3xl grid gap-4"></div>
-
-                    <div class="mt-8 text-center">
-                        <a href="https://wa.me/51957878409"
-                            data-wa="menu"
-                            target="_blank" rel="noopener noreferrer"
-                            class="inline-flex items-center justify-center rounded-full bg-alpine-moss px-6 py-3 text-sm font-semibold text-white transition hover:bg-alpine-grass"
-                            data-i18n="carta.whatsapp">
-                            Consultar disponibilidad por WhatsApp
-                        </a>
+                    <div class="group overflow-hidden rounded-2xl bg-white shadow-card">
+                        <div class="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-lagoon-100 to-lagoon-50">
+                            <span class="absolute top-3 left-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-sm font-bold text-alpine-moss shadow-sm">2</span>
+                            <img src="assets/images/derived/medium/Ambiente_intermedio_lado_carretera.webp"
+                                alt="Comedor vista carretera"
+                                data-i18n-alt="rest.diningRoadAlt"
+                                class="absolute inset-0 h-full w-full object-contain p-3" loading="lazy" decoding="async" width="900" height="1600" srcset="assets/images/derived/thumb/Ambiente_intermedio_lado_carretera.webp 480w, assets/images/derived/medium/Ambiente_intermedio_lado_carretera.webp 900w" sizes="(min-width: 1320px) 381px, (min-width: 1024px) calc(30vw - 16px), (min-width: 640px) calc(45vw - 12px), (min-width: 480px) 90vw, calc(100vw - 48px)">
+                        </div>
+                        <div class="p-5">
+                            <p class="text-sm text-lagoon-700" data-i18n-html="rest.room2"><strong>Comedor vista carretera</strong> — junto a la carretera, cerrado para resguardarse del viento; más vista a la pista que a la laguna.</p>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Muelle -->
-                <div class="mt-20 rounded-2xl border border-lagoon-100 bg-white p-6 sm:p-8 shadow-card">
+                    <div class="group overflow-hidden rounded-2xl bg-white shadow-card">
+                        <div class="relative aspect-[4/3] overflow-hidden">
+                            <span class="absolute top-3 left-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-sm font-bold text-alpine-moss shadow-sm">3</span>
+                            <img src="assets/images/derived/medium/comedor_de_vista_panoramica_vacio_pero_con_vista_completa_a_la_laguna_pared_transparente.webp"
+                                alt="Comedor vista laguna"
+                                data-i18n-alt="rest.diningAlt"
+                                class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" decoding="async" width="1280" height="960" srcset="assets/images/derived/thumb/comedor_de_vista_panoramica_vacio_pero_con_vista_completa_a_la_laguna_pared_transparente.webp 480w, assets/images/derived/medium/comedor_de_vista_panoramica_vacio_pero_con_vista_completa_a_la_laguna_pared_transparente.webp 1280w" sizes="(min-width: 1320px) 381px, (min-width: 1024px) calc(30vw - 16px), (min-width: 640px) calc(45vw - 12px), (min-width: 480px) 90vw, calc(100vw - 48px)">
+                        </div>
+                        <div class="p-5">
+                            <p class="text-sm text-lagoon-700" data-i18n-html="rest.room3"><strong>Comedor vista laguna</strong> — pared transparente con vista total a la laguna (un plástico resistente que simula vidrio, instalado con ingenio y poco presupuesto).</p>
+                        </div>
+                    </div>
+                </div></div></details>
+  <div class="mt-20 rounded-2xl border border-lagoon-100 bg-white p-6 sm:p-8 shadow-card">
                     <div class="grid gap-8 lg:grid-cols-2 lg:items-center">
                         <div>
                             <p class="text-xs font-bold uppercase tracking-widest text-lagoon-600" data-i18n="dock.label">Experiencia</p>
@@ -1014,25 +511,133 @@
                             <img src="assets/images/derived/medium/varias_personas_caminando_en_muelle.webp"
                                 alt="Varias personas caminando por el muelle de la laguna"
                                 class="js-lightbox h-36 w-full rounded-xl object-cover sm:h-44" loading="lazy"
-                                data-lightbox-group="muelle" data-lightbox-full="assets/images/varias_personas_caminando_en_muelle.jpg" decoding="async">
+                                data-lightbox-group="muelle" data-lightbox-full="assets/images/varias_personas_caminando_en_muelle.jpg" decoding="async" width="1280" height="1707" srcset="assets/images/derived/thumb/varias_personas_caminando_en_muelle.webp 480w, assets/images/derived/medium/varias_personas_caminando_en_muelle.webp 1280w" sizes="(min-width: 1320px) 176px, (min-width: 1024px) calc(15vw - 40px), (min-width: 768px) calc(30vw - 30px), (min-width: 640px) calc(30vw - 22px), calc(50vw - 50px)">
                             <img src="assets/images/derived/medium/3_turistas_en_muelle_de_laguna_caminando_como_modelos.webp"
                                 alt="Turistas caminando por el muelle de la laguna"
                                 class="js-lightbox h-36 w-full rounded-xl object-cover sm:h-44" loading="lazy"
-                                data-lightbox-group="muelle" data-lightbox-full="assets/images/3_turistas_en_muelle_de_laguna_caminando_como_modelos.jpg" decoding="async">
+                                data-lightbox-group="muelle" data-lightbox-full="assets/images/3_turistas_en_muelle_de_laguna_caminando_como_modelos.jpg" decoding="async" width="1280" height="960" srcset="assets/images/derived/thumb/3_turistas_en_muelle_de_laguna_caminando_como_modelos.webp 480w, assets/images/derived/medium/3_turistas_en_muelle_de_laguna_caminando_como_modelos.webp 1280w" sizes="(min-width: 1320px) 176px, (min-width: 1024px) calc(15vw - 40px), (min-width: 768px) calc(30vw - 30px), (min-width: 640px) calc(30vw - 22px), calc(50vw - 50px)">
                             <img src="assets/images/derived/medium/laguna_canrash_se_ve_el_muelle_a_lo_lejos_con_2_personas_en_el_vista_panorámica.webp"
                                 alt="Vista panorámica de la laguna con el muelle a lo lejos y dos personas"
                                 class="js-lightbox col-span-2 h-36 w-full rounded-xl object-cover sm:col-span-1 sm:h-44" loading="lazy"
-                                data-lightbox-group="muelle" data-lightbox-full="assets/images/laguna_canrash_se_ve_el_muelle_a_lo_lejos_con_2_personas_en_el_vista_panorámica.jpg" decoding="async">
+                                data-lightbox-group="muelle" data-lightbox-full="assets/images/laguna_canrash_se_ve_el_muelle_a_lo_lejos_con_2_personas_en_el_vista_panorámica.jpg" decoding="async" width="1280" height="960" srcset="assets/images/derived/thumb/laguna_canrash_se_ve_el_muelle_a_lo_lejos_con_2_personas_en_el_vista_panorámica.webp 480w, assets/images/derived/medium/laguna_canrash_se_ve_el_muelle_a_lo_lejos_con_2_personas_en_el_vista_panorámica.webp 1280w" sizes="(min-width: 1320px) 176px, (min-width: 1024px) calc(15vw - 40px), (min-width: 768px) calc(30vw - 30px), (min-width: 640px) calc(30vw - 22px), calc(100vw - 88px)">
                         </div>
+                    </div>
                 </div>
-            </div>
-        </section>
+ </div>
+</section>
 
-        <!-- ═══════════════════ RESEÑAS DE VISITANTES ═══════════════════ -->
-        <!-- Selección consultada el 30/09/2026 en la ficha Restaurante Laguna Canrash
-             (0x91a8564cdd7adabf:0x7f3a4abf53bca071). Fragmentos originales en español;
-             las cinco estrellas corresponden a cada reseña, no al promedio del negocio. -->
-        <section id="resenas" class="bg-lagoon-100/50 py-20 sm:py-24" aria-labelledby="resenas-title">
+        <section id="servicios" tabindex="-1" class="v2-services">
+ <div class="v2-container">
+  <div class="v2-section-heading"><p class="v2-eyebrow" data-i18n="serv.label">Hospedaje y servicios</p><h2 data-i18n="serv.title">Completa tu escapada</h2><p data-i18n="review.servicesIntro">Un lugar sencillo para descansar y dejar tu vehículo. Consulta disponibilidad antes de venir.</p></div>
+  <div class="v2-service-grid"><article class="overflow-hidden rounded-2xl border border-lagoon-100 bg-white shadow-card">
+                        <div class="relative h-56 sm:h-64 overflow-hidden">
+                            <img src="assets/images/derived/medium/foto_hospedaje_calidad_media.webp"
+                                alt="Hospedaje rústico en módulos de madera o casitas de adobe"
+                                class="h-full w-full object-cover" loading="lazy" decoding="async" width="1280" height="960" srcset="assets/images/derived/thumb/foto_hospedaje_calidad_media.webp 480w, assets/images/derived/medium/foto_hospedaje_calidad_media.webp 1280w" sizes="(min-width: 1320px) 580px, (min-width: 768px) calc(45vw - 16px), (min-width: 480px) 90vw, calc(100vw - 48px)">
+                            <div class="absolute inset-0 bg-gradient-to-t from-lagoon-950/70 to-transparent"></div>
+                            <span class="absolute bottom-4 left-4 rounded-full bg-alpine-bark px-3 py-1 text-xs font-bold uppercase tracking-wide text-white" data-i18n="serv.lodgeBadge">
+                                Hospedaje rústico
+                            </span>
+                        </div>
+                        <div class="p-6 sm:p-8">
+                            <h3 class="font-display text-xl font-bold text-lagoon-950" data-i18n="serv.lodgeTitle">Descanso en los Andes peruanos</h3>
+                            <p class="mt-3 text-lagoon-700 leading-relaxed" data-i18n="serv.lodgeDesc">
+                                Habitaciones en módulos de madera y acogedoras casitas de adobe.
+                                Pensado para transportistas de ruta y personal de empresas de la zona.
+                            </p>
+                            <div class="mt-5 flex items-center gap-4 rounded-xl bg-lagoon-50 p-4">
+                                <div class="text-center">
+                                    <p class="font-display text-3xl font-bold text-lagoon-700">S/ 30</p>
+                                    <p class="text-xs text-lagoon-600 uppercase tracking-wide" data-i18n="serv.lodgePrice">por noche</p>
+                                </div>
+                                <div class="h-10 w-px bg-lagoon-200"></div>
+                                <p class="text-sm text-lagoon-700" data-i18n="serv.lodgeNote">Ambiente tranquilo, cálido y rodeado de paisaje andino — con la misma vigilancia que el resto de instalaciones.</p>
+                            </div>
+
+                        <a class="v2-button v2-button-dark v2-service-cta" href="https://wa.me/51957878409" data-wa="lodge" target="_blank" rel="noopener noreferrer"><span data-i18n="review.askLodge">Consultar hospedaje</span><span aria-hidden="true">↗</span></a></div>
+                    </article><article class="overflow-hidden rounded-2xl border border-lagoon-100 bg-white shadow-card">
+                        <div class="relative h-56 sm:h-64 overflow-hidden">
+                            <img src="assets/images/derived/medium/foto_lateral_cochera_con_techo.webp"
+                                alt="Vista lateral de la cochera cubierta con techo"
+                                class="h-full w-full object-cover" loading="lazy" decoding="async" width="1280" height="960" srcset="assets/images/derived/thumb/foto_lateral_cochera_con_techo.webp 480w, assets/images/derived/medium/foto_lateral_cochera_con_techo.webp 1280w" sizes="(min-width: 1320px) 580px, (min-width: 768px) calc(45vw - 16px), (min-width: 480px) 90vw, calc(100vw - 48px)">
+                            <div class="absolute inset-0 bg-gradient-to-t from-lagoon-950/70 to-transparent"></div>
+                            <span class="absolute bottom-4 left-4 rounded-full bg-alpine-moss px-3 py-1 text-xs font-bold uppercase tracking-wide text-white" data-i18n="serv.garageBadge">
+                                Cochera segura
+                            </span>
+                        </div>
+                        <div class="p-6 sm:p-8">
+                            <h3 class="font-display text-xl font-bold text-lagoon-950" data-i18n="serv.garageTitle">Cochera para mineros y viajeros</h3>
+                            <p class="mt-3 text-lagoon-700 leading-relaxed" data-i18n="serv.garageDesc">
+                                Ideal para trabajadores de Antamina que dejan sus vehículos por 10 días o más.
+                                Espacios cubiertos con techo y estacionamiento amplio al aire libre.
+                            </p>
+                            <ul class="mt-5 space-y-3">
+                                <li class="flex items-start gap-3">
+                                    <svg class="mt-0.5 h-5 w-5 shrink-0 text-alpine-moss" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span class="text-sm text-lagoon-800" data-i18n-html="serv.garageRoof"><strong>Con techo:</strong> S/ 10 por día — capacidad: 6 vehículos</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <svg class="mt-0.5 h-5 w-5 shrink-0 text-alpine-moss" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span class="text-sm text-lagoon-800" data-i18n-html="serv.garageOpen"><strong>Sin techo:</strong> S/ 5 por día — amplio parqueo al aire libre</span>
+                                </li>
+                            </ul>
+
+                        <a class="v2-button v2-button-dark v2-service-cta" href="https://wa.me/51957878409" data-wa="garage" target="_blank" rel="noopener noreferrer"><span data-i18n="review.askGarage">Consultar cochera</span><span aria-hidden="true">↗</span></a></div>
+                    </article></div>
+  <p class="v2-wifi" data-i18n-html="serv.wifiDesc">Wi-Fi <strong>gratuito y continuo</strong> para quienes nos visitan, gracias a Starlink.</p>
+  <details class="v2-details"><summary><span data-i18n="review.security">Seguridad durante tu visita</span><span aria-hidden="true">+</span></summary><div class="v2-details-body"><div class="mt-10 mx-auto max-w-3xl rounded-2xl border border-lagoon-200 bg-white p-5 sm:p-6 shadow-card">
+                    <div class="flex items-start gap-4">
+                        <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-lagoon-100 text-lagoon-700">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lagoon-950" data-i18n="serv.securityTitle">Seguridad en todos nuestros servicios</h3>
+                            <p class="mt-2 text-sm text-lagoon-700 leading-relaxed" data-i18n-html="serv.securityDesc">
+                                Contamos con <strong>cámaras de seguridad en todo el recinto</strong> y respaldo de la
+                                <strong>central de la PNP vinculada a Antamina</strong>. Restaurante, cochera, hospedaje,
+                                estacionamiento y áreas de trabajo están bajo la misma vigilancia.
+                            </p>
+                        </div>
+                    </div>
+                </div></div></details>
+  <article class="mt-8 overflow-hidden rounded-2xl border border-lagoon-100 bg-lagoon-950 text-white shadow-card lg:flex">
+                    <div class="relative h-48 shrink-0 overflow-hidden sm:h-56 lg:h-auto lg:w-80 xl:w-96">
+                        <img src="assets/images/derived/medium/hermoso_atardecer_en_laguna_canrash.webp"
+                            alt="Atardecer en Laguna Canrash con cielo abierto sobre los Andes"
+                            class="h-full w-full object-cover" loading="lazy" decoding="async" width="1280" height="1707" srcset="assets/images/derived/thumb/hermoso_atardecer_en_laguna_canrash.webp 480w, assets/images/derived/medium/hermoso_atardecer_en_laguna_canrash.webp 1280w" sizes="(min-width: 1280px) 384px, (min-width: 1024px) 320px, (min-width: 480px) 90vw, calc(100vw - 48px)">
+                        <div class="absolute inset-0 bg-gradient-to-t from-lagoon-950/80 via-lagoon-950/20 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-lagoon-950/90"></div>
+                        <span class="absolute bottom-4 left-4 rounded-full bg-lagoon-700/90 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white" data-i18n="serv.astroBadge">
+                            Experiencia nocturna
+                        </span>
+                    </div>
+                    <div class="flex flex-col justify-center p-6 sm:p-8">
+                        <h3 class="font-display text-xl font-bold sm:text-2xl" data-i18n="serv.astroTitle">Observatorio Andino</h3>
+                        <p class="mt-3 text-lagoon-200 leading-relaxed" data-i18n="serv.astroDesc">
+                            A más de 4 000 m, el cielo de Laguna Canrash es ideal para observar estrellas, la Luna y los planetas.
+                            Consulta nuestra guía del cielo con fases lunares, mapa estelar y qué ver cada noche.
+                        </p>
+                        <a href="https://astro.lagunacanrash.com" target="_blank" rel="noopener noreferrer"
+                            class="mt-5 inline-flex w-fit items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-lagoon-950 transition hover:bg-lagoon-100">
+                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                            </svg>
+                            <span data-i18n="serv.astroLink">Ver guía del cielo</span>
+                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+ </div>
+</section>
+
+        <section id="resenas" tabindex="-1" class="bg-lagoon-100/50 py-20 sm:py-24" aria-labelledby="resenas-title">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
                     <div class="max-w-2xl">
@@ -1087,177 +692,84 @@
             </div>
         </section>
 
-        <!-- ═══════════════════ SERVICIOS ADICIONALES ═══════════════════ -->
-        <section id="servicios" class="py-20 sm:py-28">
+        <section id="historia" tabindex="-1" class="v2-history">
+ <div class="v2-container"><div class="v2-history-grid">
+  <figure><video class="media-video w-full aspect-video object-cover rounded-2xl"
+                                    controls playsinline preload="none" loading="lazy"
+                                    poster="assets/images/derived/thumb/foto_ovejas_en_laguna_canrash_con_cielo_y_cerro.webp"
+                                    aria-label="Video del pastor guiando sus ovejas en la laguna Canrash">
+                                    <source src="assets/images/pastor_guiando_a_sus_ovejas_en_laguna_canrash.mp4" type="video/mp4">
+                                </video><figcaption data-i18n="hist.sheepCaption">El pastor guiando sus ovejas en la laguna — tradición viva de nuestra familia</figcaption></figure>
+  <div><p class="v2-eyebrow" data-i18n="hist.label">Legado familiar</p><h2 data-i18n="hist.title">Nuestra historia</h2><p class="v2-history-intro" data-i18n="hist.p1">Somos una familia que lleva décadas en estas tierras. En los años 70, nuestro abuelo compró los campos alrededor de la laguna para pastorear ovejas y vacas. De ese trabajo sencillo nació el amor por este lugar.</p><details class="v2-details"><summary><span data-i18n="review.story">Leer la historia completa</span><span aria-hidden="true">+</span></summary><div class="v2-details-body"><div class="mt-8 space-y-6 text-lagoon-700 leading-relaxed">
+                            <p data-i18n="hist.p1">
+                                Somos una familia que lleva décadas en estas tierras. En los años 70, nuestro abuelo compró
+                                los campos alrededor de la laguna para pastorear ovejas y vacas, cuando este rincón de los Andes peruanos
+                                casi no tenía valor. De ese trabajo sencillo nació el amor por este lugar.
+                            </p>
+                            <p data-i18n="hist.p2">
+                                El hijo de aquel pastor se había formado ya como ingeniero agrícola en la UNAM — por sus propios
+                                esfuerzos, mucho antes de que llegara Antamina — y soñaba con llevar la laguna un paso más allá:
+                                criar trucha arcoíris en jaulas flotantes, con sus propias manos y estudio.
+                                En el año 2000 la carretera hacia la mina pasó muy cerca y el paisaje cambió para siempre.
+                                Hubo robos, engaños y noches difíciles, pero no soltó el sueño.
+                            </p>
+                            <p data-i18n="hist.p3">
+                                Hoy las ovejas siguen en el paisaje, como herencia viva de nuestro abuelo. La ganadería ya no es
+                                el sustento principal desde los años 90, pero cuida la tierra y a las familias de pastores que
+                                colaboran con nosotros. Nuestro abuelo defendió esta laguna cuando pocos lo harían; ese orgullo
+                                familiar sigue presente en cada rincón.
+                            </p>
+                            <p data-i18n="hist.p4">
+                                Vivir tan alejados del pueblo nos obligó a inventarlo todo: agua, desagüe, luz con paneles solares.
+                                En 2023 llegó Starlink y por fin tuvimos internet estable en plena altura. En 2025 ganamos el Procompite
+                                de San Marcos y pudimos mejorar los ambientes del restaurante, cerrar el salón contra el viento
+                                y ampliar la vista panorámica a la laguna.
+                            </p>
+                            <p data-i18n="hist.p5">
+                                Hoy somos hermanos y familia trabajando juntos. Te recibimos como llegamos a recibir a transportistas,
+                                mineros y viajeros de todas partes: con un plato caliente, trucha fresca y la calidez de quien sabe
+                                lo que es vivir en altura.
+                            </p>
+                        </div></div></details><div class="mt-8 grid gap-4 sm:grid-cols-2">
+                            <div class="rounded-xl border border-lagoon-100 bg-lagoon-50 p-5">
+                                <p class="text-2xl font-display font-bold text-lagoon-700">2023</p>
+                                <p class="mt-1 text-sm font-semibold text-lagoon-900" data-i18n="hist.milestone2023title">Internet en la laguna</p>
+                                <p class="mt-1 text-sm text-lagoon-600" data-i18n="hist.milestone2023desc">Llegó Starlink: conexión estable y Wi‑Fi gratuito para quienes nos visitan.</p>
+                            </div>
+                            <div class="rounded-xl border border-lagoon-100 bg-lagoon-50 p-5">
+                                <p class="text-2xl font-display font-bold text-lagoon-700">2025</p>
+                                <p class="mt-1 text-sm font-semibold text-lagoon-900" data-i18n="hist.milestone2025title">Procompite San Marcos</p>
+                                <p class="mt-1 text-sm text-lagoon-600" data-i18n="hist.milestone2025desc">Ganamos el fondo distrital y pudimos crecer: mejores ambientes, más comodidad para quien nos visita.</p>
+                            </div>
+                        </div></div>
+ </div></div>
+</section>
+
+        <section id="galeria" tabindex="-1" class="py-20 sm:py-28 bg-lagoon-50">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-2xl mx-auto">
-                    <p class="section-label text-xs font-bold uppercase tracking-widest text-lagoon-600 mx-auto" data-i18n="serv.label">Hospedaje y servicios</p>
-                    <h2 class="mt-2 font-display text-3xl font-bold text-lagoon-950 sm:text-4xl" data-i18n="serv.title">Completa tu escapada</h2>
-                    <p class="mt-4 text-lagoon-700" data-i18n="serv.intro">Descansa frente a los Andes, deja tu vehículo con tranquilidad y aprovecha una conexión estable incluso a más de 4 000 m.</p>
+                    <p class="section-label text-xs font-bold uppercase tracking-widest text-lagoon-600 mx-auto" data-i18n="gal.label">Momentos reales</p>
+                    <h2 class="mt-2 font-display text-3xl font-bold text-lagoon-950 sm:text-4xl" data-i18n="gal.title">Galería</h2>
+                    <p class="mt-4 text-lagoon-700" data-i18n="gal.intro">Explora la laguna, la comida, quienes nos visitan y el camino hasta Canrash. Toca una foto para verla en grande.</p>
                 </div>
 
-                <div class="mt-10 grid gap-4 sm:grid-cols-3">
-                    <div class="rounded-2xl border border-lagoon-100 bg-white p-5 shadow-card text-center sm:text-left">
-                        <div class="mx-auto sm:mx-0 flex h-11 w-11 items-center justify-center rounded-full bg-lagoon-100 text-lagoon-700">
-                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                        </div>
-                        <h3 class="mt-3 font-semibold text-lagoon-950" data-i18n="serv.hoursTitle">Horario de atención</h3>
-                        <p class="mt-1 text-sm text-lagoon-700" data-i18n-html="serv.hoursDesc">Todos los días de <strong>7:00 a.m. a 7:00 p.m.</strong></p>
-                    </div>
-                    <div class="rounded-2xl border border-lagoon-100 bg-white p-5 shadow-card text-center sm:text-left">
-                        <div class="mx-auto sm:mx-0 flex h-11 w-11 items-center justify-center rounded-full bg-lagoon-100 text-lagoon-700">
-                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
-                            </svg>
-                        </div>
-                        <h3 class="mt-3 font-semibold text-lagoon-950" data-i18n="serv.wifiTitle">Internet gratis</h3>
-                        <p class="mt-1 text-sm text-lagoon-700" data-i18n-html="serv.wifiDesc">Wi‑Fi <strong>gratuito y continuo</strong> para quienes nos visitan, gracias a Starlink.</p>
-                    </div>
-                    <div class="rounded-2xl border border-lagoon-100 bg-white p-5 shadow-card text-center sm:text-left">
-                        <div class="mx-auto sm:mx-0 flex h-11 w-11 items-center justify-center rounded-full bg-lagoon-100 text-lagoon-700">
-                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
-                        </div>
-                        <h3 class="mt-3 font-semibold text-lagoon-950" data-i18n="serv.whereTitle">¿Desde dónde vienes?</h3>
-                        <p class="mt-1 text-sm text-lagoon-700" data-i18n-html="serv.whereDesc"><strong>3 h</strong> desde Huaraz · <strong>1 h</strong> desde Huallanca · <strong>20 min</strong> desde Antamina</p>
-                    </div>
+                <div id="gallery-filters" class="mt-10 flex flex-wrap justify-center gap-2" role="group" data-i18n-aria="gal.filterLabel" aria-label="Filtrar galería"></div>
+
+                <div id="gallery-loading" class="mt-10 text-center text-sm text-lagoon-600" role="status" aria-live="polite" data-i18n="gal.loadingLazy">La galería se cargará al acercarte a esta sección…</div>
+                <div id="gallery-grid" class="mt-10 hidden grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4" data-lightbox-group="galeria"></div>
+                <p role="status" aria-live="polite" aria-atomic="true" id="gallery-status" class="mt-6 hidden text-center text-xs text-lagoon-500"></p>
+                <div id="gallery-more-wrap" class="mt-6 hidden text-center">
+                    <button type="button" id="gallery-more"
+                        class="inline-flex items-center justify-center rounded-full border border-lagoon-200 bg-white px-6 py-3 text-sm font-semibold text-lagoon-700 transition hover:border-lagoon-300 hover:bg-lagoon-50"
+                        data-i18n="gal.loadMore">
+                        Cargar más fotos
+                    </button>
                 </div>
-
-                <div class="mt-10 mx-auto max-w-3xl rounded-2xl border border-lagoon-200 bg-white p-5 sm:p-6 shadow-card">
-                    <div class="flex items-start gap-4">
-                        <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-lagoon-100 text-lagoon-700">
-                            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                            </svg>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-lagoon-950" data-i18n="serv.securityTitle">Seguridad en todos nuestros servicios</h3>
-                            <p class="mt-2 text-sm text-lagoon-700 leading-relaxed" data-i18n-html="serv.securityDesc">
-                                Contamos con <strong>cámaras de seguridad en todo el recinto</strong> y respaldo de la
-                                <strong>central de la PNP vinculada a Antamina</strong>. Restaurante, cochera, hospedaje,
-                                estacionamiento y áreas de trabajo están bajo la misma vigilancia.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-14 grid gap-8 lg:grid-cols-2">
-                    <!-- Cochera -->
-                    <article class="overflow-hidden rounded-2xl border border-lagoon-100 bg-white shadow-card">
-                        <div class="relative h-56 sm:h-64 overflow-hidden">
-                            <img src="assets/images/derived/medium/foto_lateral_cochera_con_techo.webp"
-                                alt="Vista lateral de la cochera cubierta con techo"
-                                class="h-full w-full object-cover" loading="lazy" decoding="async">
-                            <div class="absolute inset-0 bg-gradient-to-t from-lagoon-950/70 to-transparent"></div>
-                            <span class="absolute bottom-4 left-4 rounded-full bg-alpine-moss px-3 py-1 text-xs font-bold uppercase tracking-wide text-white" data-i18n="serv.garageBadge">
-                                Cochera segura
-                            </span>
-                        </div>
-                        <div class="p-6 sm:p-8">
-                            <h3 class="font-display text-xl font-bold text-lagoon-950" data-i18n="serv.garageTitle">Cochera para mineros y viajeros</h3>
-                            <p class="mt-3 text-lagoon-700 leading-relaxed" data-i18n="serv.garageDesc">
-                                Ideal para trabajadores de Antamina que dejan sus vehículos por 10 días o más.
-                                Espacios cubiertos con techo y estacionamiento amplio al aire libre.
-                            </p>
-                            <ul class="mt-5 space-y-3">
-                                <li class="flex items-start gap-3">
-                                    <svg class="mt-0.5 h-5 w-5 shrink-0 text-alpine-moss" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                                    </svg>
-                                    <span class="text-sm text-lagoon-800" data-i18n-html="serv.garageRoof"><strong>Con techo:</strong> S/ 10 por día — 6 espacios disponibles</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <svg class="mt-0.5 h-5 w-5 shrink-0 text-alpine-moss" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                                    </svg>
-                                    <span class="text-sm text-lagoon-800" data-i18n-html="serv.garageOpen"><strong>Sin techo:</strong> S/ 5 por día — amplio parqueo al aire libre</span>
-                                </li>
-                            </ul>
-                            <div class="mt-5 grid grid-cols-3 gap-3">
-                                <img src="assets/images/derived/medium/foto_en_la_garita_control_de_antamina.webp"
-                                    alt="Garita de control en la ruta hacia Antamina"
-                                    class="h-24 w-full rounded-xl object-cover" loading="lazy" decoding="async">
-                                <img src="assets/images/derived/medium/foto_campamento_antamina.webp"
-                                    alt="Campamento de Antamina, a 20 minutos de la laguna"
-                                    class="h-24 w-full rounded-xl object-cover" loading="lazy" decoding="async">
-                                <img src="assets/images/derived/medium/foto_desde_lejos_aestacionamiento_y_parqueo_lleno_de_comensales.webp"
-                                    alt="Estacionamiento y parqueo lleno de comensales visto desde lejos"
-                                    class="h-24 w-full rounded-xl object-cover" loading="lazy" decoding="async">
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Hospedaje -->
-                    <article class="overflow-hidden rounded-2xl border border-lagoon-100 bg-white shadow-card">
-                        <div class="relative h-56 sm:h-64 overflow-hidden">
-                            <img src="assets/images/derived/medium/foto_hospedaje_calidad_media.webp"
-                                alt="Hospedaje rústico en módulos de madera o casitas de adobe"
-                                class="h-full w-full object-cover" loading="lazy" decoding="async">
-                            <div class="absolute inset-0 bg-gradient-to-t from-lagoon-950/70 to-transparent"></div>
-                            <span class="absolute bottom-4 left-4 rounded-full bg-alpine-bark px-3 py-1 text-xs font-bold uppercase tracking-wide text-white" data-i18n="serv.lodgeBadge">
-                                Hospedaje rústico
-                            </span>
-                        </div>
-                        <div class="p-6 sm:p-8">
-                            <h3 class="font-display text-xl font-bold text-lagoon-950" data-i18n="serv.lodgeTitle">Descanso en los Andes peruanos</h3>
-                            <p class="mt-3 text-lagoon-700 leading-relaxed" data-i18n="serv.lodgeDesc">
-                                Habitaciones en módulos de madera y acogedoras casitas de adobe.
-                                Pensado para transportistas de ruta y personal de empresas de la zona.
-                            </p>
-                            <div class="mt-5 flex items-center gap-4 rounded-xl bg-lagoon-50 p-4">
-                                <div class="text-center">
-                                    <p class="font-display text-3xl font-bold text-lagoon-700">S/ 30</p>
-                                    <p class="text-xs text-lagoon-600 uppercase tracking-wide" data-i18n="serv.lodgePrice">por noche</p>
-                                </div>
-                                <div class="h-10 w-px bg-lagoon-200"></div>
-                                <p class="text-sm text-lagoon-700" data-i18n="serv.lodgeNote">Ambiente tranquilo, cálido y rodeado de paisaje andino — con la misma vigilancia que el resto de instalaciones.</p>
-                            </div>
-                            <div class="mt-5 overflow-hidden rounded-xl aspect-[4/3] max-h-28 sm:max-h-none">
-                                <img src="assets/images/derived/medium/foto_panoramica_del_hospedaje_calidad_baja.webp"
-                                    alt="Vista panorámica del hospedaje rústico"
-                                    class="h-full w-full object-cover object-center" loading="lazy" decoding="async">
-                            </div>
-                        </div>
-                    </article>
-                </div>
-
-                <article class="mt-8 overflow-hidden rounded-2xl border border-lagoon-100 bg-lagoon-950 text-white shadow-card lg:flex">
-                    <div class="relative h-48 shrink-0 overflow-hidden sm:h-56 lg:h-auto lg:w-80 xl:w-96">
-                        <img src="assets/images/derived/medium/hermoso_atardecer_en_laguna_canrash.webp"
-                            alt="Atardecer en Laguna Canrash con cielo abierto sobre los Andes"
-                            class="h-full w-full object-cover" loading="lazy" decoding="async">
-                        <div class="absolute inset-0 bg-gradient-to-t from-lagoon-950/80 via-lagoon-950/20 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-lagoon-950/90"></div>
-                        <span class="absolute bottom-4 left-4 rounded-full bg-lagoon-700/90 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white" data-i18n="serv.astroBadge">
-                            Experiencia nocturna
-                        </span>
-                    </div>
-                    <div class="flex flex-col justify-center p-6 sm:p-8">
-                        <h3 class="font-display text-xl font-bold sm:text-2xl" data-i18n="serv.astroTitle">Observatorio Andino</h3>
-                        <p class="mt-3 text-lagoon-200 leading-relaxed" data-i18n="serv.astroDesc">
-                            A más de 4 000 m, el cielo de Laguna Canrash es ideal para observar estrellas, la Luna y los planetas.
-                            Consulta nuestra guía del cielo con fases lunares, mapa estelar y qué ver cada noche.
-                        </p>
-                        <a href="https://astro.lagunacanrash.com" target="_blank" rel="noopener noreferrer"
-                            class="mt-5 inline-flex w-fit items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-lagoon-950 transition hover:bg-lagoon-100">
-                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-                            </svg>
-                            <span data-i18n="serv.astroLink">Ver guía del cielo</span>
-                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                            </svg>
-                        </a>
-                    </div>
-                </article>
+                <p id="gallery-empty" class="mt-10 hidden text-center text-sm text-lagoon-600" data-i18n="gal.empty">No hay fotos en esta categoría.</p>
             </div>
         </section>
 
-        <!-- ═══════════════════ VENTA POR MAYOR ═══════════════════ -->
-        <section id="mayor" class="py-20 sm:py-28 bg-lagoon-950 text-white">
+        <section id="mayor" tabindex="-1" class="py-20 sm:py-28 bg-lagoon-950 text-white">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
                     <div>
@@ -1271,7 +783,7 @@
                         <div class="mt-6 overflow-hidden rounded-xl">
                             <img src="assets/images/derived/medium/trabajador_dando_alimento_a_truchas_en_jaulas_flotantes_dentro_de_laguna_canrash_casi_panoramica.webp"
                                 alt="Trabajador alimentando truchas en las jaulas flotantes de la laguna"
-                                class="h-48 w-full object-cover sm:h-56" loading="lazy" decoding="async">
+                                class="h-48 w-full object-cover sm:h-56" loading="lazy" decoding="async" width="1280" height="1707" srcset="assets/images/derived/thumb/trabajador_dando_alimento_a_truchas_en_jaulas_flotantes_dentro_de_laguna_canrash_casi_panoramica.webp 480w, assets/images/derived/medium/trabajador_dando_alimento_a_truchas_en_jaulas_flotantes_dentro_de_laguna_canrash_casi_panoramica.webp 1280w" sizes="(min-width: 1320px) 564px, (min-width: 1024px) calc(45vw - 32px), (min-width: 480px) 90vw, calc(100vw - 48px)">
                         </div>
                     </div>
 
@@ -1344,214 +856,61 @@
             </div>
         </section>
 
-        <!-- ═══════════════════ NUESTRA HISTORIA ═══════════════════ -->
-        <section id="historia" class="py-20 sm:py-28">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="grid gap-12 lg:grid-cols-2 lg:gap-16 items-start">
-                    <div class="order-2 lg:order-1">
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="col-span-2 overflow-hidden rounded-2xl">
-                                <video class="autoplay-video media-video w-full aspect-video object-cover rounded-2xl"
-                                    autoplay muted loop playsinline preload="metadata"
-                                    poster="assets/images/derived/medium/foto_ovejas_en_laguna_canrash_con_cielo_y_cerro.webp"
-                                    aria-label="Video del pastor guiando sus ovejas en la laguna Canrash">
-                                    <source src="assets/images/pastor_guiando_a_sus_ovejas_en_laguna_canrash.mp4" type="video/mp4">
-                                </video>
-                                <p class="mt-2 text-center text-sm text-lagoon-600" data-i18n="hist.sheepCaption">El pastor guiando sus ovejas en la laguna — tradición viva de nuestra familia</p>
-                            </div>
-                            <img src="assets/images/derived/medium/foto_ovejas_en_laguna_canrash_con_cielo_y_cerro.webp"
-                                alt="Ovejas en Laguna Canrash con cielo abierto y cerro de fondo"
-                                class="js-lightbox h-48 w-full rounded-2xl object-cover sm:h-56" loading="lazy"
-                                data-lightbox-group="historia" data-lightbox-full="assets/images/foto_ovejas_en_laguna_canrash_con_cielo_y_cerro.jpg" decoding="async">
-                            <img src="assets/images/derived/medium/vista_desde_jaulas_flotantes_en_medio_de_laguna_hacia_la_orilla_de_la_laguna.webp"
-                                alt="Vista desde las jaulas flotantes en medio de la laguna hacia la orilla"
-                                data-i18n-alt="hist.cagesAlt"
-                                class="js-lightbox h-48 w-full rounded-2xl object-cover sm:h-56 mt-8" loading="lazy"
-                                data-lightbox-group="historia" data-lightbox-full="assets/images/vista_desde_jaulas_flotantes_en_medio_de_laguna_hacia_la_orilla_de_la_laguna.jpeg" decoding="async">
-                            <img src="assets/images/derived/medium/foto_desde_lejos_aestacionamiento_y_parqueo_lleno_de_comensales.webp"
-                                alt="Estacionamiento lleno de comensales y visitantes en Laguna Canrash"
-                                class="js-lightbox h-40 w-full rounded-2xl object-cover sm:h-44" loading="lazy"
-                                data-lightbox-group="historia" data-lightbox-full="assets/images/foto_desde_lejos_aestacionamiento_y_parqueo_lleno_de_comensales.jpg" decoding="async">
-                            <img src="assets/images/derived/medium/dos_turistas_tomandose_foto_con_canrash_a_lo_lejos_desde_elevada_altura.webp"
-                                alt="Dos visitantes tomándose una foto con la laguna Canrash de fondo"
-                                class="js-lightbox h-40 w-full rounded-2xl object-cover sm:h-44 mt-6" loading="lazy"
-                                data-lightbox-group="historia" data-lightbox-full="assets/images/dos_turistas_tomandose_foto_con_canrash_a_lo_lejos_desde_elevada_altura.jpg" decoding="async">
-                            <img src="assets/images/derived/medium/hermoso_atardecer_en_laguna_canrash.webp"
-                                alt="Atardecer sobre Laguna Canrash"
-                                class="js-lightbox col-span-2 h-40 w-full rounded-2xl object-cover sm:h-48" loading="lazy"
-                                data-lightbox-group="historia" data-lightbox-full="assets/images/hermoso_atardecer_en_laguna_canrash.jpg" decoding="async">
-                        </div>
-                    </div>
+        <section id="consulta" tabindex="-1" class="v2-consult" aria-labelledby="consulta-title">
+ <div class="v2-consult-layout">
+  <div class="v2-consult-copy">
+   <p class="v2-eyebrow" data-i18n="visit.label">ANTES DE VENIR</p>
+   <h2 id="consulta-title" data-i18n="visit.title">Te esperamos en Canrash.</h2>
+   <p data-i18n="visit.intro">Cuéntanos cuándo quieres visitarnos. Te ayudamos a coordinar tu comida, hospedaje o estacionamiento.</p>
+   <a class="v2-contact-number" href="https://wa.me/51957878409" data-wa="general" target="_blank" rel="noopener noreferrer"><span>957 878 409</span><span data-i18n="contact.whatsappDirect">WhatsApp directo</span><span aria-hidden="true">↗</span></a>
+   <p class="v2-consult-hours" data-i18n="visit.hours">Atención todos los días · 7 a.m. a 7 p.m.</p>
+  </div>
+  <form id="visit-form" class="v2-visit-form" action="https://wa.me/51957878409" method="get" target="_blank" rel="noopener noreferrer" aria-labelledby="visit-form-title" aria-describedby="visit-help">
+   <h3 id="visit-form-title" data-i18n="visit.formTitle">Prepara tu consulta al restaurante</h3>
+   <input type="hidden" name="text" id="visit-message" value="Hola, quisiera consultar disponibilidad para visitar el restaurante de Laguna Canrash.">
+   <fieldset id="visit-fields" hidden>
+    <legend class="sr-only" data-i18n="visit.optional">Datos opcionales de tu visita</legend>
+    <div class="v2-visit-fields">
+     <div><label for="visit-date" data-i18n="visit.date">Fecha de visita <span>(opcional)</span></label><input id="visit-date" type="date" autocomplete="off"></div>
+     <div><label for="visit-guests" data-i18n="visit.guests">Personas (opcional)</label><input id="visit-guests" type="number" min="1" step="1" inputmode="numeric" autocomplete="off" placeholder="4"></div>
+    </div>
+   </fieldset>
+   <button class="v2-button v2-button-dark" type="submit"><span data-i18n="visit.continue">Continuar en WhatsApp</span><span aria-hidden="true">↗</span></button>
+   <p id="visit-help" data-i18n="visit.help">Abriremos WhatsApp con tu consulta. La disponibilidad se confirma por ese medio.</p>
+   <a href="https://wa.me/51957878409" data-wa="general" target="_blank" rel="noopener noreferrer" class="v2-visit-direct" data-i18n="visit.direct">Escribir sin completar datos</a>
+  </form>
+ </div>
+</section>
 
-                    <div class="order-1 lg:order-2">
-                        <p class="section-label text-xs font-bold uppercase tracking-widest text-lagoon-600" data-i18n="hist.label">Legado familiar</p>
-                        <h2 class="mt-2 font-display text-3xl font-bold text-lagoon-950 sm:text-4xl" data-i18n="hist.title">Nuestra historia</h2>
-
-                        <div class="mt-8 space-y-6 text-lagoon-700 leading-relaxed">
-                            <p data-i18n="hist.p1">
-                                Somos una familia que lleva décadas en estas tierras. En los años 70, nuestro abuelo compró
-                                los campos alrededor de la laguna para pastorear ovejas y vacas, cuando este rincón de los Andes peruanos
-                                casi no tenía valor. De ese trabajo sencillo nació el amor por este lugar.
-                            </p>
-                            <p data-i18n="hist.p2">
-                                El hijo de aquel pastor se había formado ya como ingeniero agrícola en la UNAM — por sus propios
-                                esfuerzos, mucho antes de que llegara Antamina — y soñaba con llevar la laguna un paso más allá:
-                                criar trucha arcoíris en jaulas flotantes, con sus propias manos y estudio.
-                                En el año 2000 la carretera hacia la mina pasó muy cerca y el paisaje cambió para siempre.
-                                Hubo robos, engaños y noches difíciles, pero no soltó el sueño.
-                            </p>
-                            <p data-i18n="hist.p3">
-                                Hoy las ovejas siguen en el paisaje, como herencia viva de nuestro abuelo. La ganadería ya no es
-                                el sustento principal desde los años 90, pero cuida la tierra y a las familias de pastores que
-                                colaboran con nosotros. Nuestro abuelo defendió esta laguna cuando pocos lo harían; ese orgullo
-                                familiar sigue presente en cada rincón.
-                            </p>
-                            <p data-i18n="hist.p4">
-                                Vivir tan alejados del pueblo nos obligó a inventarlo todo: agua, desagüe, luz con paneles solares.
-                                En 2023 llegó Starlink y por fin tuvimos internet estable en plena altura. En 2025 ganamos el Procompite
-                                de San Marcos y pudimos mejorar los ambientes del restaurante, cerrar el salón contra el viento
-                                y ampliar la vista panorámica a la laguna.
-                            </p>
-                            <p data-i18n="hist.p5">
-                                Hoy somos hermanos y familia trabajando juntos. Te recibimos como llegamos a recibir a transportistas,
-                                mineros y viajeros de todas partes: con un plato caliente, trucha fresca y la calidez de quien sabe
-                                lo que es vivir en altura.
-                            </p>
-                        </div>
-
-                        <div class="mt-8 grid gap-4 sm:grid-cols-2">
-                            <div class="rounded-xl border border-lagoon-100 bg-lagoon-50 p-5">
-                                <p class="text-2xl font-display font-bold text-lagoon-700">2023</p>
-                                <p class="mt-1 text-sm font-semibold text-lagoon-900" data-i18n="hist.milestone2023title">Internet en la laguna</p>
-                                <p class="mt-1 text-sm text-lagoon-600" data-i18n="hist.milestone2023desc">Llegó Starlink: conexión estable y Wi‑Fi gratuito para quienes nos visitan.</p>
-                            </div>
-                            <div class="rounded-xl border border-lagoon-100 bg-lagoon-50 p-5">
-                                <p class="text-2xl font-display font-bold text-lagoon-700">2025</p>
-                                <p class="mt-1 text-sm font-semibold text-lagoon-900" data-i18n="hist.milestone2025title">Procompite San Marcos</p>
-                                <p class="mt-1 text-sm text-lagoon-600" data-i18n="hist.milestone2025desc">Ganamos el fondo distrital y pudimos crecer: mejores ambientes, más comodidad para quien nos visita.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ═══════════════════ GALERÍA ═══════════════════ -->
-        <section id="galeria" class="py-20 sm:py-28 bg-lagoon-50">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-2xl mx-auto">
-                    <p class="section-label text-xs font-bold uppercase tracking-widest text-lagoon-600 mx-auto" data-i18n="gal.label">Momentos reales</p>
-                    <h2 class="mt-2 font-display text-3xl font-bold text-lagoon-950 sm:text-4xl" data-i18n="gal.title">Galería</h2>
-                    <p class="mt-4 text-lagoon-700" data-i18n="gal.intro">Explora la laguna, la comida, quienes nos visitan y el camino hasta Canrash. Toca una foto para verla en grande.</p>
-                </div>
-
-                <div id="gallery-filters" class="mt-10 flex flex-wrap justify-center gap-2" role="tablist" data-i18n-aria="gal.filterLabel" aria-label="Filtrar galería"></div>
-
-                <div id="gallery-loading" class="mt-10 text-center text-sm text-lagoon-600" role="status" aria-live="polite" data-i18n="gal.loadingLazy">La galería se cargará al acercarte a esta sección…</div>
-                <div id="gallery-grid" class="mt-10 hidden grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4" data-lightbox-group="galeria"></div>
-                <p id="gallery-status" class="mt-6 hidden text-center text-xs text-lagoon-500"></p>
-                <div id="gallery-more-wrap" class="mt-6 hidden text-center">
-                    <button type="button" id="gallery-more"
-                        class="inline-flex items-center justify-center rounded-full border border-lagoon-200 bg-white px-6 py-3 text-sm font-semibold text-lagoon-700 transition hover:border-lagoon-300 hover:bg-lagoon-50"
-                        data-i18n="gal.loadMore">
-                        Cargar más fotos
-                    </button>
-                </div>
-                <p id="gallery-empty" class="mt-10 hidden text-center text-sm text-lagoon-600" data-i18n="gal.empty">No hay fotos en esta categoría.</p>
-            </div>
-        </section>
-
-        <!-- ═══════════════════ CONTACTO / UBICACIÓN ═══════════════════ -->
-        <section id="contacto" class="py-20 bg-lagoon-900 text-white">
-            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-                    <div>
-                        <img src="assets/brand/logo-reverso.svg" alt="Laguna Canrash" class="mb-5 h-16 w-auto max-w-full">
-                        <p class="mt-1 text-sm text-lagoon-300">Eica S.R.L. · RUC 20530753396</p>
-                        <p class="mt-3 text-sm text-lagoon-200 leading-relaxed" data-i18n="contact.tagline">Laguna, trucha y descanso en los Andes de Áncash.</p>
-                        <div class="mt-5 flex gap-3">
-                            <a href="https://www.facebook.com/LagunaCanrash/" target="_blank" rel="noopener noreferrer"
-                                class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
-                                aria-label="Facebook de Laguna Canrash">
-                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                                </svg>
-                            </a>
-                            <a href="https://www.instagram.com/lagunacanrash/" target="_blank" rel="noopener noreferrer"
-                                class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
-                                aria-label="Instagram de Laguna Canrash">
-                                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-                                </svg>
-                            </a>
-                        </div>
-                        <a href="https://astro.lagunacanrash.com" target="_blank" rel="noopener noreferrer"
-                            class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-lagoon-200 transition hover:text-white">
-                            <svg class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-                            </svg>
-                            <span data-i18n="contact.astroLink">Observatorio Andino — guía del cielo</span>
-                            <svg class="h-3.5 w-3.5 shrink-0 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                            </svg>
-                        </a>
-                    </div>
-
-                    <div>
-                        <h3 class="text-sm font-bold uppercase tracking-widest text-lagoon-300 mb-4" data-i18n="contact.locationTitle">Ubicación</h3>
-                        <p class="text-lagoon-100 leading-relaxed" data-i18n-html="contact.location">
-                            Distrito de San Marcos, provincia de Huari,<br>
-                            departamento de Áncash, Perú.
-                        </p>
-                        <ul class="mt-3 space-y-1 text-sm text-lagoon-300">
-                            <li data-i18n="contact.hoursFromHuaraz">~3 horas desde Huaraz</li>
-                            <li data-i18n="contact.hoursFromHuallanca">~1 hora desde Huallanca</li>
-                            <li data-i18n="contact.hoursFromAntamina">~20 minutos desde Antamina</li>
-                        </ul>
-                        <a href="https://maps.app.goo.gl/UEHtnv7U6Dp8MyLT7" target="_blank" rel="noopener noreferrer"
-                            class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-alpine-grass hover:text-white transition">
-                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
-                            <span data-i18n="contact.mapsLink">Ver ruta en Google Maps</span>
-                        </a>
-                        <a href="#como-llegar" class="mt-2 block text-xs text-lagoon-400 hover:text-lagoon-200 transition" data-i18n="contact.moreRoutes">
-                            Más rutas y detalles del camino →
-                        </a>
-                    </div>
-
-                    <div>
-                        <h3 class="text-sm font-bold uppercase tracking-widest text-lagoon-300 mb-4" data-i18n="contact.hoursTitle">Atención</h3>
-                        <p class="text-lagoon-100 leading-relaxed" data-i18n-html="contact.hours">
-                            <strong class="text-white">7:00 a.m. – 7:00 p.m.</strong><br>
-                            Todos los días de la semana.
-                        </p>
-                        <p class="mt-4 text-sm text-lagoon-200 leading-relaxed" data-i18n-html="contact.wifiNote">
-                            <strong class="text-lagoon-100">Internet gratis</strong> y continuo para visitantes, gracias a Starlink.
-                        </p>
-                    </div>
-
-                    <div>
-                        <h3 class="text-sm font-bold uppercase tracking-widest text-lagoon-300 mb-4" data-i18n="contact.contactTitle">Contacto</h3>
-                        <a href="https://wa.me/51957878409" target="_blank" rel="noopener noreferrer"
-                            class="flex items-center gap-3 rounded-xl bg-white/10 px-5 py-4 transition hover:bg-white/15">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.884 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                            </svg>
-                            <div>
-                                <p class="font-semibold">957 878 409</p>
-                                <p class="text-xs text-lagoon-300" data-i18n="contact.whatsappDirect">WhatsApp directo</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="mt-12 border-t border-lagoon-700/50 pt-8 text-center text-sm text-lagoon-400">
-                    <p>&copy; <span id="year"></span> <span data-i18n="contact.copyright">Eica S.R.L. — Laguna Canrash. Todos los derechos reservados.</span></p>
-                </div>
-            </div>
-        </section>
+<section id="contacto" tabindex="-1" class="v2-footer" aria-label="Información de Laguna Canrash">
+ <div class="v2-footer-layout">
+  <div class="v2-footer-brand">
+   <a href="#inicio"><img src="assets/brand/logo-reverso.svg" alt="Laguna Canrash, inicio" width="470" height="118"></a>
+   <p data-i18n="contact.tagline">Laguna, trucha y descanso en los Andes de Áncash.</p>
+   <p class="v2-footer-legal">Eica S.R.L. · RUC 20530753396</p>
+  </div>
+  <div>
+   <h3 data-i18n="contact.locationTitle">Ubicación</h3>
+   <p data-i18n-html="contact.location">Distrito de San Marcos, provincia de Huari,<br>departamento de Áncash, Perú.</p>
+   <a href="#como-llegar" data-i18n="hero.ctaRoute">Cómo llegar</a>
+   <a href="https://maps.app.goo.gl/UEHtnv7U6Dp8MyLT7" target="_blank" rel="noopener noreferrer" data-i18n="contact.mapsLink">Ver ruta en Google Maps</a>
+  </div>
+  <nav class="v2-footer-links" aria-label="Más sobre Laguna Canrash">
+   <h3 data-i18n="visit.explore">Explora Canrash</h3>
+   <a href="carta.html" data-i18n="nav.carta">Carta</a>
+   <a href="#servicios" data-i18n="serv.label">Hospedaje y servicios</a>
+   <a href="#mayor" data-i18n="nav.mayorMobile">Venta por Mayor</a>
+   <a href="https://astro.lagunacanrash.com" target="_blank" rel="noopener noreferrer" data-i18n="serv.astroTitle">Observatorio Andino</a>
+  </nav>
+  <div class="v2-footer-social">
+   <h3 data-i18n="visit.follow">Síguenos</h3>
+   <a href="https://www.facebook.com/LagunaCanrash/" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
+   <a href="https://www.instagram.com/lagunacanrash/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+   <a href="tel:+51957878409" data-i18n="visit.call">Llamar al 957 878 409</a>
+  </div>
+ </div>
+ <div class="v2-footer-bottom"><p>© <span id="year"></span> <span data-i18n="contact.copyright">Eica S.R.L. — Laguna Canrash. Todos los derechos reservados.</span></p><a href="#inicio"><span data-i18n="visit.top">Volver arriba</span> ↑</a></div>
+</section>
 
     </main>
 
@@ -1579,679 +938,18 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
         </button>
-        <figure class="flex max-h-full max-w-full flex-col items-center">
-            <img id="lightbox-img" src="" alt="" class="max-h-[78vh] max-w-full rounded-lg object-contain shadow-float">
+        <p id="lightbox-counter" class="v2-lightbox-counter" aria-live="polite" aria-atomic="true"></p>
+        <figure class="v2-lightbox-figure">
+            <div class="v2-lightbox-stage">
+            <img id="lightbox-img" alt="" class="max-h-[78vh] max-w-full rounded-lg object-contain shadow-float">
+            <div class="v2-lightbox-feedback"><p id="lightbox-status" role="status" aria-live="polite"></p><button id="lightbox-retry" type="button" class="v2-button v2-button-light" data-i18n="ui.lightboxRetry" hidden>Reintentar</button></div>
+            </div>
             <figcaption id="lightbox-caption" class="mt-4 max-w-2xl text-center text-sm text-lagoon-200"></figcaption>
         </figure>
     </div>
 
-    <script>
-        (function () {
-            'use strict';
-
-            const navbar = document.getElementById('navbar');
-            const navbarBar = document.getElementById('navbar-bar');
-            const menuToggle = document.getElementById('menu-toggle');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const iconOpen = document.getElementById('icon-open');
-            const iconClose = document.getElementById('icon-close');
-            const mobileLinks = document.querySelectorAll('.mobile-link');
-            const navLinks = document.querySelectorAll('.nav-link, .mobile-link');
-            const sections = document.querySelectorAll('section[id]');
-
-            document.getElementById('year').textContent = new Date().getFullYear();
-
-            function updateNavbar() {
-                const menuOpen = mobileMenu.classList.contains('mobile-nav-open');
-                if (menuOpen || window.scrollY > 48) {
-                    navbar.classList.add('nav-scrolled');
-                    navbar.classList.remove('nav-over-hero');
-                } else {
-                    navbar.classList.remove('nav-scrolled');
-                    navbar.classList.add('nav-over-hero');
-                }
-            }
-
-            function handleScroll() {
-                if (mobileMenu.classList.contains('mobile-nav-open')) {
-                    closeMobileMenu();
-                }
-                updateNavbar();
-            }
-
-            function closeMobileMenu() {
-                mobileMenu.classList.remove('mobile-nav-open');
-                mobileMenu.classList.add('mobile-nav-closed');
-                mobileMenu.setAttribute('aria-hidden', 'true');
-                navbar.classList.remove('nav-menu-open');
-                document.body.classList.remove('mobile-menu-active');
-                iconOpen.classList.remove('hidden');
-                iconClose.classList.add('hidden');
-                menuToggle.setAttribute('aria-expanded', 'false');
-                menuToggle.setAttribute('aria-label', window.LC_I18N.t('nav.openMenu'));
-                updateNavbar();
-            }
-
-            function openMobileMenu() {
-                mobileMenu.classList.remove('mobile-nav-closed');
-                mobileMenu.classList.add('mobile-nav-open');
-                mobileMenu.setAttribute('aria-hidden', 'false');
-                navbar.classList.add('nav-scrolled', 'nav-menu-open');
-                navbar.classList.remove('nav-over-hero');
-                document.body.classList.add('mobile-menu-active');
-                iconOpen.classList.add('hidden');
-                iconClose.classList.remove('hidden');
-                menuToggle.setAttribute('aria-expanded', 'true');
-                menuToggle.setAttribute('aria-label', window.LC_I18N.t('nav.closeMenu'));
-            }
-
-            menuToggle.addEventListener('click', function () {
-                const isOpen = mobileMenu.classList.contains('mobile-nav-open');
-                if (isOpen) {
-                    closeMobileMenu();
-                } else {
-                    openMobileMenu();
-                }
-            });
-
-            mobileLinks.forEach(function (link) {
-                link.addEventListener('click', closeMobileMenu);
-            });
-
-            document.querySelector('.mobile-menu-whatsapp').addEventListener('click', closeMobileMenu);
-
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape' && mobileMenu.classList.contains('mobile-nav-open')) {
-                    closeMobileMenu();
-                    menuToggle.focus();
-                }
-            });
-
-            window.addEventListener('resize', function () {
-                if (window.innerWidth >= 1024 && mobileMenu.classList.contains('mobile-nav-open')) {
-                    closeMobileMenu();
-                }
-            });
-
-            navLinks.forEach(function (link) {
-                link.addEventListener('click', function (e) {
-                    const href = link.getAttribute('href');
-                    if (href && href.startsWith('#')) {
-                        e.preventDefault();
-                        const target = document.querySelector(href);
-                        if (target) {
-                            const offset = navbarBar.offsetHeight;
-                            const top = target.getBoundingClientRect().top + window.scrollY - offset;
-                            window.scrollTo({ top: top, behavior: 'smooth' });
-                        }
-                    }
-                });
-            });
-
-            window.addEventListener('scroll', handleScroll, { passive: true });
-            updateNavbar();
-
-            const observer = new IntersectionObserver(function (entries) {
-                entries.forEach(function (entry) {
-                    if (entry.isIntersecting) {
-                        const id = entry.target.getAttribute('id');
-                        navLinks.forEach(function (link) {
-                            const href = link.getAttribute('href');
-                            if (href === '#' + id) {
-                                link.classList.add('text-white');
-                                link.classList.remove('text-white/85');
-                                link.setAttribute('aria-current', 'true');
-                            } else if (link.classList.contains('nav-link')) {
-                                link.classList.remove('text-white');
-                                link.classList.add('text-white/85');
-                                link.removeAttribute('aria-current');
-                            } else {
-                                link.removeAttribute('aria-current');
-                            }
-                        });
-                    }
-                });
-            }, { rootMargin: '-40% 0px -55% 0px' });
-
-            sections.forEach(function (section) {
-                observer.observe(section);
-            });
-
-            var revealObserver = null;
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                revealObserver = new IntersectionObserver(function (entries) {
-                    entries.forEach(function (entry) {
-                        if (!entry.isIntersecting) return;
-                        entry.target.classList.add('reveal-visible');
-                        revealObserver.unobserve(entry.target);
-                    });
-                }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
-                document.querySelectorAll('main section > div').forEach(function (element) {
-                    if (element.closest('#inicio')) return;
-                    element.classList.add('reveal-ready');
-                    revealObserver.observe(element);
-                });
-            }
-
-            document.querySelectorAll('video').forEach(function (video) {
-                video.muted = true;
-                video.defaultMuted = true;
-                video.volume = 0;
-                video.setAttribute('muted', '');
-                video.addEventListener('play', function () {
-                    video.muted = true;
-                    video.volume = 0;
-                });
-                video.addEventListener('volumechange', function () {
-                    video.muted = true;
-                    video.volume = 0;
-                });
-            });
-
-            var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-            var videoObserver = null;
-
-            function setupAutoplayVideos() {
-                var autoplayVideos = document.querySelectorAll('video.autoplay-video');
-                if (!autoplayVideos.length) return;
-
-                if (prefersReducedMotion.matches) {
-                    autoplayVideos.forEach(function (video) { video.pause(); });
-                    return;
-                }
-
-                if (!videoObserver) {
-                    videoObserver = new IntersectionObserver(function (entries) {
-                        entries.forEach(function (entry) {
-                            var video = entry.target;
-                            if (entry.isIntersecting) {
-                                video.play().catch(function () {});
-                            } else {
-                                video.pause();
-                            }
-                        });
-                    }, { threshold: 0.35 });
-                }
-
-                autoplayVideos.forEach(function (video) {
-                    videoObserver.observe(video);
-                });
-            }
-
-            setupAutoplayVideos();
-            prefersReducedMotion.addEventListener('change', setupAutoplayVideos);
-
-            var CARTA_API = 'https://admin.lagunacanrash.com/carta/carta_api';
-            var CARTA_FALLBACK = 'assets/data/carta.json';
-            var cartaDataCache = null;
-
-            function getCartaLabels() {
-                return {
-                    trucha: window.LC_I18N.t('carta.cat.trucha'),
-                    pollo: window.LC_I18N.t('carta.cat.pollo'),
-                    otros: window.LC_I18N.t('carta.cat.otros')
-                };
-            }
-
-            function formatSoles(precio) {
-                var n = Number(precio);
-                if (Number.isNaN(n)) return '—';
-                return n % 1 === 0 ? 'S/ ' + n.toFixed(0) : 'S/ ' + n.toFixed(2);
-            }
-
-            function formatFecha(fecha) {
-                if (!fecha) return '';
-                var d = new Date(fecha.replace(' ', 'T'));
-                if (Number.isNaN(d.getTime())) return fecha;
-                return d.toLocaleDateString(window.LC_I18N.getLocale(), { day: 'numeric', month: 'long', year: 'numeric' });
-            }
-
-            function dedupeItems(items) {
-                var seen = {};
-                return items.filter(function (item) {
-                    var key = item.nombre + '|' + item.precio;
-                    if (seen[key]) return false;
-                    seen[key] = true;
-                    return true;
-                });
-            }
-
-            function sortItems(items) {
-                var locale = window.LC_I18N.getLang() === 'en' ? 'en' : 'es';
-                return items.slice().sort(function (a, b) {
-                    return window.LC_I18N.translateDish(a.nombre).localeCompare(window.LC_I18N.translateDish(b.nombre), locale, { sensitivity: 'base' });
-                });
-            }
-
-            function renderCarta(data) {
-                cartaDataCache = data;
-                var carta = data.carta;
-                var menuEl = document.getElementById('carta-menu');
-                var loadingEl = document.getElementById('carta-loading');
-                var errorEl = document.getElementById('carta-error');
-                var updatedEl = document.getElementById('carta-updated');
-                var CARTA_LABELS = getCartaLabels();
-
-                if (!carta || !carta.productos) {
-                    errorEl.textContent = window.LC_I18N.t('carta.error');
-                    errorEl.classList.remove('hidden');
-                    loadingEl.classList.add('hidden');
-                    return;
-                }
-
-                if (carta.fecha_actualizacion) {
-                    updatedEl.textContent = window.LC_I18N.t('carta.updated') + formatFecha(carta.fecha_actualizacion);
-                }
-
-                menuEl.innerHTML = '';
-                ['trucha', 'pollo', 'otros'].forEach(function (key) {
-                    var items = sortItems(dedupeItems(carta.productos[key] || []));
-                    if (!items.length) return;
-
-                    var card = document.createElement('details');
-                    card.className = 'carta-collapse rounded-2xl border border-lagoon-100 bg-white shadow-card';
-
-                    var summary = document.createElement('summary');
-                    summary.className = 'flex items-center justify-between gap-4 px-6 py-5';
-                    summary.innerHTML =
-                        '<div class="text-left">' +
-                            '<h4 class="font-display text-xl font-bold text-lagoon-900">' + CARTA_LABELS[key] + '</h4>' +
-                            '<p class="mt-0.5 text-sm text-lagoon-500">' + items.length + ' ' + (items.length === 1 ? window.LC_I18N.t('carta.dish') : window.LC_I18N.t('carta.dishes')) + '</p>' +
-                        '</div>' +
-                        '<svg class="carta-chevron h-5 w-5 shrink-0 text-lagoon-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">' +
-                            '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />' +
-                        '</svg>';
-
-                    var body = document.createElement('div');
-                    body.className = 'border-t border-lagoon-100 px-6 pb-5';
-
-                    var list = document.createElement('ul');
-                    list.className = 'divide-y divide-lagoon-100';
-
-                    items.forEach(function (item) {
-                        var li = document.createElement('li');
-                        li.className = 'menu-row flex items-start justify-between gap-4 py-3';
-                        li.innerHTML =
-                            '<span class="text-sm font-medium text-lagoon-800 leading-snug">' + window.LC_I18N.translateDish(item.nombre) + '</span>' +
-                            '<span class="shrink-0 text-sm font-bold text-lagoon-700">' + formatSoles(item.precio) + '</span>';
-                        list.appendChild(li);
-                    });
-
-                    body.appendChild(list);
-                    card.appendChild(summary);
-                    card.appendChild(body);
-                    menuEl.appendChild(card);
-                });
-
-                loadingEl.classList.add('hidden');
-                errorEl.classList.add('hidden');
-                menuEl.classList.remove('hidden');
-            }
-
-            function loadCarta() {
-                var loadingEl = document.getElementById('carta-loading');
-                loadingEl.textContent = window.LC_I18N.t('carta.loading');
-                fetch(CARTA_API)
-                    .then(function (res) {
-                        if (!res.ok) throw new Error('API error');
-                        return res.json();
-                    })
-                    .then(function (data) {
-                        if (!data.success) throw new Error('API invalid');
-                        renderCarta(data);
-                    })
-                    .catch(function () {
-                        return fetch(CARTA_FALLBACK)
-                            .then(function (res) { return res.json(); })
-                            .then(renderCarta)
-                            .catch(function () {
-                                document.getElementById('carta-loading').classList.add('hidden');
-                                var errorEl = document.getElementById('carta-error');
-                                errorEl.textContent = window.LC_I18N.t('carta.errorFallback');
-                                errorEl.classList.remove('hidden');
-                            });
-                    });
-            }
-
-            loadCarta();
-
-            var IMAGES_DATA = 'assets/data/images.json';
-            var VARIANTS_DATA = 'assets/data/image-variants.json';
-            var GALLERY_BASE = 'assets/images/';
-            var GALLERY_PAGE_SIZE = 12;
-            var galleryItems = [];
-            var galleryFilter = 'todos';
-            var galleryVisibleCount = GALLERY_PAGE_SIZE;
-            var galleryImgObserver = null;
-            var galleryFiltersBound = false;
-            var galleryCategoriesCache = [];
-            var galleryInitialized = false;
-
-            document.addEventListener('langchange', function () {
-                if (cartaDataCache) renderCarta(cartaDataCache);
-                if (galleryInitialized && galleryCategoriesCache.length) {
-                    renderGalleryFilters(galleryCategoriesCache);
-                    renderGalleryGrid(false);
-                }
-                var galleryLoading = document.getElementById('gallery-loading');
-                if (galleryLoading && !galleryInitialized) {
-                    galleryLoading.textContent = window.LC_I18N.t('gal.loadingLazy');
-                }
-            });
-
-            var lightboxEl = document.getElementById('lightbox');
-            var lightboxImg = document.getElementById('lightbox-img');
-            var lightboxCaption = document.getElementById('lightbox-caption');
-            var lightboxClose = document.getElementById('lightbox-close');
-            var lightboxPrev = document.getElementById('lightbox-prev');
-            var lightboxNext = document.getElementById('lightbox-next');
-            var lightboxSlides = [];
-            var lightboxIndex = 0;
-            var lightboxTrigger = null;
-
-            function getLightboxGroup(trigger) {
-                var group = trigger.getAttribute('data-lightbox-group');
-                if (!group) return [trigger];
-                return Array.prototype.slice.call(document.querySelectorAll('.js-lightbox[data-lightbox-group="' + group + '"]'));
-            }
-
-            function getFilteredGalleryItems() {
-                if (galleryFilter === 'todos') return galleryItems;
-                return galleryItems.filter(function (item) {
-                    return item.categories.indexOf(galleryFilter) >= 0;
-                });
-            }
-
-            function updateLightbox() {
-                var slide = lightboxSlides[lightboxIndex];
-                if (!slide) return;
-                lightboxImg.src = slide.src;
-                lightboxImg.alt = slide.alt || '';
-                lightboxCaption.textContent = slide.alt || '';
-                var hasNav = lightboxSlides.length > 1;
-                lightboxPrev.classList.toggle('hidden', !hasNav);
-                lightboxNext.classList.toggle('hidden', !hasNav);
-            }
-
-            function openLightbox(trigger) {
-                lightboxTrigger = trigger;
-                var group = trigger.getAttribute('data-lightbox-group');
-                if (group === 'galeria') {
-                    var filtered = getFilteredGalleryItems();
-                    lightboxSlides = filtered.map(function (item) {
-                        return { src: item.src, alt: item.alt };
-                    });
-                    var idx = parseInt(trigger.getAttribute('data-gallery-index'), 10);
-                    lightboxIndex = Number.isNaN(idx) ? 0 : idx;
-                } else {
-                    lightboxSlides = getLightboxGroup(trigger).map(function (el) {
-                        return {
-                            src: el.getAttribute('data-lightbox-full') || el.currentSrc || el.src,
-                            alt: el.alt || ''
-                        };
-                    });
-                    lightboxIndex = Math.max(0, getLightboxGroup(trigger).indexOf(trigger));
-                }
-                updateLightbox();
-                lightboxEl.classList.remove('hidden');
-                lightboxEl.setAttribute('aria-hidden', 'false');
-                document.body.classList.add('lightbox-open');
-                lightboxClose.focus();
-            }
-
-            function closeLightbox() {
-                lightboxEl.classList.add('hidden');
-                lightboxEl.setAttribute('aria-hidden', 'true');
-                document.body.classList.remove('lightbox-open');
-                lightboxImg.removeAttribute('src');
-                if (lightboxTrigger && document.contains(lightboxTrigger)) lightboxTrigger.focus();
-                lightboxTrigger = null;
-            }
-
-            function stepLightbox(delta) {
-                if (!lightboxSlides.length) return;
-                lightboxIndex = (lightboxIndex + delta + lightboxSlides.length) % lightboxSlides.length;
-                updateLightbox();
-            }
-
-            document.addEventListener('click', function (e) {
-                var trigger = e.target.closest('.js-lightbox');
-                if (trigger) {
-                    e.preventDefault();
-                    openLightbox(trigger);
-                }
-            });
-
-            document.addEventListener('keydown', function (e) {
-                if (e.target.classList && e.target.classList.contains('js-lightbox') && (e.key === 'Enter' || e.key === ' ')) {
-                    e.preventDefault();
-                    openLightbox(e.target);
-                    return;
-                }
-                if (lightboxEl.classList.contains('hidden')) return;
-                if (e.key === 'Escape') closeLightbox();
-                if (e.key === 'ArrowLeft') stepLightbox(-1);
-                if (e.key === 'ArrowRight') stepLightbox(1);
-            });
-
-            lightboxClose.addEventListener('click', closeLightbox);
-            lightboxPrev.addEventListener('click', function () { stepLightbox(-1); });
-            lightboxNext.addEventListener('click', function () { stepLightbox(1); });
-            lightboxEl.addEventListener('click', function (e) {
-                if (e.target === lightboxEl) closeLightbox();
-            });
-
-            function buildGalleryItems(data, variants) {
-                var gallery = data.gallery;
-                if (!gallery || !gallery.assignments) return [];
-                var descriptions = gallery.descriptions || {};
-                var variantFiles = (variants && variants.files) || {};
-                return Object.keys(gallery.assignments).map(function (file) {
-                    var variant = variantFiles[file] || {};
-                    var fullSrc = variant.full || (GALLERY_BASE + file);
-                    var thumbSrc = variant.thumb || fullSrc;
-                    return {
-                        file: file,
-                        src: fullSrc,
-                        thumbSrc: thumbSrc,
-                        alt: descriptions[file] || file.replace(/_/g, ' ').replace(/\.[^.]+$/, ''),
-                        categories: gallery.assignments[file]
-                    };
-                }).sort(function (a, b) {
-                    return a.alt.localeCompare(b.alt, 'es', { sensitivity: 'base' });
-                });
-            }
-
-            function setupGalleryImgObserver() {
-                if (galleryImgObserver) galleryImgObserver.disconnect();
-                if (!('IntersectionObserver' in window)) return;
-                galleryImgObserver = new IntersectionObserver(function (entries) {
-                    entries.forEach(function (entry) {
-                        if (!entry.isIntersecting) return;
-                        var img = entry.target;
-                        var src = img.getAttribute('data-src');
-                        if (src) {
-                            img.src = src;
-                            img.removeAttribute('data-src');
-                        }
-                        galleryImgObserver.unobserve(img);
-                    });
-                }, { rootMargin: '160px' });
-            }
-
-            function observeGalleryThumb(img) {
-                if (galleryImgObserver) {
-                    galleryImgObserver.observe(img);
-                    return;
-                }
-                img.src = img.getAttribute('data-src') || '';
-                img.removeAttribute('data-src');
-            }
-
-            function createGalleryThumb(item, index) {
-                var img = document.createElement('img');
-                img.setAttribute('data-src', item.thumbSrc);
-                img.alt = item.alt;
-                img.decoding = 'async';
-                img.className = 'js-lightbox gallery-item gallery-thumb-loading aspect-square w-full rounded-xl object-cover';
-                img.setAttribute('data-lightbox-group', 'galeria');
-                img.setAttribute('data-gallery-index', String(index));
-                img.setAttribute('tabindex', '0');
-                img.addEventListener('load', function () {
-                    img.classList.remove('gallery-thumb-loading');
-                });
-                img.addEventListener('error', function () {
-                    img.remove();
-                });
-                observeGalleryThumb(img);
-                return img;
-            }
-
-            function updateGalleryMeta(total, shown) {
-                var statusEl = document.getElementById('gallery-status');
-                var moreWrap = document.getElementById('gallery-more-wrap');
-                var moreBtn = document.getElementById('gallery-more');
-
-                if (total <= 0) {
-                    statusEl.classList.add('hidden');
-                    moreWrap.classList.add('hidden');
-                    return;
-                }
-
-                statusEl.textContent = window.LC_I18N.t('gal.showing', { shown: shown, total: total });
-                statusEl.classList.remove('hidden');
-
-                if (shown < total) {
-                    moreWrap.classList.remove('hidden');
-                    moreBtn.textContent = window.LC_I18N.t('gal.loadMoreRemaining', { n: total - shown });
-                } else {
-                    moreWrap.classList.add('hidden');
-                }
-            }
-
-            function renderGalleryGrid(reset) {
-                var gridEl = document.getElementById('gallery-grid');
-                var emptyEl = document.getElementById('gallery-empty');
-                var filtered = getFilteredGalleryItems();
-
-                if (reset) {
-                    galleryVisibleCount = GALLERY_PAGE_SIZE;
-                    gridEl.innerHTML = '';
-                    setupGalleryImgObserver();
-                }
-
-                if (!filtered.length) {
-                    gridEl.classList.add('hidden');
-                    emptyEl.classList.remove('hidden');
-                    document.getElementById('gallery-status').classList.add('hidden');
-                    document.getElementById('gallery-more-wrap').classList.add('hidden');
-                    return;
-                }
-
-                emptyEl.classList.add('hidden');
-                gridEl.classList.remove('hidden');
-
-                var alreadyShown = gridEl.children.length;
-                var targetCount = Math.min(filtered.length, galleryVisibleCount);
-                var batch = filtered.slice(alreadyShown, targetCount);
-
-                batch.forEach(function (item, offset) {
-                    gridEl.appendChild(createGalleryThumb(item, alreadyShown + offset));
-                });
-
-                updateGalleryMeta(filtered.length, gridEl.children.length);
-            }
-
-            function getCategoryLabel(catId) {
-                var key = 'gal.cat.' + catId;
-                var translated = window.LC_I18N.t(key);
-                return translated !== key ? translated : catId;
-            }
-
-            function renderGalleryFilters(categories) {
-                var filtersEl = document.getElementById('gallery-filters');
-                filtersEl.innerHTML = '';
-                var allBtn = document.createElement('button');
-                allBtn.type = 'button';
-                allBtn.className = 'gallery-filter rounded-full border border-lagoon-200 bg-white px-4 py-2 text-sm font-medium text-lagoon-700 transition hover:border-lagoon-300';
-                allBtn.setAttribute('data-filter', 'todos');
-                allBtn.setAttribute('role', 'tab');
-                allBtn.setAttribute('aria-selected', galleryFilter === 'todos' ? 'true' : 'false');
-                allBtn.textContent = window.LC_I18N.t('gal.cat.all');
-                if (galleryFilter === 'todos') allBtn.classList.add('gallery-filter-active');
-                filtersEl.appendChild(allBtn);
-
-                categories.forEach(function (cat) {
-                    var btn = document.createElement('button');
-                    btn.type = 'button';
-                    btn.className = 'gallery-filter rounded-full border border-lagoon-200 bg-white px-4 py-2 text-sm font-medium text-lagoon-700 transition hover:border-lagoon-300';
-                    btn.setAttribute('data-filter', cat.id);
-                    btn.setAttribute('role', 'tab');
-                    var active = galleryFilter === cat.id;
-                    btn.setAttribute('aria-selected', active ? 'true' : 'false');
-                    if (active) btn.classList.add('gallery-filter-active');
-                    btn.textContent = getCategoryLabel(cat.id);
-                    filtersEl.appendChild(btn);
-                });
-
-                if (!galleryFiltersBound) {
-                    filtersEl.addEventListener('click', function (e) {
-                        var btn = e.target.closest('.gallery-filter');
-                        if (!btn) return;
-                        galleryFilter = btn.getAttribute('data-filter');
-                        filtersEl.querySelectorAll('.gallery-filter').forEach(function (button) {
-                            var isActive = button === btn;
-                            button.classList.toggle('gallery-filter-active', isActive);
-                            button.setAttribute('aria-selected', isActive ? 'true' : 'false');
-                        });
-                        renderGalleryGrid(true);
-                    });
-                    galleryFiltersBound = true;
-                }
-            }
-
-            function initGallery() {
-                var loadingEl = document.getElementById('gallery-loading');
-                loadingEl.textContent = window.LC_I18N.t('gal.loading');
-                Promise.all([
-                    fetch(IMAGES_DATA).then(function (res) { return res.json(); }),
-                    fetch(VARIANTS_DATA).then(function (res) {
-                        if (!res.ok) return { files: {} };
-                        return res.json();
-                    }).catch(function () { return { files: {} }; })
-                ])
-                    .then(function (results) {
-                        galleryItems = buildGalleryItems(results[0], results[1]);
-                        galleryCategoriesCache = results[0].gallery.categories || [];
-                        renderGalleryFilters(galleryCategoriesCache);
-                        loadingEl.classList.add('hidden');
-                        renderGalleryGrid(true);
-                        galleryInitialized = true;
-                    })
-                    .catch(function () {
-                        loadingEl.textContent = window.LC_I18N.t('gal.error');
-                    });
-            }
-
-            document.getElementById('gallery-more').addEventListener('click', function () {
-                galleryVisibleCount += GALLERY_PAGE_SIZE;
-                renderGalleryGrid(false);
-            });
-
-            var gallerySection = document.getElementById('galeria');
-            if (gallerySection && 'IntersectionObserver' in window) {
-                var galleryBootObserver = new IntersectionObserver(function (entries) {
-                    if (entries[0].isIntersecting) {
-                        galleryBootObserver.disconnect();
-                        initGallery();
-                    }
-                }, { rootMargin: '280px' });
-                galleryBootObserver.observe(gallerySection);
-            } else {
-                initGallery();
-            }
-        })();
-    </script>
+    <script src="assets/js/site.js?v=2.2" defer></script>
+    <script src="assets/js/visit.js?v=2.2" defer></script>
 </body>
 
 </html>

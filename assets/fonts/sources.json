@@ -1,0 +1,29 @@
+{
+  "subset": "latin",
+  "files": [
+    {
+      "file": "manrope-latin-500-800.woff2",
+      "source": "https://fonts.gstatic.com/s/manrope/v20/xn7gYHE41ni1AdIRggexSg.woff2",
+      "license": "manrope-OFL.txt",
+      "licenseSource": "https://raw.githubusercontent.com/google/fonts/main/ofl/manrope/OFL.txt"
+    },
+    {
+      "file": "source-sans-3-latin-400-700.woff2",
+      "source": "https://fonts.gstatic.com/s/sourcesans3/v20/nwpStKy2OAdR1K-IwhWudF-R3w8aZQ.woff2",
+      "license": "sourcesans3-OFL.txt",
+      "licenseSource": "https://raw.githubusercontent.com/google/fonts/main/ofl/sourcesans3/OFL.txt"
+    },
+    {
+      "file": "source-serif-4-latin-600.woff2",
+      "source": "https://fonts.gstatic.com/s/sourceserif4/v15/vEFy2_tTDB4M7-auWDN0ahZJW3IX2ih5nk3AucvUHf6OAVIJmeUDygwjisltnhtdDg.woff2",
+      "license": "sourceserif4-OFL.txt",
+      "licenseSource": "https://raw.githubusercontent.com/google/fonts/main/ofl/sourceserif4/OFL.txt"
+    },
+    {
+      "file": "source-serif-4-latin-600-italic.woff2",
+      "source": "https://fonts.gstatic.com/s/sourceserif4/v15/vEF02_tTDB4M7-auWDN0ahZJW1ge6NmXpVAHV83Bfb_US2D2QYxoUKIkn98pmFhtDMQC.woff2",
+      "license": "sourceserif4-OFL.txt",
+      "licenseSource": "https://raw.githubusercontent.com/google/fonts/main/ofl/sourceserif4/OFL.txt"
+    }
+  ]
+}
