@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Prueba de música | Laguna Canrash</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #0b1a24; color: #fff; font-family: sans-serif; }
+  iframe, video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; background: #0b1a24; }
+  .oculto { visibility: hidden; }
+  video { object-fit: cover; }
+  #diag { position: absolute; left: 0; right: 0; bottom: 0; z-index: 5; padding: 6px 14px; font-size: 18px; line-height: 1.4; background: rgba(0, 0, 0, .55); }
+  #activar { position: absolute; z-index: 6; top: 50%; left: 50%; width: 520px; margin: -60px 0 0 -260px; padding: 28px; font-size: 34px; border: 4px solid #fff; border-radius: 16px; background: #0f5c7a; color: #fff; display: none; }
+  #activar:focus { background: #1688b3; }
+</style>
+</head>
+<body>
+<iframe id="marco-a" title="Pantalla de la carta"></iframe>
+<iframe id="marco-b" class="oculto" title="Pantalla de la carta"></iframe>
+<video id="video" class="oculto" muted playsinline loop preload="none"></video>
+<audio id="musica" preload="auto"></audio>
+<button id="activar" type="button">Activar música</button>
+<div id="diag">Iniciando prueba…</div>
+<script>
+(function () {
+  'use strict';
+  var VERSION = 'prueba-1';
+  // Nocturnos de Chopin grabados por Musopen, CC0: https://archive.org/details/musopen-chopin
+  var BASE_MUSICA = 'https://archive.org/download/musopen-chopin/';
+  var LISTA = [["Nocturne%20B.%20108%20in%20C%20minor.mp3", 193.0], ["Nocturne%20B.%2049%20in%20C%20sharp%20minor%20%27Lento%20con%20gran%20espressione%27%20%281%29.mp3", 238.0], ["Nocturne%20Op.%2015%20no.%201%20In%20F%20major.mp3", 305.0], ["Nocturne%20Op.%2027%20no.%201%20in%20C%20sharp%20minor.mp3", 352.0], ["Nocturne%20Op.%2032%20no.%201%20in%20B%20major.mp3", 301.0], ["Nocturne%20Op.%2032%20no.%202%20in%20A%20flat%20major.mp3", 343.0], ["Nocturne%20Op.%2048%20no.%201%20in%20C%20minor.mp3", 379.0], ["Nocturne%20Op.%2048%20no.%202%20in%20F%20sharp%20minor.mp3", 496.0], ["Nocturne%20Op.%2055%20no.%201%20in%20F%20minor.mp3", 316.0], ["Nocturne%20Op.%2055%20no.%202%20in%20E%20flat%20major.mp3", 309.0], ["Nocturne%20Op.%2062%20no.%202%20in%20E%20major.mp3", 339.0], ["Nocturne%20Op.%209%20no.%202%20in%20E%20flat%20major.mp3", 276.0], ["NocturneOp.72No.1InEMinor.mp3", 272.0], ["NocturneOp.9No.1InBFlatMinor.mp3", 337.0], ["NocturneOp.9No.3.mp3", 417.0], ["NocturneOp27No2.mp3", 377.0]];
+  var CARTA = 'https://admin.lagunacanrash.com/carta/publica?tv=1&compat=webos35&view=';
+  var VIDEO = 'https://lagunacanrash.com/assets/images/video_drone_toda_laguna.mp4';
+  // Inicio fijo de la lista: la posición depende solo de la hora.
+  var EPOCA = Date.UTC(2026, 0, 1) / 1000;
+  var parametros = window.location.search;
+  var cada = Number((/[?&]cada=(\d{2,4})/.exec(parametros) || [])[1]) || 60;
+  var conDiag = !/[?&]diag=0/.test(parametros);
+  var pantallas = ['menu', 'sabores', 'laguna', 'video'];
+  var audio = document.getElementById('musica');
+  var video = document.getElementById('video');
+  var boton = document.getElementById('activar');
+  var diag = document.getElementById('diag');
+  var marcos = [document.getElementById('marco-a'), document.getElementById('marco-b')];
+  var visible = 0;
+  var indice = -1;
+  var pantalla = '';
+  var cuenta = { cambios: 0, esperas: 0, errores: 0, reintentos: 0, saltos: 0 };
+  var ultimoError = '';
+  var reintento;
+  var inicio = Date.now();
+
+  if (!conDiag) diag.style.display = 'none';
+
+  function mmss(segundos) {
+    if (!(segundos >= 0) || segundos === Infinity) return '--:--';
+    var m = Math.floor(segundos / 60);
+    var s = Math.floor(segundos % 60);
+    return m + ':' + (s < 10 ? '0' : '') + s;
+  }
+
+  var total = 0;
+  var pista = 0;
+  var desde = 0;
+  for (var i = 0; i < LISTA.length; i += 1) total += LISTA[i][1];
+
+  // Pista y segundo que corresponden a la hora actual.
+  function ubicarPorHora() {
+    var resto = (Date.now() / 1000 - EPOCA) % total;
+    pista = 0;
+    while (resto >= LISTA[pista][1]) {
+      resto -= LISTA[pista][1];
+      pista += 1;
+    }
+    desde = resto;
+  }
+
+  function sonar() {
+    var intento = audio.play();
+    if (intento && intento.then) {
+      intento.then(function () {
+        boton.style.display = 'none';
+      }, function (error) {
+        ultimoError = 'play: ' + (error && error.name);
+        boton.style.display = 'block';
+        boton.focus();
+      });
+    }
+  }
+
+  function cargarMusica() {
+    audio.src = BASE_MUSICA + LISTA[pista][0];
+    audio.load();
+  }
+
+  audio.addEventListener('loadedmetadata', function () {
+    if (desde > 0 && desde < audio.duration) {
+      audio.currentTime = desde;
+      cuenta.saltos += 1;
+    }
+    desde = 0;
+    sonar();
+  });
+  audio.addEventListener('ended', function () {
+    pista = (pista + 1) % LISTA.length;
+    cargarMusica();
+  });
+  audio.addEventListener('waiting', function () { cuenta.esperas += 1; });
+  audio.addEventListener('error', function () {
+    cuenta.errores += 1;
+    ultimoError = 'audio código ' + (audio.error && audio.error.code);
+    window.clearTimeout(reintento);
+    reintento = window.setTimeout(function () {
+      cuenta.reintentos += 1;
+      ubicarPorHora();
+      cargarMusica();
+    }, 10000);
+  });
+  audio.addEventListener('playing', function () { boton.style.display = 'none'; });
+  boton.addEventListener('click', sonar);
+
+  function mostrarVideo() {
+    if (!video.src) video.src = VIDEO;
+    video.className = '';
+    var intento = video.play();
+    if (intento && intento.catch) intento.catch(function (error) { ultimoError = 'video: ' + (error && error.name); });
+  }
+
+  function ocultarVideo() {
+    video.className = 'oculto';
+    video.pause();
+  }
+
+  function siguiente() {
+    indice = (indice + 1) % pantallas.length;
+    pantalla = pantallas[indice];
+    cuenta.cambios += 1;
+    if (pantalla === 'video') {
+      mostrarVideo();
+      return;
+    }
+    // Se carga en el marco oculto y se muestra cuando terminó, sin destello.
+    var nuevo = 1 - visible;
+    var marco = marcos[nuevo];
+    marco.onload = function () {
+      marco.onload = null;
+      marco.className = '';
+      marcos[visible].className = 'oculto';
+      visible = nuevo;
+      ocultarVideo();
+    };
+    marco.src = CARTA + pantalla + '&prueba=' + VERSION;
+  }
+
+  function informar() {
+    var rangos = audio.buffered;
+    var bufer = rangos.length ? rangos.end(rangos.length - 1) - audio.currentTime : 0;
+    var estado = audio.paused ? 'PAUSADA' : audio.readyState < 3 ? 'cargando' : 'sonando';
+    diag.textContent =
+      'Prueba ' + VERSION + ' · Música: ' + estado + ' pista ' + (pista + 1) + '/' + LISTA.length + ' ' + mmss(audio.currentTime) + ' / ' + mmss(audio.duration) +
+      ' · búfer ' + mmss(bufer) + ' · Pantalla: ' + pantalla + ' · cambios ' + cuenta.cambios +
+      ' · esperas ' + cuenta.esperas + ' · errores ' + cuenta.errores + ' · activa ' + mmss((Date.now() - inicio) / 1000) +
+      (ultimoError ? ' · último: ' + ultimoError : '');
+  }
+
+  ubicarPorHora();
+  cargarMusica();
+  siguiente();
+  window.setInterval(siguiente, cada * 1000);
+  window.setInterval(informar, 1000);
+})();
+</script>
+</body>
+</html>
