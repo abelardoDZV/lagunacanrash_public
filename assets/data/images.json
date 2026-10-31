@@ -264,7 +264,7 @@
         "contexto"
       ],
       "suggestedUsage": [
-        "servicios-cochera",
+        "servicios-estacionamiento",
         "confianza-mineros"
       ],
       "status": "available",
@@ -306,7 +306,7 @@
         "afluencia"
       ],
       "suggestedUsage": [
-        "servicios-cochera",
+        "servicios-estacionamiento",
         "confianza"
       ],
       "status": "available",
@@ -336,7 +336,7 @@
         "mineria"
       ],
       "suggestedUsage": [
-        "servicios-cochera",
+        "servicios-estacionamiento",
         "contexto-ruta"
       ],
       "status": "available",
@@ -369,15 +369,14 @@
       "status": "pending"
     },
     {
-      "file": "foto_lateral_cochera_con_techo.jpg",
-      "description": "Vista lateral de la cochera cubierta con techo",
+      "file": "foto_lateral_estacionamiento_con_techo.jpg",
+      "description": "Vista lateral del estacionamiento cubierto con techo",
       "tags": [
-        "cochera",
         "estacionamiento",
         "techo"
       ],
       "suggestedUsage": [
-        "servicios-cochera"
+        "servicios-estacionamiento"
       ],
       "status": "pending"
     },
@@ -778,7 +777,7 @@
       ],
       "suggestedUsage": [
         "seccion-ruta",
-        "cochera-contexto"
+        "estacionamiento-contexto"
       ],
       "status": "available",
       "resolvedPath": "ruta_a_canrash/turista_con_su_auto_en_ruta_a_canrash.jpg"
@@ -934,8 +933,8 @@
       "ceviche": "ceviche_y_chicharron_de_trucha_con_fondo_laguna_canrash.jpg",
       "sudado": "plato_sudado_de_trucha_fondo_laguna_canrash.jpg"
     },
-    "cochera": [
-      "foto_lateral_cochera_con_techo.jpg",
+    "estacionamiento": [
+      "foto_lateral_estacionamiento_con_techo.jpg",
       "foto_campamento_antamina.jpg",
       "foto_desde_lejos_aestacionamiento_y_parqueo_lleno_de_comensales.jpg"
     ],
@@ -1183,7 +1182,7 @@
       "foto_en_la_garita_control_de_antamina.jpg": "Garita de control de acceso a Antamina",
       "foto_hermosa_principal_de_toda_la_laguna_canrash.jpg": "Foto principal panorámica de toda Laguna Canrash",
       "foto_hospedaje_calidad_media.jpg": "Hospedaje rústico en módulos o casitas, calidad media",
-      "foto_lateral_cochera_con_techo.jpg": "Vista lateral de la cochera cubierta con techo",
+      "foto_lateral_estacionamiento_con_techo.jpg": "Vista lateral del estacionamiento cubierto con techo",
       "foto_ovejas_en_laguna_canrash_con_cielo_y_cerro.jpg": "Ovejas en Laguna Canrash con cielo abierto y cerro de fondo",
       "foto_panoramica_del_hospedaje_calidad_baja.jpg": "Vista panorámica del hospedaje rústico",
       "foto_panoramica_desde_lado_opuesto_de_laguna_canrash_los_servicios_se_ven_a_lo_lejos.jpg": "Panorámica desde el lado opuesto; los servicios de la empresa se ven a lo lejos",

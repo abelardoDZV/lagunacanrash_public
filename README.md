@@ -70,8 +70,8 @@ ni una actualización automática de esos valores.
 
 La carta y las cuatro rutas aparecen después de la portada. Los detalles del
 camino, ambientes, seguridad e historia se pueden desplegar; los precios y
-acciones de consulta permanecen visibles. Hospedaje y cochera tienen mensajes
-propios de WhatsApp. La capacidad de la cochera no se presenta como disponibilidad
+acciones de consulta permanecen visibles. Hospedaje y estacionamiento tienen mensajes
+propios de WhatsApp. La capacidad del estacionamiento no se presenta como disponibilidad
 actual.
 
 Las imágenes usan variantes existentes con `srcset`, `sizes` y dimensiones
