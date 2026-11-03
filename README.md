@@ -31,6 +31,34 @@ Abrir esa dirección con el puerto 8080. El servidor debe iniciarse desde la
 raíz del worktree de Public; las páginas son `index.html` y `carta.html`.
 La compilación y la vista previa no publican cambios.
 
+## Privacidad de la atención por WhatsApp
+
+`privacidad.html` contiene la política de privacidad de Laguna
+Canrash Admin para la atención compartida por WhatsApp. Incluye el responsable,
+los datos y fines de la atención, proveedores, conservación de conversaciones
+durante 12 meses desde el último mensaje y solicitudes de acceso, corrección
+y eliminación al número del restaurante. La portada enlaza la página y el
+sitemap incluye su dirección. El documento funciona sin JavaScript y utiliza
+estilos propios para apariencia clara, oscura e impresión.
+
+La página se sirve desde GitHub Pages en
+`https://lagunacanrash.com/privacidad.html`. Publicarla no habilita
+la recepción de mensajes ni crea la bandeja del Admin. Antes de usar la URL en
+Meta hay que comprobar que responde sin autenticación.
+La retención y la eliminación descritas deben implementarse también en Admin
+antes de activar su almacenamiento de conversaciones. Los registros de reservas
+y comprobantes son independientes. Actualizar esta política si cambian el
+responsable, los proveedores, el canal de solicitudes o el uso de los datos.
+
+Verificación local: documento y recursos accesibles sin sesión ni JavaScript;
+sin desbordamiento ni solapamiento de cabecera a 320, 820 y 1440 px, en claro
+y oscuro; navegación de teclado al contenido, enlaces locales y sitemap
+comprobados. La página no solicita datos ni envía mensajes.
+
+Referencias para la revisión del contenido:
+[deber de informar de la ANPD](https://cdn.www.gob.pe/uploads/document/file/4566447/Gui%CC%81a%20pra%CC%81ctica%20para%20la%20observancia%20del%20%C2%ABDeber%20de%20Informar%C2%BB.pdf)
+y [política de WhatsApp](https://www.whatsapp.com/legal/privacy-policy).
+
 ## Carta para clientes
 
 La sección `index.html#carta` y el visor `carta.html` incrustan directamente

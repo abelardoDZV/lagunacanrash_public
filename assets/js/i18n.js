@@ -274,6 +274,7 @@
             'contact.whatsappDirect': 'WhatsApp directo',
             'contact.astroLink': 'Observatorio Andino — guía del cielo',
             'contact.copyright': 'Eica S.R.L. — Laguna Canrash. Todos los derechos reservados.',
+            'contact.privacy': 'Política de privacidad',
 
             'ui.whatsappAria': 'Contactar por WhatsApp: 957 878 409',
             'ui.skipContent': 'Saltar al contenido',
@@ -557,6 +558,7 @@
             'contact.whatsappDirect': 'Direct WhatsApp',
             'contact.astroLink': 'Andean Observatory — sky guide',
             'contact.copyright': 'Eica S.R.L. — Laguna Canrash. All rights reserved.',
+            'contact.privacy': 'Privacy policy (Spanish)',
 
             'ui.whatsappAria': 'Contact via WhatsApp: +51 957 878 409',
             'ui.skipContent': 'Skip to content',
