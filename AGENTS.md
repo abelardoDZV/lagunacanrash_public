@@ -3,6 +3,7 @@
 Este repositorio forma parte del proyecto Laguna Canrash. Antes de trabajar, leer las instrucciones comunes y el mapa de interacciones de [lagunacanrash/AGENTS.md](https://github.com/abelardoDZV/lagunacanrash/blob/main/AGENTS.md), además de estas instrucciones locales.
 
 - Si el repositorio central está clonado como carpeta hermana, leer `../lagunacanrash/AGENTS.md`.
+- Al iniciar o retomar una tarea, leer también el [mapa operativo común](https://github.com/abelardoDZV/lagunacanrash/blob/main/docs/mapa-operativo.md), o `../lagunacanrash/docs/mapa-operativo.md` si está clonado. Identificar el entorno y comprobar el servicio afectado antes de ampliar la búsqueda de infraestructura. Actualizar el mapa cuando cambien ubicaciones o dependencias.
 - Si no está disponible localmente, consultar su versión actual:
 
   ```bash
