@@ -128,16 +128,11 @@
     } catch {
       status.textContent = lastPayload
         ? 'No se pudo actualizar. Se muestra la última carta cargada.'
-        : 'No se pudo cargar la carta. Puedes reintentar o abrir la carta original.';
+        : 'No se pudo cargar la carta. Puedes reintentar.';
       const retry = node('button', 'menu-retry', 'Reintentar');
       retry.type = 'button';
       retry.addEventListener('click', () => void load());
       status.append(retry);
-      if (!lastPayload) {
-        const link = node('a', '', 'Abrir carta original');
-        link.href = 'https://admin.lagunacanrash.com/carta/publica';
-        status.append(link);
-      }
     } finally {
       clearTimeout(timeout);
       busy = false;

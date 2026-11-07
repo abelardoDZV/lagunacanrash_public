@@ -73,7 +73,8 @@ los platos repetidos, los precios y la anticipación recibidos. La carta permane
 en español y con el mismo fondo claro en ambos temas. Se actualiza cada minuto
 mientras la página está visible y al volver a ella. Si falla una actualización,
 se conserva la última lectura con aviso; si falla la primera carga, se ofrece
-reintentar o abrir el original. Sin JavaScript se ofrece el enlace original.
+reintentar. Sin JavaScript se indica cómo habilitarlo y el contacto de WhatsApp.
+No se muestran enlaces al dominio de Admin, tampoco en los mensajes de error.
 
 La API debe permitir los orígenes públicos por CORS; este contrato ya existe
 en Admin. Public no accede a la base de datos ni usa el archivo histórico
@@ -162,3 +163,11 @@ El visor se probó con teclado, gestos, fallos de carga y recuperación.
 Referencias de la revisión: [contraste de WCAG 2.2](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html),
 [foco visible](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html)
 y [carga de vídeos de web.dev](https://web.dev/articles/lazy-loading-video).
+
+## Videos del sitio
+
+Los videos del camino y del pastor se sirven sin pista de audio y con el atributo
+`muted`. Conservan los controles de reproducción, pero el cliente no puede activar
+sonido porque los archivos no contienen audio. Sus URL incluyen una versión para
+evitar reutilizar las copias anteriores con sonido. Los recursos de música para
+la TV se conservan independientemente.

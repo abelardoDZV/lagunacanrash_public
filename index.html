@@ -265,11 +265,10 @@
       <p data-i18n="v2.menuIntro">La misma que encontrarás en tu mesa, con todos los platos, precios y anticipación.</p>
       <a href="carta.html" class="v2-button v2-button-dark"><span data-i18n="v2.fullMenu">Abrir carta completa</span><span aria-hidden="true">↗</span></a>
     </div>
-    <div class="v2-menu-document"><div data-public-menu lang="es"><p class="menu-status" role="status">Cargando carta…</p><noscript><p class="menu-status">Para consultar la carta, <a href="https://admin.lagunacanrash.com/carta/publica">abre la carta original</a>.</p></noscript></div></div>
+    <div class="v2-menu-document"><div data-public-menu lang="es"><p class="menu-status" role="status">Cargando carta…</p><noscript><p class="menu-status">Activa JavaScript para consultar la carta o contáctanos por WhatsApp al 957 878 409.</p></noscript></div></div>
     <div class="v2-menu-support">
       <p id="carta-help" data-i18n="v2.menuHelp">Todos los platos, sin salir de esta página.</p>
       <a href="https://wa.me/51957878409" data-wa="menu" target="_blank" rel="noopener noreferrer" data-i18n="carta.whatsapp">Consultar disponibilidad por WhatsApp</a>
-      <a href="https://admin.lagunacanrash.com/carta/publica" target="_blank" rel="noopener noreferrer" data-i18n="v2.originalMenu">¿No carga? Abre la carta original ↗</a>
     </div>
   </div>
 </section>
@@ -343,10 +342,10 @@
                 <div class="mt-12 overflow-hidden rounded-2xl bg-lagoon-50 shadow-card">
                     <div class="grid lg:grid-cols-2 lg:items-center">
                         <div class="aspect-video lg:aspect-auto lg:min-h-[18rem]">
-                            <video class="autoplay-video h-full w-full object-cover" controls playsinline preload="none" loading="lazy"
+                            <video class="autoplay-video h-full w-full object-cover" controls muted playsinline preload="none" loading="lazy"
                                 poster="assets/images/derived/thumb/turista_en_medio_de_la_pista_que_con_punto_focal_al_medio_en_la_ruta_a_canrash.webp"
                                 data-i18n-aria="route.roadVideoLabel" aria-label="Video del camino bordeando la laguna hacia Laguna Canrash">
-                                <source src="assets/images/espectacular_video_manejando_en_pista_al_lado_de_laguna_se_ve_la_laguna_y_buses_en_contra.mp4" type="video/mp4">
+                                <source src="assets/images/espectacular_video_manejando_en_pista_al_lado_de_laguna_se_ve_la_laguna_y_buses_en_contra.mp4?v=sin-audio-1" type="video/mp4">
                             </video>
                         </div>
                         <div class="p-6 sm:p-8">
@@ -696,10 +695,10 @@
         <section id="historia" tabindex="-1" class="v2-history">
  <div class="v2-container"><div class="v2-history-grid">
   <figure><video class="media-video w-full aspect-video object-cover rounded-2xl"
-                                    controls playsinline preload="none" loading="lazy"
+                                    controls muted playsinline preload="none" loading="lazy"
                                     poster="assets/images/derived/thumb/foto_ovejas_en_laguna_canrash_con_cielo_y_cerro.webp"
                                     aria-label="Video del pastor guiando sus ovejas en la laguna Canrash">
-                                    <source src="assets/images/pastor_guiando_a_sus_ovejas_en_laguna_canrash.mp4" type="video/mp4">
+                                    <source src="assets/images/pastor_guiando_a_sus_ovejas_en_laguna_canrash.mp4?v=sin-audio-1" type="video/mp4">
                                 </video><figcaption data-i18n="hist.sheepCaption">El pastor guiando sus ovejas en la laguna — tradición viva de nuestra familia</figcaption></figure>
   <div><p class="v2-eyebrow" data-i18n="hist.label">Legado familiar</p><h2 data-i18n="hist.title">Nuestra historia</h2><p class="v2-history-intro" data-i18n="hist.p1">Somos una familia que lleva décadas en estas tierras. En los años 70, nuestro abuelo compró los campos alrededor de la laguna para pastorear ovejas y vacas. De ese trabajo sencillo nació el amor por este lugar.</p><details class="v2-details"><summary><span data-i18n="review.story">Leer la historia completa</span><span aria-hidden="true">+</span></summary><div class="v2-details-body"><div class="mt-8 space-y-6 text-lagoon-700 leading-relaxed">
                             <p data-i18n="hist.p1">
@@ -952,7 +951,7 @@
 
     <script src="assets/js/site.js?v=2.2" defer></script>
     <script src="assets/js/visit.js?v=2.2" defer></script>
-    <script src="assets/js/menu.js?v=1" defer></script>
+    <script src="assets/js/menu.js?v=2" defer></script>
 </body>
 
 </html>
