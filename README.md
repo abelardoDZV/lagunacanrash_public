@@ -61,18 +61,35 @@ y [política de WhatsApp](https://www.whatsapp.com/legal/privacy-policy).
 
 ## Carta para clientes
 
-La sección `index.html#carta` y el visor `carta.html` incrustan directamente
-`https://admin.lagunacanrash.com/carta/publica` mediante un iframe. Admin
-mantiene el documento original para clientes y sus datos: Public no reconstruye
-el diseño, reordena platos, elimina filas repetidas ni modifica precios o
-anticipaciones. Ambas vistas ofrecen un enlace para abrir el original.
+La sección `index.html#carta` y la página `carta.html` muestran la carta como
+contenido de la página, sin iframe ni desplazamiento interno. Ambas usan
+`assets/js/menu.js` y la composición de clientes de Admin, adaptada en
+`assets/css/customer-menu.css`; mantenerla coordinada con `CustomerMenu` y
+`customer-documents.css` de Admin cuando cambie ese formato.
 
-La carta requiere que Admin y su API pública estén disponibles y permitan la
-incrustación desde Public. La v2 no utiliza un respaldo local de precios;
-`assets/data/carta.json` se conserva como archivo histórico, sin consumo desde
-estas páginas. Los cambios de carta realizados en Admin se muestran al cargar
-su vista pública. Esta integración no requiere sesión administrativa ni acceso
-directo de Public a la base de datos.
+Los datos proceden de `https://admin.lagunacanrash.com/carta/carta_api`, sin
+credenciales ni caché. Se conservan las categorías, el orden de las filas,
+los platos repetidos, los precios y la anticipación recibidos. La carta permanece
+en español y con el mismo fondo claro en ambos temas. Se actualiza cada minuto
+mientras la página está visible y al volver a ella. Si falla una actualización,
+se conserva la última lectura con aviso; si falla la primera carga, se ofrece
+reintentar o abrir el original. Sin JavaScript se ofrece el enlace original.
+
+La API debe permitir los orígenes públicos por CORS; este contrato ya existe
+en Admin. Public no accede a la base de datos ni usa el archivo histórico
+`assets/data/carta.json`. Esta versión se entrega desde Public, sin cambios ni despliegue de Admin.
+El push a `main` publica el código fuente; la actualización efectiva de GitHub
+Pages se comprueba por separado.
+
+Verificación local del 2026-11-07: compilación y sintaxis JavaScript correctas;
+las dos páginas comprobadas a 320, 390, 820, 1024 y 1440 px, en ambos temas,
+sin desbordamiento horizontal ni scroll vertical interno en la carta.
+Con API simulada se comprobaron filas repetidas, anticipación, precios, texto
+seguro, error inicial, reintento, respuesta incompleta, conservación de la última
+lectura, recuperación y acceso sin JavaScript. Con los archivos locales servidos
+bajo ambos orígenes públicos en el navegador se verificaron el CORS real de
+Admin, sus 21 filas vigentes y la copia del teléfono. Esta comprobación no publica
+los archivos en GitHub Pages.
 
 ## Contenido y verificaciones
 
@@ -86,6 +103,7 @@ se coordinan por WhatsApp; el sitio no confirma disponibilidad.
 node --check assets/js/site.js
 node --check assets/js/i18n.js
 node --check assets/js/visit.js
+node --check assets/js/menu.js
 npm run images:validate
 ```
 

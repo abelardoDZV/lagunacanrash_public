@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/brand/laguna-canrash-tokens.css">
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/carta.css">
+    <link rel="stylesheet" href="assets/css/customer-menu.css?v=1">
   </head>
   <body>
     <a class="menu-skip" href="#carta">Ir a la carta</a>
@@ -31,7 +32,8 @@
     </header>
     <main class="menu-viewer">
       <h1 class="visually-hidden">Carta para clientes de Laguna Canrash</h1>
-      <iframe id="carta" class="menu-frame" src="https://admin.lagunacanrash.com/carta/publica" title="Carta para clientes de Laguna Canrash: platos, precios y anticipación" allow="clipboard-write"></iframe>
+      <div id="carta" tabindex="-1"><div data-public-menu lang="es"><p class="menu-status" role="status">Cargando carta…</p><noscript><p class="menu-status">Para consultar la carta, <a href="https://admin.lagunacanrash.com/carta/publica">abre la carta original</a>.</p></noscript></div></div>
     </main>
+    <script src="assets/js/menu.js?v=1" defer></script>
   </body>
 </html>
