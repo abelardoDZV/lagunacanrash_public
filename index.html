@@ -789,6 +789,7 @@
 
                     <div class="price-table-card overflow-hidden rounded-2xl">
                         <div class="border-b border-lagoon-100 bg-lagoon-50 px-6 py-5 sm:px-8">
+                            <p data-trout-status role="status" class="text-sm text-lagoon-600">Consulta por WhatsApp si no se cargan los precios.</p>
                             <h3 class="font-display text-xl font-bold text-lagoon-950 sm:text-2xl" data-i18n="mayor.tableTitle">Tabla de precios por kilo</h3>
                             <p class="mt-1 text-sm font-medium text-lagoon-600" data-i18n="mayor.tableSubtitle">Según volumen total de compra</p>
                         </div>
@@ -800,7 +801,7 @@
                                     <p class="text-xs text-lagoon-500 mt-0.5" data-i18n="mayor.tier1sub">Compra pequeña</p>
                                 </div>
                                 <p class="shrink-0 text-right">
-                                    <span class="font-display text-3xl font-bold text-lagoon-800">22</span>
+                                    <span class="font-display text-3xl font-bold text-lagoon-800" data-trout-price="menor_5">—</span>
                                     <span class="text-sm font-semibold text-lagoon-600" data-i18n="mayor.perKg"> soles/kg</span>
                                 </p>
                             </div>
@@ -811,7 +812,7 @@
                                     <p class="text-xs text-lagoon-500 mt-0.5" data-i18n="mayor.tier2sub">Volumen medio</p>
                                 </div>
                                 <p class="shrink-0 text-right">
-                                    <span class="font-display text-3xl font-bold text-lagoon-800">21</span>
+                                    <span class="font-display text-3xl font-bold text-lagoon-800" data-trout-price="de_5_a_10">—</span>
                                     <span class="text-sm font-semibold text-lagoon-600" data-i18n="mayor.perKg"> soles/kg</span>
                                 </p>
                             </div>
@@ -822,7 +823,7 @@
                                     <p class="text-xs text-lagoon-500 mt-0.5" data-i18n="mayor.tier3sub">Restaurantes y negocios</p>
                                 </div>
                                 <p class="shrink-0 text-right">
-                                    <span class="font-display text-3xl font-bold text-lagoon-800">20</span>
+                                    <span class="font-display text-3xl font-bold text-lagoon-800" data-trout-price="de_10_a_25">—</span>
                                     <span class="text-sm font-semibold text-lagoon-600" data-i18n="mayor.perKg"> soles/kg</span>
                                 </p>
                             </div>
@@ -836,7 +837,7 @@
                                     <p class="text-xs text-alpine-moss mt-0.5 font-medium" data-i18n="mayor.tier4sub">Distribuidores y alto volumen</p>
                                 </div>
                                 <p class="shrink-0 text-right">
-                                    <span class="font-display text-3xl font-bold text-alpine-moss">19</span>
+                                    <span class="font-display text-3xl font-bold text-alpine-moss" data-trout-price="mayor_25">—</span>
                                     <span class="text-sm font-semibold text-lagoon-700" data-i18n="mayor.perKg"> soles/kg</span>
                                 </p>
                             </div>
@@ -952,6 +953,7 @@
     <script src="assets/js/site.js?v=2.2" defer></script>
     <script src="assets/js/visit.js?v=2.2" defer></script>
     <script src="assets/js/menu.js?v=2" defer></script>
+    <script src="assets/js/trout-prices.js" defer></script>
 </body>
 
 </html>

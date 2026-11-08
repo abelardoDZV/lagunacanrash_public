@@ -171,3 +171,18 @@ Los videos del camino y del pastor se sirven sin pista de audio y con el atribut
 sonido porque los archivos no contienen audio. Sus URL incluyen una versión para
 evitar reutilizar las copias anteriores con sonido. Los recursos de música para
 la TV se conservan independientemente.
+
+## Precios de trucha por kilo
+
+La sección `#mayor` conserva los cuatro intervalos y consulta
+`https://admin.lagunacanrash.com/carta/precios-trucha_api` mediante
+`assets/js/trout-prices.js`, sin cookies. Los precios se editan en Admin,
+en la tarjeta «Precio de trucha por kilo» de Carta; no se duplican en HTML.
+Se actualizan cada minuto mientras la página esté visible y al volver a ella.
+Una respuesta incompleta o un fallo conserva la última lectura y muestra aviso;
+sin primera lectura se invita a consultar por WhatsApp. Los intervalos y el resto
+de la sección mantienen la traducción ES/EN.
+
+Publicar primero Admin con la migración `c0e2a4f6b8d1` autorizada y aplicada;
+después Public. Publicar código no acredita la actualización efectiva de Pages.
+Pruebas de consulta y actualización: `node --test tests/trout-prices.test.cjs`.
