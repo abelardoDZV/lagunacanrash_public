@@ -76,9 +76,16 @@ se conserva la última lectura con aviso; si falla la primera carga, se ofrece
 reintentar. Sin JavaScript se indica cómo habilitarlo y el contacto de WhatsApp.
 No se muestran enlaces al dominio de Admin, tampoco en los mensajes de error.
 
+«Copiar Carta» genera el PNG del documento a doble resolución para pegarlo en
+WhatsApp. Si el portapapeles de imágenes no está disponible, abre la vista
+previa para copiar o descargar. El generador se carga al usar el botón.
+`assets/vendor/html2canvas-1.4.1.min.js` y su licencia proceden de la distribución
+de `html2canvas@1.4.1` en npm, la misma versión que usa Admin.
+
 La API debe permitir los orígenes públicos por CORS; este contrato ya existe
 en Admin. Public no accede a la base de datos ni usa el archivo histórico
-`assets/data/carta.json`. Esta versión se entrega desde Public, sin cambios ni despliegue de Admin.
+`assets/data/carta.json`. La opción del sitio se entrega desde Public de forma
+independiente de la ruta `/carta/publica` de Admin.
 El push a `main` publica el código fuente; la actualización efectiva de GitHub
 Pages se comprueba por separado.
 
@@ -123,9 +130,9 @@ actual.
 
 Las imágenes usan variantes existentes con `srcset`, `sizes` y dimensiones
 explícitas. Los vídeos tienen controles nativos y `preload="none"`: se reproducen
-por decisión del visitante. Las cuatro fuentes se sirven localmente desde
+por decisión del visitante. Las fuentes se sirven localmente desde
 `assets/fonts/`, con sus licencias originales y procedencia en `sources.json`.
-La carta incrustada conserva sus propios recursos, gestionados por Admin.
+La carta conserva la composición para clientes de Admin.
 
 La navegación mantiene enlaces con fragmento y mueve el foco al destino. Los
 filtros de galería son botones con estado, el recuento se anuncia y el visor

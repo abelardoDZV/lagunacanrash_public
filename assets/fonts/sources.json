@@ -24,6 +24,18 @@
       "source": "https://fonts.gstatic.com/s/sourceserif4/v15/vEF02_tTDB4M7-auWDN0ahZJW1ge6NmXpVAHV83Bfb_US2D2QYxoUKIkn98pmFhtDMQC.woff2",
       "license": "sourceserif4-OFL.txt",
       "licenseSource": "https://raw.githubusercontent.com/google/fonts/main/ofl/sourceserif4/OFL.txt"
+    },
+    {
+      "file": "source-sans-3-latin-400-italic.woff2",
+      "source": "https://registry.npmjs.org/@fontsource/source-sans-3/-/source-sans-3-5.3.1.tgz",
+      "license": "sourcesans3-OFL.txt",
+      "licenseSource": "https://raw.githubusercontent.com/google/fonts/main/ofl/sourcesans3/OFL.txt"
+    },
+    {
+      "file": "source-serif-4-latin-500-italic.woff2",
+      "source": "https://registry.npmjs.org/@fontsource/source-serif-4/-/source-serif-4-5.3.1.tgz",
+      "license": "sourceserif4-OFL.txt",
+      "licenseSource": "https://raw.githubusercontent.com/google/fonts/main/ofl/sourceserif4/OFL.txt"
     }
   ]
 }

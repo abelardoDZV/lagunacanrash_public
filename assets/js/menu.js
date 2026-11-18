@@ -1,3 +1,5 @@
+import { addMenuImageAction } from './menu-image.js?v=1';
+
 (() => {
   'use strict';
 
@@ -9,7 +11,11 @@
     ['pollo', 'A BASE DE POLLO'],
     ['otros', 'OTROS PLATOS'],
   ];
+  const phone = '957 878 409';
+  const whatsappIcon = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.75 13.96c.25.13.41.2.46.3.06.11.04.61-.21 1.18-.2.56-1.24 1.1-1.7 1.12-.46.02-.47.36-2.96-.73-2.49-1.09-3.99-3.75-4.11-3.92-.12-.17-.96-1.38-.92-2.61.05-1.22.69-1.8.95-2.04.24-.26.51-.29.68-.26h.47c.15 0 .36-.06.55.45l.69 1.87c.06.13.1.28.01.44l-.27.41-.39.42c-.12.12-.26.25-.12.5.12.26.62 1.09 1.32 1.78.91.88 1.71 1.17 1.95 1.3.24.14.39.12.54-.04l.81-.94c.19-.25.35-.19.58-.11l1.67.88M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10c-1.97 0-3.8-.57-5.35-1.55L2 22l1.55-4.65A9.969 9.969 0 0 1 2 12 10 10 0 0 1 12 2m0 2a8 8 0 0 0-8 8c0 1.72.54 3.31 1.46 4.61L4.5 19.5l2.89-.96A7.95 7.95 0 0 0 12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8z"/></svg>';
+  const copyIcon = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2m0 16H8V7h11z"/></svg>';
   let lastPayload = '';
+  let currentMenu;
   let busy = false;
 
   function node(tag, className, text) {
@@ -20,18 +26,25 @@
   }
 
   function copyPhone(yape = false) {
-    const button = node('button', 'customer-phone', '957 878 409');
+    const button = node('button', 'customer-phone');
+    button.innerHTML = yape ? `${phone}${copyIcon}` : `${whatsappIcon}${phone}`;
     button.type = 'button';
     button.setAttribute('aria-label', `Copiar número de ${yape ? 'Yape' : 'WhatsApp'}`);
+    const notice = node('span', 'customer-phone-notice');
+    notice.setAttribute('role', 'status');
+    notice.dataset.html2canvasIgnore = 'true';
+    button.append(notice);
+    let timer;
     button.addEventListener('click', async () => {
       try {
         if (!navigator.clipboard?.writeText) throw new Error();
-        await navigator.clipboard.writeText('957 878 409');
-        button.textContent = '¡Copiado!';
+        await navigator.clipboard.writeText(phone);
+        notice.textContent = '¡Copiado!';
       } catch {
-        button.textContent = 'Número: 957 878 409';
+        notice.textContent = `Número: ${phone}`;
       }
-      setTimeout(() => { button.textContent = '957 878 409'; }, 3000);
+      clearTimeout(timer);
+      timer = setTimeout(() => { notice.textContent = ''; }, 3000);
     });
     return button;
   }
@@ -51,7 +64,7 @@
         <div class="customer-menu-note"><p>Consulta la anticipación indicada en cada plato y el mínimo de personas.</p></div>
         <div class="customer-menu-contact">
           <a href="https://www.facebook.com/LagunaCanrashPeru/" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Laguna Canrash"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg></a>
-          <a href="https://www.instagram.com/lagunacanrash/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Laguna Canrash"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1"/></svg></a>
+          <a href="https://www.instagram.com/lagunacanrash/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Laguna Canrash"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg></a>
         </div>
       </div>`;
     document.querySelector('.customer-menu-contact').prepend(copyPhone());
@@ -119,9 +132,12 @@
       const serialized = JSON.stringify(payload.carta);
       if (serialized !== lastPayload) {
         const menu = render(payload.carta);
-        const previous = host.querySelector('.customer-menu');
-        if (previous) previous.replaceWith(menu);
-        else host.append(menu);
+        if (currentMenu) currentMenu.replaceWith(menu);
+        else {
+          addMenuImageAction(host, () => currentMenu);
+          host.append(menu);
+        }
+        currentMenu = menu;
         lastPayload = serialized;
       }
       status.replaceChildren();
