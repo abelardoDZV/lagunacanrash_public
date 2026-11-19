@@ -29,10 +29,12 @@
             "ui.lightboxRetry": "Reintentar",
             "wa.lodge": "Hola, quisiera consultar disponibilidad de hospedaje en Laguna Canrash. Mi fecha y cantidad de personas son:",
             "wa.garage": "Hola, quisiera consultar disponibilidad de estacionamiento en Laguna Canrash. Mi fecha y cantidad de días son:",
-            "review.routeTitle": "Elige desde dónde vienes",
+            "review.routeTitle": "Rutas al restaurante Laguna Canrash",
+            "guides.route": "Guía de rutas a Laguna Canrash",
+            "guides.routeUrl": "/como-llegar/",
             "review.routeIntro": "Llegas en auto hasta el restaurante por carretera asfaltada. Estos tiempos son aproximados.",
             "review.openMaps": "Abrir en Google Maps",
-            "review.sanMarcos": "Ruta recomendada",
+            "review.sanMarcos": "Por la AN-111",
             "review.routeDetails": "Qué ver en el camino",
             "review.restaurantIntro": "Criamos trucha arcoíris en la propia laguna. La preparamos frita, en chicharrón, ceviche y sudado, para disfrutarla en nuestro restaurante rústico.",
             "review.restaurantOther": "También encontrarás platos de pollo y res, y tres ambientes para compartir.",
@@ -43,9 +45,7 @@
             "review.security": "Seguridad durante tu visita",
             "review.story": "Leer la historia completa",
             "v2.location": "SAN MARCOS · ÁNCASH · PERÚ",
-            "v2.heroFirst": "Una escapada",
-            "v2.heroLast": "a la altura.",
-            "v2.heroIntro": "La laguna frente a ti. Trucha de nuestra crianza en tu mesa. Y tiempo para disfrutar de los Andes.",
+            "v2.heroIntro": "Visita la laguna en San Marcos, Huari. Prueba nuestra trucha de crianza propia y descansa junto al agua, en los Andes de Áncash.",
             "v2.seeMenu": "Ver nuestra carta",
             "v2.paved": "Hasta la puerta",
             "v2.explore": "Conoce Canrash",
@@ -56,10 +56,10 @@
             "v2.menuHelp": "Todos los platos, sin salir de esta página.",
             "v2.freshTitle": "Trucha de crianza propia",
             "v2.freshDesc": "El origen de nuestra cocina",
-            'meta.title': 'Laguna Canrash | Una escapada a la altura en Áncash',
-            'meta.description': 'Planea una escapada a Laguna Canrash: paisaje andino, trucha de crianza propia, restaurante, hospedaje rústico y ruta asfaltada en San Marcos, Áncash.',
-            'meta.ogDescription': 'Laguna, trucha y descanso en los Andes de Áncash. Conoce la ruta, el restaurante y el hospedaje para planear tu visita.',
-            'meta.twitterDescription': 'Laguna, trucha y descanso en los Andes de Áncash. Planea tu visita a Laguna Canrash.',
+            'meta.title': 'Laguna Canrash | Restaurante de trucha en San Marcos',
+            'meta.description': 'Visita Laguna Canrash, en San Marcos, Huari. Conoce el restaurante de trucha, el hospedaje y cómo llegar desde Huaraz, Chavín de Huántar y Antamina.',
+            'meta.ogDescription': 'Trucha de crianza propia, hospedaje rústico y una laguna andina en San Marcos, Áncash. Planea tu visita a Canrash.',
+            'meta.twitterDescription': 'Trucha de crianza propia, hospedaje rústico y una laguna andina en San Marcos, Áncash. Planea tu visita a Canrash.',
 
             'nav.label': 'Navegación principal',
             'nav.inicio': 'Inicio',
@@ -118,7 +118,9 @@
             'route.linkHuallanca': 'Ruta desde Huallanca',
             'route.linkAntamina': 'Ruta desde Antamina',
             'route.linkSanMarcos': 'Ruta desde San Marcos',
-            'route.mapsNote': 'Si partes de San Marcos, Google Maps puede mostrarte <strong>dos rutas</strong>. Elige aquí «San Marcos» para abrir la ruta recomendada.',
+            'route.mapsNote': 'Si Google Maps te ofrece varias rutas desde San Marcos, sigue la AN-111.',
+            'route.restaurantDirections': 'Cómo llegar al restaurante',
+            'route.lakeMap': 'Ver la laguna en el mapa',
             'route.sightsLabel': 'El viaje es parte de la experiencia',
             'route.sightsTitle': 'En el camino verás',
             'route.dinoTitle': 'Huellas de dinosaurio',
@@ -260,11 +262,11 @@
 
             'contact.tagline': 'Laguna, trucha y descanso en los Andes de Áncash.',
             'contact.locationTitle': 'Ubicación',
-            'contact.location': 'Distrito de San Marcos, provincia de Huari,<br>departamento de Áncash, Perú.',
+            'contact.location': 'Caserío de Taruscancha, distrito de San Marcos,<br>provincia de Huari, Áncash, Perú.',
             'contact.hoursFromHuaraz': '~3 horas desde Huaraz',
             'contact.hoursFromHuallanca': '~1 hora desde Huallanca',
             'contact.hoursFromAntamina': '~20 minutos desde Antamina',
-            'contact.mapsLink': 'Ver ruta en Google Maps',
+            'contact.mapsLink': 'Ver el restaurante en Google Maps',
             'contact.moreRoutes': 'Más rutas y detalles del camino →',
             'contact.hoursTitle': 'Atención',
             'contact.hours': '<strong class="text-white">7:00 a.m. – 7:00 p.m.</strong><br>Todos los días de la semana.',
@@ -312,10 +314,12 @@
             "ui.lightboxRetry": "Try again",
             "wa.lodge": "Hello, I would like to ask about lodging availability at Laguna Canrash. My dates and number of guests are:",
             "wa.garage": "Hello, I would like to ask about parking availability at Laguna Canrash. My dates and number of days are:",
-            "review.routeTitle": "Choose where you’re travelling from",
+            "review.routeTitle": "Routes to Laguna Canrash restaurant",
+            "guides.route": "Driving guide to Laguna Canrash",
+            "guides.routeUrl": "/en/getting-here/",
             "review.routeIntro": "A paved road takes you right to the restaurant. Travel times are approximate.",
             "review.openMaps": "Open in Google Maps",
-            "review.sanMarcos": "Recommended route",
+            "review.sanMarcos": "Via the AN-111",
             "review.routeDetails": "What to see along the way",
             "review.restaurantIntro": "We raise rainbow trout in the lagoon itself. Enjoy it fried, as crispy chicharrón, ceviche or a warming sudado in our rustic restaurant.",
             "review.restaurantOther": "You’ll also find chicken and beef dishes, and three dining areas to share.",
@@ -326,9 +330,7 @@
             "review.security": "Safety during your visit",
             "review.story": "Read our full story",
             "v2.location": "SAN MARCOS · ÁNCASH · PERU",
-            "v2.heroFirst": "A getaway",
-            "v2.heroLast": "above it all.",
-            "v2.heroIntro": "The lagoon before you. Our own farm-raised trout on your table. And time to enjoy the Andes.",
+            "v2.heroIntro": "Visit the lake in San Marcos, Huari. Try our farm-raised trout and take a break by the water in the Andes of Áncash.",
             "v2.seeMenu": "Explore our menu",
             "v2.paved": "Right to our door",
             "v2.explore": "Discover Canrash",
@@ -339,8 +341,8 @@
             "v2.menuHelp": "Every dish, right here on this page.",
             "v2.freshTitle": "Our own farm-raised trout",
             "v2.freshDesc": "Where our cooking begins",
-            'meta.title': 'Laguna Canrash | A high-altitude Andean escape',
-            'meta.description': 'Plan an escape to Laguna Canrash: Andean landscape, trout from our own farm, restaurant, rustic lodging and a paved road in San Marcos, Áncash.',
+            'meta.title': 'Laguna Canrash | Trout restaurant in San Marcos',
+            'meta.description': 'Visit Laguna Canrash in San Marcos, Huari. Find our trout restaurant, rustic lodging and directions from Huaraz, Chavín de Huántar and Antamina.',
             'meta.ogDescription': 'Lagoon, trout and rest in the Andes of Áncash. Explore the route, restaurant and lodging to plan your visit.',
             'meta.twitterDescription': 'Lagoon, trout and rest in the Andes of Áncash. Plan your visit to Laguna Canrash.',
 
@@ -401,7 +403,9 @@
             'route.linkHuallanca': 'Route from Huallanca',
             'route.linkAntamina': 'Route from Antamina',
             'route.linkSanMarcos': 'Route from San Marcos',
-            'route.mapsNote': 'If you start from San Marcos, Google Maps may show you <strong>two routes</strong>. Choose "San Marcos" here to open the recommended route.',
+            'route.mapsNote': 'If Google Maps offers several routes from San Marcos, follow the AN-111.',
+            'route.restaurantDirections': 'How to get to the restaurant',
+            'route.lakeMap': 'View the lake on the map',
             'route.sightsLabel': 'The journey is part of the experience',
             'route.sightsTitle': 'Along the way you will see',
             'route.dinoTitle': 'Dinosaur footprints',
@@ -543,11 +547,11 @@
 
             'contact.tagline': 'Lagoon, trout and rest in the Andes of Áncash.',
             'contact.locationTitle': 'Location',
-            'contact.location': 'San Marcos district, Huari province,<br>Áncash department, Peru.',
+            'contact.location': 'Taruscancha, San Marcos district,<br>Huari province, Áncash, Peru.',
             'contact.hoursFromHuaraz': '~3 hours from Huaraz',
             'contact.hoursFromHuallanca': '~1 hour from Huallanca',
             'contact.hoursFromAntamina': '~20 minutes from Antamina',
-            'contact.mapsLink': 'View route on Google Maps',
+            'contact.mapsLink': 'Find the restaurant on Google Maps',
             'contact.moreRoutes': 'More routes and road details →',
             'contact.hoursTitle': 'Hours',
             'contact.hours': '<strong class="text-white">7:00 a.m. – 7:00 p.m.</strong><br>Every day of the week.',
@@ -599,6 +603,8 @@
     var currentLang = 'es';
 
     function detectLang() {
+        var requested = window.location.search.match(/[?&]lang=(es|en)(?:&|$)/);
+        if (requested) return requested[1];
         try {
             var saved = localStorage.getItem(STORAGE_KEY);
             if (saved === 'es' || saved === 'en') return saved;
@@ -674,6 +680,10 @@
         document.querySelectorAll('[data-i18n-alt]').forEach(function (el) {
             var alt = lookupTranslation(el.getAttribute('data-i18n-alt'));
             if (typeof alt === 'string') el.setAttribute('alt', alt);
+        });
+        document.querySelectorAll('[data-i18n-href]').forEach(function (el) {
+            var href = lookupTranslation(el.getAttribute('data-i18n-href'));
+            if (typeof href === 'string') el.setAttribute('href', href);
         });
         updateMeta();
         updateWhatsAppLinks();
